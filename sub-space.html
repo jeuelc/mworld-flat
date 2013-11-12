@@ -1,17 +1,16 @@
 <!-- i-C-a -->
 <div data-role="page" id="space">
-    <div class="coachcontainer" style="position:absolute;top:0px;left:0px;width:225px;height:320px;"></div>
     <div data-role="content" style="overflow:hidden !important;">
       <div id="titleb-holder"><h1 style="margin-top:184px;">Space</h1></div>
       
       <div style="width:90%;margin:auto;">
         <!--<div class="aclink"><a href="sub-space-bh.html" data-transition="slide"><img src="css/images/5-8/Space/blackholesbtn.png"></a></div>-->
         <div class="aclink"><a href="#" id="bhmovielink"><img src="css/images/5-8/Space/blackholesbtn.png"></a></div>
-        <div class="aclink"><a href="#" data-transition="slide"><img src="css/images/5-8/Space/missiontomarsbtn.png"></a></div>
-        <div class="aclink"><a href="#" data-transition="slide"><img src="css/images/5-8/Space/bigbangbtn.png"></a></div>
-        <div class="aclink"><a href="#" data-transition="slide"><img src="css/images/5-8/Space/galaxiesbtn.png"></a></div><br>
-        <div class="aclink"><a href="#" data-transition="slide"><img src="css/images/5-8/Space/spacetravelbtn.png"></a></div>
-        <div class="aclink"><a href="#" data-transition="slide"><img src="css/images/5-8/Space/caambtn.png"></a></div>
+        <div class="aclink"><a href="sub-space-mm.html" data-transition="slide"><img src="css/images/5-8/Space/missiontomarsbtn.png"></a></div>
+        <div class="aclink"><a href="game-diamond-rush.html" data-transition="slide"><img src="css/images/5-8/Space/bigbangbtn.png"></a></div>
+        <div class="aclink"><a href="sub-space-mm-gm-blastoff.html" data-transition="slide"><img src="css/images/5-8/Space/galaxiesbtn.png"></a></div><br>
+        <div class="aclink"><a href="sub-space-mm-gm-fl.html" data-transition="slide"><img src="css/images/5-8/Space/spacetravelbtn.png"></a></div>
+        <div class="aclink"><a href="sub-space-mm-gm-bo-rocketswork.html" data-transition="slide"><img src="css/images/5-8/Space/caambtn.png"></a></div>
         <div class="aclink"><a href="#" data-transition="slide"><img src="css/images/5-8/Space/moontrekbtn.png"></a></div>
         <div class="aclink"><a href="#" data-transition="slide"><img src="css/images/5-8/Space/closeststarbtn.png"></a></div>
       </div>
@@ -27,10 +26,12 @@
       </div> <!--/pre-bh -->
   </div><!--end of content-->
   <script>
+    var videoStatus, videoEvent;
     $(function() {
-      mworldPageVisit(1, 'Space');
-      $("#space").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
-      
+      $("div#space").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+      bhvideo.addEventListener('playing', function(){
+        videoStatus = true;
+      });
       bhvideo.addEventListener('ended', function() { 
             //agvideo.webkitExitFullscreen();
             bgsoundbh.play(); 
@@ -39,9 +40,22 @@
     });
         
     function goBack() {
-      $.mobile.changePage("home.html");
-      mainaudiobg.play();
-      spacesoundbg.pause(); spacesoundbg.currentTime = 0;
+      //$.mobile.changePage("home.html");
+      if(videoStatus != undefined){console.log('if');
+        videoEvent = true;
+        bhvideo.pause();
+        bhvideo.currentTime = 0;
+        bgsoundbh.play();
+        videoStatus = undefined;
+        $("#pre-bh").css({"visibility":"hidden", "z-index":0});
+        
+        //$.mobile.changePage("sub-space.html");
+      }
+      else {console.log('else');
+        $.mobile.changePage("home.html");
+        mainaudiobg.play();
+        spacesoundbg.pause(); spacesoundbg.currentTime = 0;
+      }
     }
     
     $('.homelinkspace').on('tap', function() { 
@@ -56,11 +70,12 @@
     });
     
     $("#bhvideo").on('tap', function() {
+      if(videoEvent != undefined){ videoEvent = undefined; return; }
       bhvideo.pause();
       bhvideo.currentTime = 0;
       bgsoundbh.play();
       $.mobile.changePage("sub-space-bh.html");
     });
-    
+
 			</script>
 </div>

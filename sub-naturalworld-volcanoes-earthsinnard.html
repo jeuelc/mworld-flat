@@ -17,7 +17,7 @@
       <div class="v-spacer"></div>
       <div class="sidebarleft-half">
       
-        <a id="earthsinnardlink" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Volcanoes/Rumbling_From_The_Deep/Huff_and_Puff_Vs_Flow/Mt_Bromo.jpg', 'Earth with a bite taken out!  Look at the different layers inside.  See how thin the crust is that we stand on, compared with what is beneath!');">click here</a>
+        <a id="earthsinnardlink" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Volcanoes/Rumbling_From_The_Deep/Huff_and_Puff_Vs_Flow/earthsinnard.jpg', 'Earth with a bite taken out!  Look at the different layers inside.  See how thin the crust is that we stand on, compared with what is beneath!');">click here</a>
         <div id="f1_container" style="visibility:hidden;position:absolute;left:100px;top:270px;">
           <div id="f1_card">
             <div class="front face">
@@ -82,11 +82,6 @@
     
     function goBack() {
       $.mobile.changePage("sub-naturalworld-volcanoes-rumbling.html", {transition: "slide", reverse: true });
-      // prev page plays the same bgmusic so comment this out
-      //bgsoundvol.pause(); 
-      //bgsoundvol.currentTime = 0;
-      //bgsoundvol.play(); 
-    }
     
     $("#backofcard").on('tap', function() {
       $('#f1_card').css({"-webkit-transform": "rotateY(0deg)"});

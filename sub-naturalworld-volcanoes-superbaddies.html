@@ -17,7 +17,7 @@
       <p>Calderas are sneaky.  When they erupt, material is spewed far away, sometimes thousands of kilometres!  It leaves the remaining caldera looking like a hole in the ground  so you may not know it's there until it erupts again!  Calderas may fill with water, forming a lake, like Lake Taupo that formed in the Taupo caldera depression in New Zealand!  Tap the super-baddie to find out about two super-caldera eruptions!</p>
     </div><!--/node-content/half-->
     <div id="poisoncloudlink" style="width:180px;height:150px;position:absolute;top:100px;left:100px;"></div>
-    <div id="notdeadlink" style="width:130px;height:150px;position:absolute;top:200px;left:200px;"></div>
+    <div id="notdeadlink" style="width:130px;height:150px;position:absolute;top:400px;left:270px;"></div>
     <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/The_Natural_World/bottomhomenat.png"></a></div>
     
   </div><!--/.kidzcontent-->
@@ -44,6 +44,14 @@
     
     $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundvol.pause(); bgsoundvol.currentTime = 0;});
     
+	$('#notdeadlink').on('tap', function() {
+    $.mobile.changePage("sub-naturalworld-volcanoes-notdeadyet.html", {transition: "slide" });
+	});
+  
+  $('#poisoncloudlink').on('tap', function() {
+    $.mobile.changePage("sub-naturalworld-volcanoes-poisoncloud.html", {transition: "slide" });
+	});
+	
     function goBack() {
       $.mobile.changePage("sub-naturalworld-volcanoes-biggestbaddest.html", {transition: "slide", reverse: true });
       // prev page plays the same bgmusic so comment this out

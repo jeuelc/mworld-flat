@@ -1355,7 +1355,29 @@ ul.slides {
   overflow:hidden !important;
 }
 
-#volcanoes, #rumbling, #whatis, #huff, #pyro, #earthsinnard, #biggestbaddest, #krackawhata, #littlemonsters {
+#deathofavol {
+  background:url('images/9-12/The_Natural_World/Volcanoes/Living_With_Volcanoes/deathofavolbg.jpg') no-repeat;
+  height:748px !important;
+  width:1024px !important;
+  overflow:hidden !important;
+}
+
+#findingvol {
+  background:url('images/9-12/The_Natural_World/Volcanoes/Finding_Volcanoes/findingvolbg.jpg') no-repeat;
+  height:748px !important;
+  width:1024px !important;
+  overflow:hidden !important;
+}
+
+#etgiants {
+  background:url('images/9-12/The_Natural_World/Volcanoes/Finding_Volcanoes/etgiantsbg.jpg') no-repeat;
+  height:748px !important;
+  width:1024px !important;
+  overflow:hidden !important;
+}
+
+#volcanoes, #rumbling, #whatis, #huff, #pyro, #earthsinnard, #biggestbaddest, #krackawhata, #littlemonsters, #poisoncloud, #notdeadyet, #whatsgoingon, 
+#cracksfromsurface, #livingwithvol, #crankyneighbor, #goodbadsparkly {
   background:url('images/9-12/The_Natural_World/Volcanoes/volcanoesbg.jpg') no-repeat;
   height:748px !important;
   width:1024px !important;
@@ -1514,3 +1536,17 @@ ul.slides {
   top:169px;
   left:194px;
 }
+
+/************* missionmars *********/
+
+#missionmars, #peopleonmars, #gettingtomars, #lifeonmars, #carefulwater, 
+#cominghome, #dangerousplace, #longtrip, #imaginingmars, #lookingatmars, 
+#whatismars, #whygotomars, #redplanet, #closerlook, #blastoff, #rocketswork, 
+#drivingaround, #entry, #olympusmons, #firstlook, #vallesmarineris, #landing, 
+#falsealarms, #ingredientsforlife, #searchingforlife, #watermystery {
+  background:url(images/5-8/Space/Mission_Mars/mission-mars-bg.jpg) no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+#rocket{ background:url(images/5-8/Space/Mission_Mars/People_on_Mars/rocket.png) no-repeat 0 0; }

@@ -1,0 +1,155 @@
+<!-- i-C-a -->
+<div data-role="page" id="cosmicrays">
+  <script src="js/hammer.js"></script> 
+  <script src="js/jquery.hammer.js"></script>
+  <script src="js/slidebarwos.js"></script>
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnwos"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnwos"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnwos"></div></div>
+  <div class="infobtnholder"><div class="infobtnwos"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnwos"></div></div>
+  <div class="menubtnholder"><div class="menubtnwos"></div></div>
+    
+  <div class="bptitleholderbh" style="padding-top:14px;"><h1>Colours</h1></div>
+  <div id="spacechar">&nbsp;
+    <div data-role="content" class="kidzcontent">
+      <div class="v-spacer"></div>
+      <div class="sidebarleft-half">
+         <!--<a id="ngclink" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, css/images/9-12/The_Wonders_of_Science/Luminous_Light/seeing/colours/el_hi_res_image_1384238933.jpg', 'A lot of people are colour-blind... about 10% of the population!  Are you? Can you read the numbers above?');">click here</a>
+        <a id="cosmicrays" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Wonders_of_Science/Invisible_World/What_Else_Is_Out_There/Cosmic_Rays/Cosmic_Rays_big.jpg', 'Cosmic rays bombard the Earth constantly!');">click here</a>-->
+        <a id="super_kamiokande" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Wonders_of_Science/Luminous_Light/seeing/colours/el_hi_res_image_1384238933.jpg', 'A lot of people are colour-blind... about 10% of the population! Are you? Can you read the numbers above?');">click here</a>
+      
+        <div id="zoomwrapper">
+          <div id="pol3"class="pPiece" style="left:80px;top:270px;">
+             <img src="css/images/9-12/The_Wonders_of_Science/Luminous_Light/seeing/colours/el_image_1384238933.jpg" alt="" />
+          </div>
+        </div><!--/zoomwrapper-->
+      </div>
+      
+      <div class="bpcontentbh">
+        <p>Suppose your friend is wearing a red jumper.  Why does the jumper appear red when you look at it?  Well, you have already learned that white light is a mixture of all of the colours of the rainbow.  When white light shines on the jumper, only the red light bounces off the jumper.  This bounced-off red light can then travel into your eye.  This is why the jumper looks red!</p>
+        <p>Suppose, instead, that you were in a room filled with green light.  If you were talking to your friend with the red jumper, it would look black!  This is because the green light will not bounce off a red jumper.  Since no light is bouncing off the jumper in this case, it will look black!</p>
+      </div>
+      
+      <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/The_Wonders_of_Science/bottomhomewos.png"></a></div>
+    </div><!--end of content-->
+  </div><!--/spacechar-->    
+  
+  <!--<div class="audiopanel">-->
+    <div class="micbtnholder"><div class="micbtnwos" id="playstopbh"></div></div>
+    <div class="bwos"><div class="rwwos" id="bhaudiobbtn"></div></div>
+    <div class="plwos"><div class="plpswos" id="bhaudioplbtn"></div></div>
+    <div class="fwos"><div class="fwwos" id="bhaudiofbtn"></div></div>
+    <div id="actualaudio-bh" style="visibility:hidden;"></div>
+  <!--</div>-->
+  <script>
+  
+    // image card rotation
+    $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
+    $('div#pol1').css("z-index", 2);
+    $('div#pol2').css("z-index", 1);
+    $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
+    $('div#pol3 > img').css("-webkit-transform", "rotate(-3deg)");
+  
+    // image card events
+    $("#pol1").on('tap', function() {
+      $.mobile.changePage("sub-space-bh-bhingalaxy.html", {transition: "slide"});
+    });
+       
+    /*$("#pol2").on('tap', function() {
+      $('#cosmicrays')[0].click();
+    });*/
+       
+    $("#pol2").on('tap', function() {
+//       alert(json_decode($("#ngclink")));
+      $("#ngclink").click();
+    });
+       
+    $("#pol3").on('tap', function() {
+      $('#super_kamiokande')[0].click();
+    });
+    
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    (function() {
+      playing = false;
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-bh').html('<audio id="bhaudio" controls preload onpause="playbh()" onplay="pausebh()"><source src="http://back.uvmate.com/sites/default/files/subjectsaudio/RevisedIntro.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#cosmicrays").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+    
+    function goBack() {
+      $.mobile.changePage("sub-wonderscience-invisibleworld-whatelse.html", {transition: "slide", reverse: true });
+      bgsoundbh.pause();
+      bgsoundbh.currentTime = 0;
+      spacesoundbg.play();
+    }
+    
+    function pausedaudio() {
+      bgsoundbh.play();
+    }
+    
+    function pausebg() {
+      bgsoundbh.pause();
+    }
+
+    /* ******************** */
+    $("#playstopbh").on('tap', function() {
+      if(!playing) {
+        bhaudio.play();
+        $('.micbtnwos').css('background-position-x', '-81px');
+        playing = true;
+      } else {
+        bhaudio.pause(); bhaudio.currentTime = 0;
+        $('.micbtnwos').css('background-position-x', '0px');
+        playing = false;
+      }
+    });
+    
+    $("#bhaudioplbtn").on('tap', function() {
+      if(!playing) {
+        bhaudio.play();
+      } else {
+        bhaudio.pause();
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+    
+    $("#bhaudiofbtn").on('tap', function() {
+      var ctime = bhaudio.currentTime;
+      bhaudio.currentTime = ctime + 10;
+    });
+    
+    $("#bhaudiobbtn").on('tap', function() {
+      var ctime = bhaudio.currentTime;
+      bhaudio.currentTime = ctime - 10;
+    });
+    
+    $("#bhaudiopsbtn").on('tap', function() {
+      bhaudio.pause();
+      //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+    
+    $('.navbtn1').on('tap', function() { 
+      nav1Effects(); 
+    });
+    
+    $('.navbtn2').on('tap', function() { 
+      nav2Effects(); 
+    });
+    
+    $('.navbtn3').on('tap', function() { 
+      nav3Effects(); 
+    });
+    
+    $('.navbtn4').on('tap', function() { 
+      nav4Effects(); 
+    });
+  </script>
+  <script src="js/threecardLogic.js"></script>  <!-- for card dragging effects -->
+</div> <!--//home-->

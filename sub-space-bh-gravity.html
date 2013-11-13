@@ -20,6 +20,13 @@
   <div id="spacechar">&nbsp;
     <div data-role="content" class="kidzcontent">
       <div class="storypagetitlebh"><h1>Gravity</h1></div>
+      <div class="sidebarleft-half">
+        <div id="zoomwrapper">
+          <div id="gametimelink" class="pPiece" style="left:100px;top:270px;">
+             <img src="css/images/5-8/Space/Black_Holes/gametimepol.png" alt="" />
+          </div>
+        </div><!--/zoomwrapper-->
+      </div>
       <div class="storypagebh">
         <p>When we drop something, such as an egg or a mobile phone, it falls to the ground.  What is pulling it to the ground?  It is the force of gravity.   Gravity pulls the eggs and mobile phones (and people!) towards the surface of the Earth.  If there was no gravity then we would be able to float in the air, like an astronaut in space!</p>
         <p>The pull of gravity, which pulls us towards the Earth, also pulls the Moon towards the Earth.  This is why the Moon does not fly away into outer space, but remains ‘connected’ to the Earth.</p>
@@ -57,6 +64,10 @@
       var oldHeight = $('#node-body-holder').height();
       var newHeight = oldHeight - $('#actualaudio-gravity').height();
       $('#node-body-holder').height(newHeight);
+    });
+    
+    $('#gametimelink').on('tap', function() {
+      $.mobile.changePage("game-bh1.html", {transition: "slide"});
     });
     
     function goBack() {

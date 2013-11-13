@@ -17,6 +17,11 @@
           <div data-role="content" class="kidzcontent">
               <div class="v-spacer"></div>
               <div class="sidebarleft-half">
+                <div id="zoomwrapper">
+                  <div id="gametimelink" class="pPiece" style="left:100px;top:270px;">
+                     <img src="css/images/5-8/Space/Black_Holes/gametimepol.png" alt="" />
+                  </div>
+                </div><!--/zoomwrapper-->
               </div>
               <div class="bpcontent">
                   <p>Where do black holes go?  If you keep feeding them with gas and dust from nearby stars, they just keep getting bigger and bigger.  But what if you just leave them alone?</p>
@@ -54,6 +59,9 @@
             $("#bhgo").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     
         })();
+        $('#gametimelink').on('tap', function() {
+          $.mobile.changePage("game-bh2.html", {transition: "slide"});
+        });
         $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause();bgsoundbh.currentTime = 0; });
         function goBack() {
             $.mobile.changePage("sub-space-bh.html");

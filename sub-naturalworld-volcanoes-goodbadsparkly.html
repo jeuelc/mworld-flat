@@ -26,6 +26,9 @@
               <img id="dopple" src="css/images/9-12/The_Natural_World/Volcanoes/Living_With_Volcanoes/tfcalderapol.png">
             </div>
             <div id="backofcard" class="back face center" style="background:url(css/images/9-12/The_Natural_World/Volcanoes/Living_With_Volcanoes/tfcalderapol-rev.png) no-repeat;">
+              <div class="returncard" style="position:absolute;left:0px;top:0px;width:362px;height:170px;"></div>
+              <div id="trueans" style="position:absolute;left:90px;top:180px;width:70px;height:50px;"></div>
+              <div id="falseans" style="position:absolute;left:200px;top:180px;width:70px;height:50px;"></div>
             </div>
           </div><!--/f1+card-->
         </div><!--/f1_container-->
@@ -86,7 +89,14 @@
     
     $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundvol.pause(); bgsoundvol.currentTime = 0;});
     
-    $("#backofcard").on('tap', function() {
+    $('#falseans').on('tap', function() {
+      alert("Wrong answer");
+    });
+    $('#trueans').on('tap', function() {
+      alert("Correct answer");
+    });
+    
+    $(".returncard").on('tap', function() {
       $('#f1_card').css({"-webkit-transform": "rotateY(0deg)"});
       $('#f1_card').css({"-moz-transform": "rotateY(0deg)"});
       $('#f1_card').css({"-o-transform": "rotateY(0deg)"});

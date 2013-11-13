@@ -25,7 +25,11 @@
               <img id="dopple" src="css/images/9-12/The_Natural_World/Volcanoes/Biggest_and_Baddest/pronounceeyjapol.png">
             </div>
             <div id="backofcard" class="back face center" style="background:url(css/images/9-12/The_Natural_World/Volcanoes/Biggest_and_Baddest/pronounceeyjareverse.png) no-repeat;">
-              
+              <div class="returncard" style="position:absolute;left:0px;top:0px;width:362px;height:170px;"></div>
+              <div id="playhearme" style="position:absolute;left:152px;top:180px;width:60px;height:50px;"></div>
+              <div style="visibility:hidden;">
+                <audio id="eyjafaudio" controls preload onpause="playvol()" onplay="pausevol()"><source src="audio/volcano_eyjaf.mp3" type="audio/mpeg"></audio>
+              </div>
             </div>
           </div><!--/f1+card-->
         </div><!--/f1_container-->
@@ -119,6 +123,9 @@
       //bgsoundvol.play(); 
     }
     
+    $("#playhearme").on('tap', function() {
+      eyjafaudio.play();
+    });
     $("#pol1").on('tap', function() {
       $('#eruptionlink')[0].click();
     });
@@ -136,7 +143,8 @@
       $('#f1_card').css({"-o-transform": "rotateY(180deg)"});
       $('#f1_card').css({"transform": "rotateY(180deg)"});
     });
-    $("#backofcard").on('tap', function() {
+    $(".returncard").on('tap', function() {
+      eyjafaudio.pause();eyjafaudio.currentTime = 0;
       $('#f1_card').css({"-webkit-transform": "rotateY(0deg)"});
       $('#f1_card').css({"-moz-transform": "rotateY(0deg)"});
       $('#f1_card').css({"-o-transform": "rotateY(0deg)"});

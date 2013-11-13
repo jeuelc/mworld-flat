@@ -1347,6 +1347,26 @@ ul.slides {
 /********* invisible world -end ******/
 
 /********* volcanoes **********/
+#eruptiongame {
+    background:url('images/9-12/The_Natural_World/Volcanoes/game/eruptionbg.jpg') no-repeat;
+    height: 748px !important;
+    width:1024px !important;
+    overflow:hidden !important;
+}
+
+#rockquiz {
+    background:url('images/9-12/The_Natural_World/Volcanoes/game/volcanogamebg.jpg') no-repeat;
+    height: 748px !important;
+    width:1024px !important;
+    overflow:hidden !important;
+}
+
+#notvolcano {
+    background:url('images/9-12/The_Natural_World/Volcanoes/game/notvolcanogamebg.jpg') no-repeat;
+    height: 748px !important;
+    width:1024px !important;
+    overflow:hidden !important;
+}
 
 #superbaddies {
   background:url('images/9-12/The_Natural_World/Volcanoes/Biggest_and_Baddest/superbaddiesbg.jpg') no-repeat;
@@ -1377,7 +1397,7 @@ ul.slides {
 }
 
 #volcanoes, #rumbling, #whatis, #huff, #pyro, #earthsinnard, #biggestbaddest, #krackawhata, #littlemonsters, #poisoncloud, #notdeadyet, #whatsgoingon, 
-#cracksfromsurface, #livingwithvol, #crankyneighbor, #goodbadsparkly {
+#cracksfromsurface, #livingwithvol, #crankyneighbor, #goodbadsparkly, #inmountains, #underthesea, #hotspot {
   background:url('images/9-12/The_Natural_World/Volcanoes/volcanoesbg.jpg') no-repeat;
   height:748px !important;
   width:1024px !important;
@@ -1513,6 +1533,20 @@ ul.slides {
   color:#000000;
 }
 
+.navvol-content3 {
+  position:absolute;
+  left:59px;
+  top:263px;
+  width:920px;
+  height:160px;
+  overflow-y:scroll;
+  text-align:left;
+  font-family:"Chalkboard SE";
+  font-size:18px;
+  font-weight:normal;
+  color:#000000;
+}
+
 .bpcontent-whatis, .bpcontent-huff, .bpcontent-pyro {
   width:413px;
   height:356px;
@@ -1536,7 +1570,654 @@ ul.slides {
   top:169px;
   left:194px;
 }
+#notvolcano #question{
+    position: absolute;
+    display: block;
+    background: url('images/9-12/The_Natural_World/Volcanoes/game/questionbg.png') no-repeat;
+    top: 470px;
+    left: 355px;
+    height: 192px;
+    width: 669px;
+}
 
+#notvolcano #question-text {
+    position: absolute;
+    display: block;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 35px !important;
+    font-weight: bold !important;
+    color: #000000;
+    text-align: center;    
+    top: 590px;
+    left: 355px;
+    height: 80px;
+    width: 669px;
+    z-index: 1000;
+}
+
+#notvolcano .choiceframe {
+    position: absolute;    
+    display: block;
+    background: url('images/9-12/The_Natural_World/Volcanoes/game/choiceframe.png') no-repeat;
+    background-size: 100% 100%;
+    top: 0px;
+    left: 0px;
+    height: 250px;
+    width: 300px;
+    display: block;
+    z-index: 1000;
+}
+
+#notvolcano .choiceimage {
+    position: absolute;
+    display: block;
+    top: 10px;
+    left: 10px;
+    height: 188px;
+    width: 269px;
+}
+
+#notvolcano .choicename {
+    position: absolute;
+    top: 208px;
+    left: 0px;
+    height: 50px;
+    width: 300px;
+    display: block;
+    text-align: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+    z-index: 8000;
+}
+
+#notvolcano #choice1 {
+    position: absolute;
+    display: block;
+    top: -10px;
+    left: -1000px;
+    height: 250px;
+    width: 300px;
+    transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+    -o-transform: rotate(15deg);
+    -moz-transform: rotate(15deg);
+}
+
+#notvolcano .choice1-image {
+    background: url('images/9-12/The_Natural_World/Volcanoes/game/choice1.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+#notvolcano #choice2 {
+    position: absolute;
+    display: block;
+    top: -10px;
+    left: -1000px;
+    height: 250px;
+    width: 300px;
+    transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+}
+
+#notvolcano .choice2-image {
+    background: url('images/9-12/The_Natural_World/Volcanoes/game/choice2.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+#notvolcano #choice3 {
+    position: absolute;
+    display: block;
+    top: 210px;
+    left: -1000px;
+    height: 250px;
+    width: 300px;
+    transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg);
+    -webkit-transform: rotate(-15deg);
+    -o-transform: rotate(-15deg);
+    -moz-transform: rotate(-15deg);
+}
+
+#notvolcano .choice3-image {
+    background: url('images/9-12/The_Natural_World/Volcanoes/game/choice3.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+#notvolcano #choice4 {
+    position: absolute;
+    display: block;
+    top: 400px;
+    left: -1000px;
+    height: 250px;
+    width: 300px;
+    transform: rotate(11deg);
+    -ms-transform: rotate(11deg);
+    -webkit-transform: rotate(11deg);
+    -o-transform: rotate(11deg);
+    -moz-transform: rotate(11deg);
+}
+
+#notvolcano .choice4-image {
+    background: url('images/9-12/The_Natural_World/Volcanoes/game/choice4.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+#notvolcano #correctchoice {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: -1000px;
+    height: 270px;
+    margin-top: -135px;
+    width: 320px;
+    z-index:99999 !important;
+}
+
+#notvolcano #back {
+    position: absolute;
+    display: block;
+    background: url('images/9-12/The_Natural_World/Volcanoes/game/back.png') no-repeat;
+    background-size: 100% 100%;
+    top: 260px;
+    left: 0px;
+    height: 109px;
+    width: 130px;
+}
+
+#notvolcano .reddotmarker {
+    position: absolute;
+    display: block;
+    background: url('images/9-12/The_Natural_World/Volcanoes/game/reddot.png') no-repeat;
+    background-size: 100% 100%;
+    top: 0px;
+    left: 0px;
+    height: 25px;
+    width: 25px;
+}
+
+#notvolcano #correct-dialog {
+    position: absolute;
+    display: block;
+    background: url('images/9-12/The_Natural_World/Volcanoes/game/correct-dialog.png') no-repeat;
+    background-size: 100% 100%;
+    top: 0px;
+    left: 18px;
+    height: 470px;
+    width: 571px;
+    z-index:88888 !important;
+}
+
+#notvolcano #incorrect-dialog {
+    position: absolute;
+    display: block;
+    background: url('images/9-12/The_Natural_World/Volcanoes/game/incorrect-dialog.png') no-repeat;
+    background-size: 100% 100%;
+    top: 100px;
+    left: 200px;
+    height: 494px;
+    width: 577px;
+    z-index:88888 !important;
+}
+
+#notvolcano #correct-dialog-points {
+    position: absolute;
+    display: block;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px !important;
+    font-weight: normal !important;
+    color: #000000;
+    text-align: center;    
+    top: 230px;
+    left: 285px;
+    height: 80px;
+    width: 100px;
+    z-index:99999 !important;
+    transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+    -o-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+}
+
+#notvolcano #incorrect-dialog-retry {
+    position: absolute;
+    display: block;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 25px !important;
+    font-weight: normal !important;
+    color: #000000;
+    text-align: center;    
+    top: 310px;
+    left: 190px;
+    height: 50px;
+    width: 100px;
+    z-index:99999 !important;
+    transform: rotate(-24deg);
+    -ms-transform: rotate(-24deg);
+    -webkit-transform: rotate(-24deg);
+    -o-transform: rotate(-24deg);
+    -moz-transform: rotate(-24deg);
+}
+
+#notvolcano #incorrect-dialog-cancel {
+    position: absolute;
+    display: block;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 25px !important;
+    font-weight: normal !important;
+    color: #000000;
+    text-align: center;    
+    top: 260px;
+    left: 310px;
+    height: 50px;
+    width: 100px;
+    z-index:99999 !important;
+    transform: rotate(-24deg);
+    -ms-transform: rotate(-24deg);
+    -webkit-transform: rotate(-24deg);
+    -o-transform: rotate(-24deg);
+    -moz-transform: rotate(-24deg);
+}
+#rockquiz #gamecharacter {
+    position: absolute;
+    background: url('images/9-12/The_Natural_World/Volcanoes/game/redheadgirl.png') no-repeat;
+    background-size: 100% 100%;
+    top: 250px;
+    left: 180px;
+    height: 511px;
+    width: 675px;
+}
+
+#rockquiz #choice1 {
+    position: absolute;
+    background: url('images/9-12/The_Natural_World/Volcanoes/game/choice1rock.png') no-repeat;
+    background-size: 100% 100%;
+    top: 520px;
+    left: 150px;
+    height: 106px;
+    width: 125px;
+    z-index: 6000;
+}
+
+#rockquiz #choice1name {
+    position: absolute;
+    top: 700px;
+    left: 0px;
+    width: 400px;
+    text-align: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 23px;
+    font-weight: normal;
+    color: white;
+}
+
+#rockquiz #choice2 {
+    position: absolute;
+    background: url('images/9-12/The_Natural_World/Volcanoes/game/choice2rock.png') no-repeat;
+    background-size: 100% 100%;
+    top: 480px;
+    left: 740px;
+    height: 106px;
+    width: 125px;
+    z-index: 6000;
+}
+
+#rockquiz #choice2name {
+    position: absolute;
+    top: 700px;
+    left: 624px;
+    width: 400px;
+    text-align: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 23px;
+    font-weight: normal;
+    color: white;
+}
+
+#rockquiz #gamedialog {
+    position: absolute;
+    border: none !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index:99999 !important;
+}
+
+#rockquiz #gamedialog-content {
+    position: absolute;
+    background: url('images/9-12/The_Natural_World/Volcanoes/game/trafficdialog.png') no-repeat !important;
+    background-size: 100% 100% !important;
+    background-color: transparent;
+    height: 302px;
+    width: 429px;
+    top: -87px;
+    left: 50%;
+    margin-left:-214px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 25px;
+    font-weight: normal;
+    color: black;
+    padding: 20px 20px 20px 20px;
+    text-align: center;
+    z-index:99999 !important;
+}
+
+#rockquiz #gamedialog-content h1 {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 25px !important;
+    font-weight: normal !important;
+    color: red;
+    text-align: center;
+}
+
+#rockquiz .gamedialog-button {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 25px !important;
+    font-weight: normal !important;
+    color: #000000 !important;
+    padding: 2px 2px 2px 2px;
+    text-decoration: #000000 underline solid !important;
+    text-align: center;
+}
+
+#rockquiz .ui-dialog-content {
+    border: none;    
+}
+
+#rockquiz .ui-overlay-shadow {
+    box-shadow: none;
+}
+
+#rockquiz #dialogtitle {
+    position: absolute;
+    top: 128px;
+    left: 30px;
+    text-align: center;
+    width: 400px;
+    height: 80px;
+    color: #efd61c;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#rockquiz #dialogbody {
+    position: absolute;
+    top: 190px;
+    left: 30px;
+    text-align: center;
+    width: 400px;
+    height: 100px;
+    color: #000000;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+#rockquiz #rightchoice {
+    position: absolute;
+    top: 520px;
+    left: 420px;
+    height: 156px;
+    width: 175px;
+    z-index:99999999;
+}
+
+#rockquiz .pumice-img {
+    background: url('images/9-12/The_Natural_World/Volcanoes/game/choice1rock.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+#rockquiz .basalt-img {
+    background: url('images/9-12/The_Natural_World/Volcanoes/game/choice2rock.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+#rockquiz #question {
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    height: 175px;
+    width: 853px;
+    background: url('images/9-12/The_Natural_World/Volcanoes/game/question.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+#rockquiz #glow {
+    position: absolute;
+    top: 480px;
+    height: 222px;
+    width: 238px;
+    background: url('images/9-12/The_Natural_World/Volcanoes/game/glow.png') no-repeat;
+    background-size: 100% 100%;
+    z-index: 5000;
+}
+
+#eruptiongame {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 12px !important;
+    font-weight: normal;
+    color: #000000;
+    text-align: left;
+}
+
+#eruptiongame #caption {
+    position: absolute;
+    display: block;
+    font-size: 35px !important;
+    font-weight: bold !important;
+    top: 20px;
+    left: 30px;
+    height: 100px;
+    width: 669px;
+}
+
+#eruptiongame #choice1 {
+    position: absolute;
+    display: block;
+    background: url('images/9-12/The_Natural_World/Volcanoes/game/choice1eruption.png') no-repeat;
+    background-size: 100% 100%;
+    top: 165px;
+    left: 30px;
+    height: 70px;
+    width: 204px;
+}
+
+#eruptiongame #choice2 {
+    position: absolute;
+    display: block;
+    background: url('images/9-12/The_Natural_World/Volcanoes/game/choice2eruption.png') no-repeat;
+    background-size: 100% 100%;
+    top: 235px;
+    left: 30px;
+    height: 70px;
+    width: 204px;
+}
+
+#eruptiongame #choice3 {
+    position: absolute;
+    display: block;
+    background: url('images/9-12/The_Natural_World/Volcanoes/game/choice3eruption.png') no-repeat;
+    background-size: 100% 100%;
+    top: 305px;
+    left: 30px;
+    height: 70px;
+    width: 204px;
+}
+
+#eruptiongame #choice4 {
+    position: absolute;
+    display: block;
+    background: url('images/9-12/The_Natural_World/Volcanoes/game/choice4eruption.png') no-repeat;
+    background-size: 100% 100%;
+    top: 375px;
+    left: 30px;
+    height: 70px;
+    width: 204px;
+}
+
+#eruptiongame .answerframe {
+    position: absolute;
+    display: block;
+    background: url('images/9-12/The_Natural_World/Volcanoes/game/answerframe.png') no-repeat;
+    background-size: 100% 100%;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    text-align: center;    
+    color: #ffffff;    
+    height: 70px;
+    width: 200px;
+    line-height: 60px;
+}
+
+#eruptiongame #answer1 {
+    top: 530px;
+    left: 65px;
+    z-index: 1000;
+}
+
+#eruptiongame #answer2 {
+    top: 400px;
+    left: 300px;
+    z-index: 1000;
+}
+
+#eruptiongame #answer3 {
+    top: 260px;
+    left: 500px;
+    z-index: 1000;
+}
+
+#eruptiongame #answer4 {
+    top: 170px;
+    left: 800px;
+    z-index: 1000;
+}
+
+#eruptiongame #correct-dialog {
+    position: absolute;
+    display: block;
+    background: url('images/9-12/The_Natural_World/Volcanoes/game/correct-dialogeruption.png') no-repeat;
+    background-size: 100% 100%;
+    top: 60px;
+    left: 160px;
+    height: 618px;
+    width: 707px;
+    z-index:88888 !important;
+}
+
+#eruptiongame #incorrect-dialog {
+    position: absolute;
+    display: block;
+    background: url('images/9-12/The_Natural_World/Volcanoes/game/incorrect-dialogeruption.png') no-repeat;
+    background-size: 100% 100%;
+    top: 60px;
+    left: 160px;
+    height: 618px;
+    width: 707px;
+    z-index:88888 !important;
+}
+
+#eruptiongame #correct-dialog-points {
+    position: absolute;
+    display: block;
+    font-family: Baskerville, Georgia, Garamond, ‘Times New Roman’, Times, serif;
+    font-size: 23px !important;
+    font-weight: normal !important;
+    color: #46403c;
+    text-align: center;    
+    top: 210px;
+    left: 347px;
+    height: 80px;
+    width: 100px;
+    z-index:99999 !important;
+    transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+    -o-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+}
+
+#eruptiongame #incorrect-dialog-retry {
+    position: absolute;
+    display: block;
+    font-family: Baskerville, Georgia, Garamond, ‘Times New Roman’, Times, serif;
+    font-size: 30px !important;
+    font-weight: normal !important;
+    color: #46403c;
+    text-align: center;    
+    top: 275px;
+    left: 140px;
+    height: 50px;
+    width: 140px;
+    z-index:99999 !important;
+    transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+    -o-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+}
+
+#eruptiongame #incorrect-dialog-cancel {
+    position: absolute;
+    display: block;
+    font-family: Baskerville, Georgia, Garamond, ‘Times New Roman’, Times, serif;
+    font-size: 30px !important;
+    font-weight: normal !important;
+    color: #46403c;
+    text-align: center;    
+    top: 185px;
+    left: 385px;
+    height: 50px;
+    width: 140px;
+    z-index:99999 !important;
+    transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+    -o-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+}
+
+#eruptiongame #facehappy {
+    position: absolute;
+    display: block;
+    background: url('images/9-12/The_Natural_World/Volcanoes/game/facehappy.png') no-repeat;
+    background-size: 100% 100%;
+    top: 25px;
+    left: 900px;
+    height: 109px;
+    width: 94px;
+}
+
+#eruptiongame #facesad {
+    position: absolute;
+    display: block;
+    background: url('images/9-12/The_Natural_World/Volcanoes/game/facesad.png') no-repeat;
+    background-size: 100% 100%;
+    top: 25px;
+    left: 900px;
+    height: 109px;
+    width: 94px;
+}
+
+#eruptiongame #back {
+    position: absolute;
+    display: block;
+    background: url('images/9-12/The_Natural_World/Volcanoes/game/backeruption.png') no-repeat;
+    background-size: 100% 100%;
+    top: 640px;
+    left: 0px;
+    height: 105px;
+    width: 128px;
+}
 /************* missionmars *********/
 
 #missionmars, #peopleonmars, #gettingtomars, #lifeonmars, #carefulwater, 

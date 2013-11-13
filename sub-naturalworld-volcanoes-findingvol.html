@@ -11,8 +11,8 @@
   
   <div class="navtitleholdervol" style="padding-top:14px;"></div>
   <div id="etgiantslink" style="position:absolute;left:845px;top:20px;width:150px;height:60px;"></div>
-  <div id="hotspotslink" style="position:absolute;left:340px;top:330px;width:280px;height:40px;"></div>
-  <div id="undertheseelink" style="position:absolute;left:420px;top:460px;width:230px;height:40px;"></div>
+  <div id="hotspotlink" style="position:absolute;left:340px;top:330px;width:280px;height:40px;"></div>
+  <div id="underthesealink" style="position:absolute;left:420px;top:460px;width:230px;height:40px;"></div>
   <div id="inmountainslink" style="position:absolute;left:710px;top:440px;width:220px;height:40px;"></div>
   <div data-role="content" class="kidzcontent">
     <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/The_Natural_World/bottomhomenat.png"></a></div>
@@ -48,6 +48,17 @@
       $.mobile.changePage("sub-naturalworld-volcanoes-etgiants.html", {transition: "slide"});
     });
     
+    $('#inmountainslink').on('tap', function() {
+      $.mobile.changePage("sub-naturalworld-volcanoes-inmountains.html", {transition: "slide"});
+    });
+    
+    $('#underthesealink').on('tap', function() {
+      $.mobile.changePage("sub-naturalworld-volcanoes-underthesea.html", {transition: "slide"});
+    });
+    
+    $('#hotspotlink').on('tap', function() {
+      $.mobile.changePage("sub-naturalworld-volcanoes-hotspot.html", {transition: "slide"});
+    });
     $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundvol.pause(); bgsoundvol.currentTime = 0;});
     
     function goBack() {

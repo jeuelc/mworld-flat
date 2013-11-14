@@ -1,10 +1,10 @@
 /* i-C-a */
 var bhcreator = new Audio();
-bhcreator.src = "http://back.uvmate.com/sites/default/files/subjectsaudio/bhcreator.mp3";
+bhcreator.src = "audio/bhcreator.mp3";
 bhcreator.addEventListener('ended', function() { bhcreator.play(); });
 
 var whatamimp3 = new Audio();
-whatamimp3.src = "http://back.uvmate.com/sites/default/files/subjectsaudio/whatami.mp3";
+whatamimp3.src = "audio/whatami.mp3";
 whatamimp3.addEventListener('ended', function() { whatamimp3.play(); });
 
 var mapmakerbg = new Audio();
@@ -71,20 +71,20 @@ function pausevol() { bgsoundvol.pause() }
 function playvol() { bgsoundvol.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }
 
 var mainaudiobg = new Audio();
-mainaudiobg.src = "http://back.uvmate.com/sites/default/files/subjectsaudio/mainbg.mp3";
+mainaudiobg.src = "audio/mainbg.mp3";
 mainaudiobg.addEventListener('ended', function() { mainaudiobg.play(); });
 
 var iliadaudiobg = new Audio();
-iliadaudiobg.src = "http://back.uvmate.com/sites/default/files/subjectsaudio/Hector_vs_Achilles.mp3";
+iliadaudiobg.src = "audio/Hector_vs_Achilles.mp3";
 
 var theseusaudiobg = new Audio();
-theseusaudiobg.src = "http://back.uvmate.com/sites/default/files/subjectsaudio/Theseus_and_the_Minotaur.mp3";
+theseusaudiobg.src = "audio/Theseus_and_the_Minotaur.mp3";
 
 var odysseyaudiobg = new Audio();
-odysseyaudiobg.src = "http://back.uvmate.com/sites/default/files/subjectsaudio/Odyssey.mp3";
+odysseyaudiobg.src = "audio/Odyssey.mp3";
 
 var olympicsaudiobg = new Audio();
-olympicsaudiobg.src = "http://back.uvmate.com/sites/default/files/subjectsaudio/Olympics.mp3";
+olympicsaudiobg.src = "audio/Olympics.mp3";
 
 function pauseagbg() { 
   //agsoundbg.volume = 0.1;

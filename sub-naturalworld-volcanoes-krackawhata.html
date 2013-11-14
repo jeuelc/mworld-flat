@@ -18,16 +18,7 @@
       <div class="sidebarleft-half">
       
         <a id="krakatulink" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Volcanoes/Biggest_and_Baddest/krakatu.jpg', 'An artist\'s impression of what the 1883 Krakatau eruption in Indonesia might have looked like. This was a colossal VEI 6 eruption!');">click here</a>
-        <div id="f1_container" style="visibility:hidden;position:absolute;left:100px;top:270px;">
-          <div id="f1_card">
-            <div class="front face">
-              <img id="dopple" src="css/images/9-12/The_Natural_World/Volcanoes/Biggest_and_Baddest/rockquizpol.png">
-            </div>
-            <div id="backofcard" class="back face center" style="background:url(css/images/9-12/The_Natural_World/Volcanoes/Biggest_and_Baddest/rockquizpol-reverse.png) no-repeat;">
-              
-            </div>
-          </div><!--/f1+card-->
-        </div><!--/f1_container-->
+
         <div id="zoomwrapper">
           <div id="pol1" class="pPiece" style="left:100px;top:270px;">
              <img src="css/images/9-12/The_Natural_World/Volcanoes/Biggest_and_Baddest/krakatupol.png" alt="" />
@@ -87,26 +78,8 @@
       //bgsoundvol.play(); 
     }
     
-    $("#backofcard").on('tap', function() {
-      $('#f1_card').css({"-webkit-transform": "rotateY(0deg)"});
-      $('#f1_card').css({"-moz-transform": "rotateY(0deg)"});
-      $('#f1_card').css({"-o-transform": "rotateY(0deg)"});
-      $('#f1_card').css({"transform": "rotateY(0deg)"});
-      setTimeout(function() {
-        $("#pol2").css({"visibility":"visible", "z-index":3});
-        $('#f1_container').css({"visibility":"hidden", "z-index":0});
-      }, 1000);
-      //$("#hittites").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
-      //$("#hittites").swipe("enable");
-    });
-    
     $("#pol2").on('tap', function() {
-      $('#f1_container').css({"visibility":"visible", "z-index":10});
-      $(this).css({"visibility":"hidden"});
-      $('#f1_card').css({"-webkit-transform": "rotateY(180deg)"});
-      $('#f1_card').css({"-moz-transform": "rotateY(180deg)"});
-      $('#f1_card').css({"-o-transform": "rotateY(180deg)"});
-      $('#f1_card').css({"transform": "rotateY(180deg)"});
+      $.mobile.changePage("game-vol2.html", {transition: "slide"});
     });
     $("#pol1").on('tap', function() {
       $('#krakatulink')[0].click();

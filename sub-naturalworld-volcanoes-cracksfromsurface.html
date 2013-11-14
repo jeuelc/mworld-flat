@@ -79,6 +79,10 @@
     
     $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundvol.pause(); bgsoundvol.currentTime = 0;});
     
+    $("#pol1").on('tap', function() {
+      $.mobile.changePage("game-vol1.html", {transition: "slide"});
+    });
+    
     $("#pol2").on('tap', function() {
       $('#tectonicplateslink')[0].click();
     });

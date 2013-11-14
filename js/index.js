@@ -74,6 +74,10 @@ var mainaudiobg = new Audio();
 mainaudiobg.src = "audio/mainbg.mp3";
 mainaudiobg.addEventListener('ended', function() { mainaudiobg.play(); });
 
+var invisibleworldbg = new Audio();
+invisibleworldbg.src = "audio/invisibleworld.mp3";
+invisibleworldbg.addEventListener('ended', function() { invisibleworldbg.play(); });
+
 var iliadaudiobg = new Audio();
 iliadaudiobg.src = "audio/Hector_vs_Achilles.mp3";
 

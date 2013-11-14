@@ -1713,7 +1713,7 @@ color: #000000;
   overflow:hidden !important;
   width:1024px !important;
 }
-#bluesea , #oceans , #tides , #sun , #beach , #luxury , #bottoms , #downs , #bubbles ,#wonders , #bigblue , #hides , #plants , #krills , #poles ,  #between, #greatest , #apart{
+#bluesea , #oceans , #tides , #sun , #beach , #luxury , #bottoms , #downs , #bubbles ,#wonders , #bigblue , #hides , #plants , #krills , #poles ,  #between, #greatest , #apart , #whattodo , #thefuture , #rubbishislands{
  background:url('images/5-8/bluesea/sea.jpg') no-repeat;
   height:748px !important;
   overflow:hidden !important;
@@ -1749,10 +1749,14 @@ color: #000000;
   overflow:hidden !important;
   width:1024px !important;
 }
-
-
 #whyscientist {
   background:url('images/5-8/scientist/why-become-scientist/el_9_1383093066.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+#whalepoo{
+  background:url('images/5-8/bluesea/todo.jpg') no-repeat;
   height:748px !important;
   overflow:hidden !important;
   width:1024px !important;

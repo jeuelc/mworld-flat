@@ -1796,3 +1796,27 @@ font-family: "Chalkboard SE";
     text-align: justify;
     top: 126px;
     width: 681px; }
+	
+	.storypagetitleetgg{
+color: #ffffff;
+    font-family: "Chalkboard SE";
+    margin-left: 42px;
+    position: absolute;
+    top: 33px;
+}
+
+.storypagetitleetgg h1 {
+    color: #ffffff;
+}
+
+.storypageetgg {
+ color: #ffffff;
+    font-family: "Chalkboard SE";
+    font-size: 18px;
+    font-weight: bold;
+    height: 356px;
+    margin-left: 42px;
+    position: absolute;
+    top: 76px;
+    width: 915px;
+}

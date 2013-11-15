@@ -1602,13 +1602,8 @@ color: #000000;
 .storypagetitleetg h1 {
     color: #000000;
 }
-#sleeps , #broken{
- background:url('images/5-8/sleeps_dreams/sleeps.jpg') no-repeat;
-  height:748px !important;
-  overflow:hidden !important;
-  width:1024px !important;
-}
-#medieval , #cooking , #marketers , #houses , #village , #wheredeygo , #peopleangkor , #angkorwat , #angkorwater , #daugan , #myths , #mystery ,#animals{
+
+#medieval , #cooking , #marketers , #houses , #village , #wheredeygo , #peopleangkor , #angkorwat , #angkorwater , #daugan , #myths , #mystery {
  background:url('images/5-8/medieval/medi.jpg') no-repeat;
   height:748px !important;
   overflow:hidden !important;
@@ -1796,39 +1791,19 @@ font-family: "Chalkboard SE";
     text-align: justify;
     top: 126px;
     width: 681px; }
-	
-	.storypagetitleetgg{
-color: #ffffff;
-    font-family: "Chalkboard SE";
-    margin-left: 42px;
-    position: absolute;
-    top: 33px;
+
+#invisible{
+  background:url('images/9-12/luminous_light/invisible/invisible.png') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
 }
 
-.storypagetitleetgg h1 {
-    color: #ffffff;
+/* -------------------- sleeps and dreams section ---------------------- */
+#sleeps , #broken , #bodyclock , #bodyclocks , #socialjetlag , #messing , #parasomnias , #notsleeping , #brokensleep , #meaningofdreams , #openeyes , #rememberingdreams , #sleepcultures , #sleepcultures , #earlybirds , #sleeptime , #howsleep , #whywesleep{
+ background:url('images/5-8/sleeps_dreams/sleeps.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
 }
 
-.storypageetgg {
- color: #ffffff;
-    font-family: "Chalkboard SE";
-    font-size: 18px;
-    font-weight: bold;
-    height: 356px;
-    margin-left: 42px;
-    position: absolute;
-    top: 76px;
-    width: 915px;
-}
-.navwherebigg-content {
-color: #000000;
-    font-family: "Chalkboard SE";
-    font-size: 18px;
-    font-weight: bold;
-    height: 220px;
-    left: 98px;
-    position: absolute;
-    text-align: center;
-    top: 251px;
-    width: 830px;
-}

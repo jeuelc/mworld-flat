@@ -1820,3 +1820,16 @@ color: #ffffff;
     top: 76px;
     width: 915px;
 }
+.navwherebigg-content {
+color: #000000;
+    font-family: "Chalkboard SE";
+    font-size: 18px;
+    font-weight: bold;
+    height: 220px;
+    left: 98px;
+    overflow-y: scroll;
+    position: absolute;
+    text-align: center;
+    top: 251px;
+    width: 830px;
+}

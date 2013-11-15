@@ -1,0 +1,110 @@
+<!-- i-C-a -->
+<div data-role="page" id="whywesleep">
+  <script src="js/slidebarwos.js"></script>
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnwos"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnwos"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnwos"></div></div>
+  <div class="infobtnholder"><div class="infobtnwos"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnwos"></div></div>
+  <div class="menubtnholder"><div class="menubtnwos"></div></div>
+  
+  <div class="navtitleholdervolcano" style="padding-top:14px;"><h1>Why do we sleep?</h1></div>
+  
+    <div data-role="content" class="kidzcontent">
+      <div class="navvolcanobig-content">
+        <p>Ever tried to stay awake long past your bedtime and suddenly woken up without realising you had even fallen asleep?  As much as you might try, you cannot fight sleep.  If your body needs sleep, you will fall asleep. </p>
+		<p>Sleep is a biological process, meaning that our bodies control it without us realising it, much like the way our bodies control our digestion system.  Our bodies also protect sleep by forcing you to sleep, even if you don't want to.</p>
+		<p>Sleep is controlled by two connected systems.  The first is called the circadian rhythm and the second is called the homeostatic drive.  </p>
+	  </div>
+        
+      <div class="navvolcanobigbtn1">
+		<p><a href="sub-sleep-and-dreams-open-eyes.html" data-transition="slide"><img src="css/images/9-12/sleep_dreams/background2.png"></a></p>
+      </div>
+      <div class="navvolcanobigbtn2">
+        <p><a href="sub-sleep-and-dreams-body-clock.html" data-transition="slide" ><img src="css/images/9-12/sleep_dreams/background2.png"></a></p>
+      </div>
+      <div class="navvolcanobigbtn3">
+        <p><a href="sub-sleep-and-dreams-during-sleep.html" data-transition="slide" ><img src="css/images/9-12/sleep_dreams/background2.png"></a></p>
+      </div>
+ <div class="botlogobigholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/The_Wonders_of_Science/bottomhomewos.png"></a></div>
+    </div> <!-- end content -->  
+    
+  
+  <!--<div class="audiopanel">-->
+    <div class="micbtnholder"><div class="micbtnwos" id="playstopwhywesleep"></div></div>
+    <div class="bwos"><div class="rwwos" id="whywesleepaudiobbtn"></div></div>
+    <div class="plwos"><div class="plpswos" id="whywesleepaudioplbtn"></div></div>
+    <div class="fwos"><div class="fwwos" id="whywesleepaudiofbtn"></div></div>
+    <div id="actualaudio-whywesleep" style="visibility:hidden;"></div>
+  <!--</div>-->
+  <script>
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    (function() {
+      playing = false;
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-whywesleep').html('<audio id="whywesleepaudio" controls preload onpause="playwhywesleep()" onplay="pausewhywesleep()"><source src="http://back.uvmate.com/sites/default/files/subjectsaudio/RevisedIntro.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#whywesleep").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+    
+    function goBack() {
+      $.mobile.changePage("sub-sleep-and-dreams.html", {transition: "slide", reverse: true });
+      bgsoundbh.pause();
+      bgsoundbh.currentTime = 0;
+      spacesoundbg.play();
+    }
+    
+    function pausedaudio() {
+      bgsoundbh.play();
+    }
+    
+    function pausebg() {
+      bgsoundbh.pause();
+    }
+    /* ******************** */
+    $("#playstopwhywesleep").on('tap', function() {
+      if(!playing) {
+        whywesleepaudio.play();
+        $('.micbtnwos').css('background-position-x', '-81px');
+        playing = true;
+      } else {
+        whywesleepaudio.pause(); whywesleepaudio.currentTime = 0;
+        $('.micbtnwos').css('background-position-x', '0px');
+        playing = false;
+      }
+    });
+    
+    $("#whywesleepaudioplbtn").on('tap', function() {
+      if(!playing) {
+        whywesleepaudio.play();
+      } else {
+        whywesleepaudio.pause();
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+    
+    $("#whywesleepaudiofbtn").on('tap', function() {
+      var ctime = whywesleepaudio.currentTime;
+      whywesleepaudio.currentTime = ctime + 10;
+    });
+    
+    $("#whywesleepaudiobbtn").on('tap', function() {
+      var ctime = whywesleepaudio.currentTime;
+      whywesleepaudio.currentTime = ctime - 10;
+    });
+    
+    $("#whywesleepaudiopsbtn").on('tap', function() {
+      whywesleepaudio.pause();
+      //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+    
+    $('.navwhywesleepbigbtn1').on('tap', function() { 
+      nav1Effects(); 
+    });
+  </script>
+</div> <!--//home-->

@@ -1,0 +1,98 @@
+<!-- i-C-a -->
+<div id="sleepneeded" data-role="page">
+  <script src="js/slidebarbh.js"></script>
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnbh"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnbh"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnbh"></div></div>
+  <div class="infobtnholder"><div class="infobtnbh"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnbh"></div></div>
+  <div class="menubtnholder"><div class="menubtnbh"></div></div>
+  <div id="spacechar">&nbsp;
+    <div data-role="content" class="kidzcontent">
+      <div class="v-spacer"></div>
+      <div class="sidebarleft-half">
+      <!--<div id="sgl" style="width:141px;height:112px;left:210px;top:362px;background:transparent;position:absolute;z-index:99999;"></div>
+        <div id="snl" style="width:141px;height:112px;left:128px;top:485px;background:transparent;position:absolute;z-index:99999;"></div>
+        <div id="nsl" style="width:176px;height:106px;left:388px;top:283px;background:transparent;position:absolute;z-index:99999;"></div>
+        <div id="bhl" style="width:165px;height:117px;left:498px;top:467px;background:transparent;position:absolute;z-index:99999;"></div>
+		<div id="dsl" style="width:176px;height:106px;left:735px;top:217px;background:transparent;position:absolute;z-index:99999;"></div>
+        <div id="ehl" style="width:165px;height:110px;left:844px;top:415px;background:transparent;position:absolute;z-index:99999;"></div>
+      </div>-->
+      <div class="storypagetitlehuman"><h1>How much sleep do you need?</h1></div>
+      <div class="storypageetg">
+		<p>How much sleep you need depends on how old you are.  A new-born baby needs the most; they need 16-18 hours in every 24 hours!  A two or three year-old needs about 12-14 hours per 24 hours. Between five and 10 years you should be getting 10-12 hours sleep and as a teenager, you need about 9-10 hours sleep per night.  An adult only needs between seven and nine hours a night.</p>
+		<p>Some people need more than this and some people need less.  The secret to knowing how much sleep you need is to understand how you feel during the day.  If you are tired, grumpy, or having trouble learning and listening, and don't really feel like doing anything, then maybe you need more sleep!</p>
+	  </div>
+      <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/5-8/bottomhomebh.png"></a></div>
+    </div><!--end of content-->
+  </div><!--/spacechar-->
+  
+  <div class="micbtnholder"><div class="micbtnbh"></div></div>
+  <div class="bbh"><div class="rwbh" id="sleepneededaudiobbtn"></div></div>
+  <div class="plbh"><div class="plpsbh" id="sleepneededaudioplbtn"></div></div>
+  <div class="fbh"><div class="fwbh" id="sleepneededaudiofbtn" ></div></div>
+  <div id="actualaudio-sleepneeded" style="visibility:hidden;"></div>
+  <script>
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+        (function() {
+          playing = false;
+           /* $('#node-body-minoans').html(data[0].Body);*/
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-sleepneeded').html('<audio controls preload id="sleepneededaudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/sleepneededlife.mp3" type="audio/mpeg"></audio>');
+      } 
+      
+      $("#sleepneeded").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+  //  $("#sgl").on('tap', function() {$.mobile.changePage("sub-medieval- metropolis-sleepneededlife-angkor-cooking.html", {transition:"slide"}); });
+  // $("#snl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-sleepneededlife-angkor-marketers.html", {transition:"slide"}); });
+  //  $("#nsl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-sleepneededlife-angkor-village.html", {transition:"slide"}); });
+  //  $("#bhl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-sleepneededlife-angkor-fashion.html", {transition:"slide"}); });
+	// $("#dsl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-sleepneededlife-angkor-houses.html", {transition:"slide"}); });
+	//  $("#ehl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-sleepneededlife-angkor-animals.html", {transition:"slide"}); });
+    
+   $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+   function goBack() {
+      $.mobile.changePage("sub-sleeps-and-dreams-how-do-we-sleep.html");
+    }
+    
+    function pausedaudio() {
+      bgsoundbh.play();
+    }
+    
+    function pausebg() {
+      bgsoundbh.pause();
+    }
+    /* ******************** */
+    $("#sleepneededaudioplbtn").on('tap', function() {
+      //comefromaudio.play();
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+      if(!playing) {
+        sleepneededaudio.play();
+        $('.micbtnbh').css('background-position-x', '-81px');
+        playing = true;
+      } else {
+        sleepneededaudio.pause();
+        $('.micbtnbh').css('background-position-x', '0px');
+        playing = false;
+      }
+    });
+    
+    $("#sleepneededaudiofbtn").on('tap', function() {
+      var ctime = sleepneededaudio.currentTime;
+      sleepneededaudio.currentTime = ctime + 10;
+    });
+    
+    $("#sleepneededaudiobbtn").on('tap', function() {
+      var ctime = sleepneededaudio.currentTime;
+      sleepneededaudio.currentTime = ctime - 10;
+    });
+    
+    $("#sleepneededaudiopsbtn").on('tap', function() {
+      sleepneededaudio.pause();
+      $(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+  </script>
+</div>

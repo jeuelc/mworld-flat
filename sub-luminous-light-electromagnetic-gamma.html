@@ -1,0 +1,131 @@
+<!-- i-C-a -->
+<div id="gammarays" data-role="page">
+  <script src="js/slidebarbh.js"></script>
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnbh"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnbh"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnbh"></div></div>
+  <div class="infobtnholder"><div class="infobtnbh"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnbh"></div></div>
+  <div class="menubtnholder"><div class="menubtnbh"></div></div>
+    <script src="js/hammer.js"></script>
+    <script src="js/jquery.hammer.js"></script>
+   <!-- <div id="bonus-ags" class="talkbubble" style="background:url(css/images/5-8/volcanoes/placeholder-background.jpg) no-repeat; width:473px;height:296px;position:absolute;left:500px;top:40px;visibility:hidden;"></div>--><!--/bonus-ags-->
+    <div class="bptitleholder" style="padding-top:14px;"><h1>Gamma Rays</h1></div>
+    <div id="anisold">
+        <div id="spacechar">&nbsp;
+            <div data-role="content" class="kidzcontent">
+                <div class="v-volcano"></div>
+                  <div class="sidebarleft-half">
+                     <div id="zoomwrapper">
+                        <div id="pol1" class="pPiece" style="left:100px;top:270px;">
+                           <img src="css/images/9-12/luminous_light/whatisit/electromagnetic/gamma/cosmic_rays.png" alt="" />
+                        </div>
+                     </div><!--/zoomwrapper-->
+                </div>
+                <div class="bpcontentvolcano">
+                    <p>Gamma rays are one of the most high-energy types of invisible light.  A gamma ray has more energy than other forms of visible or invisible light.  Gamma rays are made by certain unstable atoms.  These atoms are called radioactive, and some of them send out gamma rays.  Gamma rays also come to us from outer space!  There are special gamma ray telescopes that can take images of outer space using gamma rays!</p>
+					<p>High energy gamma rays from space can also make a kind of avalanche.  Instead of this avalanche being made from snow, a gamma-ray avalanche is caused when a gamma ray from space hits particles of air very high in the sky.  This can break the particles of air into pieces.  These pieces fly off at very high speed and can break up even more air particles.  Soon you have an avalanche of broken air particles, and other particles, caused by the gamma ray from space!</p>
+				</div>
+                <!-- <div data-role="popup" id="imongnawong" data-position-to="window" data-overlay-theme="a" style="text-align:center;">
+                  <div id="node-pop">
+                     <p>What is an orbit?</p>
+                     <p>Does gravity always pull objects together? It does, but this doesn't always result in objects colliding with each other. If objects are set in motion, then they can orbit one another.  That means they circle around each other.</p>
+                     <p>A satellite travels so fast horizontally that instead of crashing to Earth, the satellite ends up circling the Earth instead.  The Planets in our Solar System have orbited the Sun for billions of years!</p>
+                  </div> 
+                </div>-->
+                <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/5-8/bottomhomebh.png"></a></div>
+            </div><!--end of content-->
+        </div>
+    </div><!--/anisold-->
+     
+    <div class="micbtnholder"><div class="micbtnbh"></div></div>
+    <div class="bbh"><div class="rwbh" id="gammaraysaudiobbtn"></div></div>
+    <div class="plbh"><div class="plpsbh" id="gammaraysaudioplbtn"></div></div>
+    <div class="fbh"><div class="fwbh" id="gammaraysaudiofbtn" ></div></div>
+    <div id="actualaudio-gammarays" style="visibility:hidden;"></div>
+    
+    <script>
+        sound = new Audio();
+        soundpop = new Audio();
+        var playing;
+        (function() {
+          playing = false;
+            $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
+            $('div#pol1').css("z-index", 2);
+            $('div#pol2').css("z-index", 1);
+            $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
+            $('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
+           
+           
+             if(sound.canPlayType('audio/mpeg')) {
+                 $('#actualaudio-gammarays').html('<audio controls preload id="gammaraysaudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/gamma.mp3" type="audio/mpeg"></audio>');
+             } 
+             
+    
+            $("#gammarays").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    
+        })();
+        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+    
+        function goBack() {
+            $.mobile.changePage("sub-luminous-light-electromagnetic.html");
+        }
+        
+       function pausedaudio() {
+         bgsoundbh.play();
+       }
+       
+       function pausebg() {
+         bgsoundbh.pause();
+       }
+       
+   // $("#pol3").on('tap', function() {
+//      $.mobile.changePage("sub-space-bh-binaries.html", {transition: "slide"});
+//    });
+//    
+    $("#pol1").on('tap', function() {
+      $.mobile.changePage("sub-luminous-light-electromagnetic-gamma-spot-light.html", {transition: "slide"});
+    });
+	
+	//$("#pol2").on('tap', function() {
+    //  $.mobile.changePage("sub-sleep-and-dreams-broken-gammarays-social-jetlag.html", {transition: "slide"});
+    //});
+      
+
+/* ******************** */
+    $("#gammaraysaudioplbtn").on('tap', function() {
+	 var gammaraysaudio = new Audio();
+      //lifeabhaudio.play();
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+      if(!playing) {
+        gammaraysaudio.play();
+        $('.micbtnbh').css('background-position-x', '-81px');
+        playing = true;
+      } else {
+        gammaraysaudio.pause();
+        $('.micbtnbh').css('background-position-x', '0px');
+        playing = false;
+      }
+    });
+    
+    $("#gammaraysaudiofbtn").on('tap', function() {
+	 var gammaraysaudio = new Audio();
+      var ctime = gammaraysaudio.currentTime;
+      gammaraysaudio.currentTime = ctime + 10;
+    });
+    
+    $("#gammaraysaudiobbtn").on('tap', function() {
+	 var gammaraysaudio = new Audio();
+      var ctime = gammaraysaudio.currentTime;
+      gammaraysaudio.currentTime = ctime - 10;
+    });
+    
+    $("#gammaraysaudiopsbtn").on('tap', function() {
+	 var gammaraysaudio = new Audio();
+      gammaraysaudio.pause();
+      $(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });       
+                
+  </script><script src="js/threecardLogic.js"></script>
+</div>

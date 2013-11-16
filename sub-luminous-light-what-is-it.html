@@ -1,0 +1,110 @@
+<!-- i-C-a -->
+<div data-role="page" id="whatisit">
+  <script src="js/slidebarwos.js"></script>
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnwos"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnwos"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnwos"></div></div>
+  <div class="infobtnholder"><div class="infobtnwos"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnwos"></div></div>
+  <div class="menubtnholder"><div class="menubtnwos"></div></div>
+  
+  <div class="navtitleholdervolcano" style="padding-top:14px;"><h1>What is it?</h1></div>
+  
+    <div data-role="content" class="kidzcontent">
+      <div class="navvolcanobig-content">
+        <p>What is light?  Light is a form of energy which moves through space.  How do we know it carries energy?  Because our faces feel warm when we stand outside on a sunny day!</p>
+		<p>Light moves very quickly.  It moves so fast that, in one second, a light beam could run around the whole world seven times!</p>
+		<p>Light lets us see the world around us.  Light has many colours.  Most of the light on Earth comes from the Sun, but we can also make light with light bulbs and candles.  See if you can name three other ways of making light.</p>
+	  </div>
+        
+      <div class="navvolcanobigbtn1">
+		<p><a href="sub-luminous-light-electromagnetic.html" data-transition="slide"><img src="css/images/9-12/luminous_light/whatisit/electromagnetic.png"></a></p>
+      </div>
+      <div class="navvolcanobigbtn2">
+        <p><a href="sub-luminous-light-no-light-no-life.html" data-transition="slide" ><img src="css/images/9-12/luminous_light/whatisit/no_light_no_life.png"></a></p>
+      </div>
+      <div class="navvolcanobigbtn3">
+        <p><a href="sub-luminous-light-super-bright-light.html" data-transition="slide" ><img src="css/images/9-12/luminous_light/whatisit/super_bright_light.png"></a></p>
+      </div>
+ <div class="botlogobigholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/The_Wonders_of_Science/bottomhomewos.png"></a></div>
+    </div> <!-- end content -->  
+    
+  
+  <!--<div class="audiopanel">-->
+    <div class="micbtnholder"><div class="micbtnwos" id="playstopwhatisit"></div></div>
+    <div class="bwos"><div class="rwwos" id="whatisitaudiobbtn"></div></div>
+    <div class="plwos"><div class="plpswos" id="whatisitaudioplbtn"></div></div>
+    <div class="fwos"><div class="fwwos" id="whatisitaudiofbtn"></div></div>
+    <div id="actualaudio-whatisit" style="visibility:hidden;"></div>
+  <!--</div>-->
+  <script>
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    (function() {
+      playing = false;
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-luminouslight').html('<audio id="luminouslightaudio" controls preload onpause="playbh()" onplay="pausebh()"><source src="http://deftsoft.info/appvendo/mw/audio/whatisit.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#whatisit").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+    
+    function goBack() {
+      $.mobile.changePage("sub-luminous-light.html", {transition: "slide", reverse: true });
+      bgsoundbh.pause();
+      bgsoundbh.currentTime = 0;
+      spacesoundbg.play();
+    }
+    
+    function pausedaudio() {
+      bgsoundbh.play();
+    }
+    
+    function pausebg() {
+      bgsoundbh.pause();
+    }
+    /* ******************** */
+    $("#playstopwhatisit").on('tap', function() {
+      if(!playing) {
+        whatisitaudio.play();
+        $('.micbtnwos').css('background-position-x', '-81px');
+        playing = true;
+      } else {
+        whatisitaudio.pause(); whatisitaudio.currentTime = 0;
+        $('.micbtnwos').css('background-position-x', '0px');
+        playing = false;
+      }
+    });
+    
+    $("#whatisitaudioplbtn").on('tap', function() {
+      if(!playing) {
+        whatisitaudio.play();
+      } else {
+        whatisitaudio.pause();
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+    
+    $("#whatisitaudiofbtn").on('tap', function() {
+      var ctime = whatisitaudio.currentTime;
+      whatisitaudio.currentTime = ctime + 10;
+    });
+    
+    $("#whatisitaudiobbtn").on('tap', function() {
+      var ctime = whatisitaudio.currentTime;
+      whatisitaudio.currentTime = ctime - 10;
+    });
+    
+    $("#whatisitaudiopsbtn").on('tap', function() {
+      whatisitaudio.pause();
+      //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+    
+    $('.navwhatisitbigbtn1').on('tap', function() { 
+      nav1Effects(); 
+    });
+  </script>
+</div> <!--//home-->

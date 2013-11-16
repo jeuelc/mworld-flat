@@ -303,7 +303,11 @@ a.fun.bsubjectlink { background:url("images/5-8/Home_Screen/bfun.png") no-repeat
   float:left;
   z-index:9999;
 }
-
+.sidebarright-half {
+  width:50%;
+  float:right;
+  z-index:9999;
+}
 .kidzcontent {
   margin-top:90px;
 }
@@ -1006,6 +1010,16 @@ a.fun.bsubjectlink { background:url("images/5-8/Home_Screen/bfun.png") no-repeat
   line-height:32px;
 }
 
+.navtitleholder_custom {
+    height: 68px;
+    left: 296px;
+    line-height: 32px;
+    position: absolute;
+    text-align: center;
+    top: 80px;
+    width: 410px;
+}
+
 .navtitleholderbh {
   width:553px;
   height:68px;
@@ -1589,7 +1603,7 @@ color: #000000;
     top: 33px;
 }
 .storypageetg {
- color: #000000;
+	color: #000000;
     font-family: "Chalkboard SE";
     font-size: 18px;
     font-weight: bold;
@@ -1598,6 +1612,35 @@ color: #000000;
     position: absolute;
     top: 76px;
     width: 915px;
+}
+
+.storypageetg_sunset{
+	color: #FFFFFF;
+    font-family: "Comic Sans MS";
+    font-size: 18px;
+    font-weight: bold;
+    height: 300px;
+    margin-left: 40px;
+    position: absolute;
+    text-align: center;
+    top: 50px;
+    width: 84%;
+}
+.storypageetg_custom{
+	color: #000000;
+    font-family: "Chalkboard SE";
+    font-size: 18px;
+    font-weight: bold;
+    height: 384px;
+    margin-left: 7px;
+    position: absolute;
+    text-align: center;
+    top: 126px;
+    width: 40%;
+}
+
+.storypageetg_custom p {
+    color: #03FDFC;
 }
 .storypagetitleetg h1 {
     color: #000000;
@@ -1666,6 +1709,12 @@ color: #000000;
   top:221px;
 }
 
+.navpeoplebtn5_custom {
+  position:absolute;
+  right:395px;
+  top:221px;
+}
+
 .navpeoplebtn4 {
   position:absolute;
   left:690px;
@@ -1682,7 +1731,18 @@ color: #000000;
   top:263px;
   width:410px;
   height:166px;
- /* overflow-y:scroll;*/
+  text-align:left;
+  font-family:"Chalkboard SE";
+  font-size:18px;
+  font-weight:bold;
+}
+
+.navpeople-content_custom {
+  position:absolute;
+  left:305px;
+  top:208px;
+  width:410px;
+  height:166px;
   text-align:left;
   font-family:"Chalkboard SE";
   font-size:18px;
@@ -1732,11 +1792,107 @@ color: #000000;
   width:1024px !important;
 }
 .storypagetitlehuman {
-color: #000000;
+	color: #000000;
     font-family: "Chalkboard SE";
     margin-left: 243px;
     position: absolute;
     top: 33px;
+}
+
+.storypagetitlehuman_electromagnetic{
+	color: #000000;
+    font-family: "Comic Sans MS";
+    margin-left: 134px;
+    position: absolute;
+    top: 10px;
+}
+
+.storypagetitlehuman_electromagnetic h1{
+    color: #02FEFF;
+    font-family: "Comic Sans MS";
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    text-transform: uppercase;
+}
+
+.storypagetitlehuman_sunset{
+	color: #000000;
+    font-family: "Chalkboard SE";
+    margin-left: 256px;
+    position: absolute;
+    top: 10px;
+}
+
+.storypagetitlehuman_sunset h1 {
+    color: #ffffff;
+    font-family: "Comic Sans MS";
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    text-transform: uppercase;
+}
+.storypagetitlehuman_lookingback {
+    color: #000000;
+    font-family: "comic sans";
+    margin-left: 534px;
+    position: absolute;
+    top: 69px;
+}
+.storypagetitlehuman_lookingback h1{
+    color: #FFFFFF;
+    font-family: "Comic Sans MS";
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    text-transform: uppercase;
+}
+.storypagetitlehuman_nolight_nolife{
+	color: #000000;
+    font-family: "Chalkboard SE";
+    margin-left: 345px;
+    position: absolute;
+    top: 33px;
+}
+.storypagetitlehuman_custom {
+	color: #000000;
+    font-family: "Chalkboard SE";
+    margin-left: 243px;
+    position: absolute;
+    top: 33px;
+}
+
+.storypagetitlehuman_custom h1{
+	color: #03FDFC;
+    font-family: "Chalkboard SE";
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-left: 48px;
+    margin-right: 0;
+    margin-top: 10px;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    text-transform: uppercase;
 }
 #dive{
  background:url('images/5-8/bluesea/dive.jpg') no-repeat;
@@ -1781,6 +1937,43 @@ color: #000000;
     top: 126px;
     width: 70%;
 }
+
+.storypageetg_electromagnetic{
+	color: #00FFFE;
+    font-family: "Comic Sans MS";
+    font-size: 18px;
+    height: 356px;
+    margin-left: 0;
+    position: absolute;
+    text-align: center;
+    top: 373px;
+    width: 50%;
+}
+
+.storypageetg_lookingback {
+    color: #FFFFFF;
+    font-family: "Comic Sans MS";
+    font-size: 18px;
+    height: 356px;
+    margin-left: 526px;
+    position: absolute;
+    text-align: center;
+    top: 155px;
+    width: 42%;
+}
+.storypageetg_nolight_nolife{
+	color: #000000;
+    font-family: "Chalkboard SE";
+    font-size: 18px;
+    font-weight: bold;
+    height: 356px;
+    margin-left: 26px;
+    position: absolute;
+    text-align: center;
+    top: 101px;
+    width: 70%;
+}
+
 .why-become-scientist-content {
 font-family: "Chalkboard SE";
     font-size: 18px;
@@ -1801,9 +1994,51 @@ font-family: "Chalkboard SE";
 
 /* -------------------- sleeps and dreams section ---------------------- */
 #sleeps , #broken , #bodyclock , #bodyclocks , #socialjetlag , #messing , #parasomnias , #notsleeping , #brokensleep , #meaningofdreams , #openeyes , #rememberingdreams , #sleepcultures , #sleepcultures , #earlybirds , #sleeptime , #howsleep , #whywesleep{
- background:url('images/5-8/sleeps_dreams/sleeps.jpg') no-repeat;
+  background:url('images/5-8/sleeps_dreams/sleeps.jpg') no-repeat;
   height:748px !important;
   overflow:hidden !important;
   width:1024px !important;
 }
 
+
+#lookingback{
+  background:url('images/9-12/luminous_light/seeing/looking_back/lookingback.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+#sunsetred{
+  background:url('images/9-12/luminous_light/seeing/sunset_red/sunsetred.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+#electromagnetic{
+  background:url('images/9-12/luminous_light/whatisit/electromagnetic/electromagnetic.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+#nolightnolife{
+  background:url('images/9-12/luminous_light/whatisit/nolightnolife/nolightnolife.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+#brightlight{
+  background:url('images/9-12/luminous_light/whatisit/brightlight/bright_light.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+#weather , #prepared , #weather_change , #safed , #storm{
+  background:url('images/5-8/weather/extreme_weather.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}

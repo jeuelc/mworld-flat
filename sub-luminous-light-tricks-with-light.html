@@ -1,0 +1,115 @@
+<!-- i-C-a -->
+<div data-role="page" id="trickswithlight">
+  <script src="js/slidebarwos.js"></script>
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnwos"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnwos"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnwos"></div></div>
+  <div class="infobtnholder"><div class="infobtnwos"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnwos"></div></div>
+  <div class="menubtnholder"><div class="menubtnwos"></div></div>
+  
+  <div class="navtitleholder" style="padding-top:14px;"><h1>Tricks with light</h1></div>
+  
+    <div data-role="content" class="kidzcontent">
+      <div class="navpeople-content">
+         <p>Light can play tricks on us!  When we look at ourselves in a mirror that has a wavy surface, we look funny!  When we look at the surface of the road on a hot day, it seems to shimmer like the surface of water on a sunny day!  Sometimes, in the desert, this heat shimmer above the surface of hot sand can look like there is water present when there is nothing but sand!  This is called a "mirage".</p>
+		 <p>There are many other tricks of light too.</p>			
+      </div>
+        
+      <div class="navpeoplebtn1">
+  <p><a href="sub-luminous-light-tricks-with-light-bioluminescence.html" data-transition="slide"><img src="css/images/9-12/sleep_dreams/background2.png"></a></p>
+      </div>
+      <div class="navpeoplebtn2">
+        <p><a href="sub-luminous-light-tricks-with-light-circus-mirrors.html" data-transition="slide" ><img src="css/images/9-12/sleep_dreams/background2.png"></a></p>
+      </div>
+      <div class="navpeoplebtn3">
+        <p><a href="sub-luminous-light-tricks-with-light-holograms.html" data-transition="slide" ><img src="css/images/9-12/sleep_dreams/background2.png"></a></p>
+      </div>
+      <div class="navpeoplebtn4">
+        <p><a href="sub-luminous-light-tricks-with-light-iridescence.html" data-transition="slide" ><img src="css/images/9-12/sleep_dreams/background2.png"></a></p>
+      </div>
+	   <div class="navpeoplebtn5">
+        <p><a href="sub-luminous-light-tricks-with-light-refrection.html" data-transition="slide" ><img src="css/images/9-12/sleep_dreams/background2.png"></a></p>
+      </div>
+      <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/The_Wonders_of_Science/bottomhomewos.png"></a></div>
+    </div> <!-- end content -->  
+    
+  
+  <!--<div class="audiopanel">-->
+    <div class="micbtnholder"><div class="micbtnwos" id="playstoptrickswithlight"></div></div>
+    <div class="bwos"><div class="rwwos" id="trickswithlightaudiobbtn"></div></div>
+    <div class="plwos"><div class="plpswos" id="trickswithlightaudioplbtn"></div></div>
+    <div class="fwos"><div class="fwwos" id="trickswithlightaudiofbtn"></div></div>
+    <div id="actualaudio-trickswithlight" style="visibility:hidden;"></div>
+  <!--</div>-->
+  <script>
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    (function() {
+      playing = false;
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-trickswithlight').html('<audio id="trickswithlightaudio" controls preload onpause="playbh()" onplay="pausebh()"><source src="http://deftsoft.info/appvendo/mw/audio/trickswithlight.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#trickswithlight").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+    
+    function goBack() {
+      $.mobile.changePage("sub-luminous-light.html", {transition: "slide", reverse: true });
+      bgsoundbh.pause();
+      bgsoundbh.currentTime = 0;
+      spacesoundbg.play();
+    }
+    
+    function pausedaudio() {
+      bgsoundbh.play();
+    }
+    
+    function pausebg() {
+      bgsoundbh.pause();
+    }
+    /* ******************** */
+    $("#playstoptrickswithlight").on('tap', function() {
+      if(!playing) {
+        trickswithlightaudio.play();
+        $('.micbtnwos').css('background-position-x', '-81px');
+        playing = true;
+      } else {
+        trickswithlightaudio.pause(); volcanoaudio.currentTime = 0;
+        $('.micbtnwos').css('background-position-x', '0px');
+        playing = false;
+      }
+    });
+    
+    $("#trickswithlightaudioplbtn").on('tap', function() {
+      if(!playing) {
+        trickswithlightaudio.play();
+      } else {
+        trickswithlightaudio.pause();
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+    
+    $("#trickswithlightaudiofbtn").on('tap', function() {
+      var ctime = trickswithlightaudio.currentTime;
+      trickswithlightaudio.currentTime = ctime + 10;
+    });
+    
+    $("#trickswithlightaudiobbtn").on('tap', function() {
+      var ctime = trickswithlightaudio.currentTime;
+      trickswithlightaudio.currentTime = ctime - 10;
+    });
+    
+    $("#trickswithlightaudiopsbtn").on('tap', function() {
+      trickswithlightaudio.pause();
+      //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+    
+    $('.navbtn1').on('tap', function() { 
+      nav1Effects(); 
+    });
+  </script>
+</div> <!--//home-->

@@ -1,0 +1,111 @@
+<!-- i-C-a -->
+<div data-role="page" id="definition">
+  <script src="js/slidebarwos.js"></script>
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnwos"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnwos"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnwos"></div></div>
+  <div class="infobtnholder"><div class="infobtnwos"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnwos"></div></div>
+  <div class="menubtnholder"><div class="menubtnwos"></div></div>
+  
+  <div class="navtitleholdervolcano" style="padding-top:14px;"><h1>What is weather?</h1></div>
+  
+    <div data-role="content" class="kidzcontent">
+      <div class="navvolcanobig-content">
+         <p>What do you feel when you go outside?  Are you hot, or cold?  Does your hair get blown around?  Is the sun shining?  Or is it hiding behind the clouds? </p>
+        <p>What you see and feel around you is the weather.  It happens in the sky in every minute of every day, even when you are sleeping.  Weather is sunshine, wind, rain, clouds, heat and cold. </p>
+        <p>So, why do we have weather?  We have weather because we have an atmosphere, which is a blanket of gases that surrounds the Earth.  The atmosphere is full of wonderful stuff like oxygen, which we need to breathe, and water vapour, which forms rain. </p>	
+		<p>It's the swirling of our atmosphere that makes and moves clouds and causes wind and rain, which together make the weather.  What is the weather like where you are?</p>					
+      </div>
+        
+      <div class="navvolcanobigbtn1">
+  <p><a href="sub-weather-definition-under-pressure.html" data-transition="slide"><img src="css/images/9-12/weather/pressure.png"></a></p>
+      </div>
+      <div class="navvolcanobigbtn2">
+        <p><a href="sub-weather-definition-wacky-weather.html" data-transition="slide" ><img src="css/images/9-12/weather/wacky.png"></a></p>
+      </div>
+      <div class="navvolcanobigbtn3">
+        <p><a href="sub-weather-definition-tell-future.html" data-transition="slide" ><img src="css/images/9-12/sleep_dreams/background2.png"></a></p>
+      </div>
+ <div class="botlogobigholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/The_Wonders_of_Science/bottomhomewos.png"></a></div>
+    </div> <!-- end content -->  
+    
+  
+  <!--<div class="audiopanel">-->
+    <div class="micbtnholder"><div class="micbtnwos" id="playstopdefinition"></div></div>
+    <div class="bwos"><div class="rwwos" id="definitionaudiobbtn"></div></div>
+    <div class="plwos"><div class="plpswos" id="definitionaudioplbtn"></div></div>
+    <div class="fwos"><div class="fwwos" id="definitionaudiofbtn"></div></div>
+    <div id="actualaudio-definition" style="visibility:hidden;"></div>
+  <!--</div>-->
+  <script>
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    (function() {
+      playing = false;
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-definition').html('<audio id="definitionaudio" controls preload onpause="playdefinition()" onplay="pausedefinition()"><source src="http://deftsoft.info/appvendo/mw/audio/definition.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#definition").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+    
+    function goBack() {
+      $.mobile.changePage("sub-extreme-weather.html", {transition: "slide", reverse: true });
+      bgsoundbh.pause();
+      bgsoundbh.currentTime = 0;
+      spacesoundbg.play();
+    }
+    
+    function pausedaudio() {
+      bgsoundbh.play();
+    }
+    
+    function pausebg() {
+      bgsoundbh.pause();
+    }
+    /* ******************** */
+    $("#playstopdefinition").on('tap', function() {
+      if(!playing) {
+        definitionaudio.play();
+        $('.micbtnwos').css('background-position-x', '-81px');
+        playing = true;
+      } else {
+        definitionaudio.pause(); definitionaudio.currentTime = 0;
+        $('.micbtnwos').css('background-position-x', '0px');
+        playing = false;
+      }
+    });
+    
+    $("#definitionaudioplbtn").on('tap', function() {
+      if(!playing) {
+        definitionaudio.play();
+      } else {
+        definitionaudio.pause();
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+    
+    $("#definitionaudiofbtn").on('tap', function() {
+      var ctime = definitionaudio.currentTime;
+      definitionaudio.currentTime = ctime + 10;
+    });
+    
+    $("#definitionaudiobbtn").on('tap', function() {
+      var ctime = definitionaudio.currentTime;
+      definitionaudio.currentTime = ctime - 10;
+    });
+    
+    $("#definitionaudiopsbtn").on('tap', function() {
+      definitionaudio.pause();
+      //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+    
+    $('.navdefinitionbigbtn1').on('tap', function() { 
+      nav1Effects(); 
+    });
+  </script>
+</div> <!--//home-->

@@ -1,0 +1,98 @@
+<!-- i-C-a -->
+<div id="brightlight" data-role="page">
+  <script src="js/slidebarbh.js"></script>
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnbh"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnbh"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnbh"></div></div>
+  <div class="infobtnholder"><div class="infobtnbh"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnbh"></div></div>
+  <div class="menubtnholder"><div class="menubtnbh"></div></div>
+  <div id="spacechar">&nbsp;
+    <div data-role="content" class="kidzcontent">
+      <div class="v-spacer"></div>
+      <div class="sidebarleft-half">
+      <!--<div id="sgl" style="width:141px;height:112px;left:210px;top:362px;background:transparent;position:absolute;z-index:99999;"></div>
+        <div id="snl" style="width:141px;height:112px;left:128px;top:485px;background:transparent;position:absolute;z-index:99999;"></div>
+        <div id="nsl" style="width:176px;height:106px;left:388px;top:283px;background:transparent;position:absolute;z-index:99999;"></div>
+        <div id="bhl" style="width:165px;height:117px;left:498px;top:467px;background:transparent;position:absolute;z-index:99999;"></div>
+		<div id="dsl" style="width:176px;height:106px;left:735px;top:217px;background:transparent;position:absolute;z-index:99999;"></div>
+        <div id="ehl" style="width:165px;height:110px;left:844px;top:415px;background:transparent;position:absolute;z-index:99999;"></div>
+      </div>-->
+      <div class="storypagetitlehuman_custom"><h1>Super bright light!</h1></div>
+      <div class="storypageetg_custom">
+			<p>We can make very bright beams of light.  A laser is a good example.  The red laser pointer you can buy in shops is a very bright beam of light.  Some lasers that are so bright they can be used to cut steel!  This is super-bright light!</p>
+			<p>Another form of super-bright light is when a star explodes.  Such an explosion is called a supernova.  When a star explodes in this way, it sometimes makes such a super-bright burst of light that the exploding star can been seen during the day!  Another form of super-bright light is the military laser, which can be used to destroy missiles.</p>
+	  </div>
+      <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/5-8/bottomhomebh.png"></a></div>
+    </div><!--end of content-->
+  </div><!--/spacechar-->
+  
+  <div class="micbtnholder"><div class="micbtnbh"></div></div>
+  <div class="bbh"><div class="rwbh" id="brightlightaudiobbtn"></div></div>
+  <div class="plbh"><div class="plpsbh" id="brightlightaudioplbtn"></div></div>
+  <div class="fbh"><div class="fwbh" id="brightlightaudiofbtn" ></div></div>
+  <div id="actualaudio-brightlight" style="visibility:hidden;"></div>
+  <script>
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+        (function() {
+          playing = false;
+           /* $('#node-body-minoans').html(data[0].Body);*/
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-brightlight').html('<audio controls preload id="brightlightaudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/brightlight.mp3" type="audio/mpeg"></audio>');
+      } 
+      
+      $("#brightlight").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+  //  $("#sgl").on('tap', function() {$.mobile.changePage("sub-medieval- metropolis-brightlightlife-angkor-cooking.html", {transition:"slide"}); });
+  // $("#snl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-brightlightlife-angkor-marketers.html", {transition:"slide"}); });
+  //  $("#nsl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-brightlightlife-angkor-village.html", {transition:"slide"}); });
+  //  $("#bhl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-brightlightlife-angkor-fashion.html", {transition:"slide"}); });
+	// $("#dsl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-brightlightlife-angkor-houses.html", {transition:"slide"}); });
+	//  $("#ehl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-brightlightlife-angkor-animals.html", {transition:"slide"}); });
+    
+   $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+   function goBack() {
+      $.mobile.changePage("sub-luminous-light-seeing.html");
+    }
+    
+    function pausedaudio() {
+      bgsoundbh.play();
+    }
+    
+    function pausebg() {
+      bgsoundbh.pause();
+    }
+    /* ******************** */
+    $("#brightlightaudioplbtn").on('tap', function() {
+      //comefromaudio.play();
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+      if(!playing) {
+        brightlightaudio.play();
+        $('.micbtnbh').css('background-position-x', '-81px');
+        playing = true;
+      } else {
+        brightlightaudio.pause();
+        $('.micbtnbh').css('background-position-x', '0px');
+        playing = false;
+      }
+    });
+    
+    $("#brightlightaudiofbtn").on('tap', function() {
+      var ctime = brightlightaudio.currentTime;
+      brightlightaudio.currentTime = ctime + 10;
+    });
+    
+    $("#brightlightaudiobbtn").on('tap', function() {
+      var ctime = brightlightaudio.currentTime;
+      brightlightaudio.currentTime = ctime - 10;
+    });
+    
+    $("#brightlightaudiopsbtn").on('tap', function() {
+      brightlightaudio.pause();
+      $(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+  </script>
+</div>

@@ -1,0 +1,114 @@
+<!-- i-C-a -->
+<div data-role="page" id="seeing">
+  <script src="js/slidebarwos.js"></script>
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnwos"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnwos"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnwos"></div></div>
+  <div class="infobtnholder"><div class="infobtnwos"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnwos"></div></div>
+  <div class="menubtnholder"><div class="menubtnwos"></div></div>
+  
+  <div class="navtitleholder" style="padding-top:14px;"><h1>Seeing</h1></div>
+  
+    <div data-role="content" class="kidzcontent">
+      <div class="nav-content">
+        <p>You use light to see the world around you!  How does this work?</p>
+		<p>Suppose you are standing outside, looking at the green leaves of a tree.  Light made inside the sun travels all the way from the sun to the leaves of the tree.  This sunlight is made up of all colours of light, but when it bounces off the leaves it is mainly the green light which comes out.  This is why leaves look green!</p>
+		<p>The green light that bounces off the leaves then travels to your eye.  There is a lens in the front of your eye which makes a picture of the tree on the back of your eye.  This picture is then detected by your brain.  This is how light is used to see the world around you!</p>
+	  </div>
+        
+      <div class="navbtn1">
+		<p><a href="sub-luminous-light-seeing-augmented-sight.html" data-transition="slide"><img src="css/images/9-12/luminous_light/seeing/augmented.png"></a></p>
+      </div>
+      <div class="navbtn2">
+        <p><a href="sub-luminous-light-seeing-colours.html" data-transition="slide" ><img src="css/images/9-12/luminous_light/seeing/colours.png"></a></p>
+      </div>
+      <div class="navbtn3">
+        <p><a href="sub-luminous-light-seeing-looking-back.html" data-transition="slide" ><img src="css/images/9-12/luminous_light/seeing/lookingback.png"></a></p>
+      </div>
+      <div class="navbtn4">
+        <p><a href="sub-luminous-light-seeing-why-is-sunset-red.html" data-transition="slide" ><img src="css/images/9-12/luminous_light/seeing/sunset.png"></a></p>
+      </div>
+        
+      <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/The_Wonders_of_Science/bottomhomewos.png"></a></div>
+    </div> <!-- end content -->  
+    
+  
+  <!--<div class="audiopanel">-->
+    <div class="micbtnholder"><div class="micbtnwos" id="playstopmedieval"></div></div>
+    <div class="bwos"><div class="rwwos" id="seeingaudiobbtn"></div></div>
+    <div class="plwos"><div class="plpswos" id="seeingaudioplbtn"></div></div>
+    <div class="fwos"><div class="fwwos" id="seeingaudiofbtn"></div></div>
+    <div id="actualaudio-seeing" style="visibility:hidden;"></div>
+  <!--</div>-->
+  <script>
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    (function() {
+      playing = false;
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-seeing').html('<audio id="seeingaudio" controls preload onpause="playbh()" onplay="pausebh()"><source src="http://deftsoft.info/appvendo/mw/audio/seeing.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#seeing").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+    
+    function goBack() {
+      $.mobile.changePage("sub-sleep-and-dreams.html", {transition: "slide", reverse: true });
+      bgsoundbh.pause();
+      bgsoundbh.currentTime = 0;
+      spacesoundbg.play();
+    }
+    
+    function pausedaudio() {
+      bgsoundbh.play();
+    }
+    
+    function pausebg() {
+      bgsoundbh.pause();
+    }
+    /* ******************** */
+    $("#playstopseeing").on('tap', function() {
+      if(!playing) {
+        seeingaudio.play();
+        $('.micbtnwos').css('background-position-x', '-81px');
+        playing = true;
+      } else {
+        seeingaudio.pause(); volcanoaudio.currentTime = 0;
+        $('.micbtnwos').css('background-position-x', '0px');
+        playing = false;
+      }
+    });
+    
+    $("#seeingaudioplbtn").on('tap', function() {
+      if(!playing) {
+        seeingaudio.play();
+      } else {
+        seeingaudio.pause();
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+    
+    $("#seeingaudiofbtn").on('tap', function() {
+      var ctime = seeingaudio.currentTime;
+      seeingaudio.currentTime = ctime + 10;
+    });
+    
+    $("#seeingaudiobbtn").on('tap', function() {
+      var ctime = seeingaudio.currentTime;
+      seeingaudio.currentTime = ctime - 10;
+    });
+    
+    $("#seeingaudiopsbtn").on('tap', function() {
+     seeingaudio.pause();
+      //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+    
+    $('.navbtn1').on('tap', function() { 
+      nav1Effects(); 
+    });
+  </script>
+</div> <!--//home-->

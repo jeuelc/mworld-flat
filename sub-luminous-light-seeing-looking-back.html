@@ -1,0 +1,100 @@
+<!-- i-C-a -->
+<div id="lookingback" data-role="page">
+  <script src="js/slidebarbh.js"></script>
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnbh"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnbh"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnbh"></div></div>
+  <div class="infobtnholder"><div class="infobtnbh"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnbh"></div></div>
+  <div class="menubtnholder"><div class="menubtnbh"></div></div>
+  <div id="spacechar">&nbsp;
+    <div data-role="content" class="kidzcontent">
+      <div class="v-spacer"></div>
+      <div class="sidebarleft-half">
+      <!--<div id="sgl" style="width:141px;height:112px;left:210px;top:362px;background:transparent;position:absolute;z-index:99999;"></div>
+        <div id="snl" style="width:141px;height:112px;left:128px;top:485px;background:transparent;position:absolute;z-index:99999;"></div>
+        <div id="nsl" style="width:176px;height:106px;left:388px;top:283px;background:transparent;position:absolute;z-index:99999;"></div>
+        <div id="bhl" style="width:165px;height:117px;left:498px;top:467px;background:transparent;position:absolute;z-index:99999;"></div>
+		<div id="dsl" style="width:176px;height:106px;left:735px;top:217px;background:transparent;position:absolute;z-index:99999;"></div>
+        <div id="ehl" style="width:165px;height:110px;left:844px;top:415px;background:transparent;position:absolute;z-index:99999;"></div>
+      </div>-->
+      <div class="storypagetitlehuman_lookingback"><h1>Looking back in time</h1></div>
+      <div class="storypageetg_lookingback">
+			<p>Light moves very quickly.  It moves so fast that, in one second, a light beam could run around the Earth seven times!</p>
+			<p>How long does it take the light from our sun to reach us?  The answer is, about eight minutes!  This means that when you feel a ray of light from the sun on your face, it left the surface of the sun about eight minutes ago.  This ray of light has travelled through 150 million kilometres to reach you!</p>
+			<p>Even more weird, if you look at the sun (only through special glasses to protect your eyes!),  you are looking back in time!  This is because you are seeing the sun as it was just over eight minutes ago!</p>
+			<p>When you look at the stars in the night sky, you are looking even further back in time!  This is because the stars in the night sky are even further away than the sun!</p>
+	  </div>
+      <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/5-8/bottomhomebh.png"></a></div>
+    </div><!--end of content-->
+  </div><!--/spacechar-->
+  
+  <div class="micbtnholder"><div class="micbtnbh"></div></div>
+  <div class="bbh"><div class="rwbh" id="lookingbackaudiobbtn"></div></div>
+  <div class="plbh"><div class="plpsbh" id="lookingbackaudioplbtn"></div></div>
+  <div class="fbh"><div class="fwbh" id="lookingbackaudiofbtn" ></div></div>
+  <div id="actualaudio-lookingback" style="visibility:hidden;"></div>
+  <script>
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+        (function() {
+          playing = false;
+           /* $('#node-body-minoans').html(data[0].Body);*/
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-lookingback').html('<audio controls preload id="lookingbackaudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/lookingback.mp3" type="audio/mpeg"></audio>');
+      } 
+      
+      $("#lookingback").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+  //  $("#sgl").on('tap', function() {$.mobile.changePage("sub-medieval- metropolis-lookingbacklife-angkor-cooking.html", {transition:"slide"}); });
+  // $("#snl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-lookingbacklife-angkor-marketers.html", {transition:"slide"}); });
+  //  $("#nsl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-lookingbacklife-angkor-village.html", {transition:"slide"}); });
+  //  $("#bhl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-lookingbacklife-angkor-fashion.html", {transition:"slide"}); });
+	// $("#dsl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-lookingbacklife-angkor-houses.html", {transition:"slide"}); });
+	//  $("#ehl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-lookingbacklife-angkor-animals.html", {transition:"slide"}); });
+    
+   $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+   function goBack() {
+      $.mobile.changePage("sub-luminous-light-seeing.html");
+    }
+    
+    function pausedaudio() {
+      bgsoundbh.play();
+    }
+    
+    function pausebg() {
+      bgsoundbh.pause();
+    }
+    /* ******************** */
+    $("#lookingbackaudioplbtn").on('tap', function() {
+      //comefromaudio.play();
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+      if(!playing) {
+        lookingbackaudio.play();
+        $('.micbtnbh').css('background-position-x', '-81px');
+        playing = true;
+      } else {
+        lookingbackaudio.pause();
+        $('.micbtnbh').css('background-position-x', '0px');
+        playing = false;
+      }
+    });
+    
+    $("#lookingbackaudiofbtn").on('tap', function() {
+      var ctime = lookingbackaudio.currentTime;
+      lookingbackaudio.currentTime = ctime + 10;
+    });
+    
+    $("#lookingbackaudiobbtn").on('tap', function() {
+      var ctime = lookingbackaudio.currentTime;
+      lookingbackaudio.currentTime = ctime - 10;
+    });
+    
+    $("#lookingbackaudiopsbtn").on('tap', function() {
+      lookingbackaudio.pause();
+      $(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+  </script>
+</div>

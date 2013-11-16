@@ -35,7 +35,7 @@
     <div class="bwos"><div class="rwwos" id="polesaudiobbtn"></div></div>
     <div class="plwos"><div class="plpswos" id="polesaudioplbtn"></div></div>
     <div class="fwos"><div class="fwwos" id="polesaudiofbtn"></div></div>
-    <div id="actualaudio-" style="visibility:hidden;"></div>
+    <div id="actualaudio-poles" style="visibility:hidden;"></div>
   <!--</div>-->
   <script>
     sound = new Audio(); // 'sound' is now an audio object
@@ -43,10 +43,10 @@
     (function() {
       playing = false;
       if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-').html('<audio id="polesaudio" controls preload onpause="playbh()" onplay="pausebh()"><source src="http://deftsoft.info/appvendo/mw/audio/.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-poles').html('<audio id="polesaudio" controls preload onpause="playbh()" onplay="pausebh()"><source src="http://deftsoft.info/appvendo/mw/audio/.mp3" type="audio/mpeg"></audio>');
       } 
     
-      $("#").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+      $("#poles").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     })();
     
     $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
@@ -72,7 +72,7 @@
         $('.micbtnwos').css('background-position-x', '-81px');
         playing = true;
       } else {
-        polesaudio.pause(); volcanoaudio.currentTime = 0;
+        polesaudio.pause(); polesaudio.currentTime = 0;
         $('.micbtnwos').css('background-position-x', '0px');
         playing = false;
       }

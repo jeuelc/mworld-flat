@@ -2036,7 +2036,13 @@ font-family: "Chalkboard SE";
   width:1024px !important;
 }
 
-#weather , #prepared , #weather_change , #safed , #storm , #definition , #pressurize , #wacky , #tell_future , #map , #pagecard1 , #pagecard2 , #pagecard3 , #pagecard4{
+#weather , #prepared , #weather_change , #safed , #storm {
+  background:url('images/5-8/weather/extreme_weather.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+ #definition , #pressurize , #wacky , #tell_future , #map , #pagecard1 , #pagecard2 , #pagecard3 , #pagecard4{
   background:url('images/5-8/weather/extreme_weather.jpg') no-repeat;
   height:748px !important;
   overflow:hidden !important;

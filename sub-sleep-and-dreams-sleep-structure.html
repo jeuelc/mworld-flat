@@ -1,5 +1,5 @@
 <!-- i-C-a -->
-<div id="sleepcultures" data-role="page">
+<div id="sleepstructure" data-role="page">
   <script src="js/slidebarbh.js"></script>
   <div class="menuhousing"></div>
   <div class="homebtnholder"><div class="homebtnbh"></div></div>
@@ -41,10 +41,10 @@
     </div><!--/anisold-->
      
     <div class="micbtnholder"><div class="micbtnbh"></div></div>
-    <div class="bbh"><div class="rwbh" id="sleepculturesaudiobbtn"></div></div>
-    <div class="plbh"><div class="plpsbh" id="sleepculturesaudioplbtn"></div></div>
-    <div class="fbh"><div class="fwbh" id="sleepculturesaudiofbtn" ></div></div>
-    <div id="actualaudio-sleepcultures" style="visibility:hidden;"></div>
+    <div class="bbh"><div class="rwbh" id="sleepstructureaudiobbtn"></div></div>
+    <div class="plbh"><div class="plpsbh" id="sleepstructureaudioplbtn"></div></div>
+    <div class="fbh"><div class="fwbh" id="sleepstructureaudiofbtn" ></div></div>
+    <div id="actualaudio-sleepstructure" style="visibility:hidden;"></div>
     
     <script>
         sound = new Audio();
@@ -60,11 +60,11 @@
            
            
              if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-sleepcultures').html('<audio controls preload id="sleepculturesaudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/sleepcultures.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-sleepstructure').html('<audio controls preload id="sleepstructureaudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/sleepstructure.mp3" type="audio/mpeg"></audio>');
              } 
              
     
-            $("#sleepcultures").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+            $("#sleepstructure").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     
         })();
         $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
@@ -86,45 +86,45 @@
 //    });
 //    
    // $("#pol1").on('tap', function() {
-   //   $.mobile.changePage("sub-sleep-and-dreams-broken-sleepcultures-body-clocks.html", {transition: "slide"});
+   //   $.mobile.changePage("sub-sleep-and-dreams-broken-sleepstructure-body-clocks.html", {transition: "slide"});
    // });
 	
  //	$("#pol2").on('tap', function() {
- //     $.mobile.changePage("sub-sleep-and-dreams-broken-sleepcultures-social-jetlag.html", {transition: "slide"});
+ //     $.mobile.changePage("sub-sleep-and-dreams-broken-sleepstructure-social-jetlag.html", {transition: "slide"});
  //   });
       
 
 /* ******************** */
-    $("#sleepculturesaudioplbtn").on('tap', function() {
-	 var sleepculturesaudio = new Audio();
+    $("#sleepstructureaudioplbtn").on('tap', function() {
+	 var sleepstructureaudio = new Audio();
       //lifeabhaudio.play();
       //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
       if(!playing) {
-        sleepculturesaudio.play();
+        sleepstructureaudio.play();
         $('.micbtnbh').css('background-position-x', '-81px');
         playing = true;
       } else {
-        sleepculturesaudio.pause();
+        sleepstructureaudio.pause();
         $('.micbtnbh').css('background-position-x', '0px');
         playing = false;
       }
     });
     
-    $("#sleepculturesaudiofbtn").on('tap', function() {
-	 var sleepculturesaudio = new Audio();
-      var ctime = sleepculturesaudio.currentTime;
-      sleepculturesaudio.currentTime = ctime + 10;
+    $("#sleepstructureaudiofbtn").on('tap', function() {
+	 var sleepstructureaudio = new Audio();
+      var ctime = sleepstructureaudio.currentTime;
+      sleepstructureaudio.currentTime = ctime + 10;
     });
     
-    $("#sleepculturesaudiobbtn").on('tap', function() {
-	 var sleepculturesaudio = new Audio();
-      var ctime = sleepculturesaudio.currentTime;
-      sleepculturesaudio.currentTime = ctime - 10;
+    $("#sleepstructureaudiobbtn").on('tap', function() {
+	 var sleepstructureaudio = new Audio();
+      var ctime = sleepstructureaudio.currentTime;
+      sleepstructureaudio.currentTime = ctime - 10;
     });
     
-    $("#sleepculturesaudiopsbtn").on('tap', function() {
-	 var sleepculturesaudio = new Audio();
-      sleepculturesaudio.pause();
+    $("#sleepstructureaudiopsbtn").on('tap', function() {
+	 var sleepstructureaudio = new Audio();
+      sleepstructureaudio.pause();
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 

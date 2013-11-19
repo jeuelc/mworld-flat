@@ -13,8 +13,9 @@
       <div class="v-spacer"></div>
       <div class="sidebarleft-half">
         <div id="sgl" style="height: 99px;left: 303px;position: absolute; top: 48px; width: 171px;background:transparent;position:absolute"></div>
-        <div id="snl" style="width:184px;height:194px;left:190px;top:543px;background:transparent;position:absolute"></div>
-        <div id="nsl" style="width:205px;height:160px;right:1px;top:27px;background:transparent;position:absolute"></div>
+       <div id="nsl" style=" background: none repeat scroll 0 0 transparent;height: 160px;position: absolute;right: 160px;top: 27px;width: 235px;"></div>
+	   <div id="gsl" style="  background: none repeat scroll 0 0 transparent;height: 101px; position: absolute;right: 283px;top: 248px;width: 144px;"></div>
+	    <div id="hsl" style=" background: none repeat scroll 0 0 transparent;height: 175px;position: absolute;right: 432px;top: 195px;width: 197px; z-index:999999;"></div>
       </div>
       <div class="storypagetitleforms"><h1>Forms of extreme weather!</h1></div>
       <div class="storypageforms">
@@ -40,13 +41,13 @@
         $('#actualaudio-weather_forms').html('<audio controls preload id="weather_formsaudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/weather_forms.mp3" type="audio/mpeg"></audio>');
       } 
       
-      $("#bhweather_forms").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+      $("#weather_forms").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     })();
     
-    //$("#sgl").on('tap', function() { $.mobile.changePage("sub-deep- blue-sea-weather_forms-big-blue.html", {transition:"slide"}); });
-   // $("#snl").on('tap', function() { $.mobile.changePage("sub-deep- blue-sea-weather_forms-bottoms-up.html", {transition:"slide"}); });
-  //  $("#nsl").on('tap', function() { $.mobile.changePage("sub-deep- blue-sea-weather_forms-beach.html", {transition:"slide"}); });
-  //  $("#bhl").on('tap', function() { $.mobile.changePage("sub-space-bh-blackhole.html", {transition:"slide"}); });
+    $("#sgl").on('tap', function() { $.mobile.changePage("sub-weather-forms-baked.html", {transition:"slide"}); });
+   $("#nsl").on('tap', function() { $.mobile.changePage("sub-weather-forms-soaked-squally.html", {transition:"slide"}); });
+   $("#gsl").on('tap', function() { $.mobile.changePage("sub-weather-forms-parched.html", {transition:"slide"}); });
+    $("#hsl").on('tap', function() { $.mobile.changePage("sub-weather-forms-geography.html", {transition:"slide"}); });
     
    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
    function goBack() {

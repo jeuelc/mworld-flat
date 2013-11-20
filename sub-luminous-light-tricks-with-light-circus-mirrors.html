@@ -39,7 +39,7 @@
         </div>
     </div><!--/anisold-->
      
-    <div class="micbtnholder"><div class="micbtnbh"></div></div>
+    <div class="micbtnholder"><div class="micbtnbh" id="playstopcircusmirror"></div></div>
     <div class="bbh"><div class="rwbh" id="circusmirroraudiobbtn"></div></div>
     <div class="plbh"><div class="plpsbh" id="circusmirroraudioplbtn"></div></div>
     <div class="fbh"><div class="fwbh" id="circusmirroraudiofbtn" ></div></div>
@@ -59,27 +59,52 @@
            
            
              if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-circusmirror').html('<audio controls preload id="circusmirroraudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/circusmirror.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-circusmirror').html('<audio controls preload id="circusmirroraudio" onpause="playluminous()" onplay="pauseluminous()"><source src="http://deftsoft.info/appvendo/mw/audio/circusmirror.mp3" type="audio/mpeg"></audio>');
              } 
              
     
             $("#circusmirror").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     
         })();
-        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundluminous.pause(); bgsoundluminous.currentTime = 0;});
     
         function goBack() {
             $.mobile.changePage("sub-luminous-light-tricks-with-light.html");
         }
         
-       function pausedaudio() {
-         bgsoundbh.play();
+       function playluminous() {
+         bgsoundluminous.play();
        }
        
-       function pausebg() {
-         bgsoundbh.pause();
+       function pauseluminous() {
+         bgsoundluminous.pause();
        }
        
+	 $("#playstopcircusmirror").on('tap', function() {
+       if(!playing) {
+        circusmirroraudio.play();
+        $('.micbtnbh').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        circusmirroraudio.pause(); circusmirroraudio.currentTime = 0;
+        $('.micbtnbh').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+	});
+	
+	$("#circusmirroraudioplbtn").on('tap', function() {
+	  if(!paused) {
+        circusmirroraudio.pause();
+        paused = true;
+      } else {
+        circusmirroraudio.play();
+        paused = false;
+      }
+	  //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+	
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-bh-binaries.html", {transition: "slide"});
 //    });
@@ -94,36 +119,20 @@
       
 
 /* ******************** */
-    $("#circusmirroraudioplbtn").on('tap', function() {
-	 var circusmirroraudio = new Audio();
-      //lifeabhaudio.play();
-      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
-      if(!playing) {
-        circusmirroraudio.play();
-        $('.micbtnbh').css('background-position-x', '-81px');
-        playing = true;
-      } else {
-        circusmirroraudio.pause();
-        $('.micbtnbh').css('background-position-x', '0px');
-        playing = false;
-      }
-    });
+    
     
     $("#circusmirroraudiofbtn").on('tap', function() {
-	 var circusmirroraudio = new Audio();
-      var ctime = circusmirroraudio.currentTime;
+	  var ctime = circusmirroraudio.currentTime;
       circusmirroraudio.currentTime = ctime + 10;
     });
     
     $("#circusmirroraudiobbtn").on('tap', function() {
-	 var circusmirroraudio = new Audio();
-      var ctime = circusmirroraudio.currentTime;
+	  var ctime = circusmirroraudio.currentTime;
       circusmirroraudio.currentTime = ctime - 10;
     });
     
     $("#circusmirroraudiopsbtn").on('tap', function() {
-	 var circusmirroraudio = new Audio();
-      circusmirroraudio.pause();
+	  circusmirroraudio.pause();
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 

@@ -31,7 +31,7 @@ You eat plants to get energy, for example when you have a slice of bread.  In yo
     </div><!--end of content-->
   </div><!--/spacechar-->
   
-  <div class="micbtnholder"><div class="micbtnbh"></div></div>
+  <div class="micbtnholder"><div class="micbtnbh" id="playstopnolightnolife"></div></div>
   <div class="bbh"><div class="rwbh" id="nolightnolifeaudiobbtn"></div></div>
   <div class="plbh"><div class="plpsbh" id="nolightnolifeaudioplbtn"></div></div>
   <div class="fbh"><div class="fwbh" id="nolightnolifeaudiofbtn" ></div></div>
@@ -43,7 +43,7 @@ You eat plants to get energy, for example when you have a slice of bread.  In yo
           playing = false;
            /* $('#node-body-minoans').html(data[0].Body);*/
       if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-nolightnolife').html('<audio controls preload id="nolightnolifeaudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/nolightnolife.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-nolightnolife').html('<audio controls preload id="nolightnolifeaudio" onpause="playluminous()" onplay="pauseluminous()"><source src="http://deftsoft.info/appvendo/mw/audio/nolightnolife.mp3" type="audio/mpeg"></audio>');
       } 
       
       $("#nolightnolife").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
@@ -56,30 +56,40 @@ You eat plants to get energy, for example when you have a slice of bread.  In yo
 	// $("#dsl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-nolightnolifelife-angkor-houses.html", {transition:"slide"}); });
 	//  $("#ehl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-nolightnolifelife-angkor-animals.html", {transition:"slide"}); });
     
-   $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+   $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundluminous.pause(); bgsoundluminous.currentTime = 0;});
    function goBack() {
-      $.mobile.changePage("sub-luminous-light-seeing.html");
+      $.mobile.changePage("sub-luminous-light-what-is-it.html");
     }
     
-    function pausedaudio() {
-      bgsoundbh.play();
+    function playluminous() {
+         bgsoundluminous.play();
     }
-    
-    function pausebg() {
-      bgsoundbh.pause();
+       
+    function pauseluminous() {
+         bgsoundluminous.pause();
     }
-    /* ******************** */
-    $("#nolightnolifeaudioplbtn").on('tap', function() {
-      //comefromaudio.play();
-      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
-      if(!playing) {
+	
+	$("#playstopnolightnolife").on('tap', function() {
+       if(!playing) {
         nolightnolifeaudio.play();
         $('.micbtnbh').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
-        nolightnolifeaudio.pause();
+        nolightnolifeaudio.pause(); nolightnolifeaudio.currentTime = 0;
         $('.micbtnbh').css('background-position-x', '0px');
         playing = false;
+        paused = true;
+      }
+	});
+    /* ******************** */
+    $("#nolightnolifeaudioplbtn").on('tap', function() {
+     if(!paused) {
+        nolightnolifeaudio.pause();
+        paused = true;
+      } else {
+        nolightnolifeaudio.play();
+        paused = false;
       }
     });
     

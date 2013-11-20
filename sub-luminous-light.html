@@ -38,11 +38,12 @@
     
   
   <!--<div class="audiopanel">-->
-    <div class="micbtnholder"><div class="micbtnwos" id="playstopmedieval"></div></div>
+    <div class="micbtnholder"><div class="micbtnwos" id="playstopluminouslight"></div></div>
     <div class="bwos"><div class="rwwos" id="luminouslightaudiobbtn"></div></div>
     <div class="plwos"><div class="plpswos" id="luminouslightaudioplbtn"></div></div>
     <div class="fwos"><div class="fwwos" id="luminouslightaudiofbtn"></div></div>
     <div id="actualaudio-luminouslight" style="visibility:hidden;"></div>
+	<!--<div id="actualaudio-luminouslight"></div> -->
   <!--</div>-->
   <script>
     sound = new Audio(); // 'sound' is now an audio object
@@ -50,31 +51,43 @@
     (function() {
       playing = false;
       if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-luminouslight').html('<audio id="luminouslightaudio" controls preload onpause="playbh()" onplay="pausebh()"><source src="http://deftsoft.info/appvendo/mw/audio/luminouslight.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-luminouslight').html('<audio id="luminouslightaudio" controls preload onpause="playluminous()" onplay="pauseluminous()"><source src="http://deftsoft.info/appvendo/mw/audio/luminouslight.mp3" type="audio/mpeg"></audio>');
       } 
     
       $("#luminouslight").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     })();
     
-    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundluminous.pause(); bgsoundluminous.currentTime = 0;});
     
     function goBack() {
       $.mobile.changePage("index.html", {transition: "slide", reverse: true });
-      bgsoundbh.pause();
-      bgsoundbh.currentTime = 0;
-      spacesoundbg.play();
+      bgsoundluminous.pause();
+      bgsoundluminous.currentTime = 0;
+    //  spacesoundbg.play();
     }
     
-    function pausedaudio() {
-      bgsoundbh.play();
+    function playluminous() {
+         bgsoundluminous.play();
     }
-    
-    function pausebg() {
-      bgsoundbh.pause();
+       
+    function pauseluminous() {
+         bgsoundluminous.pause();
     }
     /* ******************** */
     $("#playstopluminouslight").on('tap', function() {
-      if(!playing) {
+       if(!playing) {
+        luminouslightaudio.play();
+        $('.micbtnwos').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        luminouslightaudio.pause(); luminouslightaudio.currentTime = 0;
+        $('.micbtnwos').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+	  
+	  /*if(!playing) {
         luminouslightaudio.play();
         $('.micbtnwos').css('background-position-x', '-81px');
         playing = true;
@@ -82,15 +95,25 @@
         luminouslightaudio.pause(); volcanoaudio.currentTime = 0;
         $('.micbtnwos').css('background-position-x', '0px');
         playing = false;
-      }
+      }*/
     });
     
     $("#luminouslightaudioplbtn").on('tap', function() {
-      if(!playing) {
+      if(!paused) {
+        luminouslightaudio.pause();
+        paused = true;
+      } else {
         luminouslightaudio.play();
+        paused = false;
+      }
+	  /*if(!playing) {
+        luminouslightaudio.play();
+		playing=true;
       } else {
         luminouslightaudio.pause();
-      }
+		luminouslightaudio.currentTime	=	0;
+		playing=false;
+      }*/
       //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
     });
     

@@ -23,15 +23,13 @@
       <div class="storypagetitlehuman_sunset"><h1>Why is the sunset red?</h1></div>
       <div class="storypageetg_sunset">
 			<p>When you look at the sunset, the sun looks red.  Why is this?</p>
-			<p>As you can see from the picture, when the sun is setting the light has to travel through a lot more of the atmosphere than during the day.</p>
-			<p>All of the colours of the rainbow shine from the sun.  As the light passes through the air in the atmosphere, some of it is scattered away.  Air is better at knocking away green, blue, indigo and violet light than it is at knocking away red, orange and yellow light.</p>
-			<p>With much of the green, blue, indigo and violet light removed, the remaining light looks red-yellow, which is why the sunset looks red.</p>
+			<p>As you can see from the picture, when the sun is setting the light has to travel through a lot more of the atmosphere than during the day.All of the colours of the rainbow shine from the sun.  As the light passes through the air in the atmosphere, some of it is scattered away.  Air is better at knocking away green, blue, indigo and violet light than it is at knocking away red, orange and yellow light.With much of the green, blue, indigo and violet light removed, the remaining light looks red-yellow, which is why the sunset looks red.</p>
 	  </div>
       <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/5-8/bottomhomebh.png"></a></div>
     </div><!--end of content-->
   </div><!--/spacechar-->
   
-  <div class="micbtnholder"><div class="micbtnbh"></div></div>
+ <div class="micbtnholder"><div class="micbtnbh" id="playstopsunsetred"></div></div> 
   <div class="bbh"><div class="rwbh" id="sunsetredaudiobbtn"></div></div>
   <div class="plbh"><div class="plpsbh" id="sunsetredaudioplbtn"></div></div>
   <div class="fbh"><div class="fwbh" id="sunsetredaudiofbtn" ></div></div>
@@ -42,9 +40,10 @@
         (function() {
           playing = false;
            /* $('#node-body-minoans').html(data[0].Body);*/
-      if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-sunsetred').html('<audio controls preload id="sunsetredaudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/sunsetred.mp3" type="audio/mpeg"></audio>');
-      } 
+	  
+	  if(sound.canPlayType('audio/mpeg')) {
+                 $('#actualaudio-sunsetred').html('<audio controls preload id="sunsetredaudio" onpause="playluminous()" onplay="pauseluminous()"><source src="http://deftsoft.info/appvendo/mw/audio/sunsetred.mp3" type="audio/mpeg"></audio>');
+             }  
       
       $("#sunsetred").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     })();
@@ -56,32 +55,42 @@
 	// $("#dsl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-sunsetredlife-angkor-houses.html", {transition:"slide"}); });
 	//  $("#ehl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-sunsetredlife-angkor-animals.html", {transition:"slide"}); });
     
-   $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+   $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundluminous.pause(); bgsoundluminous.currentTime = 0;});
    function goBack() {
       $.mobile.changePage("sub-luminous-light-seeing.html");
     }
     
-    function pausedaudio() {
-      bgsoundbh.play();
-    }
-    
-    function pausebg() {
-      bgsoundbh.pause();
-    }
+     function playluminous() {
+         bgsoundluminous.play();
+       }
+       
+       function pauseluminous() {
+         bgsoundluminous.pause();
+       }
     /* ******************** */
-    $("#sunsetredaudioplbtn").on('tap', function() {
-      //comefromaudio.play();
-      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
-      if(!playing) {
+       $("#playstopsunsetred").on('tap', function() {
+       if(!playing) {
         sunsetredaudio.play();
         $('.micbtnbh').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
-        sunsetredaudio.pause();
+       sunsetredaudio.pause(); sunsetredaudio.currentTime = 0;
         $('.micbtnbh').css('background-position-x', '0px');
         playing = false;
+        paused = true;
       }
-    });
+	  });
+	  
+	  $("#sunsetredaudioplbtn").on('tap', function() {
+	  if(!paused) {
+        sunsetredaudio.pause();
+        paused = true;
+      } else {
+        sunsetredaudio.play();
+        paused = false;
+      }
+	  });
     
     $("#sunsetredaudiofbtn").on('tap', function() {
       var ctime = sunsetredaudio.currentTime;

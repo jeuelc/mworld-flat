@@ -19,7 +19,8 @@
                   <div class="sidebarleft-half">
                      <div id="zoomwrapper">
                         <div id="pol1" class="pPiece" style="left:100px;top:270px;">
-                           <img src="css/images/9-12/luminous_light/whatisit/electromagnetic/gamma/infrared/zebra.png" alt="" />
+                           <!-- <img src="css/images/9-12/luminous_light/whatisit/electromagnetic/gamma/infrared/zebra.png" alt="" /> -->
+						   <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
                         </div>
                         <div id="pol2"class="pPiece" style="left:75px;top:290px;">
                            <img src="css/images/9-12/luminous_light/whatisit/electromagnetic/gamma/infrared/fire_fighters.png" alt="" />
@@ -42,7 +43,7 @@
         </div>
     </div><!--/anisold-->
      
-    <div class="micbtnholder"><div class="micbtnbh"></div></div>
+    <div class="micbtnholder"><div class="micbtnbh" id="playstopinfrared"></div></div>
     <div class="bbh"><div class="rwbh" id="infraredaudiobbtn"></div></div>
     <div class="plbh"><div class="plpsbh" id="infraredaudioplbtn"></div></div>
     <div class="fbh"><div class="fwbh" id="infraredaudiofbtn" ></div></div>
@@ -62,27 +63,42 @@
            
            
              if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-infrared').html('<audio controls preload id="infraredaudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/infrared.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-infrared').html('<audio controls preload id="infraredaudio" onpause="playluminous()" onplay="pauseluminous()"><source src="http://deftsoft.info/appvendo/mw/audio/infrared.mp3" type="audio/mpeg"></audio>');
              } 
              
     
             $("#infrared").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     
         })();
-        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundluminous.pause(); bgsoundluminous.currentTime = 0;});
     
         function goBack() {
             $.mobile.changePage("sub-luminous-light-electromagnetic.html");
         }
         
-       function pausedaudio() {
-         bgsoundbh.play();
-       }
+    function playluminous() {
+         bgsoundluminous.play();
+    }
        
-       function pausebg() {
-         bgsoundbh.pause();
-       }
-       
+    function pauseluminous() {
+         bgsoundluminous.pause();
+    }
+     
+	
+	$("#playstopinfrared").on('tap', function() {
+       if(!playing) {
+        infraredaudio.play();
+        $('.micbtnbh').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        infraredaudio.pause(); infraredaudio.currentTime = 0;
+        $('.micbtnbh').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+	});
+	 
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-bh-binaries.html", {transition: "slide"});
 //    });
@@ -98,35 +114,29 @@
 
 /* ******************** */
     $("#infraredaudioplbtn").on('tap', function() {
-	 var infraredaudio = new Audio();
-      //lifeabhaudio.play();
-      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
-      if(!playing) {
-        infraredaudio.play();
-        $('.micbtnbh').css('background-position-x', '-81px');
-        playing = true;
-      } else {
+		if(!paused) {
         infraredaudio.pause();
-        $('.micbtnbh').css('background-position-x', '0px');
-        playing = false;
+        paused = true;
+      } else {
+        infraredaudio.play();
+        paused = false;
       }
     });
     
     $("#infraredaudiofbtn").on('tap', function() {
-	 var infraredaudio = new Audio();
+	  /*var infraredaudio = new Audio();*/
       var ctime = infraredaudio.currentTime;
       infraredaudio.currentTime = ctime + 10;
     });
     
     $("#infraredaudiobbtn").on('tap', function() {
-	 var infraredaudio = new Audio();
+	  /*var infraredaudio = new Audio();*/
       var ctime = infraredaudio.currentTime;
       infraredaudio.currentTime = ctime - 10;
     });
     
     $("#infraredaudiopsbtn").on('tap', function() {
-	 var infraredaudio = new Audio();
-      infraredaudio.pause();
+	  infraredaudio.pause();
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 

@@ -39,7 +39,7 @@
         </div>
     </div><!--/anisold-->
      
-    <div class="micbtnholder"><div class="micbtnbh"></div></div>
+    <div class="micbtnholder"><div class="micbtnbh" id="playstopradiowaves"></div></div>
     <div class="bbh"><div class="rwbh" id="radiowavesaudiobbtn"></div></div>
     <div class="plbh"><div class="plpsbh" id="radiowavesaudioplbtn"></div></div>
     <div class="fbh"><div class="fwbh" id="radiowavesaudiofbtn" ></div></div>
@@ -59,27 +59,40 @@
            
            
              if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-radiowaves').html('<audio controls preload id="radiowavesaudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/radiowaves.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-radiowaves').html('<audio controls preload id="radiowavesaudio" onpause="playluminous()" onplay="pauseluminous()"><source src="http://deftsoft.info/appvendo/mw/audio/radiowaves.mp3" type="audio/mpeg"></audio>');
              } 
              
     
             $("#radiowaves").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     
         })();
-        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundluminous.pause(); bgsoundluminous.currentTime = 0;});
     
         function goBack() {
             $.mobile.changePage("sub-luminous-light-electromagnetic.html");
         }
         
-       function pausedaudio() {
-         bgsoundbh.play();
-       }
+       function playluminous() {
+			 bgsoundluminous.play();
+		}
+		   
+		function pauseluminous() {
+			 bgsoundluminous.pause();
+		}
        
-       function pausebg() {
-         bgsoundbh.pause();
-       }
-       
+	    $("#playstopradiowaves").on('tap', function() {
+		   if(!playing) {
+			radiowavesaudio.play();
+			$('.micbtnbh').css('background-position-x', '-81px');
+			playing = true;
+			paused = false;
+		  } else {
+			radiowavesaudio.pause(); radiowavesaudio.currentTime = 0;
+			$('.micbtnbh').css('background-position-x', '0px');
+			playing = false;
+			paused = true;
+		  }
+		});
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-bh-binaries.html", {transition: "slide"});
 //    });
@@ -95,35 +108,27 @@
 
 /* ******************** */
     $("#radiowavesaudioplbtn").on('tap', function() {
-	 var radiowavesaudio = new Audio();
-      //lifeabhaudio.play();
-      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
-      if(!playing) {
-        radiowavesaudio.play();
-        $('.micbtnbh').css('background-position-x', '-81px');
-        playing = true;
-      } else {
+	 if(!paused) {
         radiowavesaudio.pause();
-        $('.micbtnbh').css('background-position-x', '0px');
-        playing = false;
+        paused = true;
+      } else {
+        radiowavesaudio.play();
+        paused = false;
       }
     });
     
     $("#radiowavesaudiofbtn").on('tap', function() {
-	 var radiowavesaudio = new Audio();
-      var ctime = radiowavesaudio.currentTime;
+	  var ctime = radiowavesaudio.currentTime;
       radiowavesaudio.currentTime = ctime + 10;
     });
     
     $("#radiowavesaudiobbtn").on('tap', function() {
-	 var radiowavesaudio = new Audio();
-      var ctime = radiowavesaudio.currentTime;
+	  var ctime = radiowavesaudio.currentTime;
       radiowavesaudio.currentTime = ctime - 10;
     });
     
     $("#radiowavesaudiopsbtn").on('tap', function() {
-	 var radiowavesaudio = new Audio();
-      radiowavesaudio.pause();
+	  radiowavesaudio.pause();
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 

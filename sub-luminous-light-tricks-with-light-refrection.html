@@ -49,7 +49,7 @@
         </div>
     </div><!--/anisold-->
      
-    <div class="micbtnholder"><div class="micbtnbh"></div></div>
+    <div class="micbtnholder"><div class="micbtnbh" id="playstoprefraction"></div></div>
     <div class="bbh"><div class="rwbh" id="refractionaudiobbtn"></div></div>
     <div class="plbh"><div class="plpsbh" id="refractionaudioplbtn"></div></div>
     <div class="fbh"><div class="fwbh" id="refractionaudiofbtn" ></div></div>
@@ -76,18 +76,18 @@
             $("#refraction").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     
         })();
-        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundluminous.pause(); bgsoundluminous.currentTime = 0;});
     
         function goBack() {
             $.mobile.changePage("sub-luminous-light-tricks-with-light.html");
         }
         
-       function pausedaudio() {
-         bgsoundbh.play();
+       function playluminous() {
+         bgsoundluminous.play();
        }
        
-       function pausebg() {
-         bgsoundbh.pause();
+       function pauseluminous() {
+         bgsoundluminous.pause();
        }
        
    // $("#pol3").on('tap', function() {
@@ -103,37 +103,43 @@
     //});
       
 
-/* ******************** */
-    $("#refractionaudioplbtn").on('tap', function() {
-	 var refractionaudio = new Audio();
-      //lifeabhaudio.play();
-      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
-      if(!playing) {
+
+	$("#playstoprefraction").on('tap', function() {
+       if(!playing) {
         refractionaudio.play();
         $('.micbtnbh').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
-        refractionaudio.pause();
+        refractionaudio.pause(); refractionaudio.currentTime = 0;
         $('.micbtnbh').css('background-position-x', '0px');
         playing = false;
+        paused = true;
+      }
+	});
+/* ******************** */
+    $("#refractionaudioplbtn").on('tap', function() {
+	 if(!paused) {
+        refractionaudio.pause();
+        paused = true;
+      } else {
+        refractionaudio.play();
+        paused = false;
       }
     });
     
     $("#refractionaudiofbtn").on('tap', function() {
-	 var refractionaudio = new Audio();
       var ctime = refractionaudio.currentTime;
       refractionaudio.currentTime = ctime + 10;
     });
     
     $("#refractionaudiobbtn").on('tap', function() {
-	 var refractionaudio = new Audio();
-      var ctime = refractionaudio.currentTime;
+	  var ctime = refractionaudio.currentTime;
       refractionaudio.currentTime = ctime - 10;
     });
     
     $("#refractionaudiopsbtn").on('tap', function() {
-	 var refractionaudio = new Audio();
-      refractionaudio.pause();
+	  refractionaudio.pause();
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 

@@ -44,27 +44,27 @@
     (function() {
       playing = false;
       if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-luminouslight').html('<audio id="luminouslightaudio" controls preload onpause="playbh()" onplay="pausebh()"><source src="http://deftsoft.info/appvendo/mw/audio/whatisit.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-whatisit').html('<audio id="whatisitaudio" controls preload onpause="playluminous()" onplay="pauseluminous()"><source src="http://deftsoft.info/appvendo/mw/audio/whatisit.mp3" type="audio/mpeg"></audio>');
       } 
     
       $("#whatisit").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     })();
     
-    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundluminous.pause(); bgsoundluminous.currentTime = 0;});
     
     function goBack() {
       $.mobile.changePage("sub-luminous-light.html", {transition: "slide", reverse: true });
-      bgsoundbh.pause();
-      bgsoundbh.currentTime = 0;
-      spacesoundbg.play();
+      bgsoundluminous.pause();
+      bgsoundluminous.currentTime = 0;
+    //  spacesoundbg.play();
     }
     
-    function pausedaudio() {
-      bgsoundbh.play();
+    function playluminous() {
+         bgsoundluminous.play();
     }
-    
-    function pausebg() {
-      bgsoundbh.pause();
+       
+    function pauseluminous() {
+         bgsoundluminous.pause();
     }
     /* ******************** */
     $("#playstopwhatisit").on('tap', function() {
@@ -72,18 +72,22 @@
         whatisitaudio.play();
         $('.micbtnwos').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
         whatisitaudio.pause(); whatisitaudio.currentTime = 0;
         $('.micbtnwos').css('background-position-x', '0px');
         playing = false;
+        paused = true;
       }
     });
     
     $("#whatisitaudioplbtn").on('tap', function() {
-      if(!playing) {
-        whatisitaudio.play();
-      } else {
+      if(!paused) {
         whatisitaudio.pause();
+        paused = true;
+      } else {
+        whatisitaudio.play();
+        paused = false;
       }
       //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
     });

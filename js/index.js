@@ -1,10 +1,10 @@
 /* i-C-a */
 var bhcreator = new Audio();
-bhcreator.src = "audio/bhcreator.mp3";
+bhcreator.src = "http://back.uvmate.com/sites/default/files/subjectsaudio/bhcreator.mp3";
 bhcreator.addEventListener('ended', function() { bhcreator.play(); });
 
 var whatamimp3 = new Audio();
-whatamimp3.src = "audio/whatami.mp3";
+whatamimp3.src = "http://back.uvmate.com/sites/default/files/subjectsaudio/whatami.mp3";
 whatamimp3.addEventListener('ended', function() { whatamimp3.play(); });
 
 var mapmakerbg = new Audio();
@@ -63,32 +63,36 @@ var bgsoundbh = new Audio();
 bgsoundbh.src = "audio/blackhole.mp3";
 bgsoundbh.addEventListener('ended', function() { bgsoundbh.play(); });
 
-var bgsoundvol = new Audio();
-bgsoundvol.src = "audio/volcanoes.mp3";
-bgsoundvol.addEventListener('ended', function() { bgsoundvol.play(); });
-
-function pausevol() { bgsoundvol.pause() }
-function playvol() { bgsoundvol.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }
+var bssoundbg = new Audio();
+bssoundbg.src = "audio/bluesea.mp3";
+bssoundbg.addEventListener('ended', function() { bssoundbg.play(); });
 
 var mainaudiobg = new Audio();
-mainaudiobg.src = "audio/mainbg.mp3";
+mainaudiobg.src = "http://back.uvmate.com/sites/default/files/subjectsaudio/mainbg.mp3";
 mainaudiobg.addEventListener('ended', function() { mainaudiobg.play(); });
 
-var invisibleworldbg = new Audio();
-invisibleworldbg.src = "audio/invisibleworld.mp3";
-invisibleworldbg.addEventListener('ended', function() { invisibleworldbg.play(); });
+var mainaudiosea = new Audio();
+mainaudiosea.src = "audio/backgroundsea.mp3";
+mainaudiosea.addEventListener('ended', function() { mainaudiosea.play(); });
+
+/*var naturalsoundsea = new Audio();
+naturalsoundsea.src = "audio/natural.mp3";
+naturalsoundsea.addEventListener('ended', function() { naturalsoundbg.play(); });*/
 
 var iliadaudiobg = new Audio();
-iliadaudiobg.src = "audio/Hector_vs_Achilles.mp3";
+iliadaudiobg.src = "http://back.uvmate.com/sites/default/files/subjectsaudio/Hector_vs_Achilles.mp3";
 
 var theseusaudiobg = new Audio();
-theseusaudiobg.src = "audio/Theseus_and_the_Minotaur.mp3";
+theseusaudiobg.src = "http://back.uvmate.com/sites/default/files/subjectsaudio/Theseus_and_the_Minotaur.mp3";
 
 var odysseyaudiobg = new Audio();
-odysseyaudiobg.src = "audio/Odyssey.mp3";
+odysseyaudiobg.src = "http://back.uvmate.com/sites/default/files/subjectsaudio/Odyssey.mp3";
 
 var olympicsaudiobg = new Audio();
-olympicsaudiobg.src = "audio/Olympics.mp3";
+olympicsaudiobg.src = "http://back.uvmate.com/sites/default/files/subjectsaudio/Olympics.mp3";
+
+function pausesea() { bssoundbg.pause() }
+function playsea() { bssoundbg.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }
 
 function pauseagbg() { 
   //agsoundbg.volume = 0.1;
@@ -689,3 +693,30 @@ $('#originsofgreece2').live( 'pagehide',function(event, ui){
 $('#ancientgreece').live( 'pagehide',function(event, ui){
   animateAGS =  false;
 });
+
+
+
+/************************ Luminous Light Section *******************************/
+var bgsoundluminous = new Audio();
+bgsoundluminous.src = "";
+bgsoundluminous.addEventListener('ended', function() { bgsoundluminous.play(); });
+
+function pauseluminous() { bgsoundluminous.pause() }
+function playluminous() { bgsoundluminous.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }
+
+/************************ Sleep And Dreams Section *******************************/
+var bgsoundsleeps = new Audio();
+bgsoundsleeps.src = "http://deftsoft.info/appvendo/mw/audio/background/sleeps_bg.mp3";
+bgsoundsleeps.addEventListener('ended', function() { bgsoundsleeps.play(); });
+
+function pausesleeps() { bgsoundsleeps.pause() }
+function playsleeps() { bgsoundsleeps.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }
+
+/************************ How to Become A Scientist Section *******************************/
+
+var bgsoundsleeps = new Audio();
+bgsoundsleeps.src = "http://deftsoft.info/appvendo/mw/audio/background/sleeps_bg.mp3";
+bgsoundsleeps.addEventListener('ended', function() { bgsoundsleeps.play(); });
+
+function pausesleeps() { bgsoundsleeps.pause() }
+function playsleeps() { bgsoundsleeps.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }

@@ -44,46 +44,50 @@
     (function() {
       playing = false;
       if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-howsleep').html('<audio id="howsleepaudio" controls preload onpause="playhowsleep()" onplay="pausehowsleep()"><source src="http://deftsoft.info/appvendo/mw/audio/howsleep.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-howsleep').html('<audio id="howsleepaudio" controls preload onpause="playsleeps()" onplay="pausesleeps()"><source src="http://deftsoft.info/appvendo/mw/audio/howsleep.mp3" type="audio/mpeg"></audio>');
       } 
     
       $("#howsleep").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     })();
     
-    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundsleeps.pause(); bgsoundsleeps.currentTime = 0;});
     
     function goBack() {
       $.mobile.changePage("sub-sleep-and-dreams.html", {transition: "slide", reverse: true });
-      bgsoundbh.pause();
-      bgsoundbh.currentTime = 0;
+      bgsoundsleeps.pause();
+      bgsoundsleeps.currentTime = 0;
       spacesoundbg.play();
     }
     
-    function pausedaudio() {
-      bgsoundbh.play();
-    }
-    
-    function pausebg() {
-      bgsoundbh.pause();
-    }
+    function playsleeps() {
+		 bgsoundsleeps.play();
+	}
+       
+	function pausesleeps() {
+		 bgsoundsleeps.pause();
+	}
     /* ******************** */
     $("#playstophowsleep").on('tap', function() {
       if(!playing) {
         howsleepaudio.play();
         $('.micbtnwos').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
         howsleepaudio.pause(); howsleepaudio.currentTime = 0;
         $('.micbtnwos').css('background-position-x', '0px');
         playing = false;
+        paused = true;
       }
     });
     
     $("#howsleepaudioplbtn").on('tap', function() {
-      if(!playing) {
-        howsleepaudio.play();
-      } else {
+     if(!paused) {
         howsleepaudio.pause();
+        paused = true;
+      } else {
+        howsleepaudio.play();
+        paused = false;
       }
       //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
     });

@@ -1,5 +1,5 @@
 <!-- i-C-a -->
-<div id="socialjetlag" data-role="page">
+<div id="enoughtsleep" data-role="page">
   <script src="js/slidebarbh.js"></script>
   <div class="menuhousing"></div>
   <div class="homebtnholder"><div class="homebtnbh"></div></div>
@@ -11,7 +11,7 @@
     <script src="js/hammer.js"></script>
     <script src="js/jquery.hammer.js"></script>
    <!-- <div id="bonus-ags" class="talkbubble" style="background:url(css/images/5-8/volcanoes/placeholder-background.jpg) no-repeat; width:473px;height:296px;position:absolute;left:500px;top:40px;visibility:hidden;"></div>--><!--/bonus-ags-->
-    <div class="bptitleholder" style="padding-top:14px;"><h1>Social jetlag</h1></div>
+    <div class="bptitleholder" style="padding-top:14px;"><h1>When you don't get enough sleep...</h1></div>
     <div id="anisold">
         <div id="spacechar">&nbsp;
             <div data-role="content" class="kidzcontent">
@@ -24,9 +24,7 @@
                      </div><!--/zoomwrapper-->
                 </div>
                 <div class="bpcontentvolcano">
-                    <p>Have you ever flown to another country and wanted to go to sleep in the middle of the day?  Have you ever heard anyone complain about being jetlagged and feeling terrible?  </p>
-					<p>Being jetlagged is what happens when your body clock is out of sync with the time clock.  But you don't have to get on a plane to be jetlagged.  'Social jetlag' is what happens when your body clock falls out of sync with clock time because you go to bed at different times and get different amounts of sleep each night.  </p>
-					<p>By doing this, your body clock cannot get into a routine and so tells your body to go to sleep when you might not want to.</p>
+                    <p></p>
 				</div>
                 <!-- <div data-role="popup" id="imongnawong" data-position-to="window" data-overlay-theme="a" style="text-align:center;">
                   <div id="node-pop">
@@ -40,11 +38,11 @@
         </div>
     </div><!--/anisold-->
      
-    <div class="micbtnholder"><div class="micbtnbh" id="playstopsocialjetlag"></div></div>
-    <div class="bbh"><div class="rwbh" id="socialjetlagaudiobbtn"></div></div>
-    <div class="plbh"><div class="plpsbh" id="socialjetlagaudioplbtn"></div></div>
-    <div class="fbh"><div class="fwbh" id="socialjetlagaudiofbtn" ></div></div>
-    <div id="actualaudio-socialjetlag" style="visibility:hidden;"></div>
+    <div class="micbtnholder"><div class="micbtnbh" id="playstopenoughtsleep"></div></div>
+    <div class="bbh"><div class="rwbh" id="enoughtsleepaudiobbtn"></div></div>
+    <div class="plbh"><div class="plpsbh" id="enoughtsleepaudioplbtn"></div></div>
+    <div class="fbh"><div class="fwbh" id="enoughtsleepaudiofbtn" ></div></div>
+    <div id="actualaudio-enoughtsleep" style="visibility:hidden;"></div>
     
     <script>
         sound = new Audio();
@@ -60,23 +58,23 @@
            
            
              if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-socialjetlag').html('<audio controls preload id="socialjetlagaudio" onpause="playsleeps()" onplay="pausesleeps()"><source src="http://deftsoft.info/appvendo/mw/audio/socialjetlag.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-enoughtsleep').html('<audio controls preload id="enoughtsleepaudio" onpause="playsleeps()" onplay="pausesleeps()"><source src="http://deftsoft.info/appvendo/mw/audio/enoughtsleep.mp3" type="audio/mpeg"></audio>');
              } 
              
     
-            $("#socialjetlag").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+            $("#enoughtsleep").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     
         })();
         $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundsleeps.pause(); bgsoundsleeps.currentTime = 0;});
     
         function goBack() {
-            $.mobile.changePage("sub-sleep-and-dreams-broken-messing.html");
+            $.mobile.changePage("sub-sleeps-and-dreams-during-sleep.html");
         }
         
         function playsleeps() {
 			 bgsoundsleeps.play();
-	    }
-       
+		}
+		   
 		function pausesleeps() {
 			 bgsoundsleeps.pause();
 		}
@@ -85,53 +83,55 @@
 //      $.mobile.changePage("sub-space-bh-binaries.html", {transition: "slide"});
 //    });
 //    
-   // $("#pol1").on('tap', function() {
-   //   $.mobile.changePage("sub-sleep-and-dreams-broken-socialjetlag-body-clocks.html", {transition: "slide"});
-   // });
+    //$("#pol1").on('tap', function() {
+    //  $.mobile.changePage("sub-sleep-and-dreams-broken-enoughtsleep-body-clocks.html", {transition: "slide"});
+    //});
 	
- //	$("#pol2").on('tap', function() {
- //     $.mobile.changePage("sub-sleep-and-dreams-broken-socialjetlag-social-jetlag.html", {transition: "slide"});
- //   });
+	//$("#pol2").on('tap', function() {
+    //  $.mobile.changePage("sub-sleep-and-dreams-broken-enoughtsleep-social-jetlag.html", {transition: "slide"});
+    //});
       
 
 /* ******************** */
 
-	$("#playstopsocialjetlag").on('tap', function() {
+	
+	$("#playstopenoughtsleep").on('tap', function() {
       if(!playing) {
-        socialjetlagaudio.play();
+        enoughtsleepaudio.play();
         $('.micbtnbh').css('background-position-x', '-81px');
         playing = true;
         paused = false;
       } else {
-        socialjetlagaudio.pause(); socialjetlagaudio.currentTime = 0;
+        enoughtsleepaudio.pause(); enoughtsleepaudio.currentTime = 0;
         $('.micbtnbh').css('background-position-x', '0px');
         playing = false;
         paused = true;
       }
     });
 	
-    $("#socialjetlagaudioplbtn").on('tap', function() {
+	
+    $("#enoughtsleepaudioplbtn").on('tap', function() {
 	 if(!paused) {
-        socialjetlagaudio.pause();
+        enoughtsleepaudio.pause();
         paused = true;
       } else {
-        socialjetlagaudio.play();
+        enoughtsleepaudio.play();
         paused = false;
       }
     });
     
-    $("#socialjetlagaudiofbtn").on('tap', function() {
-	  var ctime = socialjetlagaudio.currentTime;
-      socialjetlagaudio.currentTime = ctime + 10;
+    $("#enoughtsleepaudiofbtn").on('tap', function() {
+	  var ctime = enoughtsleepaudio.currentTime;
+      enoughtsleepaudio.currentTime = ctime + 10;
     });
     
-    $("#socialjetlagaudiobbtn").on('tap', function() {
-	  var ctime = socialjetlagaudio.currentTime;
-      socialjetlagaudio.currentTime = ctime - 10;
+    $("#enoughtsleepaudiobbtn").on('tap', function() {
+	  var ctime = enoughtsleepaudio.currentTime;
+      enoughtsleepaudio.currentTime = ctime - 10;
     });
     
-    $("#socialjetlagaudiopsbtn").on('tap', function() {
-	  socialjetlagaudio.pause();
+    $("#enoughtsleepaudiopsbtn").on('tap', function() {
+	  enoughtsleepaudio.pause();
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 

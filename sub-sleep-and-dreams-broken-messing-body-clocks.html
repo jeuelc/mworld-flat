@@ -40,7 +40,7 @@
         </div>
     </div><!--/anisold-->
      
-    <div class="micbtnholder"><div class="micbtnbh"></div></div>
+    <div class="micbtnholder"><div class="micbtnbh" id="playstopbodyclocks"></div></div>
     <div class="bbh"><div class="rwbh" id="bodyclocksaudiobbtn"></div></div>
     <div class="plbh"><div class="plpsbh" id="bodyclocksaudioplbtn"></div></div>
     <div class="fbh"><div class="fwbh" id="bodyclocksaudiofbtn" ></div></div>
@@ -60,26 +60,26 @@
            
            
              if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-bodyclocks').html('<audio controls preload id="bodyclocksaudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/bodyclocks.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-bodyclocks').html('<audio controls preload id="bodyclocksaudio" onpause="playsleeps()" onplay="pausesleeps()"><source src="http://deftsoft.info/appvendo/mw/audio/bodyclocks.mp3" type="audio/mpeg"></audio>');
              } 
              
     
             $("#bodyclocks").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     
         })();
-        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundsleeps.pause(); bgsoundsleeps.currentTime = 0;});
     
         function goBack() {
             $.mobile.changePage("sub-sleep-and-dreams-broken-messing.html");
         }
         
-       function pausedaudio() {
-         bgsoundbh.play();
-       }
+        function playsleeps() {
+			 bgsoundsleeps.play();
+	    }
        
-       function pausebg() {
-         bgsoundbh.pause();
-       }
+		function pausesleeps() {
+			 bgsoundsleeps.pause();
+		}
        
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-bh-binaries.html", {transition: "slide"});
@@ -95,36 +95,44 @@
       
 
 /* ******************** */
-    $("#bodyclocksaudioplbtn").on('tap', function() {
-	 var bodyclocksaudio = new Audio();
-      //lifeabhaudio.play();
-      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+
+	$("#playstopbodyclocks").on('tap', function() {
       if(!playing) {
         bodyclocksaudio.play();
         $('.micbtnbh').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
-        bodyclocksaudio.pause();
+        bodyclocksaudio.pause(); bodyclocksaudio.currentTime = 0;
         $('.micbtnbh').css('background-position-x', '0px');
         playing = false;
+        paused = true;
+      }
+    });
+	
+	
+    $("#bodyclocksaudioplbtn").on('tap', function() {
+	 if(!paused) {
+        bodyclocksaudio.pause();
+        paused = true;
+      } else {
+        bodyclocksaudio.play();
+        paused = false;
       }
     });
     
     $("#bodyclocksaudiofbtn").on('tap', function() {
-	 var bodyclocksaudio = new Audio();
-      var ctime = bodyclocksaudio.currentTime;
+	  var ctime = bodyclocksaudio.currentTime;
       bodyclocksaudio.currentTime = ctime + 10;
     });
     
     $("#bodyclocksaudiobbtn").on('tap', function() {
-	 var bodyclocksaudio = new Audio();
-      var ctime = bodyclocksaudio.currentTime;
+	  var ctime = bodyclocksaudio.currentTime;
       bodyclocksaudio.currentTime = ctime - 10;
     });
     
     $("#bodyclocksaudiopsbtn").on('tap', function() {
-	 var bodyclocksaudio = new Audio();
-      bodyclocksaudio.pause();
+	  bodyclocksaudio.pause();
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 

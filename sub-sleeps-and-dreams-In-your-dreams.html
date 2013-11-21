@@ -27,7 +27,7 @@
     </div><!--end of content-->
   </div><!--/spacechar-->
   
-  <div class="micbtnholder"><div class="micbtnbh"></div></div>
+  <div class="micbtnholder"><div class="micbtnbh" id="playstopinyourdreams"></div></div>
   <div class="bbh"><div class="rwbh" id="inyourdreamsaudiobbtn"></div></div>
   <div class="plbh"><div class="plpsbh" id="inyourdreamsaudioplbtn"></div></div>
   <div class="fbh"><div class="fwbh" id="inyourdreamsaudiofbtn" ></div></div>
@@ -39,7 +39,7 @@
           playing = false;
            /* $('#node-body-minoans').html(data[0].Body);*/
       if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-inyourdreams').html('<audio controls preload id="inyourdreamsaudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/inyourdreamslife.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-inyourdreams').html('<audio controls preload id="inyourdreamsaudio" onpause="playsleeps()" onplay="pausesleeps()"><source src="http://deftsoft.info/appvendo/mw/audio/inyourdreamslife.mp3" type="audio/mpeg"></audio>');
       } 
       
       $("#inyourdreams").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
@@ -52,30 +52,41 @@
 	// $("#dsl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-inyourdreamslife-angkor-houses.html", {transition:"slide"}); });
 	//  $("#ehl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-inyourdreamslife-angkor-animals.html", {transition:"slide"}); });
     
-   $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+   $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundsleeps.pause(); bgsoundsleeps.currentTime = 0;});
    function goBack() {
       $.mobile.changePage("sub-sleep-and-dreams.html");
     }
     
-    function pausedaudio() {
-      bgsoundbh.play();
-    }
-    
-    function pausebg() {
-      bgsoundbh.pause();
-    }
+    function playsleeps() {
+		 bgsoundsleeps.play();
+	}
+       
+	function pausesleeps() {
+		 bgsoundsleeps.pause();
+	}
     /* ******************** */
-    $("#inyourdreamsaudioplbtn").on('tap', function() {
-      //comefromaudio.play();
-      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+	
+	$("#playstopinyourdreams").on('tap', function() {
       if(!playing) {
         inyourdreamsaudio.play();
         $('.micbtnbh').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
-        inyourdreamsaudio.pause();
+        inyourdreamsaudio.pause(); inyourdreamsaudio.currentTime = 0;
         $('.micbtnbh').css('background-position-x', '0px');
         playing = false;
+        paused = true;
+      }
+    });
+	
+    $("#inyourdreamsaudioplbtn").on('tap', function() {
+      if(!paused) {
+        inyourdreamsaudio.pause();
+        paused = true;
+      } else {
+        inyourdreamsaudio.play();
+        paused = false;
       }
     });
     

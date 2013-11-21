@@ -44,27 +44,27 @@
     (function() {
       playing = false;
       if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-whywesleep').html('<audio id="whywesleepaudio" controls preload onpause="playwhywesleep()" onplay="pausewhywesleep()"><source src="http://deftsoft.info/appvendo/mw/audio/whywesleep.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-whywesleep').html('<audio id="whywesleepaudio" controls preload onpause="playsleeps()" onplay="pausesleeps()"><source src="http://deftsoft.info/appvendo/mw/audio/whywesleep.mp3" type="audio/mpeg"></audio>');
       } 
     
       $("#whywesleep").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     })();
     
-    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundsleeps.pause(); bgsoundsleeps.currentTime = 0;});
     
     function goBack() {
       $.mobile.changePage("sub-sleep-and-dreams.html", {transition: "slide", reverse: true });
-      bgsoundbh.pause();
-      bgsoundbh.currentTime = 0;
+      bgsoundsleeps.pause();
+      bgsoundsleeps.currentTime = 0;
       spacesoundbg.play();
     }
     
-    function pausedaudio() {
-      bgsoundbh.play();
+    function playsleeps() {
+         bgsoundsleeps.play();
     }
-    
-    function pausebg() {
-      bgsoundbh.pause();
+       
+    function pausesleeps() {
+         bgsoundsleeps.pause();
     }
     /* ******************** */
     $("#playstopwhywesleep").on('tap', function() {
@@ -72,18 +72,22 @@
         whywesleepaudio.play();
         $('.micbtnwos').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
         whywesleepaudio.pause(); whywesleepaudio.currentTime = 0;
         $('.micbtnwos').css('background-position-x', '0px');
         playing = false;
+        paused = true;
       }
     });
     
     $("#whywesleepaudioplbtn").on('tap', function() {
-      if(!playing) {
-        whywesleepaudio.play();
-      } else {
+      if(!paused) {
         whywesleepaudio.pause();
+        paused = true;
+      } else {
+        whywesleepaudio.play();
+        paused = false;
       }
       //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
     });

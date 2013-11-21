@@ -44,27 +44,27 @@
     (function() {
       playing = false;
       if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-brokensleep').html('<audio id="brokensleepaudio" controls preload onpause="playbrokensleep()" onplay="pausebrokensleep()"><source src="http://deftsoft.info/appvendo/mw/audio/brokensleep.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-brokensleep').html('<audio id="brokensleepaudio" controls preload onpause="playsleeps()" onplay="pausesleeps()"><source src="http://deftsoft.info/appvendo/mw/audio/brokensleep.mp3" type="audio/mpeg"></audio>');
       } 
     
       $("#brokensleep").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     })();
     
-    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundsleeps.pause(); bgsoundsleeps.currentTime = 0;});
     
     function goBack() {
       $.mobile.changePage("sub-sleep-and-dreams.html", {transition: "slide", reverse: true });
-      bgsoundbh.pause();
-      bgsoundbh.currentTime = 0;
+      bgsoundsleeps.pause();
+      bgsoundsleeps.currentTime = 0;
       spacesoundbg.play();
     }
     
-    function pausedaudio() {
-      bgsoundbh.play();
+    function playsleeps() {
+         bgsoundsleeps.play();
     }
-    
-    function pausebg() {
-      bgsoundbh.pause();
+       
+    function pausesleeps() {
+         bgsoundsleeps.pause();
     }
     /* ******************** */
     $("#playstopbrokensleep").on('tap', function() {
@@ -72,18 +72,22 @@
         brokensleepaudio.play();
         $('.micbtnwos').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
         brokensleepaudio.pause(); brokensleepaudio.currentTime = 0;
         $('.micbtnwos').css('background-position-x', '0px');
         playing = false;
+        paused = true;
       }
     });
     
     $("#brokensleepaudioplbtn").on('tap', function() {
-      if(!playing) {
-        brokensleepaudio.play();
-      } else {
+      if(!paused) {
         brokensleepaudio.pause();
+        paused = true;
+      } else {
+        brokensleepaudio.play();
+        paused = false;
       }
       //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
     });

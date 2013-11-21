@@ -40,7 +40,7 @@
         </div>
     </div><!--/anisold-->
      
-    <div class="micbtnholder"><div class="micbtnbh"></div></div>
+    <div class="micbtnholder"><div class="micbtnbh" id="playstopopeneyes"></div></div>
     <div class="bbh"><div class="rwbh" id="openeyesaudiobbtn"></div></div>
     <div class="plbh"><div class="plpsbh" id="openeyesaudioplbtn"></div></div>
     <div class="fbh"><div class="fwbh" id="openeyesaudiofbtn" ></div></div>
@@ -60,26 +60,26 @@
            
            
              if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-openeyes').html('<audio controls preload id="openeyesaudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/openeyes.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-openeyes').html('<audio controls preload id="openeyesaudio" onpause="playsleeps()" onplay="pausesleeps()"><source src="http://deftsoft.info/appvendo/mw/audio/openeyes.mp3" type="audio/mpeg"></audio>');
              } 
              
     
             $("#openeyes").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     
         })();
-        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundsleeps.pause(); bgsoundsleeps.currentTime = 0;});
     
         function goBack() {
             $.mobile.changePage("sub-sleeps-and-dreams-why-do-we-sleep.html");
         }
         
-       function pausedaudio() {
-         bgsoundbh.play();
-       }
-       
-       function pausebg() {
-         bgsoundbh.pause();
-       }
+        function playsleeps() {
+			 bgsoundsleeps.play();
+		}
+		   
+		function pausesleeps() {
+			 bgsoundsleeps.pause();
+		}
        
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-bh-binaries.html", {transition: "slide"});
@@ -95,36 +95,42 @@
       
 
 /* ******************** */
-    $("#openeyesaudioplbtn").on('tap', function() {
-	 var openeyesaudio = new Audio();
-      //lifeabhaudio.play();
-      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+	$("#playstopopeneyes").on('tap', function() {
       if(!playing) {
         openeyesaudio.play();
         $('.micbtnbh').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
-        openeyesaudio.pause();
+        openeyesaudio.pause(); openeyesaudio.currentTime = 0;
         $('.micbtnbh').css('background-position-x', '0px');
         playing = false;
+        paused = true;
+      }
+    });
+
+    $("#openeyesaudioplbtn").on('tap', function() {
+	 if(!paused) {
+        openeyesaudio.pause();
+        paused = true;
+      } else {
+        openeyesaudio.play();
+        paused = false;
       }
     });
     
     $("#openeyesaudiofbtn").on('tap', function() {
-	 var openeyesaudio = new Audio();
-      var ctime = openeyesaudio.currentTime;
+	  var ctime = openeyesaudio.currentTime;
       openeyesaudio.currentTime = ctime + 10;
     });
     
     $("#openeyesaudiobbtn").on('tap', function() {
-	 var openeyesaudio = new Audio();
-      var ctime = openeyesaudio.currentTime;
+	  var ctime = openeyesaudio.currentTime;
       openeyesaudio.currentTime = ctime - 10;
     });
     
     $("#openeyesaudiopsbtn").on('tap', function() {
-	 var openeyesaudio = new Audio();
-      openeyesaudio.pause();
+	  openeyesaudio.pause();
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 

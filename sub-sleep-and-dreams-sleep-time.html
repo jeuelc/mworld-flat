@@ -43,7 +43,7 @@
         </div>
     </div><!--/anisold-->
      
-    <div class="micbtnholder"><div class="micbtnbh"></div></div>
+    <div class="micbtnholder"><div class="micbtnbh" id="playstopsleeptime"></div></div>
     <div class="bbh"><div class="rwbh" id="sleeptimeaudiobbtn"></div></div>
     <div class="plbh"><div class="plpsbh" id="sleeptimeaudioplbtn"></div></div>
     <div class="fbh"><div class="fwbh" id="sleeptimeaudiofbtn" ></div></div>
@@ -63,7 +63,7 @@
            
            
              if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-sleeptime').html('<audio controls preload id="sleeptimeaudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/sleeptime.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-sleeptime').html('<audio controls preload id="sleeptimeaudio" onpause="playsleeps()" onplay="pausesleeps()"><source src="http://deftsoft.info/appvendo/mw/audio/sleeptime.mp3" type="audio/mpeg"></audio>');
              } 
              
     
@@ -76,13 +76,13 @@
             $.mobile.changePage("sub-sleep-and-dreams-how-do-we-sleep.html");
         }
         
-       function pausedaudio() {
-         bgsoundbh.play();
-       }
-       
-       function pausebg() {
-         bgsoundbh.pause();
-       }
+        function playsleeps() {
+			 bgsoundsleeps.play();
+		}
+		   
+		function pausesleeps() {
+			 bgsoundsleeps.pause();
+		}
        
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-bh-binaries.html", {transition: "slide"});
@@ -98,36 +98,44 @@
       
 
 /* ******************** */
-    $("#sleeptimeaudioplbtn").on('tap', function() {
-	 var sleeptimeaudio = new Audio();
-      //lifeabhaudio.play();
-      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+
+	$("#playstopsleeptime").on('tap', function() {
       if(!playing) {
         sleeptimeaudio.play();
         $('.micbtnbh').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
-        sleeptimeaudio.pause();
+        sleeptimeaudio.pause(); sleeptimeaudio.currentTime = 0;
         $('.micbtnbh').css('background-position-x', '0px');
         playing = false;
+        paused = true;
+      }
+    });
+	
+	
+    $("#sleeptimeaudioplbtn").on('tap', function() {
+	 if(!paused) {
+        sleeptimeaudio.pause();
+        paused = true;
+      } else {
+        sleeptimeaudio.play();
+        paused = false;
       }
     });
     
     $("#sleeptimeaudiofbtn").on('tap', function() {
-	 var sleeptimeaudio = new Audio();
-      var ctime = sleeptimeaudio.currentTime;
+	  var ctime = sleeptimeaudio.currentTime;
       sleeptimeaudio.currentTime = ctime + 10;
     });
     
     $("#sleeptimeaudiobbtn").on('tap', function() {
-	 var sleeptimeaudio = new Audio();
-      var ctime = sleeptimeaudio.currentTime;
+	  var ctime = sleeptimeaudio.currentTime;
       sleeptimeaudio.currentTime = ctime - 10;
     });
     
     $("#sleeptimeaudiopsbtn").on('tap', function() {
-	 var sleeptimeaudio = new Audio();
-      sleeptimeaudio.pause();
+	  sleeptimeaudio.pause();
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 

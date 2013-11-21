@@ -41,7 +41,7 @@
         </div>
     </div><!--/anisold-->
      
-    <div class="micbtnholder"><div class="micbtnbh"></div></div>
+    <div class="micbtnholder"><div class="micbtnbh" id="playstopmeaningofdreams"></div></div>
     <div class="bbh"><div class="rwbh" id="meaningofdreamsaudiobbtn"></div></div>
     <div class="plbh"><div class="plpsbh" id="meaningofdreamsaudioplbtn"></div></div>
     <div class="fbh"><div class="fwbh" id="meaningofdreamsaudiofbtn" ></div></div>
@@ -61,27 +61,27 @@
            
            
              if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-meaningofdreams').html('<audio controls preload id="meaningofdreamsaudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/meaningofdreams.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-meaningofdreams').html('<audio controls preload id="meaningofdreamsaudio" onpause="playsleeps()" onplay="pausesleeps()"><source src="http://deftsoft.info/appvendo/mw/audio/meaningofdreams.mp3" type="audio/mpeg"></audio>');
              } 
              
     
             $("#meaningofdreams").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     
         })();
-        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundsleeps.pause(); bgsoundsleeps.currentTime = 0;});
     
         function goBack() {
             $.mobile.changePage("sub-sleep-and-dreams-In-your-dreams.html");
         }
         
-       function pausedaudio() {
-         bgsoundbh.play();
-       }
-       
-       function pausebg() {
-         bgsoundbh.pause();
-       }
-       
+        function playsleeps() {
+			 bgsoundsleeps.play();
+		}
+		   
+		function pausesleeps() {
+			 bgsoundsleeps.pause();
+		}
+
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-bh-binaries.html", {transition: "slide"});
 //    });
@@ -96,36 +96,43 @@
       
 
 /* ******************** */
-    $("#meaningofdreamsaudioplbtn").on('tap', function() {
-	 var meaningofdreamsaudio = new Audio();
-      //lifeabhaudio.play();
-      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+
+	$("#playstopmeaningofdreams").on('tap', function() {
       if(!playing) {
         meaningofdreamsaudio.play();
         $('.micbtnbh').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
-        meaningofdreamsaudio.pause();
+        meaningofdreamsaudio.pause(); meaningofdreamsaudio.currentTime = 0;
         $('.micbtnbh').css('background-position-x', '0px');
         playing = false;
+        paused = true;
+      }
+    });
+
+    $("#meaningofdreamsaudioplbtn").on('tap', function() {
+	 if(!paused) {
+        meaningofdreamsaudio.pause();
+        paused = true;
+      } else {
+        meaningofdreamsaudio.play();
+        paused = false;
       }
     });
     
     $("#meaningofdreamsaudiofbtn").on('tap', function() {
-	 var meaningofdreamsaudio = new Audio();
-      var ctime = meaningofdreamsaudio.currentTime;
+	  var ctime = meaningofdreamsaudio.currentTime;
       meaningofdreamsaudio.currentTime = ctime + 10;
     });
     
     $("#meaningofdreamsaudiobbtn").on('tap', function() {
-	 var meaningofdreamsaudio = new Audio();
-      var ctime = meaningofdreamsaudio.currentTime;
+	  var ctime = meaningofdreamsaudio.currentTime;
       meaningofdreamsaudio.currentTime = ctime - 10;
     });
     
     $("#meaningofdreamsaudiopsbtn").on('tap', function() {
-	 var meaningofdreamsaudio = new Audio();
-      meaningofdreamsaudio.pause();
+	  meaningofdreamsaudio.pause();
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 

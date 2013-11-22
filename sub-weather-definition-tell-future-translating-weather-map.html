@@ -8,124 +8,100 @@
   <div class="infobtnholder"><div class="infobtnbh"></div></div>
   <div class="credsbtnholder"><div class="credsbtnbh"></div></div>
   <div class="menubtnholder"><div class="menubtnbh"></div></div>
-    <script src="js/hammer.js"></script>
-    <script src="js/jquery.hammer.js"></script>
-   <!-- <div id="bonus-ags" class="talkbubble" style="background:url(css/images/5-8/volcanoes/placeholder-background.jpg) no-repeat; width:473px;height:296px;position:absolute;left:500px;top:40px;visibility:hidden;"></div>--><!--/bonus-ags-->
-    <div class="bptitleholder" style="padding-top:14px;"><h1>Translating a weather map</h1></div>
-    <div id="anisold">
-        <div id="spacechar">&nbsp;
-            <div data-role="content" class="kidzcontent">
-                <div class="v-volcano"></div>
-                  <div class="sidebarleft-half">
-                     <div id="zoomwrapper">
-                        <div id="pol1" class="pPiece" style="left:100px;top:270px;">
-                           <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
-                        </div>
-                        <div id="pol2"class="pPiece" style="left:75px;top:290px;">
-                           <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
-                        </div>
-                     </div><!--/zoomwrapper-->
-                
-                </div>
-                <div class="bpcontentvolcano">
-                   <p>To help forecast the weather, you look at a weather map, which is like a normal map but with extra lines and symbols on top.  Here's how you work out what it means!</p>
+  <div id="spacechar">&nbsp;
+    <div data-role="content" class="kidzcontent">
+      <div class="v-spacer"></div>
+      <div class="sidebarleft-half">
+       <!-- <div id="sgl" style="width:202px;height:187px;left:136px;top:48px;background:transparent;position:absolute"></div>
+        <div id="snl" style="width:184px;height:194px;left:190px;top:543px;background:transparent;position:absolute"></div>
+        <div id="nsl" style="width:205px;height:160px;right:1px;top:27px;background:transparent;position:absolute"></div>-->
+      </div>
+      <div class="storypagetitlebh"><h1>Translating a weather map</h1></div>
+      <div class="storypagebh" style="top:300px;">
+        <p>To help forecast the weather, you look at a weather map, which is like a normal map but with extra lines and symbols on top.  Here's how you work out what it means!</p>
         <p>The lines are called 'isobars' and they show the atmospheric pressure, which is the weight of the air pressing down on us from above and can tell you a lot about the weather. </p>
 		<p>If where you live is under high pressure, the weather will be fine with no rain, little cloud and a light breeze.  Alternatively, if where you live is under low pressure, you get thick clouds, rain and fast winds!</p>
-		<p>The symbols on weather maps show 'weather fronts', which are a type of weather system. There are warm fronts, and cold fronts.  When a cold front passes, the weather can change from being warm to cold very quickly.  If a warm front passes, the weather changes from cold to warm.  This change is so big that you can go to school in a t-shirt and come home in a winter coat!</p>		
-                  </div>
-                </div>
-                <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/5-8/bottomhomebh.png"></a></div>
-            </div><!--end of content-->
-        </div>
-    </div><!--/anisold-->
-     
-    <div class="micbtnholder"><div class="micbtnbh"></div></div>
-    <div class="bbh"><div class="rwbh" id="mapaudiobbtn"></div></div>
-    <div class="plbh"><div class="plpsbh" id="mapaudioplbtn"></div></div>
-    <div class="fbh"><div class="fwbh" id="mapaudiofbtn" ></div></div>
-    <div id="actualaudio-map" style="visibility:hidden;"></div>
-    
-    <script>
-        sound = new Audio();
-        soundpop = new Audio();
-        var playing;
+		<p>The symbols on weather maps show 'weather fronts', which are a type of weather system. There are warm fronts, and cold fronts.  When a cold front passes, the weather can change from being warm to cold very quickly.  If a warm front passes, the weather changes from cold to warm.  This change is so big that you can go to school in a t-shirt and come home in a winter coat!</p>		  
+      </div>
+      <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/5-8/bottomhomebh.png"></a></div>
+    </div><!--end of content-->
+  </div><!--/spacechar-->
+  
+  <div class="micbtnholder"><div class="micbtnbh" id="playstopmap"></div></div>
+  <div class="bbh"><div class="rwbh" id="mapaudiobbtn"></div></div>
+  <div class="plbh"><div class="plpsbh" id="mapaudioplbtn"></div></div>
+  <div class="fbh"><div class="fwbh" id="mapaudiofbtn" ></div></div>
+  <div id="actualaudio-map" style="visibility:hidden;"></div>
+  <script>
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
         (function() {
           playing = false;
-            $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
-            $('div#pol1').css("z-index", 2);
-            $('div#pol2').css("z-index", 1);
-            $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
-            $('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
-           
-           
-             if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-map').html('<audio controls preload id="mapaudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/map.mp3" type="audio/mpeg"></audio>');
-             } 
-             
-    
-            $("#map").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
-    
-        })();
-        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
-    
-        function goBack() {
-            $.mobile.changePage("sub-weather-definition-tell-future.html");
-        }
-        
-       function pausedaudio() {
-         bgsoundbh.play();
-       }
-       
-       function pausebg() {
-         bgsoundbh.pause();
-       }
-       
-   // $("#pol3").on('tap', function() {
-//      $.mobile.changePage("sub-space-bh-binaries.html", {transition: "slide"});
-//    });
-//    
-//    $("#pol2").on('tap', function() {
-//      $.mobile.changePage("sub-space-bh-quasars.html", {transition: "slide"});
-//    });
-//    
-  //  $("#pol1").on('tap', function() {
-  //    $.mobile.changePage("sub-weather-definition-tell-future-translating-weather-map.html", {transition: "slide"});
-  //  });
+           /* $('#node-body-minoans').html(data[0].Body);*/
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-map').html('<audio controls preload id="mapaudio" onpause="playsweather()" onplay="pauseweather()"><source src="http://deftsoft.info/appvendo/mw/audio/map.mp3" type="audio/mpeg"></audio>');
+      } 
       
-
-/* ******************** */
-    $("#mapaudioplbtn").on('tap', function() {
-	 var mapaudio = new Audio();
-      //lifeabhaudio.play();
-      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+      $("#bhmap").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+   // $("#sgl").on('tap', function() { $.mobile.changePage("sub-deep- blue-sea-map-big-blue.html", {transition:"slide"}); });
+   // $("#snl").on('tap', function() { $.mobile.changePage("sub-deep- blue-sea-map-bottoms-up.html", {transition:"slide"}); });
+  //  $("#nsl").on('tap', function() { $.mobile.changePage("sub-deep- blue-sea-map-beach.html", {transition:"slide"}); });
+  //  $("#bhl").on('tap', function() { $.mobile.changePage("sub-space-bh-blackhole.html", {transition:"slide"}); });
+    
+   $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundweather.pause(); bgsoundweather.currentTime = 0;});
+   function goBack() {
+      $.mobile.changePage("sub-weather-definition-tell-future.html");
+    }
+    
+    function playsweather() {
+		 bgsoundweather.play();
+	}
+	   
+	function pauseweather() {
+		 bgsoundweather.pause();
+	}
+    /* ******************** */
+	
+	$("#playstopmap").on('tap', function() {
       if(!playing) {
         mapaudio.play();
         $('.micbtnbh').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
-        mapaudio.pause();
+        mapaudio.pause(); mapaudio.currentTime = 0;
         $('.micbtnbh').css('background-position-x', '0px');
         playing = false;
+        paused = true;
+      }
+    });
+	
+	
+    $("#mapaudioplbtn").on('tap', function() {
+      if(!paused) {
+        mapaudio.pause();
+        paused = true;
+      } else {
+        mapaudio.play();
+        paused = false;
       }
     });
     
     $("#mapaudiofbtn").on('tap', function() {
-	 var mapaudio = new Audio();
       var ctime = mapaudio.currentTime;
       mapaudio.currentTime = ctime + 10;
     });
     
     $("#mapaudiobbtn").on('tap', function() {
-	 var mapaudio = new Audio();
       var ctime = mapaudio.currentTime;
       mapaudio.currentTime = ctime - 10;
     });
     
     $("#mapaudiopsbtn").on('tap', function() {
-	 var mapaudio = new Audio();
       mapaudio.pause();
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
-    });       
-                
-  </script><script src="js/threecardLogic.js"></script>
+    });
+  </script>
 </div>

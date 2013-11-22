@@ -31,11 +31,11 @@
     
   
   <!--<div class="audiopanel">-->
-    <div class="micbtnholder"><div class="micbtnwos" id="playstopmedieval"></div></div>
+    <div class="micbtnholder"><div class="micbtnwos" id="playstopoceans"></div></div>
     <div class="bwos"><div class="rwwos" id="oceansaudiobbtn"></div></div>
     <div class="plwos"><div class="plpswos" id="oceansaudioplbtn"></div></div>
     <div class="fwos"><div class="fwwos" id="oceansaudiofbtn"></div></div>
-    <div id="actualaudio-" style="visibility:hidden;"></div>
+    <div id="actualaudio-oceans" style="visibility:hidden;"></div>
   <!--</div>-->
   <script>
     sound = new Audio(); // 'sound' is now an audio object
@@ -43,46 +43,50 @@
     (function() {
       playing = false;
       if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-').html('<audio id="oceansaudio" controls preload onpause="playbh()" onplay="pausebh()"><source src="http://deftsoft.info/appvendo/mw/audio/.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-oceans').html('<audio id="oceansaudio" controls preload onpause="playbluesea()" onplay="pausebluesea()"><source src="http://deftsoft.info/appvendo/mw/audio/bluesea.mp3" type="audio/mpeg"></audio>');
       } 
     
-      $("#").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+      $("#oceans").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     })();
     
-    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
-    
-    function goBack() {
+    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbluesea.pause(); bgsoundbluesea.currentTime = 0;});
+	
+	  function goBack() {
       $.mobile.changePage("sub-deep-blue-sea.html", {transition: "slide", reverse: true });
-      bgsoundbh.pause();
-      bgsoundbh.currentTime = 0;
-      spacesoundbg.play();
+      bgsoundbluesea.pause();
+      bgsoundbluesea.currentTime = 0;
+      naturalsoundbg.play();
     }
     
-    function pausedaudio() {
-      bgsoundbh.play();
+    function playbluesea() {
+         bgsoundbluesea.play();
     }
-    
-    function pausebg() {
-      bgsoundbh.pause();
+       
+    function pausebluesea() {
+         bgsoundbluesea.pause();
     }
     /* ******************** */
+	
     $("#playstopoceans").on('tap', function() {
       if(!playing) {
         oceansaudio.play();
         $('.micbtnwos').css('background-position-x', '-81px');
         playing = true;
       } else {
-        oceansaudio.pause(); volcanoaudio.currentTime = 0;
+        oceansaudio.pause(); oceansaudio.currentTime = 0;
         $('.micbtnwos').css('background-position-x', '0px');
         playing = false;
       }
     });
     
-    $("#oceansaudioplbtn").on('tap', function() {
-      if(!playing) {
-        oceansaudio.play();
-      } else {
+	
+	 $("#oceansaudioplbtn").on('tap', function() {
+      if(!paused) {
         oceansaudio.pause();
+        paused = true;
+      } else {
+        oceansaudio.play();
+        paused = false;
       }
       //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
     });

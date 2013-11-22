@@ -43,27 +43,27 @@
     (function() {
       playing = false;
       if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-prepared').html('<audio id="preparedaudio" controls preload onpause="playbh()" onplay="pausebh()"><source src="http://deftsoft.info/appvendo/mw/audio/prepared.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-prepared').html('<audio id="preparedaudio" controls preload onpause="playsweather()" onplay="pauseweather()"><source src="http://deftsoft.info/appvendo/mw/audio/prepared.mp3" type="audio/mpeg"></audio>');
       } 
     
       $("#prepared").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     })();
     
-    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundweather.pause(); bgsoundweather.currentTime = 0;});
     
     function goBack() {
       $.mobile.changePage("sub-extreme-weather.html", {transition: "slide", reverse: true });
-      bgsoundbh.pause();
-      bgsoundbh.currentTime = 0;
+      bgsoundweather.pause();
+      bgsoundweather.currentTime = 0;
       spacesoundbg.play();
     }
     
-    function pausedaudio() {
-      bgsoundbh.play();
+    function playsweather() {
+         bgsoundweather.play();
     }
-    
-    function pausebg() {
-      bgsoundbh.pause();
+       
+    function pauseweather() {
+         bgsoundweather.pause();
     }
     /* ******************** */
     $("#playstopprepared").on('tap', function() {
@@ -71,18 +71,22 @@
         preparedaudio.play();
         $('.micbtnwos').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
         preparedaudio.pause(); preparedaudio.currentTime = 0;
         $('.micbtnwos').css('background-position-x', '0px');
         playing = false;
+        paused = true;
       }
     });
     
     $("#preparedaudioplbtn").on('tap', function() {
-      if(!playing) {
-        preparedaudio.play();
-      } else {
+      if(!paused) {
         preparedaudio.pause();
+        paused = true;
+      } else {
+        preparedaudio.play();
+        paused = false;
       }
       //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
     });

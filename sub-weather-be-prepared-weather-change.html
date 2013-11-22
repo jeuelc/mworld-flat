@@ -45,7 +45,7 @@
         </div>
     </div><!--/anisold-->
      
-    <div class="micbtnholder"><div class="micbtnbh"></div></div>
+    <div class="micbtnholder"><div class="micbtnbh" id="playstopweather_change"></div></div>
     <div class="bbh"><div class="rwbh" id="weather_changeaudiobbtn"></div></div>
     <div class="plbh"><div class="plpsbh" id="weather_changeaudioplbtn"></div></div>
     <div class="fbh"><div class="fwbh" id="weather_changeaudiofbtn" ></div></div>
@@ -65,26 +65,26 @@
            
            
              if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-weather_change').html('<audio controls preload id="weather_changeaudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/weather_change.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-weather_change').html('<audio controls preload id="weather_changeaudio" onpause="playsweather()" onplay="pauseweather()"><source src="http://deftsoft.info/appvendo/mw/audio/weather_change.mp3" type="audio/mpeg"></audio>');
              } 
              
     
             $("#weather_change").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     
         })();
-        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundweather.pause(); bgsoundweather.currentTime = 0;});
     
         function goBack() {
             $.mobile.changePage("sub-weather-be-prepared.html");
         }
         
-       function pausedaudio() {
-         bgsoundbh.play();
-       }
-       
-       function pausebg() {
-         bgsoundbh.pause();
-       }
+        function playsweather() {
+			 bgsoundweather.play();
+		}
+		   
+		function pauseweather() {
+			 bgsoundweather.pause();
+		}
        
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-bh-binaries.html", {transition: "slide"});
@@ -100,36 +100,44 @@
       
 
 /* ******************** */
-    $("#weather_changeaudioplbtn").on('tap', function() {
-	 var weather_changeaudio = new Audio();
-      //lifeabhaudio.play();
-      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    
+	
+	$("#playstopweather_change").on('tap', function() {
       if(!playing) {
         weather_changeaudio.play();
         $('.micbtnbh').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
-        weather_changeaudio.pause();
+        weather_changeaudio.pause(); weather_changeaudio.currentTime = 0;
         $('.micbtnbh').css('background-position-x', '0px');
         playing = false;
+        paused = true;
+      }
+    });
+	
+	$("#weather_changeaudioplbtn").on('tap', function() {
+	 if(!paused) {
+        weather_changeaudio.pause();
+        paused = true;
+      } else {
+        weather_changeaudio.play();
+        paused = false;
       }
     });
     
     $("#weather_changeaudiofbtn").on('tap', function() {
-	 var weather_changeaudio = new Audio();
-      var ctime = weather_changeaudio.currentTime;
+	  var ctime = weather_changeaudio.currentTime;
       weather_changeaudio.currentTime = ctime + 10;
     });
     
     $("#weather_changeaudiobbtn").on('tap', function() {
-	 var weather_changeaudio = new Audio();
-      var ctime = weather_changeaudio.currentTime;
+	  var ctime = weather_changeaudio.currentTime;
       weather_changeaudio.currentTime = ctime - 10;
     });
     
     $("#weather_changeaudiopsbtn").on('tap', function() {
-	 var weather_changeaudio = new Audio();
-      weather_changeaudio.pause();
+	  weather_changeaudio.pause();
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 

@@ -49,46 +49,50 @@
     (function() {
       playing = false;
       if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-storm').html('<audio id="stormaudio" controls preload onpause="playbh()" onplay="pausebh()"><source src="http://deftsoft.info/appvendo/mw/audio/storm.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-storm').html('<audio id="stormaudio" controls preload onpause="playsweather()" onplay="pauseweather()"><source src="http://deftsoft.info/appvendo/mw/audio/storm.mp3" type="audio/mpeg"></audio>');
       } 
     
       $("#storm").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     })();
     
-    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundweather.pause(); bgsoundweather.currentTime = 0;});
     
     function goBack() {
       $.mobile.changePage("sub-extreme-weather.html", {transition: "slide", reverse: true });
-      bgsoundbh.pause();
-      bgsoundbh.currentTime = 0;
+      bgsoundweather.pause();
+      bgsoundweather.currentTime = 0;
       spacesoundbg.play();
     }
     
-    function pausedaudio() {
-      bgsoundbh.play();
-    }
-    
-    function pausebg() {
-      bgsoundbh.pause();
-    }
+    function playsweather() {
+		 bgsoundweather.play();
+	}
+	   
+	function pauseweather() {
+		 bgsoundweather.pause();
+	}
     /* ******************** */
     $("#playstopstorm").on('tap', function() {
       if(!playing) {
         stormaudio.play();
         $('.micbtnwos').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
-        stormaudio.pause(); volcanoaudio.currentTime = 0;
+        stormaudio.pause(); stormaudio.currentTime = 0;
         $('.micbtnwos').css('background-position-x', '0px');
         playing = false;
+        paused = true;
       }
     });
     
     $("#stormaudioplbtn").on('tap', function() {
-      if(!playing) {
-        stormaudio.play();
-      } else {
+      if(!paused) {
         stormaudio.pause();
+        paused = true;
+      } else {
+        stormaudio.play();
+        paused = false;
       }
       //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
     });

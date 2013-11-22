@@ -45,7 +45,7 @@
         </div>
     </div><!--/anisold-->
      
-    <div class="micbtnholder"><div class="micbtnbh"></div></div>
+    <div class="micbtnholder"><div class="micbtnbh" id="playstopsafed"></div></div>
     <div class="bbh"><div class="rwbh" id="safedaudiobbtn"></div></div>
     <div class="plbh"><div class="plpsbh" id="safedaudioplbtn"></div></div>
     <div class="fbh"><div class="fwbh" id="safedaudiofbtn" ></div></div>
@@ -65,26 +65,26 @@
            
            
              if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-safed').html('<audio controls preload id="safedaudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/safed.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-safed').html('<audio controls preload id="safedaudio" onpause="playsweather()" onplay="pauseweather()"><source src="http://deftsoft.info/appvendo/mw/audio/safed.mp3" type="audio/mpeg"></audio>');
              } 
              
     
             $("#safed").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     
         })();
-        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundweather.pause(); bgsoundweather.currentTime = 0;});
     
         function goBack() {
             $.mobile.changePage("sub-weather-be-prepared.html");
         }
         
-       function pausedaudio() {
-         bgsoundbh.play();
-       }
-       
-       function pausebg() {
-         bgsoundbh.pause();
-       }
+        function playsweather() {
+			 bgsoundweather.play();
+		}
+		   
+		function pauseweather() {
+			 bgsoundweather.pause();
+		}
        
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-bh-binaries.html", {transition: "slide"});
@@ -100,36 +100,43 @@
       
 
 /* ******************** */
-    $("#safedaudioplbtn").on('tap', function() {
-	 var safedaudio = new Audio();
-      //lifeabhaudio.play();
-      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+
+    $("#playstopsafed").on('tap', function() {
       if(!playing) {
         safedaudio.play();
         $('.micbtnbh').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
-        safedaudio.pause();
+        safedaudio.pause(); safedaudio.currentTime = 0;
         $('.micbtnbh').css('background-position-x', '0px');
         playing = false;
+        paused = true;
+      }
+    });
+ 
+    $("#safedaudioplbtn").on('tap', function() {
+	 if(!paused) {
+        safedaudio.pause();
+        paused = true;
+      } else {
+        safedaudio.play();
+        paused = false;
       }
     });
     
     $("#safedaudiofbtn").on('tap', function() {
-	 var safedaudio = new Audio();
-      var ctime = safedaudio.currentTime;
+	  var ctime = safedaudio.currentTime;
       safedaudio.currentTime = ctime + 10;
     });
     
     $("#safedaudiobbtn").on('tap', function() {
-	 var safedaudio = new Audio();
-      var ctime = safedaudio.currentTime;
+	  var ctime = safedaudio.currentTime;
       safedaudio.currentTime = ctime - 10;
     });
     
     $("#safedaudiopsbtn").on('tap', function() {
-	 var safedaudio = new Audio();
-      safedaudio.pause();
+	  safedaudio.pause();
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 

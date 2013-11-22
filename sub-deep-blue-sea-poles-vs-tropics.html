@@ -20,10 +20,10 @@
       </div>
         
       <div class="navseabtn1">
-  <p><a href="sub-deep-blue-sea-bw-poles.html" data-transition="slide"><img src="css/images/9-12/bluesea/st.png"></a></p>
+  <p><a href="sub-deep-blue-sea-bw-poles.html" data-transition="slide"><img src="css/images/9-12/The_Natural_World/Deep_Blue_Sea/poles_vs_tropics/st.png"></a></p>
       </div>
       <div class="navseabtn3">
-        <p><a href="sub-deep-blue-sea-poles-apart.html" data-transition="slide" ><img src="css/images/9-12/bluesea/apart.png"></a></p>
+        <p><a href="sub-deep-blue-sea-poles-apart.html" data-transition="slide" ><img src="css/images/9-12/The_Natural_World/Deep_Blue_Sea/poles_vs_tropics/apart.png"></a></p>
       </div>
      
     <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/The_Wonders_of_Science/bottomhomewos.png"></a></div>
@@ -31,7 +31,7 @@
     
   
   <!--<div class="audiopanel">-->
-    <div class="micbtnholder"><div class="micbtnwos" id="playstopmedieval"></div></div>
+    <div class="micbtnholder"><div class="micbtnwos" id="playstoppoles"></div></div>
     <div class="bwos"><div class="rwwos" id="polesaudiobbtn"></div></div>
     <div class="plwos"><div class="plpswos" id="polesaudioplbtn"></div></div>
     <div class="fwos"><div class="fwwos" id="polesaudiofbtn"></div></div>
@@ -43,27 +43,27 @@
     (function() {
       playing = false;
       if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-poles').html('<audio id="polesaudio" controls preload onpause="playbh()" onplay="pausebh()"><source src="http://deftsoft.info/appvendo/mw/audio/.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-poles').html('<audio id="polesaudio" controls preload onpause="playbluesea()" onplay="pausebluesea()"><source src="http://deftsoft.info/appvendo/mw/audio/poles.mp3" type="audio/mpeg"></audio>');
       } 
     
       $("#poles").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     })();
     
-    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+    $('.homelinkbh').on('tap', function() { mainaudiobg.play();bgsoundbluesea.pause(); bgsoundbluesea.currentTime = 0;});
     
     function goBack() {
       $.mobile.changePage("sub-deep-blue-sea.html", {transition: "slide", reverse: true });
-      bgsoundbh.pause();
-      bgsoundbh.currentTime = 0;
-      spacesoundbg.play();
+      bgsoundbluesea.pause();
+      bgsoundbluesea.currentTime = 0;
+      naturalsoundbg.play();
     }
     
-    function pausedaudio() {
-      bgsoundbh.play();
+    function playbluesea() {
+         bgsoundbluesea.play();
     }
-    
-    function pausebg() {
-      bgsoundbh.pause();
+       
+    function pausebluesea() {
+         bgsoundbluesea.pause();
     }
     /* ******************** */
     $("#playstoppoles").on('tap', function() {
@@ -79,10 +79,12 @@
     });
     
     $("#polesaudioplbtn").on('tap', function() {
-      if(!playing) {
-        polesaudio.play();
-      } else {
+      if(!paused) {
         polesaudio.pause();
+        paused = true;
+      } else {
+        polesaudio.play();
+        paused = false;
       }
       //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
     });

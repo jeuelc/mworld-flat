@@ -63,10 +63,6 @@ var bgsoundbh = new Audio();
 bgsoundbh.src = "audio/blackhole.mp3";
 bgsoundbh.addEventListener('ended', function() { bgsoundbh.play(); });
 
-var bssoundbg = new Audio();
-bssoundbg.src = "audio/bluesea.mp3";
-bssoundbg.addEventListener('ended', function() { bssoundbg.play(); });
-
 var mainaudiobg = new Audio();
 mainaudiobg.src = "http://back.uvmate.com/sites/default/files/subjectsaudio/mainbg.mp3";
 mainaudiobg.addEventListener('ended', function() { mainaudiobg.play(); });
@@ -720,3 +716,20 @@ bgsoundsleeps.addEventListener('ended', function() { bgsoundsleeps.play(); });
 
 function pausesleeps() { bgsoundsleeps.pause() }
 function playsleeps() { bgsoundsleeps.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }
+
+/************************ Extreme Weather Section *******************************/
+
+var bgsoundweather = new Audio();
+bgsoundweather.src = "http://deftsoft.info/appvendo/mw/audio/weather_bg.mp3";
+bgsoundweather.addEventListener('ended', function() { bgsoundweather.play(); });
+
+function pauseweather() { bgsoundweather.pause() }
+function playsweather() { bgsoundweather.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }
+
+/************************ Deep Blue Section *******************************/
+var bgsoundbluesea = new Audio();
+bgsoundbluesea.src = "http://deftsoft.info/appvendo/mw/audio/backgroundsea.mp3";
+bgsoundbluesea.addEventListener('ended', function() { bgsoundbluesea.play(); });
+
+function pausebluesea() { bgsoundbluesea.pause() }
+function playbluesea() { bgsoundbluesea.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }

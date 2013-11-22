@@ -22,16 +22,16 @@
       </div>
         
       <div class="navbtn1">
-  <p><a href="sub-deep-blue-sea-oceans.html" data-transition="slide"><img src="css/images/9-12/bluesea/oceans.png"></a></p>
+  <p><a href="sub-deep-blue-sea-oceans.html" data-transition="slide"><img src="css/images/9-12/The_Natural_World/Deep_Blue_Sea/oceans.png"></a></p>
       </div>
       <div class="navbtn2">
-        <p><a href="sub-deep-blue-sea-dive-in.html" data-transition="slide" ><img src="css/images/9-12/bluesea/dive.png"></a></p>
+        <p><a href="sub-deep-blue-sea-dive-in.html" data-transition="slide" ><img src="css/images/9-12/The_Natural_World/Deep_Blue_Sea/dive.png"></a></p>
       </div>
       <div class="navbtn3">
-        <p><a href="sub-deep-blue-sea-poles-vs-tropics.html" data-transition="slide" ><img src="css/images/9-12/bluesea/poles.png"></a></p>
+        <p><a href="sub-deep-blue-sea-poles-vs-tropics.html" data-transition="slide" ><img src="css/images/9-12/The_Natural_World/Deep_Blue_Sea/poles.png"></a></p>
       </div>
       <div class="navbtn4">
-        <p><a href="sub-deep-blue-sea-future.html" data-transition="slide" ><img src="css/images/9-12/bluesea/future.png"></a></p>
+        <p><a href="sub-deep-blue-sea-future.html" data-transition="slide" ><img src="css/images/9-12/The_Natural_World/Deep_Blue_Sea/future.png"></a></p>
       </div>
         
       <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/The_Wonders_of_Science/bottomhomewos.png"></a></div>
@@ -39,7 +39,7 @@
     
   
   <!--<div class="audiopanel">-->
-    <div class="micbtnholder"><div class="micbtnwos" id="playstopmedieval"></div></div>
+    <div class="micbtnholder"><div class="micbtnwos" id="playstopbluesea"></div></div>
     <div class="bwos"><div class="rwwos" id="blueseaaudiobbtn"></div></div>
     <div class="plwos"><div class="plpswos" id="blueseaaudioplbtn"></div></div>
     <div class="fwos"><div class="fwwos" id="blueseaaudiofbtn"></div></div>
@@ -50,28 +50,28 @@
     var playing;
     (function() {
       playing = false;
-      if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-bluesea').html('<audio id="blueseaaudio" controls preload onpause="playbh()" onplay="pausebh()"><source src="http://deftsoft.info/appvendo/mw/audio/bluesea.mp3" type="audio/mpeg"></audio>');
+	  if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-bluesea').html('<audio id="blueseaaudio" controls preload onpause="playbluesea()" onplay="pausebluesea()"><source src="http://deftsoft.info/appvendo/mw/audio/bluesea.mp3" type="audio/mpeg"></audio>');
       } 
-    
+	  
       $("#bluesea").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     })();
     
-    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbluesea.pause(); bgsoundbluesea.currentTime = 0;});
     
     function goBack() {
-      $.mobile.changePage("index.html", {transition: "slide", reverse: true });
-      bgsoundbh.pause();
-      bgsoundbh.currentTime = 0;
-      spacesoundbg.play();
+      $.mobile.changePage("sub-naturalworld.html", {transition: "slide", reverse: true });
+      bgsoundbluesea.pause();
+      bgsoundbluesea.currentTime = 0;
+      naturalsoundbg.play();
     }
     
-    function pausedaudio() {
-      bgsoundbh.play();
+    function playbluesea() {
+         bgsoundbluesea.play();
     }
-    
-    function pausebg() {
-      bgsoundbh.pause();
+       
+    function pausebluesea() {
+         bgsoundbluesea.pause();
     }
     /* ******************** */
     $("#playstopbluesea").on('tap', function() {
@@ -80,17 +80,20 @@
         $('.micbtnwos').css('background-position-x', '-81px');
         playing = true;
       } else {
-        blueseaaudio.pause(); volcanoaudio.currentTime = 0;
+        blueseaaudio.pause(); blueseaaudio.currentTime = 0;
         $('.micbtnwos').css('background-position-x', '0px');
         playing = false;
       }
     });
+	
     
     $("#blueseaaudioplbtn").on('tap', function() {
-      if(!playing) {
-        blueseaaudio.play();
-      } else {
+     if(!paused) {
         blueseaaudio.pause();
+        paused = true;
+      } else {
+        blueseaaudio.play();
+        paused = false;
       }
       //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
     });

@@ -45,7 +45,7 @@
         </div>
     </div><!--/anisold-->
      
-    <div class="micbtnholder"><div class="micbtnbh"></div></div>
+    <div class="micbtnholder"><div class="micbtnbh" id="playstoppagecard4"></div></div>
     <div class="bbh"><div class="rwbh" id="pagecard4audiobbtn"></div></div>
     <div class="plbh"><div class="plpsbh" id="pagecard4audioplbtn"></div></div>
     <div class="fbh"><div class="fwbh" id="pagecard4audiofbtn" ></div></div>
@@ -65,7 +65,7 @@
            
            
              if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-pagecard4').html('<audio controls preload id="pagecard4audio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/pagecard4.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-pagecard4').html('<audio controls preload id="pagecard4audio" onpause="playsweather()" onplay="pauseweather()"><source src="http://deftsoft.info/appvendo/mw/audio/pagecard4.mp3" type="audio/mpeg"></audio>');
              } 
              
     
@@ -78,13 +78,13 @@
             $.mobile.changePage("sub-extreme-weather-creating-storm.html");
         }
         
-       function pausedaudio() {
-         bgsoundbh.play();
-       }
-       
-       function pausebg() {
-         bgsoundbh.pause();
-       }
+        function playsweather() {
+			 bgsoundweather.play();
+		}
+		   
+		function pauseweather() {
+			 bgsoundweather.pause();
+		}
        
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-bh-binaries.html", {transition: "slide"});
@@ -100,36 +100,45 @@
       
 
 /* ******************** */
-    $("#pagecard4audioplbtn").on('tap', function() {
-	 var pagecard4audio = new Audio();
-      //lifeabhaudio.play();
-      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+
+
+	$("#playstoppagecard4").on('tap', function() {
       if(!playing) {
         pagecard4audio.play();
         $('.micbtnbh').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
-        pagecard4audio.pause();
+        pagecard4audio.pause(); pagecard4audio.currentTime = 0;
         $('.micbtnbh').css('background-position-x', '0px');
         playing = false;
+        paused = true;
+      }
+	});
+	
+	
+    $("#pagecard4audioplbtn").on('tap', function() {
+	 if(!paused) {
+        pagecard4audio.pause();
+        paused = true;
+      } else {
+        pagecard4audio.play();
+        paused = false;
       }
     });
     
     $("#pagecard4audiofbtn").on('tap', function() {
-	 var pagecard4audio = new Audio();
-      var ctime = pagecard4audio.currentTime;
+	  var ctime = pagecard4audio.currentTime;
       pagecard4audio.currentTime = ctime + 10;
     });
     
     $("#pagecard4audiobbtn").on('tap', function() {
-	 var pagecard4audio = new Audio();
-      var ctime = pagecard4audio.currentTime;
+	  var ctime = pagecard4audio.currentTime;
       pagecard4audio.currentTime = ctime - 10;
     });
     
     $("#pagecard4audiopsbtn").on('tap', function() {
-	 var pagecard4audio = new Audio();
-      pagecard4audio.pause();
+	  pagecard4audio.pause();
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 

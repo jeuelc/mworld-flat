@@ -17,11 +17,23 @@
             <div data-role="content" class="kidzcontent">
                 <div class="v-volcano"></div>
                   <div class="sidebarleft-half">
+				  
+				   <a id="apartlink" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Volcanoes/Biggest_and_Baddest/krakatu.jpg', 'An artist\'s impression of what the 1883 Krakatau eruption in Indonesia might have looked like. This was a colossal VEI 6 eruption!');">click here</a>
+				   
+				   <a id="apartslink" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Volcanoes/Biggest_and_Baddest/krakatu.jpg', 'An artist\'s impression of what the 1883 Krakatau eruption in Indonesia might have looked like. This was a colossal VEI 6 eruption!');">click here</a>
+				   <a id="apartdlink" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Volcanoes/Biggest_and_Baddest/krakatu.jpg', 'An artist\'s impression of what the 1883 Krakatau eruption in Indonesia might have looked like. This was a colossal VEI 6 eruption!');">click here</a>
+				   
                      <div id="zoomwrapper">
                         <div id="pol1" class="pPiece" style="left:100px;top:270px;">
                            <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
                         </div>
                         <div id="pol2"class="pPiece" style="left:75px;top:290px;">
+                           <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
+                        </div>
+						<div id="pol3" class="pPiece" style="left:80px;top:270px;">
+                           <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
+                        </div>
+                        <div id="pol4"class="pPiece" style="left:80px;top:270px;">
                            <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
                         </div>
                      </div><!--/zoomwrapper-->
@@ -44,7 +56,7 @@
         </div>
     </div><!--/anisold-->
      
-    <div class="micbtnholder"><div class="micbtnbh"></div></div>
+    <div class="micbtnholder"><div class="micbtnbh" id="playstopapart"></div></div>
     <div class="bbh"><div class="rwbh" id="apartaudiobbtn"></div></div>
     <div class="plbh"><div class="plpsbh" id="apartaudioplbtn"></div></div>
     <div class="fbh"><div class="fwbh" id="apartaudiofbtn" ></div></div>
@@ -64,26 +76,37 @@
            
            
              if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-apart').html('<audio controls preload id="apartaudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/apart.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-apart').html('<audio controls preload id="apartaudio" onpause="playbluesea()" onplay="pausebluesea()"><source src="http://deftsoft.info/appvendo/mw/audio/apart.mp3" type="audio/mpeg"></audio>');
              } 
              
     
             $("#apart").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     
         })();
-        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbluesea.pause(); bgsoundbluesea.currentTime = 0;});
     
         function goBack() {
             $.mobile.changePage("sub-deep-blue-sea-poles-vs-tropics.html");
         }
         
-       function pausedaudio() {
-         bgsoundbh.play();
-       }
+      function playbluesea() {
+         bgsoundbluesea.play();
+    }
        
-       function pausebg() {
-         bgsoundbh.pause();
-       }
+    function pausebluesea() {
+         bgsoundbluesea.pause();
+    }
+	
+		
+	$("#pol1").on('tap', function() {
+      $('#apartlink')[0].click();
+    });
+	$("#pol2").on('tap', function() {
+      $('#apartslink')[0].click();
+    });
+	$("#pol3").on('tap', function() {
+      $('#apartdlink')[0].click();
+    });
        
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-bh-binaries.html", {transition: "slide"});
@@ -93,14 +116,14 @@
 //      $.mobile.changePage("sub-space-bh-quasars.html", {transition: "slide"});
 //    });
 //    
-   // $("#pol1").on('tap', function() {
-   //  $.mobile.changePage("sub-space-bh-galaxies.html", {transition: "slide"});
-  // });
+    $("#pol4").on('tap', function() {
+     $.mobile.changePage("sub-space-bh-galaxies.html", {transition: "slide"});
+   });
       
 
 /* ******************** */
-    $("#apartaudioplbtn").on('tap', function() {
-	 var apartaudio = new Audio();
+    $("#playstopapart").on('tap', function() {
+	// var apartaudio = new Audio();
       //lifeabhaudio.play();
       //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
       if(!playing) {
@@ -112,6 +135,17 @@
         $('.micbtnbh').css('background-position-x', '0px');
         playing = false;
       }
+    });
+	
+	$("#apartaudioplbtn").on('tap', function() {
+      if(!paused) {
+        apartaudio.pause();
+        paused = true;
+      } else {
+        apartaudio.play();
+        paused = false;
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
     });
     
     $("#apartaudiofbtn").on('tap', function() {

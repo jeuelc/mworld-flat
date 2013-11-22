@@ -45,46 +45,51 @@
     (function() {
       playing = false;
       if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-soaked').html('<audio id="soakedaudio" controls preload onpause="playsoaked()" onplay="pausesoaked()"><source src="http://deftsoft.info/appvendo/mw/audio/soaked.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-soaked').html('<audio id="soakedaudio" controls preload onpause="playsweather()" onplay="pauseweather()"><source src="http://deftsoft.info/appvendo/mw/audio/soaked.mp3" type="audio/mpeg"></audio>');
       } 
     
       $("#soaked").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     })();
     
-    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundweather.pause(); bgsoundweather.currentTime = 0;});
     
     function goBack() {
       $.mobile.changePage("sub-weather-forms.html", {transition: "slide", reverse: true });
-      bgsoundbh.pause();
-      bgsoundbh.currentTime = 0;
+      bgsoundweather.pause();
+      bgsoundweather.currentTime = 0;
       spacesoundbg.play();
     }
     
-    function pausedaudio() {
-      bgsoundbh.play();
-    }
-    
-    function pausebg() {
-      bgsoundbh.pause();
-    }
+    function playsweather() {
+		 bgsoundweather.play();
+	}
+	   
+	function pauseweather() {
+		 bgsoundweather.pause();
+	}
     /* ******************** */
-    $("#playstopsoaked").on('tap', function() {
+	
+	$("#playstopsoaked").on('tap', function() {
       if(!playing) {
         soakedaudio.play();
         $('.micbtnwos').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
         soakedaudio.pause(); soakedaudio.currentTime = 0;
         $('.micbtnwos').css('background-position-x', '0px');
         playing = false;
+        paused = true;
       }
-    });
-    
-    $("#soakedaudioplbtn").on('tap', function() {
-      if(!playing) {
-        soakedaudio.play();
-      } else {
+	});
+	
+	$("#soakedaudioplbtn").on('tap', function() {
+      if(!paused) {
         soakedaudio.pause();
+        paused = true;
+      } else {
+        soakedaudio.play();
+        paused = false;
       }
       //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
     });

@@ -17,10 +17,16 @@
             <div data-role="content" class="kidzcontent">
                 <div class="v-volcano"></div>
                   <div class="sidebarleft-half">
+				  
+				   <a id="sunlink" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Volcanoes/Biggest_and_Baddest/krakatu.jpg', 'An artist\'s impression of what the 1883 Krakatau eruption in Indonesia might have looked like. This was a colossal VEI 6 eruption!');">click here</a>
+
                      <div id="zoomwrapper">
                         <div id="pol1" class="pPiece" style="left:100px;top:270px;">
                            <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
                         </div>
+						<div id="pol2"class="pPiece" style="left:75px;top:290px;">
+             <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
+          </div>
                      </div><!--/zoomwrapper-->
                 
                 </div>
@@ -40,7 +46,7 @@
         </div>
     </div><!--/anisold-->
      
-    <div class="micbtnholder"><div class="micbtnbh"></div></div>
+    <div class="micbtnholder"><div class="micbtnbh" id="playstopsun"></div></div>
     <div class="bbh"><div class="rwbh" id="sunaudiobbtn"></div></div>
     <div class="plbh"><div class="plpsbh" id="sunaudioplbtn"></div></div>
     <div class="fbh"><div class="fwbh" id="sunaudiofbtn" ></div></div>
@@ -60,56 +66,61 @@
            
            
              if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-sun').html('<audio controls preload id="sunaudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/sun.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-sun').html('<audio controls preload id="sunaudio" onpause="playbluesea()" onplay="pausebluesea()"><source src="http://deftsoft.info/appvendo/mw/audio/sun.mp3" type="audio/mpeg"></audio>');
              } 
              
     
             $("#sun").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     
         })();
-        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbluesea.pause(); bgsoundbluesea.currentTime = 0;});
     
         function goBack() {
             $.mobile.changePage("sub-deep-blue-sea-tides-currents.html");
         }
         
-       function pausedaudio() {
-         bgsoundbh.play();
-       }
+      function playbluesea() {
+         bgsoundbluesea.play();
+    }
        
-       function pausebg() {
-         bgsoundbh.pause();
-       }
+    function pausebluesea() {
+         bgsoundbluesea.pause();
+    }
        
-   // $("#pol3").on('tap', function() {
-//      $.mobile.changePage("sub-space-bh-binaries.html", {transition: "slide"});
-//    });
-//    
-//    $("#pol2").on('tap', function() {
-//      $.mobile.changePage("sub-space-bh-quasars.html", {transition: "slide"});
-//    });
-//    
-//    $("#pol1").on('tap', function() {
-//      $.mobile.changePage("sub-space-bh-galaxies.html", {transition: "slide"});
-//    });
+  $("#pol2").on('tap', function() {
+      $.mobile.changePage("game-vol2.html", {transition: "slide"});
+    });
+    $("#pol1").on('tap', function() {
+      $('#sunlink')[0].click();
+    });
       
 
 /* ******************** */
-    $("#sunaudioplbtn").on('tap', function() {
-	 var sunaudio = new Audio();
-      //lifeabhaudio.play();
-      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+$("#playstopsun").on('tap', function() {
       if(!playing) {
         sunaudio.play();
         $('.micbtnbh').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
-        sunaudio.pause();
+        sunaudio.pause(); sunaudio.currentTime = 0;
         $('.micbtnbh').css('background-position-x', '0px');
         playing = false;
+        paused = true;
       }
     });
     
+    $("#sunaudioplbtn").on('tap', function() {
+      if(!paused) {
+        sunaudio.pause();
+        paused = true;
+      } else {
+        sunaudio.play();
+        paused = false;
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+
     $("#sunaudiofbtn").on('tap', function() {
 	 var sunaudio = new Audio();
       var ctime = sunaudio.currentTime;
@@ -128,5 +139,5 @@
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 
-  </script><script src="js/threecardLogic.js"></script>
+  </script><script src="js/twocardLogic.js"></script>
 </div>

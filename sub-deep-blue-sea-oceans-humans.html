@@ -29,7 +29,7 @@ Other people had to manage the pottery kilns, tend the royal elephants or make s
     </div><!--end of content-->
   </div><!--/spacechar-->
   
-  <div class="micbtnholder"><div class="micbtnbh"></div></div>
+  <div class="micbtnholder"><div class="micbtnbh" id="playstophumans"></div></div>
   <div class="bbh"><div class="rwbh" id="humansaudiobbtn"></div></div>
   <div class="plbh"><div class="plpsbh" id="humansaudioplbtn"></div></div>
   <div class="fbh"><div class="fwbh" id="humansaudiofbtn" ></div></div>
@@ -40,8 +40,8 @@ Other people had to manage the pottery kilns, tend the royal elephants or make s
         (function() {
           playing = false;
            /* $('#node-body-minoans').html(data[0].Body);*/
-      if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-humans').html('<audio controls preload id="humansaudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/humanslife.mp3" type="audio/mpeg"></audio>');
+		     if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-oceans').html('<audio id="humansaudio" controls preload onpause="playbluesea()" onplay="pausebluesea()"><source src="http://deftsoft.info/appvendo/mw/audio/humanslife.mp3" type="audio/mpeg"></audio>');
       } 
       
       $("#humans").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
@@ -54,20 +54,20 @@ Other people had to manage the pottery kilns, tend the royal elephants or make s
 	// $("#dsl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-humanslife-angkor-houses.html", {transition:"slide"}); });
 	//  $("#ehl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-humanslife-angkor-animals.html", {transition:"slide"}); });
     
-   $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+   $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbluesea.pause(); bgsoundbluesea.currentTime = 0;});
    function goBack() {
       $.mobile.changePage("sub-deep-blue-sea-oceans.html");
     }
     
-    function pausedaudio() {
-      bgsoundbh.play();
+    function playbluesea() {
+         bgsoundbluesea.play();
     }
-    
-    function pausebg() {
-      bgsoundbh.pause();
+       
+    function pausebluesea() {
+         bgsoundbluesea.pause();
     }
     /* ******************** */
-    $("#humansaudioplbtn").on('tap', function() {
+    $("#playstophumans").on('tap', function() {
       //comefromaudio.play();
       //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
       if(!playing) {
@@ -80,6 +80,20 @@ Other people had to manage the pottery kilns, tend the royal elephants or make s
         playing = false;
       }
     });
+	
+  $("#humansaudioplbtn").on('tap', function() {
+      if(!paused) {
+        oceansaudio.pause();
+        paused = true;
+      } else {
+        oceansaudio.play();
+        paused = false;
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+	
+	
+	
     
     $("#humansaudiofbtn").on('tap', function() {
       var ctime = humansaudio.currentTime;

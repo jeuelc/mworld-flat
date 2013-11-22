@@ -44,7 +44,7 @@
         </div>
     </div><!--/anisold-->
      
-    <div class="micbtnholder"><div class="micbtnbh"></div></div>
+    <div class="micbtnholder"><div class="micbtnbh" id="playstoptell_future"></div></div>
     <div class="bbh"><div class="rwbh" id="tell_futureaudiobbtn"></div></div>
     <div class="plbh"><div class="plpsbh" id="tell_futureaudioplbtn"></div></div>
     <div class="fbh"><div class="fwbh" id="tell_futureaudiofbtn" ></div></div>
@@ -64,26 +64,26 @@
            
            
              if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-tell_future').html('<audio controls preload id="tell_futureaudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/tell_future.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-tell_future').html('<audio controls preload id="tell_futureaudio" onpause="playsweather()" onplay="pauseweather()"><source src="http://deftsoft.info/appvendo/mw/audio/tell_future.mp3" type="audio/mpeg"></audio>');
              } 
              
     
             $("#tell_future").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     
         })();
-        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundweather.pause(); bgsoundweather.currentTime = 0;});
     
         function goBack() {
             $.mobile.changePage("sub-weather-definition.html");
         }
         
-       function pausedaudio() {
-         bgsoundbh.play();
-       }
-       
-       function pausebg() {
-         bgsoundbh.pause();
-       }
+        function playsweather() {
+			 bgsoundweather.play();
+		}
+		   
+		function pauseweather() {
+			 bgsoundweather.pause();
+		}
        
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-bh-binaries.html", {transition: "slide"});
@@ -99,36 +99,44 @@
       
 
 /* ******************** */
-    $("#tell_futureaudioplbtn").on('tap', function() {
-	 var tell_futureaudio = new Audio();
-      //lifeabhaudio.play();
-      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+
+	$("#playstoptell_future").on('tap', function() {
       if(!playing) {
         tell_futureaudio.play();
         $('.micbtnbh').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
-        tell_futureaudio.pause();
+        tell_futureaudio.pause(); tell_futureaudio.currentTime = 0;
         $('.micbtnbh').css('background-position-x', '0px');
         playing = false;
+        paused = true;
+      }
+    });
+	
+	
+    $("#tell_futureaudioplbtn").on('tap', function() {
+	 if(!paused) {
+        tell_futureaudio.pause();
+        paused = true;
+      } else {
+        tell_futureaudio.play();
+        paused = false;
       }
     });
     
     $("#tell_futureaudiofbtn").on('tap', function() {
-	 var tell_futureaudio = new Audio();
-      var ctime = tell_futureaudio.currentTime;
+	  var ctime = tell_futureaudio.currentTime;
       tell_futureaudio.currentTime = ctime + 10;
     });
     
     $("#tell_futureaudiobbtn").on('tap', function() {
-	 var tell_futureaudio = new Audio();
-      var ctime = tell_futureaudio.currentTime;
+	  var ctime = tell_futureaudio.currentTime;
       tell_futureaudio.currentTime = ctime - 10;
     });
     
     $("#tell_futureaudiopsbtn").on('tap', function() {
-	 var tell_futureaudio = new Audio();
-      tell_futureaudio.pause();
+	  tell_futureaudio.pause();
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 

@@ -1,13 +1,14 @@
 <!-- i-C-a -->
 <div data-role="page" id="definition">
-  <script src="js/slidebarwos.js"></script>
+  <script src="js/slidebarweather.js"></script>
+  <link rel="stylesheet" href="css/style-extreme-weather.css" />
   <div class="menuhousing"></div>
-  <div class="homebtnholder"><div class="homebtnwos"></div></div>
-  <div class="mpbtnholder"><div class="mpbtnwos"></div></div>
-  <div class="cpbtnholder"><div class="cpbtnwos"></div></div>
-  <div class="infobtnholder"><div class="infobtnwos"></div></div>
-  <div class="credsbtnholder"><div class="credsbtnwos"></div></div>
-  <div class="menubtnholder"><div class="menubtnwos"></div></div>
+  <div class="homebtnholder"><div class="homebtnweather"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnweather"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnweather"></div></div>
+  <div class="infobtnholder"><div class="infobtnweather"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnweather"></div></div>
+  <div class="menubtnholder"><div class="menubtnweather"></div></div>
   
   <div class="navtitleholdervolcano" style="padding-top:14px;"><h1>What is weather?</h1></div>
   
@@ -28,15 +29,15 @@
       <div class="navvolcanobigbtn3">
         <p><a href="sub-weather-definition-tell-future.html" data-transition="slide" ><img src="css/images/9-12/sleep_dreams/background2.png"></a></p>
       </div>
- <div class="botlogobigholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/The_Wonders_of_Science/bottomhomewos.png"></a></div>
+ <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/The_Wonders_of_Science/bottomhomewos.png"></a></div>
     </div> <!-- end content -->  
     
   
   <!--<div class="audiopanel">-->
-    <div class="micbtnholder"><div class="micbtnwos" id="playstopdefinition"></div></div>
-    <div class="bwos"><div class="rwwos" id="definitionaudiobbtn"></div></div>
-    <div class="plwos"><div class="plpswos" id="definitionaudioplbtn"></div></div>
-    <div class="fwos"><div class="fwwos" id="definitionaudiofbtn"></div></div>
+    <div class="micbtnholder"><div class="micbtnweather" id="playstopdefinition"></div></div>
+    <div class="bweather"><div class="rwweather" id="definitionaudiobbtn"></div></div>
+    <div class="plweather"><div class="plpsweather" id="definitionaudioplbtn"></div></div>
+    <div class="fweather"><div class="fwweather" id="definitionaudiofbtn"></div></div>
     <div id="actualaudio-definition" style="visibility:hidden;"></div>
   <!--</div>-->
   <script>
@@ -71,12 +72,12 @@
     $("#playstopdefinition").on('tap', function() {
       if(!playing) {
         definitionaudio.play();
-        $('.micbtnwos').css('background-position-x', '-81px');
+        $('.micbtnweather').css('background-position-x', '-81px');
         playing = true;
         paused = false;
       } else {
         definitionaudio.pause(); definitionaudio.currentTime = 0;
-        $('.micbtnwos').css('background-position-x', '0px');
+        $('.micbtnweather').css('background-position-x', '0px');
         playing = false;
         paused = true;
       }

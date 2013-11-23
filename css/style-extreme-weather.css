@@ -1,0 +1,82 @@
+/********* Extreme Weather  **********/
+
+#weather{
+  background:url('images/5-8/weather/extreme_weather.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+.plweather, .psweather, .bweather, .fweather {
+  position:absolute;
+  top:670px;
+  left:1024px;
+  z-index:20;
+}
+
+.plpsweather {
+  background:url('images/9-12/The_Wonders_of_Science/play.png') no-repeat 0 -73px;
+  height:73px;
+  width:73px;
+}
+
+.micbtnweather {
+  background:url('images/9-12/The_Wonders_of_Science/mic.png') no-repeat 0 -81px;
+  height:81px;
+  width:81px;
+}
+
+.rwweather {
+  background:url('images/9-12/The_Wonders_of_Science/rw.png') no-repeat 0 -73px;
+  height:73px;
+  width:73px;
+}
+
+.plpsweather {
+  background:url('images/9-12/The_Wonders_of_Science/play.png') no-repeat 0 -73px;
+  height:73px;
+  width:73px;
+}
+
+.fwweather {
+  background:url('images/9-12/The_Wonders_of_Science/fw.png') no-repeat 0 -73px;
+  height:73px;
+  width:73px;
+}
+
+.menubtnweather {
+  background:url('images/9-12/The_Wonders_of_Science/menu.png') no-repeat 0 -90px;
+  height:90px;
+  width:90px;
+}
+
+
+.homebtnweather {
+  background:url('images/9-12/The_Wonders_of_Science/map.png') no-repeat 0 -74px;
+  height:74px;
+  width:80px;
+}
+
+.mpbtnweather {
+  background:url('images/9-12/The_Wonders_of_Science/mpoints.png') no-repeat 0 -84px;
+  height:79px;
+  width:80px;
+}
+
+.cpbtnweather {
+  background:url('images/9-12/The_Wonders_of_Science/ctrlpnl.png') no-repeat 0 -74px;
+  height:74px;
+  width:74px;
+}
+
+.infobtnweather {
+  background:url('images/9-12/The_Wonders_of_Science/info.png') no-repeat 0 -74px;
+  height:74px;
+  width:74px;
+}
+
+.credsbtnweather {
+  background:url('images/9-12/The_Wonders_of_Science/credits.png') no-repeat 0 -74px;
+  height:74px;
+  width:74px;
+}

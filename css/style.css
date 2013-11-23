@@ -1775,6 +1775,15 @@ color: #000000;
   width:1024px !important;
 }
 
+
+
+
+#luminouslight{
+ background:url('images/9-12/luminous_light/luminouslight.png') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
 .navseabtn1 {
     left: 60px;
     position: absolute;

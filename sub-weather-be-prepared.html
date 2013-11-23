@@ -1,13 +1,14 @@
 <!-- i-C-a -->
 <div data-role="page" id="prepared">
-  <script src="js/slidebarwos.js"></script>
+  <script src="js/slidebarweather.js"></script>
+  <link rel="stylesheet" href="css/style-extreme-weather.css" />
   <div class="menuhousing"></div>
-  <div class="homebtnholder"><div class="homebtnwos"></div></div>
-  <div class="mpbtnholder"><div class="mpbtnwos"></div></div>
-  <div class="cpbtnholder"><div class="cpbtnwos"></div></div>
-  <div class="infobtnholder"><div class="infobtnwos"></div></div>
-  <div class="credsbtnholder"><div class="credsbtnwos"></div></div>
-  <div class="menubtnholder"><div class="menubtnwos"></div></div>
+  <div class="homebtnholder"><div class="homebtnweather"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnweather"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnweather"></div></div>
+  <div class="infobtnholder"><div class="infobtnweather"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnweather"></div></div>
+  <div class="menubtnholder"><div class="menubtnweather"></div></div>
   
   <div class="navtitleholder" style="padding-top:14px;"><h1>Be Prepared!</h1></div>
   
@@ -31,10 +32,10 @@
     
   
   <!--<div class="audiopanel">-->
-    <div class="micbtnholder"><div class="micbtnwos" id="playstopprepared"></div></div>
-    <div class="bwos"><div class="rwwos" id="preparedaudiobbtn"></div></div>
-    <div class="plwos"><div class="plpswos" id="preparedaudioplbtn"></div></div>
-    <div class="fwos"><div class="fwwos" id="preparedaudiofbtn"></div></div>
+    <div class="micbtnholder"><div class="micbtnweather" id="playstopprepared"></div></div>
+    <div class="bweather"><div class="rwweather" id="preparedaudiobbtn"></div></div>
+    <div class="plweather"><div class="plpsweather" id="preparedaudioplbtn"></div></div>
+    <div class="fweather"><div class="fwweather" id="preparedaudiofbtn"></div></div>
     <div id="actualaudio-prepared" style="visibility:hidden;"></div>
   <!--</div>-->
   <script>
@@ -69,12 +70,12 @@
     $("#playstopprepared").on('tap', function() {
       if(!playing) {
         preparedaudio.play();
-        $('.micbtnwos').css('background-position-x', '-81px');
+        $('.micbtnweather').css('background-position-x', '-81px');
         playing = true;
         paused = false;
       } else {
         preparedaudio.pause(); preparedaudio.currentTime = 0;
-        $('.micbtnwos').css('background-position-x', '0px');
+        $('.micbtnweather').css('background-position-x', '0px');
         playing = false;
         paused = true;
       }

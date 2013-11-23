@@ -1,0 +1,81 @@
+/********* Luminous Light  **********/
+#luminouslight{
+ background:url('images/9-12/luminous_light/luminouslight.png') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+.plluminous, .psluminous, .bluminous, .fluminous {
+  position:absolute;
+  top:670px;
+  left:1024px;
+  z-index:20;
+}
+
+.plpsluminous {
+  background:url('images/9-12/The_Wonders_of_Science/play.png') no-repeat 0 -73px;
+  height:73px;
+  width:73px;
+}
+
+.micbtnluminous {
+  background:url('images/9-12/The_Wonders_of_Science/mic.png') no-repeat 0 -81px;
+  height:81px;
+  width:81px;
+}
+
+.rwluminous {
+  background:url('images/9-12/The_Wonders_of_Science/rw.png') no-repeat 0 -73px;
+  height:73px;
+  width:73px;
+}
+
+.plpsluminous {
+  background:url('images/9-12/The_Wonders_of_Science/play.png') no-repeat 0 -73px;
+  height:73px;
+  width:73px;
+}
+
+.fwluminous {
+  background:url('images/9-12/The_Wonders_of_Science/fw.png') no-repeat 0 -73px;
+  height:73px;
+  width:73px;
+}
+
+.menubtnluminous {
+  background:url('images/9-12/The_Wonders_of_Science/menu.png') no-repeat 0 -90px;
+  height:90px;
+  width:90px;
+}
+
+
+.homebtnluminous {
+  background:url('images/9-12/The_Wonders_of_Science/map.png') no-repeat 0 -74px;
+  height:74px;
+  width:80px;
+}
+
+.mpbtnluminous {
+  background:url('images/9-12/The_Wonders_of_Science/mpoints.png') no-repeat 0 -84px;
+  height:79px;
+  width:80px;
+}
+
+.cpbtnluminous {
+  background:url('images/9-12/The_Wonders_of_Science/ctrlpnl.png') no-repeat 0 -74px;
+  height:74px;
+  width:74px;
+}
+
+.infobtnluminous {
+  background:url('images/9-12/The_Wonders_of_Science/info.png') no-repeat 0 -74px;
+  height:74px;
+  width:74px;
+}
+
+.credsbtnluminous {
+  background:url('images/9-12/The_Wonders_of_Science/credits.png') no-repeat 0 -74px;
+  height:74px;
+  width:74px;
+}

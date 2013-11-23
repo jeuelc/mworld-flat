@@ -1,13 +1,14 @@
 <!-- i-C-a -->
 <div id="weather_forms" data-role="page">
-  <script src="js/slidebarbh.js"></script>
+  <script src="js/slidebarweather.js"></script>
+  <link rel="stylesheet" href="css/style-extreme-weather.css" />
   <div class="menuhousing"></div>
-  <div class="homebtnholder"><div class="homebtnbh"></div></div>
-  <div class="mpbtnholder"><div class="mpbtnbh"></div></div>
-  <div class="cpbtnholder"><div class="cpbtnbh"></div></div>
-  <div class="infobtnholder"><div class="infobtnbh"></div></div>
-  <div class="credsbtnholder"><div class="credsbtnbh"></div></div>
-  <div class="menubtnholder"><div class="menubtnbh"></div></div>
+  <div class="homebtnholder"><div class="homebtnweather"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnweather"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnweather"></div></div>
+  <div class="infobtnholder"><div class="infobtnweather"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnweather"></div></div>
+  <div class="menubtnholder"><div class="menubtnweather"></div></div>
   <div id="spacechar">&nbsp;
     <div data-role="content" class="kidzcontent">
       <div class="v-spacer"></div>
@@ -22,14 +23,14 @@
         <p>Have you ever heard thunder or seen lightning?  Has the wind ever been so strong that it almost blows you over?  Have you got very wet after standing in the rain for just a few seconds?  Then you have experienced extreme weather!  </p>
                     <p>Although it doesn't happen very often, different types of extreme weather can happen everywhere around the world.  How many types of extreme weather can you name?  Which types have happened where you live? </p>	  
       </div>
-      <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/5-8/bottomhomebh.png"></a></div>
+      <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/The_Wonders_of_Science/bottomhomewos.png"></a></div>
     </div><!--end of content-->
   </div><!--/spacechar-->
   
-  <div class="micbtnholder"><div class="micbtnbh" id="playstopweather_forms"></div></div>
-  <div class="bbh"><div class="rwbh" id="weather_formsaudiobbtn"></div></div>
-  <div class="plbh"><div class="plpsbh" id="weather_formsaudioplbtn"></div></div>
-  <div class="fbh"><div class="fwbh" id="weather_formsaudiofbtn" ></div></div>
+  <div class="micbtnholder"><div class="micbtnweather" id="playstopweather_forms"></div></div>
+  <div class="bweather"><div class="rwweather" id="weather_formsaudiobbtn"></div></div>
+  <div class="plweather"><div class="plpsweather" id="weather_formsaudioplbtn"></div></div>
+  <div class="fweather"><div class="fwweather" id="weather_formsaudiofbtn" ></div></div>
   <div id="actualaudio-weather_forms" style="visibility:hidden;"></div>
   <script>
     sound = new Audio(); // 'sound' is now an audio object
@@ -67,12 +68,12 @@
 	$("#playstopweather_forms").on('tap', function() {
       if(!playing) {
         weather_formsaudio.play();
-        $('.micbtnbh').css('background-position-x', '-81px');
+        $('.micbtnweather').css('background-position-x', '-81px');
         playing = true;
         paused = false;
       } else {
         weather_formsaudio.pause(); weather_formsaudio.currentTime = 0;
-        $('.micbtnbh').css('background-position-x', '0px');
+        $('.micbtnweather').css('background-position-x', '0px');
         playing = false;
         paused = true;
       }

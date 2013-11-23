@@ -1,13 +1,14 @@
 <!-- i-C-a -->
 <div data-role="page" id="trickswithlight">
-  <script src="js/slidebarwos.js"></script>
+  <script src="js/slidebar_luminous_light.js"></script>
+  <link rel="stylesheet" href="css/style-luminous-light.css" />
   <div class="menuhousing"></div>
-  <div class="homebtnholder"><div class="homebtnwos"></div></div>
-  <div class="mpbtnholder"><div class="mpbtnwos"></div></div>
-  <div class="cpbtnholder"><div class="cpbtnwos"></div></div>
-  <div class="infobtnholder"><div class="infobtnwos"></div></div>
-  <div class="credsbtnholder"><div class="credsbtnwos"></div></div>
-  <div class="menubtnholder"><div class="menubtnwos"></div></div>
+  <div class="homebtnholder"><div class="homebtnluminous"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnluminous"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnluminous"></div></div>
+  <div class="infobtnholder"><div class="infobtnluminous"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnluminous"></div></div>
+  <div class="menubtnholder"><div class="menubtnluminous"></div></div>
   
   <div class="navtitleholder" style="padding-top:14px;"><h1>Tricks with light</h1></div>
   
@@ -37,10 +38,10 @@
     
   
   <!--<div class="audiopanel">-->
-    <div class="micbtnholder"><div class="micbtnwos" id="playstoptrickswithlight"></div></div>
-    <div class="bwos"><div class="rwwos" id="trickswithlightaudiobbtn"></div></div>
-    <div class="plwos"><div class="plpswos" id="trickswithlightaudioplbtn"></div></div>
-    <div class="fwos"><div class="fwwos" id="trickswithlightaudiofbtn"></div></div>
+    <div class="micbtnholder"><div class="micbtnluminous" id="playstoptrickswithlight"></div></div>
+    <div class="bluminous"><div class="rwluminous" id="trickswithlightaudiobbtn"></div></div>
+    <div class="plluminous"><div class="plpsluminous" id="trickswithlightaudioplbtn"></div></div>
+    <div class="fluminous"><div class="fwluminous" id="trickswithlightaudiofbtn"></div></div>
     <div id="actualaudio-trickswithlight" style="visibility:hidden;"></div>
   <!--</div>-->
   <script>
@@ -75,22 +76,22 @@
     $("#playstoptrickswithlight").on('tap', function() {
       if(!playing) {
         trickswithlightaudio.play();
-        $('.micbtnwos').css('background-position-x', '-81px');
+        $('.micbtnluminous').css('background-position-x', '-81px');
         playing = true;
         paused = false;
       } else {
         trickswithlightaudio.pause(); trickswithlightaudio.currentTime = 0;
-        $('.micbtnwos').css('background-position-x', '0px');
+        $('.micbtnluminous').css('background-position-x', '0px');
         playing = false;
         paused = true;
       }
 	  /*if(!playing) {
         trickswithlightaudio.play();
-        $('.micbtnwos').css('background-position-x', '-81px');
+        $('.micbtnluminous').css('background-position-x', '-81px');
         playing = true;
       } else {
         trickswithlightaudio.pause(); volcanoaudio.currentTime = 0;
-        $('.micbtnwos').css('background-position-x', '0px');
+        $('.micbtnluminous').css('background-position-x', '0px');
         playing = false;
       }*/
     });

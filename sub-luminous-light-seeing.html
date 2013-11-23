@@ -1,13 +1,14 @@
 <!-- i-C-a -->
 <div data-role="page" id="seeing">
-  <script src="js/slidebarwos.js"></script>
+  <script src="js/slidebar_luminous_light.js"></script>
+  <link rel="stylesheet" href="css/style-luminous-light.css" />
   <div class="menuhousing"></div>
-  <div class="homebtnholder"><div class="homebtnwos"></div></div>
-  <div class="mpbtnholder"><div class="mpbtnwos"></div></div>
-  <div class="cpbtnholder"><div class="cpbtnwos"></div></div>
-  <div class="infobtnholder"><div class="infobtnwos"></div></div>
-  <div class="credsbtnholder"><div class="credsbtnwos"></div></div>
-  <div class="menubtnholder"><div class="menubtnwos"></div></div>
+  <div class="homebtnholder"><div class="homebtnluminous"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnluminous"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnluminous"></div></div>
+  <div class="infobtnholder"><div class="infobtnluminous"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnluminous"></div></div>
+  <div class="menubtnholder"><div class="menubtnluminous"></div></div>
   
   <div class="navtitleholder" style="padding-top:14px;"><h1>Seeing</h1></div>
   
@@ -36,10 +37,10 @@
     
   
   <!--<div class="audiopanel">-->
-    <div class="micbtnholder"><div class="micbtnwos" id="playstopseeing"></div></div>
-    <div class="bwos"><div class="rwwos" id="seeingaudiobbtn"></div></div>
-    <div class="plwos"><div class="plpswos" id="seeingaudioplbtn"></div></div>
-    <div class="fwos"><div class="fwwos" id="seeingaudiofbtn"></div></div>
+    <div class="micbtnholder"><div class="micbtnluminous" id="playstopseeing"></div></div>
+    <div class="bluminous"><div class="rwluminous" id="seeingaudiobbtn"></div></div>
+    <div class="plluminous"><div class="plpsluminous" id="seeingaudioplbtn"></div></div>
+    <div class="fluminous"><div class="fwluminous" id="seeingaudiofbtn"></div></div>
     <div id="actualaudio-seeing" style="visibility:hidden;"></div>
   <!--</div>-->
   <script>
@@ -74,23 +75,23 @@
     $("#playstopseeing").on('tap', function() {
        if(!playing) {
         seeingaudio.play();
-        $('.micbtnwos').css('background-position-x', '-81px');
+        $('.micbtnluminous').css('background-position-x', '-81px');
         playing = true;
         paused = false;
       } else {
         seeingaudio.pause(); seeingaudio.currentTime = 0;
-        $('.micbtnwos').css('background-position-x', '0px');
+        $('.micbtnluminous').css('background-position-x', '0px');
         playing = false;
         paused = true;
       }
 	  
 	  /*if(!playing) {
         luminouslightaudio.play();
-        $('.micbtnwos').css('background-position-x', '-81px');
+        $('.micbtnluminous').css('background-position-x', '-81px');
         playing = true;
       } else {
         luminouslightaudio.pause(); volcanoaudio.currentTime = 0;
-        $('.micbtnwos').css('background-position-x', '0px');
+        $('.micbtnluminous').css('background-position-x', '0px');
         playing = false;
       }*/
     });

@@ -18,13 +18,34 @@
             <div data-role="content" class="kidzcontent">
                 <div class="v-volcano"></div>
                   <div class="sidebarleft-half">
+					<div id="f1_container" style="visibility:hidden;position:absolute;left:100px;top:270px;">
+					  <div id="f1_card">
+						<div class="front face">
+						  <img id="dopple" src="css/images/9-12/Human_Body/The_Mind/Sleep_And_Dreams/Broken_Sleep/Messing_With_Your_Body_Clock/sleepyhormone.png">
+						</div>
+						<div id="backofcard" class="back face center" style="background:url(css/images/9-12/Human_Body/The_Mind/Sleep_And_Dreams/Broken_Sleep/Messing_With_Your_Body_Clock/sleepyhormone-reverse.png) no-repeat;">
+						<div class="returncard" style="position:absolute;left:0px;top:0px;width:362px;height:170px;"></div>
+						  <div class="falseans" style="position:absolute;left: 51px;top: 166px;width: 124px;height: 33px;"></div>
+						  <div class="falseans" style="position:absolute;left:190px;top: 166px;width: 124px;height: 33px;"></div>
+						  <div class="falseans" style="position:absolute;left:51px;top:205px;width: 124px;height: 33px;"></div>
+						  <div id="trueans" style="position:absolute;left:190px;top:205px;width: 124px;height: 33px;"></div>
+						</div>
+					  </div><!--/f1+card-->
+					</div><!--/f1_container-->					  
                      <div id="zoomwrapper">
                         <div id="pol1" class="pPiece" style="left:100px;top:270px;">
-                           <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
+							<img src="css/images/9-12/Human_Body/The_Mind/Sleep_And_Dreams/Broken_Sleep/Messing_With_Your_Body_Clock/sleepyhormone.png" alt="" />		
+                           
                         </div>
                         <div id="pol2"class="pPiece" style="left:75px;top:290px;">
+                           <img src="css/images/9-12/Human_Body/The_Mind/Sleep_And_Dreams/Broken_Sleep/Messing_With_Your_Body_Clock/socialjetlag.png" alt="" />
+                        </div>
+                        <div id="pol3" class="pPiece" style="left:80px;top:270px;">
                            <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
                         </div>
+                        <div id="pol4"class="pPiece" style="left:80px;top:270px;">
+                           <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
+                        </div>						
                      </div><!--/zoomwrapper-->
                 </div>
                 <div class="bpcontentvolcano">
@@ -57,11 +78,12 @@
         (function() {
           playing = false;
             $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
-            $('div#pol1').css("z-index", 2);
-            $('div#pol2').css("z-index", 1);
+            $('div#pol1').css("z-index", 4);
+            $('div#pol2').css("z-index", 3);
+            $('div#pol3').css("z-index", 2);
+            $('div#pol4').css("z-index", 1);			
             $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
             $('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
-           
            
              if(sound.canPlayType('audio/mpeg')) {
                  $('#actualaudio-messing').html('<audio controls preload id="messingaudio" onpause="playsleeps()" onplay="pausesleeps()"><source src="http://deftsoft.info/appvendo/mw/audio/messing.mp3" type="audio/mpeg"></audio>');
@@ -84,20 +106,52 @@
 		function pausesleeps() {
 			 bgsoundsleeps.pause();
 		}
-       
+
+    $(".returncard").on('tap', function() {
+      $('#f1_card').css({"-webkit-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"-moz-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"-o-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"transform": "rotateY(0deg)"});
+      setTimeout(function() {
+        $("#pol1").css({"visibility":"visible", "z-index":3});
+        $('#f1_container').css({"visibility":"hidden", "z-index":0});
+      }, 1000);
+    });
+		
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-sleeps-binaries.html", {transition: "slide"});
 //    });
 //    
     $("#pol1").on('tap', function() {
-      $.mobile.changePage("sub-sleep-and-dreams-broken-messing-body-clocks.html", {transition: "slide"});
+      $('#f1_container').css({"visibility":"visible", "z-index":10});
+      $(this).css({"visibility":"hidden"});
+      $('#f1_card').css({"-webkit-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"-moz-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"-o-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"transform": "rotateY(180deg)"});
     });
-	
+	//2nd quiz
 	$("#pol2").on('tap', function() {
-      $.mobile.changePage("sub-sleep-and-dreams-broken-messing-social-jetlag.html", {transition: "slide"});
+      $.mobile.changePage("#", {transition: "slide"});
     });
-      
+	//3rd link
+    $("#pol3").on('tap', function() {
+	  $.mobile.changePage("sub-sleep-and-dreams-broken-messing-body-clocks.html", {transition: "slide"});
+    });   
+	//4th page link
+    $("#pol4").on('tap', function() {
+	  $.mobile.changePage("sub-sleep-and-dreams-broken-messing-social-jetlag.html", {transition: "slide"});
+    });   	
 
+	
+/* write and wrong ans */
+    $('.falseans').on('tap', function() {
+      alert("Wrong answer");
+    });
+    $('#trueans').on('tap', function() {
+      alert("Correct answer");
+    });		
+	
 /* ******************** */
 
 	$("#playstopmessing").on('tap', function() {
@@ -139,5 +193,5 @@
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 
-  </script><script src="js/threecardLogic.js"></script>
+  </script><script src="js/fourcardLogic.js"></script>  <!-- for card dragging effects -->
 </div>

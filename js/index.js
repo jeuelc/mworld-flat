@@ -710,12 +710,12 @@ function playsleeps() { bgsoundsleeps.play(); $(".audiopanel").css({"backgroundP
 
 /************************ How to Become A Scientist Section *******************************/
 
-var bgsoundsleeps = new Audio();
-bgsoundsleeps.src = "http://deftsoft.info/appvendo/mw/audio/background/sleeps_bg.mp3";
-bgsoundsleeps.addEventListener('ended', function() { bgsoundsleeps.play(); });
+var bgsoundscientist = new Audio();
+bgsoundscientist.src = "http://deftsoft.info/appvendo/mw/audio/background/sleeps_bg.mp3";
+bgsoundscientist.addEventListener('ended', function() { bgsoundscientist.play(); });
 
-function pausesleeps() { bgsoundsleeps.pause() }
-function playsleeps() { bgsoundsleeps.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }
+function pausescientist() { bgsoundscientist.pause() }
+function playscientist() { bgsoundscientist.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }
 
 /************************ Extreme Weather Section *******************************/
 

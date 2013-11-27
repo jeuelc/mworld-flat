@@ -18,18 +18,25 @@
             <div data-role="content" class="kidzcontent">
                 <div class="v-volcano"></div>
                   <div class="sidebarleft-half">
+			  
+					<a id="pencilsappearbroken" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Wonders_of_Science/Luminous_Light/Tricks_With_Light/Refraction_And_Rainbows/Pencils_Appear_Broken-zoom.jpg', 'Light refracts through the water, making the pencils appear broken.');">click here</a>
+				
+					<a id="frog" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Wonders_of_Science/Luminous_Light/Tricks_With_Light/Refraction_And_Rainbows/Frog-zoom.jpg', 'The frog looks disjointed because light refracts travelling from water through to air.');">click here</a>
+					
+					<a id="waterdroplet" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Wonders_of_Science/Luminous_Light/Tricks_With_Light/Refraction_And_Rainbows/Water_Droplet-zoom.jpg', 'Light refracting through a water droplet acts like a magnifying glass.');">click here</a>
+					<a id="prism" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Wonders_of_Science/Luminous_Light/Tricks_With_Light/Refraction_And_Rainbows/Prism-zoom.jpg', 'When white light passes through a prism, the light is split up into all the different colours of the rainbow.');">click here</a>					
                      <div id="zoomwrapper">
                         <div id="pol1" class="pPiece" style="left:100px;top:270px;">
-                           <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
+                           <img src="css/images/9-12/The_Wonders_of_Science/Luminous_Light/Tricks_With_Light/Refraction_And_Rainbows/Pencils_Appear_Broken.jpg" alt="" />
                         </div>
                         <div id="pol2"class="pPiece" style="left:75px;top:290px;">
-                           <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
+                           <img src="css/images/9-12/The_Wonders_of_Science/Luminous_Light/Tricks_With_Light/Refraction_And_Rainbows/Frog.jpg" alt="" />
                         </div>
                         <div id="pol3"class="pPiece" style="left:80px;top:270px;">
-                           <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
+                           <img src="css/images/9-12/The_Wonders_of_Science/Luminous_Light/Tricks_With_Light/Refraction_And_Rainbows/Water_Droplet.jpg" alt="" />
                         </div>
 						 <div id="pol4"class="pPiece" style="left:80px;top:270px;">
-                           <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
+                           <img src="css/images/9-12/The_Wonders_of_Science/Luminous_Light/Tricks_With_Light/Refraction_And_Rainbows/Prism.jpg" alt="" />
                         </div>
                      </div><!--/zoomwrapper-->
                 
@@ -90,6 +97,21 @@
        function pauseluminous() {
          bgsoundluminous.pause();
        }
+
+		 $("#pol1").on('tap', function() {
+			$('#pencilsappearbroken')[0].click();
+		});	
+		 $("#pol2").on('tap', function() {
+			$('#frog')[0].click();
+		});	
+
+		 $("#pol3").on('tap', function() {
+			$('#waterdroplet')[0].click();
+		});	
+		 $("#pol4").on('tap', function() {
+			$('#prism')[0].click();
+		});		
+
        
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-luminous-binaries.html", {transition: "slide"});

@@ -18,18 +18,24 @@
             <div data-role="content" class="kidzcontent">
                 <div class="v-volcano"></div>
                   <div class="sidebarleft-half">
+					<a id="peacock" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Wonders_of_Science/Luminous_Light/Tricks_With_Light/Iridescence/Peacock-zoom.jpg', 'Peacock feathers display iridescence.');">click here</a>
+				
+					<a id="bubbles" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Wonders_of_Science/Luminous_Light/Tricks_With_Light/Iridescence/Bubbles-zoom.jpg', 'Bubbles are a good example of colourful iridescence!');">click here</a>
+					
+					<a id="bismuth" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Wonders_of_Science/Luminous_Light/Tricks_With_Light/Iridescence/Bismuth-zoom.jpg', 'Bismuth is a brittle metal that forms cool geometric structures. When exposed to the air, an iridescent oxide layer forms making many colours visible from yellow to blue. ');">click here</a>
+					<a id="seashells" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Wonders_of_Science/Luminous_Light/Tricks_With_Light/Iridescence/Sea_Shells-zoom.jpg', 'Colourful sea shells are another example of iridescence.');">click here</a>					
                      <div id="zoomwrapper">
                         <div id="pol1" class="pPiece" style="left:100px;top:270px;">
-                           <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
+                           <img src="css/images/9-12/The_Wonders_of_Science/Luminous_Light/Tricks_With_Light/Iridescence/Peacock.jpg" alt="" />
                         </div>
                         <div id="pol2"class="pPiece" style="left:75px;top:290px;">
-                           <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
+                           <img src="css/images/9-12/The_Wonders_of_Science/Luminous_Light/Tricks_With_Light/Iridescence/Bubbles.jpg" alt="" />
                         </div>
                         <div id="pol3"class="pPiece" style="left:80px;top:270px;">
-                           <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
+                           <img src="css/images/9-12/The_Wonders_of_Science/Luminous_Light/Tricks_With_Light/Iridescence/Bismuth.jpg" alt="" />
                         </div>
 						 <div id="pol4"class="pPiece" style="left:80px;top:270px;">
-                           <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
+                           <img src="css/images/9-12/The_Wonders_of_Science/Luminous_Light/Tricks_With_Light/Iridescence/Sea_Shells.jpg" alt="" />
                         </div>
                      </div><!--/zoomwrapper-->
                 
@@ -91,6 +97,20 @@
        function pauseluminous() {
          bgsoundluminous.pause();
        }
+
+		 $("#pol1").on('tap', function() {
+			$('#peacock')[0].click();
+		});	
+		 $("#pol2").on('tap', function() {
+			$('#bubbles')[0].click();
+		});	
+
+		 $("#pol3").on('tap', function() {
+			$('#bismuth')[0].click();
+		});	
+		 $("#pol4").on('tap', function() {
+			$('#seashells')[0].click();
+		});		
        
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-luminous-binaries.html", {transition: "slide"});

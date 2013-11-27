@@ -13,19 +13,17 @@
     <div data-role="content" class="kidzcontent">
       <div class="v-spacer"></div>
       <div class="sidebarleft-half">
-      <!--<div id="sgl" style="width:141px;height:112px;left:210px;top:362px;background:transparent;position:absolute;z-index:99999;"></div>
-        <div id="snl" style="width:141px;height:112px;left:128px;top:485px;background:transparent;position:absolute;z-index:99999;"></div>
-        <div id="nsl" style="width:176px;height:106px;left:388px;top:283px;background:transparent;position:absolute;z-index:99999;"></div>
-        <div id="sleepsl" style="width:165px;height:117px;left:498px;top:467px;background:transparent;position:absolute;z-index:99999;"></div>
-		<div id="dsl" style="width:176px;height:106px;left:735px;top:217px;background:transparent;position:absolute;z-index:99999;"></div>
-        <div id="ehl" style="width:165px;height:110px;left:844px;top:415px;background:transparent;position:absolute;z-index:99999;"></div>
-      </div>-->
+        <div id="sgl" style="height: 99px;left: 210px;position: absolute; top: 140px; width: 225px;background:transparent;position:absolute;"></div>
+        <div id="nsl" style=" background: none repeat scroll 0 0 transparent;height: 100px;position: absolute;right: 360px;top: 27px;width: 235px;"></div>
+	    <div id="gsl" style=" background: none repeat scroll 0 0 transparent;height: 99px; position: absolute;right: 140px;top: 140px;width: 225px;"></div>
+	    
+      </div>
       <div class="storypagetitlehuman"><h1>In your dreams</h1></div>
       <div class="storypageetg">
 			<p>Everybody talks about their dreams.  Dreams have interested philosophers and psychologists for centuries, yet despite years of research, why we dream and what dreams really mean remains a mystery!</p>
 			<p>What we do know is that dreaming mostly happens in REM sleep  when our eyes are moving really fast behind our eyelids.  During this sleep stage our brain waves look almost exactly the same as when we are awake.</p>
 	  </div>
-      <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/The_Wonders_of_Science/bottomhomewos.png"></a></div>
+      <div class="botlogoholder"><a href="home.html" class="homelinksleeps"><img src="css/images/9-12/Human_Body/bottomhomehb.png"></a></div>
     </div><!--end of content-->
   </div><!--/spacechar-->
   
@@ -47,15 +45,12 @@
       $("#inyourdreams").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     })();
     
-  //  $("#sgl").on('tap', function() {$.mobile.changePage("sub-medieval- metropolis-inyourdreamslife-angkor-cooking.html", {transition:"slide"}); });
-  // $("#snl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-inyourdreamslife-angkor-marketers.html", {transition:"slide"}); });
-  //  $("#nsl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-inyourdreamslife-angkor-village.html", {transition:"slide"}); });
-  //  $("#sleepsl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-inyourdreamslife-angkor-fashion.html", {transition:"slide"}); });
-	// $("#dsl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-inyourdreamslife-angkor-houses.html", {transition:"slide"}); });
-	//  $("#ehl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-inyourdreamslife-angkor-animals.html", {transition:"slide"}); });
+    $("#sgl").on('tap', function() { $.mobile.changePage("sub-sleeps-and-dreams-why-do-we-dream-.html", {transition:"slide"}); });
+    $("#nsl").on('tap', function() { $.mobile.changePage("sub-sleep-and-dreams-remembering-dreams.html", {transition:"slide"}); });
+    $("#gsl").on('tap', function() { $.mobile.changePage("sub-sleep-and-dreams-meaning-of-dreams.html", {transition:"slide"}); });
     
-   $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundsleeps.pause(); bgsoundsleeps.currentTime = 0;});
-   function goBack() {
+	$('.homelinksleeps').on('tap', function() { mainaudiobg.play(); bgsoundsleeps.pause(); bgsoundsleeps.currentTime = 0;});
+    function goBack() {
       $.mobile.changePage("sub-sleep-and-dreams.html");
     }
     

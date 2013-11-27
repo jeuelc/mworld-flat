@@ -1,11 +1,34 @@
 /********* Luminous Light  **********/
-#luminouslight{
- background:url('images/9-12/luminous_light/luminouslight.png') no-repeat;
+#luminouslight, #seeing, #augmentedsight,#colours,#trickswithlight,#bioluminescence,#circusmirror,#hologram,#iridescence,#refraction,#whatisit{
+ background:url('images/9-12/The_Wonders_of_Science/Luminous_Light/luminouslight_bg.png') no-repeat;
   height:748px !important;
   overflow:hidden !important;
   width:1024px !important;
 }
-
+#invisible{
+  background:url('images/9-12/The_Wonders_of_Science/Luminous_Light/How_To_Make_Yourself_Invisible/How_To_Make_Yourself_Invisible_bg.png') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+#sunsetred{
+  background:url('images/9-12/The_Wonders_of_Science/Luminous_Light/Seeing/Why_Is_The_Sunset_Red/Why_Is_Sunset_Red.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+#lookingback{
+  background:url('images/9-12/The_Wonders_of_Science/Luminous_Light/Seeing/Looking_Back_In_Time/Looking_Back_In_Time_bg.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+#electromagnetic{
+  background:url('images/9-12/The_Wonders_of_Science/Luminous_Light/What_Is_It/Electromagnetic_Spectrum/Electromagnetic_Spectrum_bg.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
 .plluminous, .psluminous, .bluminous, .fluminous {
   position:absolute;
   top:670px;

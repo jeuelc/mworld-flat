@@ -2001,13 +2001,13 @@ font-family: "Chalkboard SE";
   width:1024px !important;
 }
 
-/* -------------------- sleeps and dreams section ---------------------- */
+/* -------------------- sleeps and dreams section ---------------------- 
 #sleeps , #broken , #bodyclock , #bodyclocks , #socialjetlag , #messing , #parasomnias , #notsleeping , #brokensleep , #meaningofdreams , #openeyes , #rememberingdreams , #sleepcultures , #sleepstructure , #earlybirds , #sleeptime , #howsleep , #whywesleep{
   background:url('images/5-8/sleeps_dreams/sleeps.jpg') no-repeat;
   height:748px !important;
   overflow:hidden !important;
   width:1024px !important;
-}
+} */
 
 
 #lookingback{
@@ -2017,19 +2017,9 @@ font-family: "Chalkboard SE";
   width:1024px !important;
 }
 
-#sunsetred{
-  background:url('images/9-12/luminous_light/seeing/sunset_red/sunsetred.jpg') no-repeat;
-  height:748px !important;
-  overflow:hidden !important;
-  width:1024px !important;
-}
 
-#electromagnetic{
-  background:url('images/9-12/luminous_light/whatisit/electromagnetic/electromagnetic.jpg') no-repeat;
-  height:748px !important;
-  overflow:hidden !important;
-  width:1024px !important;
-}
+
+
 
 #nolightnolife{
   background:url('images/9-12/luminous_light/whatisit/nolightnolife/nolightnolife.jpg') no-repeat;

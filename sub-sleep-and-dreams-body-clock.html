@@ -11,92 +11,66 @@
   <div class="menubtnholder"><div class="menubtnsleeps"></div></div>
     <script src="js/hammer.js"></script>
     <script src="js/jquery.hammer.js"></script>
-   <!-- <div id="bonus-ags" class="talkbubble" style="background:url(css/images/5-8/volcanoes/placeholder-background.jpg) no-repeat; width:473px;height:296px;position:absolute;left:500px;top:40px;visibility:hidden;"></div>--><!--/bonus-ags-->
-    <div class="bptitleholder" style="padding-top:14px;"><h1>Tick, tock, body clock</h1></div>
-    <div id="anisold">
-        <div id="spacechar">&nbsp;
-            <div data-role="content" class="kidzcontent">
-                <div class="v-volcano"></div>
-                  <div class="sidebarleft-half">
-                     <div id="zoomwrapper">
-                        <div id="pol1" class="pPiece" style="left:100px;top:270px;">
-                           <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
-                        </div>
-                     </div><!--/zoomwrapper-->
-                </div>
-                <div class="bpcontentvolcano">
-                    <p>Inside your body is a clock that tells you when it's time to eat (you get hungry), time to play (you get lots of energy), and time to sleep (you get tired).  Your body clock is also known as your circadian rhythm, and comes from a tiny spot in your brain called the Suprachiasmatic Nucleus.</p>
+  <div id="spacechar">&nbsp;
+    <div data-role="content" class="kidzcontent">
+      <div class="v-spacer"></div>
+      <div class="sidebarleft-half">
+      <!--<div id="sgl" style="width:141px;height:112px;left:210px;top:362px;background:transparent;position:absolute;z-index:99999;"></div>
+        <div id="snl" style="width:141px;height:112px;left:128px;top:485px;background:transparent;position:absolute;z-index:99999;"></div>
+        <div id="nsl" style="width:176px;height:106px;left:388px;top:283px;background:transparent;position:absolute;z-index:99999;"></div>
+        <div id="sleepsl" style="width:165px;height:117px;left:498px;top:467px;background:transparent;position:absolute;z-index:99999;"></div>
+		<div id="dsl" style="width:176px;height:106px;left:735px;top:217px;background:transparent;position:absolute;z-index:99999;"></div>
+        <div id="ehl" style="width:165px;height:110px;left:844px;top:415px;background:transparent;position:absolute;z-index:99999;"></div>
+      </div>-->
+      <div class="storypagetitlehuman"><h1>Tick, tock, body clock</h1></div>
+      <div class="storypageetg">
+		<p>Inside your body is a clock that tells you when it's time to eat (you get hungry), time to play (you get lots of energy), and time to sleep (you get tired).  Your body clock is also known as your circadian rhythm, and comes from a tiny spot in your brain called the Suprachiasmatic Nucleus.</p>
 					<p>Over 24 hours of the day, your body clock is like a roller coaster - it goes up and it goes down. From about 6am to 2pm, your body clock ensures you have what you need for peak performance and energy.  It then tells your body to take a rest, so it slows everything down until about 4pm.  After that, your body clock gets you moving again until between 8 and 10pm. From then until 6am, your body clock tells you to sleep.</p>
 					<p>Of course, your body clock can't tell the actual time so it uses day and night, or light and dark, which it senses through your eyes, to set your body clock.</p>
-				</div>
-                <!-- <div data-role="popup" id="imongnawong" data-position-to="window" data-overlay-theme="a" style="text-align:center;">
-                  <div id="node-pop">
-                     <p>What is an orbit?</p>
-                     <p>Does gravity always pull objects together? It does, but this doesn't always result in objects colliding with each other. If objects are set in motion, then they can orbit one another.  That means they circle around each other.</p>
-                     <p>A satellite travels so fast horizontally that instead of crashing to Earth, the satellite ends up circling the Earth instead.  The Planets in our Solar System have orbited the Sun for billions of years!</p>
-                  </div> 
-                </div>-->
-                <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/The_Wonders_of_Science/bottomhomewos.png"></a></div>
-            </div><!--end of content-->
-        </div>
-    </div><!--/anisold-->
-     
+	  </div>
+      <div class="botlogoholder"><a href="home.html" class="homelinksleeps"><img src="css/images/9-12/Human_Body/bottomhomehb.png"></a></div>
+    </div><!--end of content-->
+  </div><!--/spacechar-->
+  
     <div class="micbtnholder"><div class="micbtnsleeps" id="playstopbodyclock"></div></div>
     <div class="bsleeps"><div class="rwsleeps" id="bodyclockaudiobbtn"></div></div>
     <div class="plsleeps"><div class="plpssleeps" id="bodyclockaudioplbtn"></div></div>
     <div class="fsleeps"><div class="fwsleeps" id="bodyclockaudiofbtn" ></div></div>
     <div id="actualaudio-bodyclock" style="visibility:hidden;"></div>
-    
-    <script>
-        sound = new Audio();
-        soundpop = new Audio();
-        var playing;
+  <script>
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
         (function() {
           playing = false;
-            $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
-            $('div#pol1').css("z-index", 2);
-            $('div#pol2').css("z-index", 1);
-            $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
-            $('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
-           
-           
-             if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-bodyclock').html('<audio controls preload id="bodyclockaudio" onpause="playsleeps()" onplay="pausesleeps()"><source src="http://deftsoft.info/appvendo/mw/audio/bodyclock.mp3" type="audio/mpeg"></audio>');
-             } 
-             
-    
-            $("#bodyclock").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
-    
-        })();
-        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundsleeps.pause(); bgsoundsleeps.currentTime = 0;});
-    
-        function goBack() {
-            $.mobile.changePage("sub-sleeps-and-dreams-why-do-we-sleep.html");
-        }
-        
-        function playsleeps() {
-			 bgsoundsleeps.play();
-		}
-		   
-		function pausesleeps() {
-			 bgsoundsleeps.pause();
-		}
-		   
-   // $("#pol3").on('tap', function() {
-//      $.mobile.changePage("sub-space-sleeps-binaries.html", {transition: "slide"});
-//    });
-//    
-    //$("#pol1").on('tap', function() {
-    //  $.mobile.changePage("sub-sleep-and-dreams-broken-bodyclock-body-clocks.html", {transition: "slide"});
-    //});
-	
-	//$("#pol2").on('tap', function() {
-    //  $.mobile.changePage("sub-sleep-and-dreams-broken-bodyclock-social-jetlag.html", {transition: "slide"});
-    //});
+           /* $('#node-body-minoans').html(data[0].Body);*/
+          if(sound.canPlayType('audio/mpeg')) {
+			 $('#actualaudio-bodyclock').html('<audio controls preload id="bodyclockaudio" onpause="playsleeps()" onplay="pausesleeps()"><source src="http://deftsoft.info/appvendo/mw/audio/bodyclock.mp3" type="audio/mpeg"></audio>');
+		  }
       
-
-/* ******************** */
-
+      $("#bodyclock").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+  //  $("#sgl").on('tap', function() {$.mobile.changePage("sub-medieval- metropolis-sleepneededlife-angkor-cooking.html", {transition:"slide"}); });
+  // $("#snl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-sleepneededlife-angkor-marketers.html", {transition:"slide"}); });
+  //  $("#nsl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-sleepneededlife-angkor-village.html", {transition:"slide"}); });
+  //  $("#sleepsl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-sleepneededlife-angkor-fashion.html", {transition:"slide"}); });
+	// $("#dsl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-sleepneededlife-angkor-houses.html", {transition:"slide"}); });
+	//  $("#ehl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-sleepneededlife-angkor-animals.html", {transition:"slide"}); });
+    
+    $('.homelinksleeps').on('tap', function() { mainaudiobg.play(); bgsoundsleeps.pause(); bgsoundsleeps.currentTime = 0;});
+	function goBack() {
+		$.mobile.changePage("sub-sleeps-and-dreams-why-do-we-sleep.html");
+	}
+    
+    function playsleeps() {
+		 bgsoundsleeps.play();
+	}
+       
+	function pausesleeps() {
+		 bgsoundsleeps.pause();
+	}
+    /* ******************** */
+	
 	$("#playstopbodyclock").on('tap', function() {
       if(!playing) {
         bodyclockaudio.play();

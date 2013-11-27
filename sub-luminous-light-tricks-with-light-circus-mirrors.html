@@ -18,9 +18,10 @@
             <div data-role="content" class="kidzcontent">
                 <div class="v-volcano"></div>
                   <div class="sidebarleft-half">
+					<a id="tide" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Wonders_of_Science/Luminous_Light/Tricks_With_Light/CircusMirrors/Circus_Mirrors-zoom.jpg', 'CTide brings in bioluminescent marine microbes called phytoplankton.');">click here</a>					  
                      <div id="zoomwrapper">
                         <div id="pol1" class="pPiece" style="left:100px;top:270px;">
-                           <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
+                           <img src="css/images/9-12/The_Wonders_of_Science/Luminous_Light/Tricks_With_Light/CircusMirrors/Circus_Mirrors.jpg" alt="" />
                         </div>
                      </div><!--/zoomwrapper-->
                 </div>
@@ -105,6 +106,12 @@
       }
 	  //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
     });
+
+
+    $("#pol1").on('tap', function() {
+      $('#tide')[0].click();
+    });	
+
 	
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-luminous-binaries.html", {transition: "slide"});

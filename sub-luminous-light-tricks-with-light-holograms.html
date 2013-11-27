@@ -18,9 +18,10 @@
             <div data-role="content" class="kidzcontent">
                 <div class="v-volcano"></div>
                   <div class="sidebarleft-half">
+					<a id="banknote" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Wonders_of_Science/Luminous_Light/Tricks_With_Light/Holograms/Bank_Note-zoom.jpg', 'Many bank notes have holograms to make it more difficult for people to create fake money.');">click here</a>					  
                      <div id="zoomwrapper">
                         <div id="pol1" class="pPiece" style="left:100px;top:270px;">
-                           <img src="css/images/9-12/luminous_light/tricks/hologram/banknote.jpg" alt="" />
+                           <img src="css/images/9-12/The_Wonders_of_Science/Luminous_Light/Tricks_With_Light/Holograms/Bank_Note.jpg" alt="" />
                         </div>
                      </div><!--/zoomwrapper-->
                 </div>
@@ -72,7 +73,9 @@
         function goBack() {
             $.mobile.changePage("sub-luminous-light-tricks-with-light.html");
         }
-        
+     $("#pol1").on('tap', function() {
+      $('#banknote')[0].click();
+    });	       
        function playluminous() {
          bgsoundluminous.play();
        }

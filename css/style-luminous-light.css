@@ -1,9 +1,42 @@
 /********* Luminous Light  **********/
-#luminouslight, #seeing, #augmentedsight,#colours,#trickswithlight,#bioluminescence,#circusmirror,#hologram,#iridescence,#refraction,#whatisit{
+#luminouslight, #seeing, #augmentedsight,#colours,#trickswithlight,#bioluminescence,#circusmirror,#hologram,#iridescence,#refraction,#whatisit,#gammarays,#infrared,#radiowaves,#ultraviolet,#visible,#xrays{
  background:url('images/9-12/The_Wonders_of_Science/Luminous_Light/luminouslight_bg.png') no-repeat;
   height:748px !important;
   overflow:hidden !important;
   width:1024px !important;
+}
+#nolightnolife{
+  background:url('images/9-12/The_Wonders_of_Science/Luminous_Light/What_Is_It/No_Light_No_Life/No_Light_No_Life_bg.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+#brightlight{
+  background:url('images/9-12/The_Wonders_of_Science/Luminous_Light/What_Is_It/Super_Bright_Light/Super_Bright_Light_bg.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+.storypageetg_electromagnetic_visible {
+	color: #000000;
+	font-family: "Chalkboard SE";
+	font-size: 18px;
+	font-weight: bold;
+	height: 356px;
+	right: 10px;
+	position: absolute;
+	text-align: center;
+	top: 232px;
+	width: 50%;
+
+}
+.storypagetitlehuman_electromagnetic_visible {
+	color: #000000;
+	font-family: "Chalkboard SE";
+	margin-left: 438px;
+	position: absolute;
+	top: 182px;
 }
 #invisible{
   background:url('images/9-12/The_Wonders_of_Science/Luminous_Light/How_To_Make_Yourself_Invisible/How_To_Make_Yourself_Invisible_bg.png') no-repeat;

@@ -1,7 +1,27 @@
 /********* Extreme Weather  **********/
 
-#weather{
-  background:url('images/5-8/weather/extreme_weather.jpg') no-repeat;
+#map  {
+  background:url('images/9-12/The_Natural_World/Extreme_Weather/What_Is_Weather/You_CanTell_The_Future/Translating_A_Weather_Map/Translating_A_Weather_Map_Bg.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+#weather , #prepared , #weather_change , #safed , #storm , #definition , #pressurize , #wacky , #tell_future , #map , #pagecard1 , #pagecard2 , #pagecard3 , #pagecard4 , #baked , #parched , #soaked , #thunder , #supercells , #winter_storm , #cyclones  {
+  background:url('images/9-12/The_Natural_World/Extreme_Weather/Extreme_Weather.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+#weather_forms {
+  background:url('images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Forms_Of_Extreme_Weather_Bg.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+#geography {
+  background:url('images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/The_Geography_Of_Weather/GOW_Bg.png') no-repeat;
   height:748px !important;
   overflow:hidden !important;
   width:1024px !important;

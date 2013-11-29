@@ -18,6 +18,9 @@
             <div data-role="content" class="kidzcontent">
                 <div class="v-volcano"></div>
                   <div class="sidebarleft-half">
+					<a id="fromabove" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Soaked_And_Squally/Tropical_Cyclones/From_Above_Hi_Res.jpg', 'Tropical cyclone Edzani, Indian Ocean, 2010.  Can you work out from the spin direction which hemisphere it is in?   ');">click here</a>		
+					
+					<a id="windgusts" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Soaked_And_Squally/Tropical_Cyclones/Wind_Gusts_Hi_Res.jpg', 'Palm trees being blown to bits during a tropical cyclone');">click here</a>						  
                      <div id="zoomwrapper">
                         <div id="pol1" class="pPiece" style="left:100px;top:270px;">
                            <img src="css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Soaked_And_Squally/Tropical_Cyclones/From_Above.jpg" alt="" />
@@ -86,7 +89,13 @@
 		function pauseweather() {
 			 bgsoundweather.pause();
 		}
-       
+  $("#pol1").on('tap', function() {
+      $('#fromabove')[0].click();
+    });
+
+	 $("#pol2").on('tap', function() {
+      $('#windgusts')[0].click();
+    });	      
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-weather-binaries.html", {transition: "slide"});
 //    });
@@ -141,5 +150,5 @@
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 
-  </script><script src="js/threecardLogic.js"></script>
+  </script><script src="js/twocardLogic.js"></script>
 </div>

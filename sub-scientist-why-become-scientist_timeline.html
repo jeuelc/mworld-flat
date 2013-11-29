@@ -1,0 +1,112 @@
+<!-- i-C-a -->
+<div id="scientisttimeline" data-role="page">
+  <script src="js/slidebarscientist.js"></script>
+  <link rel="stylesheet" href="css/style-scientist.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnscientist"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnscientist"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnscientist"></div></div>
+  <div class="infobtnholder"><div class="infobtnscientist"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnscientist"></div></div>
+  <div class="menubtnholder"><div class="menubtnscientist"></div></div>
+  <div id="spacechar">&nbsp;
+    <div data-role="content" class="kidzcontent">
+      <div class="v-spacer"></div>
+      <div class="sidebarleft-half">
+     <!-- <div id="sgl" style="width:141px;height:112px;left:210px;top:362px;background:transparent;position:absolute;z-index:99999;"></div>
+        <div id="snl" style="width:141px;height:112px;left:128px;top:485px;background:transparent;position:absolute;z-index:99999;"></div>
+        <div id="nsl" style="width:176px;height:106px;left:388px;top:283px;background:transparent;position:absolute;z-index:99999;"></div>
+        <div id="scientistl" style="width:165px;height:117px;left:498px;top:467px;background:transparent;position:absolute;z-index:99999;"></div>
+		<div id="dsl" style="width:176px;height:106px;left:735px;top:217px;background:transparent;position:absolute;z-index:99999;"></div>
+        <div id="ehl" style="width:165px;height:110px;left:844px;top:415px;background:transparent;position:absolute;z-index:99999;"></div>-->
+      </div>
+      <div class="why-become-scientist-title"><h1></h1></div>
+      <div class="why-become-scientist-content">
+			<p></p>
+	  </div>
+      <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/The_Wonders_of_Science/bottomhomewos.png"></a></div>
+    </div><!--end of content-->
+  </div><!--/spacechar-->
+  
+  <div class="micbtnholder"><div class="micbtnscientist" id="playstopscientisttimeline"></div></div>
+  <div class="bscientist"><div class="rwscientist" id="scientisttimelineaudiobbtn"></div></div>
+  <div class="plscientist"><div class="plpsscientist" id="scientisttimelineaudioplbtn"></div></div>
+  <div class="fscientist"><div class="fwscientist" id="scientisttimelineaudiofbtn" ></div></div>
+  <div id="actualaudio-scientisttimeline" style="visibility:hidden;"></div>
+  <script>
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+        (function() {
+          playing = false;
+           /* $('#node-body-minoans').html(data[0].Body);*/
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-scientisttimeline').html('<audio controls preload id="scientisttimelineaudio" onpause="playscientist()" onplay="pausescientist()"><source src="http://deftsoft.info/appvendo/mw/audio/scientisttimeline.mp3" type="audio/mpeg"></audio>');
+      } 
+      
+      $("#scientisttimeline").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+  //  $("#sgl").on('tap', function() {$.mobile.changePage("sub-medieval- metropolis-scientisttimelinelife-angkor-cooking.html", {transition:"slide"}); });
+  // $("#snl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-scientisttimelinelife-angkor-marketers.html", {transition:"slide"}); });
+  //  $("#nsl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-scientisttimelinelife-angkor-village.html", {transition:"slide"}); });
+  //  $("#scientistl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-scientisttimelinelife-angkor-fashion.html", {transition:"slide"}); });
+	// $("#dsl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-scientisttimelinelife-angkor-houses.html", {transition:"slide"}); });
+	 // $("#ehl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-scientisttimelinelife-angkor-animals.html", {transition:"slide"}); });
+    
+   $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundscientist.pause(); bgsoundscientist.currentTime = 0;});
+   function goBack() {
+      $.mobile.changePage("sub-scientist-why-become-scientist.html");
+    }
+    
+    function playscientist() {
+         bgsoundscientist.play();
+    }
+       
+    function pausescientist() {
+         bgsoundscientist.pause();
+    }
+	
+    /* ******************** */
+	
+	
+	$("#playstopscientisttimeline").on('tap', function() {
+      if(!playing) {
+        scientisttimelineaudio.play();
+        $('.micbtnscientist').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        scientisttimelineaudio.pause(); scientisttimelineaudio.currentTime = 0;
+        $('.micbtnscientist').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+	
+    $("#scientisttimelineaudioplbtn").on('tap', function() {
+      if(!paused) {
+        scientisttimelineaudio.pause();
+        paused = true;
+      } else {
+        scientisttimelineaudio.play();
+        paused = false;
+      }
+    });
+    
+	
+    $("#scientisttimelineaudiofbtn").on('tap', function() {
+      var ctime = scientisttimelineaudio.currentTime;
+      scientisttimelineaudio.currentTime = ctime + 10;
+    });
+    
+    $("#scientisttimelineaudiobbtn").on('tap', function() {
+      var ctime = scientisttimelineaudio.currentTime;
+      scientisttimelineaudio.currentTime = ctime - 10;
+    });
+    
+    $("#scientisttimelineaudiopsbtn").on('tap', function() {
+      scientisttimelineaudio.pause();
+      $(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+  </script>
+</div>

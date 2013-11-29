@@ -18,7 +18,28 @@
             <div data-role="content" class="kidzcontent">
                 <div class="v-volcano"></div>
                   <div class="sidebarleft-half">
-                     <div id="zoomwrapper">
+					<a id="atmos" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Extreme_Weather/What_Is_Weather/Under_Pressure/Atoms_Hi_Res.jpg', 'All our weather happens between the ground and 10 kilometres into the sky, which is only a tiny sliver at the bottom of this thin blue line that we call our atmosphere!');">click here</a>		
+					
+					<a id="atmosschematic" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Extreme_Weather/What_Is_Weather/Under_Pressure/Atoms_Schematic_Hi_Res.jpg', 'This diagram shows the different layers of our atmosphere from the ground upwards...amazingly our weather is confined to the Troposphere!');">click here</a>		
+					
+						<!-- This section is for flipping images quize -->
+						<div id="f1_container" style="visibility:hidden;position:absolute;left:100px;top:270px;">
+						  <div id="f1_card">
+							<div class="front face">
+							  <img id="dopple" src="css/images/9-12/The_Natural_World/Extreme_Weather/What_Is_Weather/Under_Pressure/Poles_Versus_The_Tropics.png">
+							</div>
+							<div id="backofcard" class="back face center" style="background:url(css/images/9-12/The_Natural_World/Extreme_Weather/What_Is_Weather/Under_Pressure/Poles_Versus_The_Tropics_Reverse.png) no-repeat;">
+							  <div class="returncard" style="position:absolute;left:0px;top:0px;width:362px;height:170px;"></div>
+								<div class="falseans" style="position:absolute;left: 51px;top: 166px;width: 124px;height: 33px;"></div>		
+								<div class="falseans" style="position:absolute;left:190px;top: 166px;width: 124px;height: 33px;"></div>
+								<div class="falseans" style="position:absolute;left:51px;top:205px;width: 124px;height: 33px;"></div>
+								<div id="trueans" style="position:absolute;left:190px;top:205px;width: 124px;height: 33px;"></div>								
+							</div>
+						  </div><!--/f1+card-->
+						</div><!--/f1_container-->
+						<!-- Flip content ends here -->
+                     
+					 <div id="zoomwrapper">
                         <div id="pol1" class="pPiece" style="left:100px;top:270px;">
                            <img src="css/images/9-12/The_Natural_World/Extreme_Weather/What_Is_Weather/Under_Pressure/Poles_Versus_The_Tropics.png" alt="" />
                         </div>
@@ -88,7 +109,40 @@
 		function pauseweather() {
 			 bgsoundweather.pause();
 		}
-       
+
+	   
+    $(".returncard").on('tap', function() {
+      $('#f1_card').css({"-webkit-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"-moz-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"-o-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"transform": "rotateY(0deg)"});
+      setTimeout(function() {
+        $("#pol1").css({"visibility":"visible", "z-index":3});
+        $('#f1_container').css({"visibility":"hidden", "z-index":0});
+      }, 1000);
+    });
+    $('.falseans').on('tap', function() {
+      alert("Wrong answer");
+    });
+    $('#trueans').on('tap', function() {
+      alert("Correct answer");
+	  });
+    $("#pol1").on('tap', function() {
+      $('#f1_container').css({"visibility":"visible", "z-index":10});
+      $(this).css({"visibility":"hidden"});
+      $('#f1_card').css({"-webkit-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"-moz-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"-o-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"transform": "rotateY(180deg)"});
+    });	
+
+ $("#pol2").on('tap', function() {
+      $('#atmos')[0].click();
+    });
+	 $("#pol3").on('tap', function() {
+      $('#atmosschematic')[0].click();
+    });
+		
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-weather-binaries.html", {transition: "slide"});
 //    });

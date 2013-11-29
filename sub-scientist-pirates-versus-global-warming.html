@@ -10,15 +10,16 @@
   <div class="infobtnholder"><div class="infobtnscientist"></div></div>
   <div class="credsbtnholder"><div class="credsbtnscientist"></div></div>
   <div class="menubtnholder"><div class="menubtnscientist"></div></div>
-  <div class="bptitleholderscientist" style="padding-top:14px;"><h1>Pirates versus global warming</h1></div>
+  <div class="bptitleholder_what_is_science" style="padding-top:14px;"><h1>Pirates versus global warming</h1></div>
   <div id="spacechar">&nbsp;
     <div data-role="content" class="kidzcontent">
       <div class="v-volcano"></div>
       <div class="sidebarleft-half">
+		<a id="gamaraysxrays" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Wonders_of_Science/How_To_Become_A_Scientist/How_To_Become_A_Scientist/Pirates_Versus_Global_Warming/Pirates_Hi_Res.png', 'Do pirates cause global warming?');">click here</a>
         <div id="f1_container" style="visibility:hidden;position:absolute;left:100px;top:270px;">
           <div id="f1_card">
             <div class="front face">
-              <img id="dopple" src="css/images/5-8/volcanoes/placeholder-background.jpg">
+              <img id="dopple" src="css/images/9-12/The_Wonders_of_Science/How_To_Become_A_Scientist/How_To_Become_A_Scientist/Pirates_Versus_Global_Warming/Pirates.png">
             </div>
             <div id="backofcard" class="back face center" style="background:url(css/images/5-8/volcanoes/placeholder-background.jpg) no-repeat;">
               <div style="width:100px;height:40px;position:relative;top:157px;left:200px;">
@@ -33,10 +34,7 @@
         </div><!--/f1_container-->
         <div id="zoomwrapper">    
           <div id="pol1" class="pPiece" style="left:100px;top:270px;">
-             <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
-          </div>
-          <div id="pol2"class="pPiece" style="left:75px;top:290px;">
-            <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
+            <img src="css/images/9-12/The_Wonders_of_Science/How_To_Become_A_Scientist/How_To_Become_A_Scientist/Pirates_Versus_Global_Warming/Pirates.png" alt="" />
           </div>
         </div><!--/zoomwrapper-->
       </div>
@@ -120,7 +118,9 @@
 	}
 	
 	
-	
+	$("#pol1").on('tap', function() {
+      $('#gamaraysxrays')[0].click();
+    });
 	
    // $("#pol1").on('tap', function() {
     //  $.mobile.changePage("sub-volcanoes-big & bad-superbaddies-not-dead-what going on.html", {transition: "slide"});

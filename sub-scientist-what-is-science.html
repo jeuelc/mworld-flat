@@ -12,24 +12,27 @@
     <script src="js/hammer.js"></script>
     <script src="js/jquery.hammer.js"></script>
    <!-- <div id="bonus-ags" class="talkbubble" style="background:url(css/images/5-8/volcanoes/placeholder-background.jpg) no-repeat; width:473px;height:296px;position:absolute;left:500px;top:40px;visibility:hidden;"></div>--><!--/bonus-ags-->
-    <div class="bptitleholder" style="padding-top:14px;"><h1>What is Science?</h1></div>
+    <div class="bptitleholder_what_is_science" style="padding-top:14px;"><h1>What is Science?</h1></div>
 	<div id="anisold">
         <div id="spacechar">&nbsp;
             <div data-role="content" class="kidzcontent">
                 <div class="v-volcano"></div>
                   <div class="sidebarleft-half">
+					  <a id="antarctica" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Wonders_of_Science/How_To_Become_A_Scientist/What_Is_Science/Antarctica_Hi_Res.jpg', 'Scientists work in many locations including sometimes harsh conditions like Antarctica.');">click here</a>
+					  <a id="waterquality" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Wonders_of_Science/How_To_Become_A_Scientist/What_Is_Science/Water_Quality_Being_Tested_Hi_Res.jpg', 'Scientists also work out in the field.  Here water quality is being tested.');">click here</a>
+					  <a id="vacuumchamber" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Wonders_of_Science/How_To_Become_A_Scientist/What_Is_Science/Vacuum_Chamber_Hi_Res.jpg', 'Scientist working all sort of equipment. This scientist works with vacuum chambers.');">click here</a>
                      <div id="zoomwrapper">
                         <div id="pol1" class="pPiece" style="left:100px;top:270px;">
-                           <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
+                           <img src="css/images/9-12/The_Wonders_of_Science/How_To_Become_A_Scientist/What_Is_Science/What_isnot_science.png" alt="" />
                         </div>
-                        <div id="pol2"class="pPiece" style="left:75px;top:290px;">
-                           <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
+                        <div id="pol2"class="pPiece" style="left:70px;top:290px;">
+                           <img src="css/images/9-12/The_Wonders_of_Science/How_To_Become_A_Scientist/What_Is_Science/Antarctica.jpg" alt="" />
                         </div>
-                        <div id="pol3"class="pPiece" style="left:80px;top:270px;">
-                           <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
+                        <div id="pol3"class="pPiece" style="left:50px;top:320px;">
+                           <img src="css/images/9-12/The_Wonders_of_Science/How_To_Become_A_Scientist/What_Is_Science/Water_Quality_Being_Tested.jpg" alt="" />
                         </div>
-						 <div id="pol4"class="pPiece" style="left:80px;top:270px;">
-                           <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
+						 <div id="pol4"class="pPiece" style="left:30px;top:340px;">
+                           <img src="css/images/9-12/The_Wonders_of_Science/How_To_Become_A_Scientist/What_Is_Science/Vacuum_Chamber.jpg" alt="" />
                         </div>
                      </div><!--/zoomwrapper-->
                 
@@ -104,7 +107,17 @@
       $.mobile.changePage("sub-scientist-what-isnot-science.html", {transition: "slide"});
     });
       
-
+	$("#pol2").on('tap', function() {
+      $('#antarctica')[0].click();
+    });
+	
+	$("#pol3").on('tap', function() {
+      $('#waterquality')[0].click();
+    });
+	
+	$("#pol4").on('tap', function() {
+      $('#vacuumchamber')[0].click();
+    });
 /* ******************** */
 
 
@@ -148,5 +161,5 @@
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 
-  </script><script src="js/threecardLogic.js"></script>
+  </script><script src="js/fourcardLogic.js"></script>
 </div>

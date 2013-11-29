@@ -1,6 +1,7 @@
 <!-- i-C-a -->
 <div id="supercells" data-role="page">
-  <script src="js/slidebarbh.js"></script>
+  <script src="js/slidebarweather.js"></script>
+  <link rel="stylesheet" href="css/style-extreme-weather.css" />
   <div class="menuhousing"></div>
   <div class="homebtnholder"><div class="homebtnbh"></div></div>
   <div class="mpbtnholder"><div class="mpbtnbh"></div></div>
@@ -17,7 +18,16 @@
             <div data-role="content" class="kidzcontent">
                 <div class="v-volcano"></div>
                   <div class="sidebarleft-half">
-                     <div id="zoomwrapper">
+				  
+				<a id="supercell" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Soaked_And_Squally/Thunderstorms/Supercells_And_Tornadoes/Supercell_Hi_Res.jpg', 'Some supercells take on a shape that almost makes them look like UFOs!  This supercell is in Kansas in the United States of America  ');">click here</a>		
+					
+					<a id="tornado" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Soaked_And_Squally/Thunderstorms/Supercells_And_Tornadoes/Tornado_Hi_Res.jpg', 'Tornadoes can be as small as 10 metres wide or as large as 3 kilometres wide!  But their vortex is so compact outside this width that they can knock one house to the ground and leave next door untouched, Oklahoma, USA');">click here</a>		
+					
+				<a id="damage" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Soaked_And_Squally/Thunderstorms/Supercells_And_Tornadoes/Damage_Hi_Res.jpg', 'Tornadoes can be as small as 10 metres wide or as large as 3 kilometres wide!  But their vortex is so compact outside this width that they can knock one house to the ground and leave next door untouched, Oklahoma, USA');">click here</a>		
+					
+					<a id="supercellsandtornados" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Soaked_And_Squally/Thunderstorms/Supercells_And_Tornadoes/Storm_Chasers_Hi_Res.jpg', 'Storm chasers are so fascinated by tornadoes and supercells that they like to follow them!  Its very dangerous so you dont try this unless you know what youre doing!');">click here</a>	
+                    
+					<div id="zoomwrapper">
                         <div id="pol1" class="pPiece" style="left:100px;top:270px;">
                            <img src="css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Soaked_And_Squally/Thunderstorms/Supercells_And_Tornadoes/Supercell.jpg" alt="" />
                         </div>
@@ -94,7 +104,28 @@
 		function pauseweather() {
 			 bgsoundweather.pause();
 		}
-       
+
+
+   
+
+	 $("#pol1").on('tap', function() {
+      $('#supercell')[0].click();
+    });
+
+	 $("#pol2").on('tap', function() {
+      $('#tornado')[0].click();
+    });		  
+	 $("#pol3").on('tap', function() {
+      $('#damage')[0].click();
+    });
+
+	 $("#pol4").on('tap', function() {
+      $('#supercellsandtornados')[0].click();
+    });		  
+
+
+
+		
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-bh-binaries.html", {transition: "slide"});
 //    });
@@ -150,5 +181,5 @@
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 
-  </script><script src="js/threecardLogic.js"></script>
+  </script><script src="js/fivecardLogic.js"></script>
 </div>

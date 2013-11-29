@@ -18,6 +18,11 @@
             <div data-role="content" class="kidzcontent">
                 <div class="v-volcano"></div>
                   <div class="sidebarleft-half">
+					<a id="lightning" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Extreme_Weather/What_Is_Weather/Wacky_Weather/Lightning_Hi_Res.jpg', 'A spectacular lightning show over the ocean - not a good evening for a walk along the beach!');">click here</a>		
+										  
+					<a id="hail" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Extreme_Weather/What_Is_Weather/Wacky_Weather/Hail_Hi_Res.jpg', 'Giant hail stones!');">click here</a>		
+					
+			  
                      <div id="zoomwrapper">
                         <div id="pol1" class="pPiece" style="left:100px;top:270px;">
                            <img src="css/images/9-12/The_Natural_World/Extreme_Weather/What_Is_Weather/Wacky_Weather/Lightning.jpg" alt="" />
@@ -88,7 +93,17 @@
 		function pauseweather() {
 			 bgsoundweather.pause();
 		}
-       
+
+
+ $("#pol1").on('tap', function() {
+      $('#lightning')[0].click();
+    });
+	 $("#pol2").on('tap', function() {
+      $('#hail')[0].click();
+    });
+
+
+		
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-weather-binaries.html", {transition: "slide"});
 //    });

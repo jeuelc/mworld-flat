@@ -12,18 +12,39 @@
     <script src="js/hammer.js"></script>
     <script src="js/jquery.hammer.js"></script>
    <!-- <div id="bonus-ags" class="talkbubble" style="background:url(css/images/5-8/volcanoes/placeholder-background.jpg) no-repeat; width:473px;height:296px;position:absolute;left:500px;top:40px;visibility:hidden;"></div>--><!--/bonus-ags-->
-     <div class="bptitleholderscientist" style="padding-top:14px;"><h1>Anyone can do science!to</h1></div>
+     <div class="bptitleholder_what_is_science" style="padding-top:14px;"><h1>Anyone can do science!to</h1></div>
     <div id="anisold">
         <div id="spacechar">&nbsp;
             <div data-role="content" class="kidzcontent">
                 <div class="v-volcano"></div>
                   <div class="sidebarleft-half">
+					<a id="galaxyzoo" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Wonders_of_Science/How_To_Become_A_Scientist/Who_Can_Do_Science/Anyone_Can_Do_Science/Galaxy_Zoo_Hi_Res.jpg', 'The GalaxyZoo is a crowd sourcing science project that asks people to identify galaxies.  (Courtesy: zooniverse.org)');">click here</a>
+
+					<a id="zoom" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Wonders_of_Science/How_To_Become_A_Scientist/Who_Can_Do_Science/Anyone_Can_Do_Science/Zoom_Inverse_All_Hi_Res.jpg', 'Here are some of the popular project people can participate in. (Courtesy: zooniverse.org)');">click here</a> 	
+				  
+					<!-- This section is for flipping images quize -->
+					<div id="f1_container" style="visibility:hidden;position:absolute;left:100px;top:270px;">
+					  <div id="f1_card">
+						<div class="front face">
+						  <img id="dopple" src="css/images/9-12/The_Wonders_of_Science/How_To_Become_A_Scientist/Who_Can_Do_Science/Anyone_Can_Do_Science/Crowd_Source_MC_Quiz.png">
+						</div>
+						<div id="backofcard" class="back face center" style="background:url(css/images/9-12/The_Wonders_of_Science/How_To_Become_A_Scientist/Who_Can_Do_Science/Anyone_Can_Do_Science/Crowd_Source_MC_Quiz_Reverse.png) no-repeat;">
+						  <div class="returncard" style="position:absolute;left:0px;top:0px;width:362px;height:170px;"></div>
+						  <div id="trueans" style="position:absolute;left:90px;top:180px;width:70px;height:50px;"></div>
+						  <div id="falseans" style="position:absolute;left:200px;top:180px;width:70px;height:50px;"></div>							  
+						</div>
+					  </div><!--/f1+card-->
+					</div><!--/f1_container-->
+					<!-- Flip content ends here -->
                      <div id="zoomwrapper">
                         <div id="pol1" class="pPiece" style="left:100px;top:270px;">
-                           <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
+                           <img src="css/images/9-12/The_Wonders_of_Science/How_To_Become_A_Scientist/Who_Can_Do_Science/Anyone_Can_Do_Science/Crowd_Source_MC_Quiz.png" alt="" />
                         </div>
                         <div id="pol2"class="pPiece" style="left:75px;top:290px;">
-                           <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
+                           <img src="css/images/9-12/The_Wonders_of_Science/How_To_Become_A_Scientist/Who_Can_Do_Science/Anyone_Can_Do_Science/Galaxy_Zoo.jpg" alt="" />
+                        </div>
+						<div id="pol2"class="pPiece" style="left:75px;top:290px;">
+                           <img src="css/images/9-12/The_Wonders_of_Science/How_To_Become_A_Scientist/Who_Can_Do_Science/Anyone_Can_Do_Science/Zoom_Inverse_All.jpg" alt="" />
                         </div>
                      </div><!--/zoomwrapper-->
                 
@@ -65,7 +86,7 @@
            
            
              if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-anyonecando').html('<audio controls preload id="anyonecandoaudio" onpause="playscientist()" onplay="pausescientist()"><source src="http://deftsoft.info/appvendo/mw/audio/anyonecando.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-anyonecando').html('<audio controls preload id="anyonecandoaudio" onpause="playscientist()" onplay="pausescientist()"><source src="http://deftsoft.info/appvendo/mw/audio/anyonecandoscience.mp3" type="audio/mpeg"></audio>');
              } 
              
     
@@ -97,7 +118,22 @@
    // $("#pol1").on('tap', function() {
     //  $.mobile.changePage("sub-deep- blue-sea-anyonecando-currents-sun-moon.html", {transition: "slide"});
    // });
-      
+      $("#pol1").on('tap', function() {
+      $('#f1_container').css({"visibility":"visible", "z-index":10});
+      $(this).css({"visibility":"hidden"});
+      $('#f1_card').css({"-webkit-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"-moz-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"-o-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"transform": "rotateY(180deg)"});
+	  });	
+
+	  $("#pol2").on('tap', function() {
+		$('#galaxyzoo')[0].click();
+	  });
+	  
+	  $("#pol3").on('tap', function() {
+		$('#zoom')[0].click();
+	  });
 
 /* ******************** */
 

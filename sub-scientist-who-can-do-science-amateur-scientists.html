@@ -12,18 +12,35 @@
     <script src="js/hammer.js"></script>
     <script src="js/jquery.hammer.js"></script>
    <!-- <div id="bonus-ags" class="talkbubble" style="background:url(css/images/5-8/volcanoes/placeholder-background.jpg) no-repeat; width:473px;height:296px;position:absolute;left:500px;top:40px;visibility:hidden;"></div>--><!--/bonus-ags-->
-     <div class="bptitleholderscientist" style="padding-top:14px;"><h1>Amateur Scientists</h1></div>
+     <div class="bptitleholder_what_is_science" style="padding-top:14px;"><h1>Amateur Scientists</h1></div>
     <div id="anisold">
         <div id="spacechar">&nbsp;
             <div data-role="content" class="kidzcontent">
                 <div class="v-volcano"></div>
                   <div class="sidebarleft-half">
-                     <div id="zoomwrapper">
+					<a id="gamaraysxrays" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Wonders_of_Science/How_To_Become_A_Scientist/Who_Can_Do_Science/Amateur_Scientists/Einstein_Hi_Res.jpg', 'Albert Einstein became a well known public figure after his work as an amateur scientist. This mural was painted by Brazilian street artist Eduardo Kobra and can be found in Los Angeles, California. (Courtesy: Street Art News)');">click here</a>
+					
+					<!-- This section is for flipping images quize -->
+					<div id="f1_container" style="visibility:hidden;position:absolute;left:100px;top:270px;">
+					  <div id="f1_card">
+						<div class="front face">
+						  <img id="dopple" src="css/images/9-12/The_Wonders_of_Science/How_To_Become_A_Scientist/Who_Can_Do_Science/Amateur_Scientists/True_False_Action_Card.png">
+						</div>
+						<div id="backofcard" class="back face center" style="background:url(css/images/9-12/The_Wonders_of_Science/How_To_Become_A_Scientist/Who_Can_Do_Science/Amateur_Scientists/True_False_Action_Card_Reverse.png) no-repeat;">
+						  <div class="returncard" style="position:absolute;left:0px;top:0px;width:362px;height:170px;"></div>
+							<div id="trueans" style="position:absolute;left:90px;top:180px;width:70px;height:50px;"></div>
+							  <div id="falseans" style="position:absolute;left:200px;top:180px;width:70px;height:50px;"></div>							  
+						</div>
+					  </div><!--/f1+card-->
+					</div><!--/f1_container-->
+					<!-- Flip content ends here -->
+					
+					<div id="zoomwrapper">
                         <div id="pol1" class="pPiece" style="left:100px;top:270px;">
-                           <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
+                           <img src="css/images/9-12/The_Wonders_of_Science/How_To_Become_A_Scientist/Who_Can_Do_Science/Amateur_Scientists/True_False_Action_Card.png" alt="" />
                         </div>
                         <div id="pol2"class="pPiece" style="left:75px;top:290px;">
-                           <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
+                           <img src="css/images/9-12/The_Wonders_of_Science/How_To_Become_A_Scientist/Who_Can_Do_Science/Amateur_Scientists/Einstein.jpg" alt="" />
                         </div>
                      </div><!--/zoomwrapper-->
                 
@@ -98,7 +115,34 @@
     //  $.mobile.changePage("sub-deep- blue-sea-amateurscientist-currents-sun-moon.html", {transition: "slide"});
    // });
       
+	$(".returncard").on('tap', function() {
+      $('#f1_card').css({"-webkit-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"-moz-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"-o-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"transform": "rotateY(0deg)"});
+      setTimeout(function() {
+        $("#pol1").css({"visibility":"visible", "z-index":3});
+        $('#f1_container').css({"visibility":"hidden", "z-index":0});
+      }, 1000);
+    });
+    $('#falseans').on('tap', function() {
+      alert("Wrong answer");
+    });
+    $('#trueans').on('tap', function() {
+      alert("Correct answer");
+	  });
+    $("#pol1").on('tap', function() {
+      $('#f1_container').css({"visibility":"visible", "z-index":10});
+      $(this).css({"visibility":"hidden"});
+      $('#f1_card').css({"-webkit-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"-moz-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"-o-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"transform": "rotateY(180deg)"});
+    });	
 
+    $("#pol2").on('tap', function() {
+      $('#gamaraysxrays')[0].click();
+    });
 /* ******************** */
 
 
@@ -142,5 +186,5 @@
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 
-  </script><script src="js/threecardLogic.js"></script>
+  </script><script src="js/twocardLogic.js"></script>
 </div>

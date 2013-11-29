@@ -18,6 +18,26 @@
             <div data-role="content" class="kidzcontent">
                 <div class="v-volcano"></div>
                   <div class="sidebarleft-half">
+				  
+					<a id="weatherballoon" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Extreme_Weather/What_Is_Weather/You_CanTell_The_Future/Weather_Balloon_Hi_Res.jpg', 'Scientists take measurements from satellites and weather balloons, like this one, to gather data about the weather!');">click here</a>		
+					
+					<a id="supercomputers" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Extreme_Weather/What_Is_Weather/You_CanTell_The_Future/Super_Computers_Hi_Res.jpg', 'Huge computers take weather data and use them to calculate a weather forecast');">click here</a>		
+					
+						<!-- This section is for flipping images quize -->
+						<div id="f1_container" style="visibility:hidden;position:absolute;left:100px;top:270px;">
+						  <div id="f1_card">
+							<div class="front face">
+							  <img id="dopple" src="css/images/9-12/The_Natural_World/Extreme_Weather/What_Is_Weather/You_CanTell_The_Future/Cyclone.png">
+							</div>
+							<div id="backofcard" class="back face center" style="background:url(css/images/9-12/The_Natural_World/Extreme_Weather/What_Is_Weather/You_CanTell_The_Future/Cyclone_Reverse.png) no-repeat;">
+							  <div class="returncard" style="position:absolute;left:0px;top:0px;width:362px;height:170px;"></div>
+								<div id="trueans" style="position:absolute;left: 90px;top: 175px;width: 63px;height: 55px;"></div>
+								<div id="falseans" style="position:absolute;left: 199px;top: 177px;width: 80px;height: 54px;"></div>								
+							</div>
+						  </div><!--/f1+card-->
+						</div><!--/f1_container-->
+						<!-- Flip content ends here -->				  
+				  
                      <div id="zoomwrapper">
                         <div id="pol1" class="pPiece" style="left:100px;top:270px;">
                            <img src="css/images/9-12/The_Natural_World/Extreme_Weather/What_Is_Weather/You_CanTell_The_Future/Translatinga_Weather_Map.png" alt="" />
@@ -25,10 +45,10 @@
                         <div id="pol2"class="pPiece" style="left:75px;top:290px;">
                            <img src="css/images/9-12/The_Natural_World/Extreme_Weather/What_Is_Weather/You_CanTell_The_Future/Cyclone.png" alt="" />
                         </div>
-						<div id="pol3"class="pPiece" style="left:45px;top:320px;">
+						<div id="pol3"class="pPiece" style="left:55px;top:310px;">
                            <img src="css/images/9-12/The_Natural_World/Extreme_Weather/What_Is_Weather/You_CanTell_The_Future/Weather_Balloon.jpg" alt="" />
                         </div>
-						<div id="pol4"class="pPiece" style="left:25px;top:340px;">
+						<div id="pol4"class="pPiece" style="left:35px;top:340px;">
                            <img src="css/images/9-12/The_Natural_World/Extreme_Weather/What_Is_Weather/You_CanTell_The_Future/Super_Computers.jpg" alt="" />
                         </div>
                      </div><!--/zoomwrapper-->
@@ -64,10 +84,13 @@
         (function() {
           playing = false;
             $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
-            $('div#pol1').css("z-index", 2);
-            $('div#pol2').css("z-index", 1);
+            $('div#pol1').css("z-index", 4);
+            $('div#pol2').css("z-index", 3);
+            $('div#pol3').css("z-index", 2);
+            $('div#pol4').css("z-index", 1);			
             $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
             $('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
+			$('div#pol4 > img').css("-webkit-transform", "rotate(-8deg)");
            
            
              if(sound.canPlayType('audio/mpeg')) {
@@ -91,7 +114,54 @@
 		function pauseweather() {
 			 bgsoundweather.pause();
 		}
-       
+
+
+    $(".returncard").on('tap', function() {
+      $('#f1_card').css({"-webkit-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"-moz-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"-o-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"transform": "rotateY(0deg)"});
+      setTimeout(function() {
+        $("#pol1").css({"visibility":"visible", "z-index":3});
+        $('#f1_container').css({"visibility":"hidden", "z-index":0});
+      }, 1000);
+    });
+		
+   // $("#pol3").on('tap', function() {
+//      $.mobile.changePage("sub-space-sleeps-binaries.html", {transition: "slide"});
+//    });
+//    
+    $("#pol2").on('tap', function() {
+      $('#f1_container').css({"visibility":"visible", "z-index":10});
+      $(this).css({"visibility":"hidden"});
+      $('#f1_card').css({"-webkit-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"-moz-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"-o-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"transform": "rotateY(180deg)"});
+    });
+	
+    $("#pol1").on('tap', function() {
+      $.mobile.changePage("sub-weather-definition-tell-future-translating-weather-map.html", {transition: "slide"});
+    });
+	
+	 $("#pol3").on('tap', function() {
+      $('#weatherballoon')[0].click();
+    });
+
+	 $("#pol4").on('tap', function() {
+      $('#supercomputers')[0].click();
+    });	
+
+	
+/* write and wrong ans */
+    $('#falseans').on('tap', function() {
+      alert("Wrong answer");
+    });
+    $('#trueans').on('tap', function() {
+      alert("Correct answer");
+    });		
+	
+/* ******************** */		
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-weather-binaries.html", {transition: "slide"});
 //    });
@@ -100,9 +170,7 @@
 //      $.mobile.changePage("sub-space-weather-quasars.html", {transition: "slide"});
 //    });
 //    
-    $("#pol1").on('tap', function() {
-      $.mobile.changePage("sub-weather-definition-tell-future-translating-weather-map.html", {transition: "slide"});
-    });
+
       
 
 /* ******************** */
@@ -147,5 +215,5 @@
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 
-  </script><script src="js/threecardLogic.js"></script>
+  </script><script src="js/fourcardLogic.js"></script>
 </div>

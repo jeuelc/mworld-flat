@@ -18,6 +18,27 @@
             <div data-role="content" class="kidzcontent">
                 <div class="v-volcano"></div>
                   <div class="sidebarleft-half">
+				  
+
+					<a id="weatherballoon" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Baked/Fire_Fighter_Hi_Res.jpg', 'A firefighter bravely attends to a forest fire');">click here</a>		
+					
+					<a id="supercomputers" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Baked/Regeneration_Hi_Res.jpg', 'A Banksia after a bushfire in Australia.  Fire stimulates the opening of seed pods, so that they can escape and grow more Banksias - one of its cleaver adaptations to survive!');">click here</a>		
+					
+						<!-- This section is for flipping images quize -->
+						<div id="f1_container" style="visibility:hidden;position:absolute;left:100px;top:270px;">
+						  <div id="f1_card">
+							<div class="front face">
+							  <img id="dopple" src="css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Baked/Hung_Out_To_Dry.png">
+							</div>
+							<div id="backofcard" class="back face center" style="background:url(css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Baked/Hung_Out_To_Dry_Reverse.png) no-repeat;">
+							  <div class="returncard" style="position:absolute;left:0px;top:0px;width:362px;height:170px;"></div>
+								<div id="trueans" style="position:absolute;left: 90px;top: 175px;width: 63px;height: 55px;"></div>
+								<div id="falseans" style="position:absolute;left: 199px;top: 177px;width: 80px;height: 54px;"></div>								
+							</div>
+						  </div><!--/f1+card-->
+						</div><!--/f1_container-->
+						<!-- Flip content ends here -->						  
+				  
                      <div id="zoomwrapper">
                         <div id="pol1" class="pPiece" style="left:100px;top:270px;">
                            <img src="css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Baked/Hung_Out_To_Dry.png" alt="" />
@@ -88,7 +109,55 @@
 		function pauseweather() {
 			 bgsoundweather.pause();
 		}
-       
+
+    $(".returncard").on('tap', function() {
+      $('#f1_card').css({"-webkit-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"-moz-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"-o-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"transform": "rotateY(0deg)"});
+      setTimeout(function() {
+        $("#pol1").css({"visibility":"visible", "z-index":3});
+        $('#f1_container').css({"visibility":"hidden", "z-index":0});
+      }, 1000);
+    });
+		
+   // $("#pol3").on('tap', function() {
+//      $.mobile.changePage("sub-space-sleeps-binaries.html", {transition: "slide"});
+//    });
+//    
+    $("#pol1").on('tap', function() {
+      $('#f1_container').css({"visibility":"visible", "z-index":10});
+      $(this).css({"visibility":"hidden"});
+      $('#f1_card').css({"-webkit-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"-moz-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"-o-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"transform": "rotateY(180deg)"});
+    });
+	 $("#pol2").on('tap', function() {
+      $('#weatherballoon')[0].click();
+    });
+
+	 $("#pol3").on('tap', function() {
+      $('#supercomputers')[0].click();
+    });	
+	
+/* write and wrong ans */
+    $('#falseans').on('tap', function() {
+      alert("Wrong answer");
+    });
+    $('#trueans').on('tap', function() {
+      alert("Correct answer");
+    });		
+	
+/* ******************** */	
+
+
+
+
+
+
+
+		
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-weather-binaries.html", {transition: "slide"});
 //    });

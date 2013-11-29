@@ -1570,9 +1570,9 @@ ul.slides {
     width: 413px;
 }
 .storypagetitlefindingvolcanoes {
- color: #000000;
+	color: #000000;
     font-family: "Chalkboard SE";
-     position: absolute;
+    position: absolute;
     top: 33px;
     width: 390px;
 }
@@ -1580,7 +1580,7 @@ ul.slides {
     color: #000000;
 }
 .storypagefindingvolcanoes{
-  color: #000000;
+    color: #000000;
     font-family: "Chalkboard SE";
     font-size: 18px;
     font-weight: bold;
@@ -1909,12 +1909,7 @@ color: #000000;
   overflow:hidden !important;
   width:1024px !important;
 }
-#whyscientist {
-  background:url('images/5-8/scientist/why-become-scientist/el_9_1383093066.jpg') no-repeat;
-  height:748px !important;
-  overflow:hidden !important;
-  width:1024px !important;
-}
+
 #whalepoo{
   background:url('images/9-12/The_Natural_World/Deep_Blue_Sea/The_Future/todo.jpg') no-repeat;
   height:748px !important;

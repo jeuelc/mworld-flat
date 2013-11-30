@@ -1768,15 +1768,6 @@ color: #000000;
   overflow:hidden !important;
   width:1024px !important;
 }
-#bluesea , #oceans , #tides , #sun , #beach , #luxury , #bottoms , #downs , #bubbles ,#wonders , #bigblue , #hides , #plants , #krills , #poles ,  #between, #greatest , #apart , #whattodo , #thefuture , #rubbishislands{
- background:url('images/9-12/The_Natural_World/Deep_Blue_Sea/sea.jpg') no-repeat;
-  height:748px !important;
-  overflow:hidden !important;
-  width:1024px !important;
-}
-
-
-
 
 #luminouslight{
  background:url('images/9-12/luminous_light/luminouslight.png') no-repeat;
@@ -1903,12 +1894,7 @@ color: #000000;
     padding-top: 0;
     text-transform: uppercase;
 }
-#dive{
- background:url('images/9-12/The_Natural_World/Deep_Blue_Sea/dive.jpg') no-repeat;
-  height:748px !important;
-  overflow:hidden !important;
-  width:1024px !important;
-}
+
 
 #whalepoo{
   background:url('images/9-12/The_Natural_World/Deep_Blue_Sea/The_Future/todo.jpg') no-repeat;

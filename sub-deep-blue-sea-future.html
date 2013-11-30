@@ -1,13 +1,14 @@
 <!-- i-C-a -->
 <div data-role="page" id="thefuture">
-  <script src="js/slidebarwos.js"></script>
+  <script src="js/slidebar_deep_blue_sea.js"></script>
+  <link rel="stylesheet" href="css/style-deep-blue-sea.css" />
   <div class="menuhousing"></div>
-  <div class="homebtnholder"><div class="homebtnwos"></div></div>
-  <div class="mpbtnholder"><div class="mpbtnwos"></div></div>
-  <div class="cpbtnholder"><div class="cpbtnwos"></div></div>
-  <div class="infobtnholder"><div class="infobtnwos"></div></div>
-  <div class="credsbtnholder"><div class="credsbtnwos"></div></div>
-  <div class="menubtnholder"><div class="menubtnwos"></div></div>
+  <div class="homebtnholder"><div class="homebtndeep"></div></div>
+  <div class="mpbtnholder"><div class="mpbtndeep"></div></div>
+  <div class="cpbtnholder"><div class="cpbtndeep"></div></div>
+  <div class="infobtnholder"><div class="infobtndeep"></div></div>
+  <div class="credsbtnholder"><div class="credsbtndeep"></div></div>
+  <div class="menubtnholder"><div class="menubtndeep"></div></div>
   
     <div class="navtitleholdervolcano" style="padding-top:14px;"><h1>The future</h1></div>
   
@@ -21,23 +22,23 @@
       </div>
         
       <div class="navvolcanobigbtn1">
-  <p><a href="sub-deep-blue-sea-future-rubbish.html" data-transition="slide"><img src="css/images/9-12/sleep_dreams/background2.png"></a></p>
+  <p><a href="sub-deep-blue-sea-future-rubbish.html" data-transition="slide"><img src="css/images/9-12/The_Natural_World/The_Deep_Blue_Sea/The_Future/Rubbish_Islands.png"></a></p>
       </div>
       <div class="navvolcanobigbtn2">
-        <p><a href="sub-deep-blue-sea-future-whale-poo.html" data-transition="slide" ><img src="css/images/5-8/bluesea/whale.png"></a></p>
+        <p><a href="sub-deep-blue-sea-future-whale-poo.html" data-transition="slide" ><img src="css/images/9-12/The_Natural_World/The_Deep_Blue_Sea/The_Future/Whale_Poo.png"></a></p>
       </div>
       <div class="navvolcanobigbtn3">
-        <p><a href="sub-deep-blue-sea-future-what-can-we-do.html" data-transition="slide" ><img src="css/images/5-8/bluesea/whattodo.png"></a></p>
+        <p><a href="sub-deep-blue-sea-future-what-can-we-do.html" data-transition="slide" ><img src="css/images/9-12/The_Natural_World/The_Deep_Blue_Sea/The_Future/What_Can_We_do.png"></a></p>
       </div>
- <div class="botlogobigholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/The_Wonders_of_Science/bottomhomewos.png"></a></div>
+ <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/The_Natural_World/bottomhomewos.png"></a></div>
     </div> <!-- end content -->  
     
   
   <!--<div class="audiopanel">-->
-    <div class="micbtnholder"><div class="micbtnwos" id="playstopbigblue"></div></div>
-    <div class="bwos"><div class="rwwos" id="bigblueaudiobbtn"></div></div>
-    <div class="plwos"><div class="plpswos" id="bigblueaudioplbtn"></div></div>
-    <div class="fwos"><div class="fwwos" id="bigblueaudiofbtn"></div></div>
+    <div class="micbtnholder"><div class="micbtndeep" id="playstopbigblue"></div></div>
+    <div class="bdeep"><div class="rwdeep" id="bigblueaudiobbtn"></div></div>
+    <div class="pldeep"><div class="plpsdeep" id="bigblueaudioplbtn"></div></div>
+    <div class="fdeep"><div class="fwdeep" id="bigblueaudiofbtn"></div></div>
     <div id="actualaudio-bigblue" style="visibility:hidden;"></div>
   <!--</div>-->
   <script>
@@ -72,11 +73,11 @@
     $("#playstopbigblue").on('tap', function() {
       if(!playing) {
         bigblueaudio.play();
-        $('.micbtnwos').css('background-position-x', '-81px');
+        $('.micbtndeep').css('background-position-x', '-81px');
         playing = true;
       } else {
         bigblueaudio.pause(); bigblueaudio.currentTime = 0;
-        $('.micbtnwos').css('background-position-x', '0px');
+        $('.micbtndeep').css('background-position-x', '0px');
         playing = false;
       }
     });

@@ -1,13 +1,14 @@
 <!-- i-C-a -->
 <div data-role="page" id="oceans">
-  <script src="js/slidebarwos.js"></script>
+  <script src="js/slidebar_deep_blue_sea.js"></script>
+  <link rel="stylesheet" href="css/style-deep-blue-sea.css" />
   <div class="menuhousing"></div>
-  <div class="homebtnholder"><div class="homebtnwos"></div></div>
-  <div class="mpbtnholder"><div class="mpbtnwos"></div></div>
-  <div class="cpbtnholder"><div class="cpbtnwos"></div></div>
-  <div class="infobtnholder"><div class="infobtnwos"></div></div>
-  <div class="credsbtnholder"><div class="credsbtnwos"></div></div>
-  <div class="menubtnholder"><div class="menubtnwos"></div></div>
+  <div class="homebtnholder"><div class="homebtndeep"></div></div>
+  <div class="mpbtnholder"><div class="mpbtndeep"></div></div>
+  <div class="cpbtnholder"><div class="cpbtndeep"></div></div>
+  <div class="infobtnholder"><div class="infobtndeep"></div></div>
+  <div class="credsbtnholder"><div class="credsbtndeep"></div></div>
+  <div class="menubtnholder"><div class="menubtndeep"></div></div>
   
   <div class="navtitleholder" style="padding-top:14px;"><h1>Oceans and the Earth</h1></div>
   
@@ -20,21 +21,21 @@
       </div>
         
       <div class="navseabtn1">
-  <p><a href="sub-deep-blue-sea-oceans-humans.html" data-transition="slide"><img src="css/images/9-12/sleep_dreams/background2.png"></a></p>
+  <p><a href="sub-deep-blue-sea-oceans-humans.html" data-transition="slide"><img src="css/images/9-12/The_Natural_World/The_Deep_Blue_Sea/Oceans_And_The_Earth/Humans.png"></a></p>
       </div>
       <div class="navseabtn3">
-        <p><a href="sub-deep-blue-sea-tides-currents.html" data-transition="slide" ><img src="css/images/9-12/sleep_dreams/background2.png"></a></p>
+        <p><a href="sub-deep-blue-sea-tides-currents.html" data-transition="slide" ><img src="css/images/9-12/The_Natural_World/The_Deep_Blue_Sea/Oceans_And_The_Earth/Tides.png"></a></p>
       </div>
      
-    <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/The_Wonders_of_Science/bottomhomewos.png"></a></div>
+    <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/The_Natural_World/bottomhomewos.png"></a></div>
     </div> <!-- end content -->  
     
   
   <!--<div class="audiopanel">-->
-    <div class="micbtnholder"><div class="micbtnwos" id="playstopoceans"></div></div>
-    <div class="bwos"><div class="rwwos" id="oceansaudiobbtn"></div></div>
-    <div class="plwos"><div class="plpswos" id="oceansaudioplbtn"></div></div>
-    <div class="fwos"><div class="fwwos" id="oceansaudiofbtn"></div></div>
+    <div class="micbtnholder"><div class="micbtndeep" id="playstopoceans"></div></div>
+    <div class="bdeep"><div class="rwdeep" id="oceansaudiobbtn"></div></div>
+    <div class="pldeep"><div class="plpsdeep" id="oceansaudioplbtn"></div></div>
+    <div class="fdeep"><div class="fwdeep" id="oceansaudiofbtn"></div></div>
     <div id="actualaudio-oceans" style="visibility:hidden;"></div>
   <!--</div>-->
   <script>
@@ -70,11 +71,11 @@
     $("#playstopoceans").on('tap', function() {
       if(!playing) {
         oceansaudio.play();
-        $('.micbtnwos').css('background-position-x', '-81px');
+        $('.micbtndeep').css('background-position-x', '-81px');
         playing = true;
       } else {
         oceansaudio.pause(); oceansaudio.currentTime = 0;
-        $('.micbtnwos').css('background-position-x', '0px');
+        $('.micbtndeep').css('background-position-x', '0px');
         playing = false;
       }
     });

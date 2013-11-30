@@ -1,13 +1,14 @@
 <!-- i-C-a -->
 <div id="whattodo" data-role="page">
-  <script src="js/slidebarbh.js"></script>
+  <script src="js/slidebar_deep_blue_sea.js"></script>
+  <link rel="stylesheet" href="css/style-deep-blue-sea.css" />
   <div class="menuhousing"></div>
-  <div class="homebtnholder"><div class="homebtnbh"></div></div>
-  <div class="mpbtnholder"><div class="mpbtnbh"></div></div>
-  <div class="cpbtnholder"><div class="cpbtnbh"></div></div>
-  <div class="infobtnholder"><div class="infobtnbh"></div></div>
-  <div class="credsbtnholder"><div class="credsbtnbh"></div></div>
-  <div class="menubtnholder"><div class="menubtnbh"></div></div>
+  <div class="homebtnholder"><div class="homebtndeep"></div></div>
+  <div class="mpbtnholder"><div class="mpbtndeep"></div></div>
+  <div class="cpbtnholder"><div class="cpbtndeep"></div></div>
+  <div class="infobtnholder"><div class="infobtndeep"></div></div>
+  <div class="credsbtnholder"><div class="credsbtndeep"></div></div>
+  <div class="menubtnholder"><div class="menubtndeep"></div></div>
     <script src="js/hammer.js"></script>
     <script src="js/jquery.hammer.js"></script>
    <!-- <div id="bonus-ags" class="talkbubble" style="background:url(css/images/5-8/volcanoes/placeholder-background.jpg) no-repeat; width:473px;height:296px;position:absolute;left:500px;top:40px;visibility:hidden;"></div>--><!--/bonus-ags-->
@@ -17,21 +18,24 @@
             <div data-role="content" class="kidzcontent">
                 <div class="v-volcano"></div>
                   <div class="sidebarleft-half">
+				  
+					<a id="thoughts" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/The_Deep_Blue_Sea/The_Future/What_Can_We_Do/Thought_Hi_Res.jpg', 'Enjoy stunning coasts in your country or nearby countries and share some unforgettable moments, like the magic of sunset over the Ocean!');">click here</a>
+					
+					<a id="cleanup" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/The_Deep_Blue_Sea/The_Future/What_Can_We_Do/Clean_Up_Hi_Res.jpg', 'Help keep the beaches clean and provide a comfy and safe place for us and the coastal animals to enjoy!');">click here</a>
+					
+					<a id="play" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/The_Deep_Blue_Sea/The_Future/What_Can_We_Do/Play_Hi_Res.jpg', 'Go play, hang out and explore the beautiful beaches around the world but don't forget to leave them clean at the end of the day');">click here</a>
+					
                      <div id="zoomwrapper">
                         <div id="pol1" class="pPiece" style="left:100px;top:270px;">
-                           <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
+                           <img src="css/images/9-12/The_Natural_World/The_Deep_Blue_Sea/The_Future/What_Can_We_Do/Thought.jpg" alt="" />
                         </div>
                         <div id="pol2"class="pPiece" style="left:75px;top:290px;">
-                           <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
+                           <img src="css/images/9-12/The_Natural_World/The_Deep_Blue_Sea/The_Future/What_Can_We_Do/Clean_Up.jpg" alt="" />
                         </div>
                         <div id="pol3"class="pPiece" style="left:80px;top:270px;">
-                           <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
+                           <img src="css/images/9-12/The_Natural_World/The_Deep_Blue_Sea/The_Future/What_Can_We_Do/Play.jpg" alt="" />
                         </div>
-						 <div id="pol4"class="pPiece" style="left:80px;top:270px;">
-                           <img src="css/images/5-8/volcanoes/placeholder-background.jpg" alt="" />
-                        </div>
-                     </div><!--/zoomwrapper-->
-                
+					 </div><!--/zoomwrapper-->
                 </div>
                 <div class="bpcontentvolcano">
                    <p>You and I have a very important role in protecting the world's oceans and it can be as simple as putting your rubbish in the bin!</p>
@@ -45,15 +49,15 @@
                      <p>A satellite travels so fast horizontally that instead of crashing to Earth, the satellite ends up circling the Earth instead.  The Planets in our Solar System have orbited the Sun for billions of years!</p>
                   </div>
                 </div>
-                <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/5-8/bottomhomebh.png"></a></div>
+               <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/The_Natural_World/bottomhomewos.png"></a></div>
             </div><!--end of content-->
         </div>
     </div><!--/anisold-->
      
-    <div class="micbtnholder"><div class="micbtnbh"></div></div>
-    <div class="bbh"><div class="rwbh" id="whattodoaudiobbtn"></div></div>
-    <div class="plbh"><div class="plpsbh" id="whattodoaudioplbtn"></div></div>
-    <div class="fbh"><div class="fwbh" id="whattodoaudiofbtn" ></div></div>
+    <div class="micbtnholder"><div class="micbtndeep"></div></div>
+    <div class="bdeep"><div class="rwdeep" id="whattodoaudiobbtn"></div></div>
+    <div class="pldeep"><div class="plpsdeep" id="whattodoaudioplbtn"></div></div>
+    <div class="fdeep"><div class="fwdeep" id="whattodoaudiofbtn" ></div></div>
     <div id="actualaudio-whattodo" style="visibility:hidden;"></div>
     
     <script>
@@ -77,45 +81,53 @@
             $("#whattodo").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     
         })();
-        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsounddeep.pause(); bgsounddeep.currentTime = 0;});
     
         function goBack() {
             $.mobile.changePage("sub-deep-blue-sea-future.html");
         }
         
        function pausedaudio() {
-         bgsoundbh.play();
+         bgsounddeep.play();
        }
        
        function pausebg() {
-         bgsoundbh.pause();
+         bgsounddeep.pause();
        }
        
    // $("#pol3").on('tap', function() {
-//      $.mobile.changePage("sub-space-bh-binaries.html", {transition: "slide"});
+//      $.mobile.changePage("sub-space-deep-binaries.html", {transition: "slide"});
 //    });
 //    
 //    $("#pol2").on('tap', function() {
-//      $.mobile.changePage("sub-space-bh-quasars.html", {transition: "slide"});
+//      $.mobile.changePage("sub-space-deep-quasars.html", {transition: "slide"});
 //    });
-//    
-    $("#pol1").on('tap', function() {
-      $.mobile.changePage("sub-deep-blue-sea-future.html", {transition: "slide"});
+    
+	$("#pol1").on('tap', function() {
+      $('#thoughts')[0].click();
+    });
+	
+	$("#pol2").on('tap', function() {
+      $('#cleanup')[0].click();
+    });
+	
+	$("#pol3").on('tap', function() {
+      $('#play')[0].click();
     });
       
 
 /* ******************** */
     $("#whattodoaudioplbtn").on('tap', function() {
 	 var whattodoaudio = new Audio();
-      //lifeabhaudio.play();
+      //lifeadeepaudio.play();
       //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
       if(!playing) {
         whattodoaudio.play();
-        $('.micbtnbh').css('background-position-x', '-81px');
+        $('.micbtndeep').css('background-position-x', '-81px');
         playing = true;
       } else {
         whattodoaudio.pause();
-        $('.micbtnbh').css('background-position-x', '0px');
+        $('.micbtndeep').css('background-position-x', '0px');
         playing = false;
       }
     });

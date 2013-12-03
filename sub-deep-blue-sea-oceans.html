@@ -44,7 +44,7 @@
     (function() {
       playing = false;
       if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-oceans').html('<audio id="oceansaudio" controls preload onpause="playbluesea()" onplay="pausebluesea()"><source src="http://deftsoft.info/appvendo/mw/audio/bluesea.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-oceans').html('<audio id="oceansaudio" controls preload onpause="playbluesea()" onplay="pausebluesea()"><source src="audio/The_Deep_Blue_Sea/oceansandearth.mp3" type="audio/mpeg"></audio>');
       } 
     
       $("#oceans").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
@@ -73,10 +73,12 @@
         oceansaudio.play();
         $('.micbtndeep').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
         oceansaudio.pause(); oceansaudio.currentTime = 0;
         $('.micbtndeep').css('background-position-x', '0px');
         playing = false;
+        paused = true;
       }
     });
     

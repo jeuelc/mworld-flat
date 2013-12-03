@@ -57,14 +57,11 @@
         (function() {
           playing = false;
             $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
-            $('div#pol1').css("z-index", 2);
-            $('div#pol2').css("z-index", 1);
-            $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
-            $('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
-           
+            $('div#pol1').css("z-index", 1);
+            
            
              if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-microwaves').html('<audio controls preload id="microwavesaudio" onpause="playluminous()" onplay="pauseluminous()"><source src="http://deftsoft.info/appvendo/mw/audio/microwaves.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-microwaves').html('<audio controls preload id="microwavesaudio" onpause="playluminous()" onplay="pauseluminous()"><source src="audio/Liminous_Light/microwaves.mp3" type="audio/mpeg"></audio>');
              } 
              
     
@@ -137,5 +134,5 @@
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 
-  </script><script src="js/threecardLogic.js"></script>
+  </script><script src="js/twocardLogic.js"></script>
 </div>

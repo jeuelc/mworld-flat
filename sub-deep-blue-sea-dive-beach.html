@@ -60,7 +60,7 @@
         </div>
     </div><!--/anisold-->
      
-    <div class="micbtnholder"><div class="micbtndeep"></div></div>
+    <div class="micbtnholder"><div class="micbtndeep" id="playstopbeach"></div></div>
     <div class="bdeep"><div class="rwdeep" id="beachaudiobbtn"></div></div>
     <div class="pldeep"><div class="plpsdeep" id="beachaudioplbtn"></div></div>
     <div class="fdeep"><div class="fwdeep" id="beachaudiofbtn" ></div></div>
@@ -73,33 +73,37 @@
         (function() {
           playing = false;
             $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
-            $('div#pol1').css("z-index", 2);
-            $('div#pol2').css("z-index", 1);
+            $('div#pol1').css("z-index", 4);
+            $('div#pol2').css("z-index", 3);
+			$('div#pol3').css("z-index", 2);
+			$('div#pol4').css("z-index", 1);
             $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
             $('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
+			$('div#pol4 > img').css("-webkit-transform", "rotate(10deg)");
+			$('div#pol5 > img').css("-webkit-transform", "rotate(-10deg)");
            
            
-             if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-beach').html('<audio controls preload id="beachaudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/beach.mp3" type="audio/mpeg"></audio>');
-             } 
+            if(sound.canPlayType('audio/mpeg')) {
+                $('#actualaudio-beach').html('<audio controls preload id="beachaudio" onpause="playbluesea()" onplay="pausebluesea()"><source src="audio/The_Deep_Blue_Sea/beachtime.mp3" type="audio/mpeg"></audio>');
+            } 
              
     
             $("#beach").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     
         })();
-        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsounddeep.pause(); bgsounddeep.currentTime = 0;});
+        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbluesea.pause(); bgsoundbluesea.currentTime = 0;});
     
         function goBack() {
             $.mobile.changePage("sub-deep-blue-sea-dive-in.html");
         }
         
-       function pausedaudio() {
-         bgsounddeep.play();
-       }
-       
-       function pausebg() {
-         bgsounddeep.pause();
-       }
+        function playbluesea() {
+			 bgsoundbluesea.play();
+		}
+		   
+		function pausebluesea() {
+			 bgsoundbluesea.pause();
+		}
        
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-bh-binaries.html", {transition: "slide"});
@@ -108,8 +112,10 @@
 //    $("#pol2").on('tap', function() {
 //      $.mobile.changePage("sub-space-bh-quasars.html", {transition: "slide"});
 //    });
-//  
-
+	
+	
+	
+	
 	$(".returncard").on('tap', function() {
       $('#f1_card').css({"-webkit-transform": "rotateY(0deg)"});
       $('#f1_card').css({"-moz-transform": "rotateY(0deg)"});
@@ -159,35 +165,45 @@
     }); 
 
 /* ******************** */
-    $("#beachaudioplbtn").on('tap', function() {
-	 var beachaudio = new Audio();
-      //lifeabhaudio.play();
-      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    $("#playstopbeach").on('tap', function() {
       if(!playing) {
         beachaudio.play();
         $('.micbtndeep').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
-        beachaudio.pause();
+        beachaudio.pause(); beachaudio.currentTime = 0;
         $('.micbtndeep').css('background-position-x', '0px');
         playing = false;
+        paused = true;
       }
+    });
+	
+	$("#beachaudioplbtn").on('tap', function() {
+      if(!paused) {
+        beachaudio.pause();
+        paused = true;
+      } else {
+        beachaudio.play();
+        paused = false;
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
     });
     
     $("#beachaudiofbtn").on('tap', function() {
-	 var beachaudio = new Audio();
+	//var beachaudio = new Audio();
       var ctime = beachaudio.currentTime;
       beachaudio.currentTime = ctime + 10;
     });
     
     $("#beachaudiobbtn").on('tap', function() {
-	 var beachaudio = new Audio();
+	//var beachaudio = new Audio();
       var ctime = beachaudio.currentTime;
       beachaudio.currentTime = ctime - 10;
     });
     
     $("#beachaudiopsbtn").on('tap', function() {
-	 var beachaudio = new Audio();
+	//var beachaudio = new Audio();
       beachaudio.pause();
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       

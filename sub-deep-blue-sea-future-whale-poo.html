@@ -28,7 +28,7 @@
     </div><!--end of content-->
   </div><!--/spacechar-->
   
-  <div class="micbtnholder"><div class="micbtndeep"></div></div>
+  <div class="micbtnholder"><div class="micbtndeep" id="playstopwhalepoo"></div></div>
   <div class="bdeep"><div class="rwdeep" id="whalepooaudiobbtn"></div></div>
   <div class="pldeep"><div class="plpsdeep" id="whalepooaudioplbtn"></div></div>
   <div class="fdeep"><div class="fwdeep" id="whalepooaudiofbtn" ></div></div>
@@ -40,7 +40,7 @@
           playing = false;
            /* $('#node-body-minoans').html(data[0].Body);*/
       if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-whalepoo').html('<audio controls preload id="whalepooaudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/whalepoolife.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-whalepoo').html('<audio controls preload id="whalepooaudio" onpause="playbluesea()" onplay="pausebluesea()"><source src="audio/The_Deep_Blue_Sea/whalepoo.mp3" type="audio/mpeg"></audio>');
       } 
       
       $("#whalepoo").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
@@ -53,30 +53,42 @@
 	// $("#dsl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-whalepoolife-angkor-houses.html", {transition:"slide"}); });
 	//  $("#ehl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-whalepoolife-angkor-animals.html", {transition:"slide"}); });
     
-   $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsounddeep.pause(); bgsounddeep.currentTime = 0;});
-   function goBack() {
+    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbluesea.pause(); bgsoundbluesea.currentTime = 0;});
+    function goBack() {
       $.mobile.changePage("sub-deep-blue-sea-future.html");
     }
     
-    function pausedaudio() {
-      bgsounddeep.play();
+    function playbluesea() {
+         bgsoundbluesea.play();
     }
-    
-    function pausebg() {
-      bgsounddeep.pause();
+       
+    function pausebluesea() {
+         bgsoundbluesea.pause();
     }
     /* ******************** */
-    $("#whalepooaudioplbtn").on('tap', function() {
-      //comefromaudio.play();
-      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+	
+	$("#playstopwhalepoo").on('tap', function() {
       if(!playing) {
         whalepooaudio.play();
         $('.micbtndeep').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
-        whalepooaudio.pause();
+        whalepooaudio.pause(); whalepooaudio.currentTime = 0;
         $('.micbtndeep').css('background-position-x', '0px');
         playing = false;
+        paused = true;
+      }
+    });
+	
+	
+    $("#whalepooaudioplbtn").on('tap', function() {
+      if(!paused) {
+        whalepooaudio.pause();
+        paused = true;
+      } else {
+        whalepooaudio.play();
+        paused = false;
       }
     });
     

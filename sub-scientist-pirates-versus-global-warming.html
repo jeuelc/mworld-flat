@@ -70,12 +70,12 @@
       playing = false;
       $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");      
       $('div#pol1').css("z-index", 1);
-      $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
+      //$('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
       $("#f1_container").css("z-index", 0);      
       
            /* $('#node-body-minoans').html(data[0].Body);*/
       if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-globalwarming').html('<audio controls preload id="globalwarmingaudio" onpause="playscientist()" onplay="pausescientist()"><source src="http://back.uvmate.com/sites/default/files/subjectsaudio/globalwarming.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-globalwarming').html('<audio controls preload id="globalwarmingaudio" onpause="playscientist()" onplay="pausescientist()"><source src="audio/How_To_Become_A_Scientist/globalwarming.mp3" type="audio/mpeg"></audio>');
       } 
          
     
@@ -189,5 +189,5 @@
       supergiantaudio.pause();
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });
-  </script><script src="js/twocardLogic.js"></script>
+  </script><script src="js/onecardLogic.js"></script>
 </div>

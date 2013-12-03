@@ -21,7 +21,7 @@
       </div>
         
       <div class="navvolcanobigbtn1">
-  <p><a href="sub-deep-blue-sea-dive-big-blue-krills.html" data-transition="slide"><img src="css/images/9-12/The_Natural_World/The_Deep_Blue_Sea/Dive_In/The_Big_Blue/In_For_The_Krill.png"></a></p>
+		<p><a href="sub-deep-blue-sea-dive-big-blue-krills.html" data-transition="slide"><img src="css/images/9-12/The_Natural_World/The_Deep_Blue_Sea/Dive_In/The_Big_Blue/In_For_The_Krill.png"></a></p>
       </div>
       <div class="navvolcanobigbtn2">
         <p><a href="sub-deep-blue-sea-dive-big-blue-hide.html" data-transition="slide" ><img src="css/images/9-12/The_Natural_World/The_Deep_Blue_Sea/Dive_In/The_Big_Blue/Hide_And_Seek.png"></a></p>
@@ -29,7 +29,7 @@
       <div class="navvolcanobigbtn3">
         <p><a href="sub-deep-blue-sea-dive-big-blue-plants.html" data-transition="slide" ><img src="css/images/9-12/The_Natural_World/The_Deep_Blue_Sea/Dive_In/The_Big_Blue/Plants_In_The_Ocean.png"></a></p>
       </div>
- <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/The_Natural_World/bottomhomewos.png"></a></div>
+	<div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/The_Natural_World/bottomhomewos.png"></a></div>
     </div> <!-- end content -->  
     
   
@@ -46,27 +46,27 @@
     (function() {
       playing = false;
       if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-bigblue').html('<audio id="bigblueaudio" controls preload onpause="playbigblue()" onplay="pausebigblue()"><source src="http://back.uvmate.com/sites/default/files/subjectsaudio/RevisedIntro.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-bigblue').html('<audio id="bigblueaudio" controls preload onpause="playbluesea()" onplay="pausebluesea()"><source src="audio/The_Deep_Blue_Sea/bigblue.mp3" type="audio/mpeg"></audio>');
       } 
     
       $("#bigblue").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     })();
     
-    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbluesea.pause(); bgsoundbluesea.currentTime = 0;});
     
     function goBack() {
       $.mobile.changePage("sub-deep-blue-sea-dive-in.html", {transition: "slide", reverse: true });
-      bgsoundbh.pause();
-      bgsoundbh.currentTime = 0;
+      bgsoundbluesea.pause();
+      bgsoundbluesea.currentTime = 0;
       spacesoundbg.play();
     }
     
-    function pausedaudio() {
-      bgsoundbh.play();
+    function playbluesea() {
+         bgsoundbluesea.play();
     }
-    
-    function pausebg() {
-      bgsoundbh.pause();
+       
+    function pausebluesea() {
+         bgsoundbluesea.pause();
     }
     /* ******************** */
     $("#playstopbigblue").on('tap', function() {
@@ -74,18 +74,22 @@
         bigblueaudio.play();
         $('.micbtndeep').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
         bigblueaudio.pause(); bigblueaudio.currentTime = 0;
         $('.micbtndeep').css('background-position-x', '0px');
         playing = false;
+        paused = true;
       }
     });
     
     $("#bigblueaudioplbtn").on('tap', function() {
-      if(!playing) {
-        bigblueaudio.play();
-      } else {
+      if(!paused) {
         bigblueaudio.pause();
+        paused = true;
+      } else {
+        bigblueaudio.play();
+        paused = false;
       }
       //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
     });

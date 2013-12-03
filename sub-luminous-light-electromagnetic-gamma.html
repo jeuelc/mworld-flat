@@ -71,15 +71,14 @@
         (function() {
           playing = false;
             $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
-            $('div#pol1').css("z-index", 2);
-            $('div#pol2').css("z-index", 1);
-            $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
-            $('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
+            $('div#pol1').css("z-index", 1);
+            //$('div#pol2').css("z-index", 1);
+            //$('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
+            //$('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
            
-           
-             if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-gammarays').html('<audio controls preload id="gammaraysaudio" onpause="playluminous()" onplay="pauseluminous()"><source src="http://deftsoft.info/appvendo/mw/audio/gamma.mp3" type="audio/mpeg"></audio>');
-             } 
+            if(sound.canPlayType('audio/mpeg')) {
+                 $('#actualaudio-gammarays').html('<audio controls preload id="gammaraysaudio" onpause="playluminous()" onplay="pauseluminous()"><source src="audio/Liminous_Light/gamma.mp3" type="audio/mpeg"></audio>');
+            } 
              
     
             $("#gammarays").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
@@ -178,5 +177,5 @@
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 
-  </script><script src="js/threecardLogic.js"></script>
+  </script><script src="js/twocardLogic.js"></script>
 </div>

@@ -56,7 +56,7 @@
            
            
             if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-sleeptime').html('<audio controls preload id="sleeptimeaudio" onpause="playsleeps()" onplay="pausesleeps()"><source src="http://deftsoft.info/appvendo/mw/audio/sleeptime.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-sleeptime').html('<audio controls preload id="sleeptimeaudio" onpause="playsleeps()" onplay="pausesleeps()"><source src="audio/Sleeps_And_Dreams/sleeptime.mp3" type="audio/mpeg"></audio>');
             }
              
     
@@ -77,37 +77,6 @@
 			 bgsoundsleeps.pause();
 		}
 
-
-
-
-    $(".returncard").on('tap', function() {
-      $('#f1_card').css({"-webkit-transform": "rotateY(0deg)"});
-      $('#f1_card').css({"-moz-transform": "rotateY(0deg)"});
-      $('#f1_card').css({"-o-transform": "rotateY(0deg)"});
-      $('#f1_card').css({"transform": "rotateY(0deg)"});
-      setTimeout(function() {
-        $("#pol1").css({"visibility":"visible", "z-index":3});
-        $('#f1_container').css({"visibility":"hidden", "z-index":0});
-      }, 1000);
-    });
-
-    $(".returncard2").on('tap', function() {
-      $('#f2_card').css({"-webkit-transform": "rotateY(0deg)"});
-      $('#f2_card').css({"-moz-transform": "rotateY(0deg)"});
-      $('#f2_card').css({"-o-transform": "rotateY(0deg)"});
-      $('#f2_card').css({"transform": "rotateY(0deg)"});
-      setTimeout(function() {
-        $("#pol2").css({"visibility":"visible", "z-index":3});
-        $('#f2_container').css({"visibility":"hidden", "z-index":0});
-      }, 1000);
-    });	
-
-    $('#falseans').on('tap', function() {
-      alert("Wrong answer");
-    });
-    $('#trueans').on('tap', function() {
-      alert("Correct answer");
-    });	
   
     $("#pol1").on('tap', function() {
       $.mobile.changePage("sub-sleep-and-dreams-sleep-time-early-birds.html", {transition: "slide"});

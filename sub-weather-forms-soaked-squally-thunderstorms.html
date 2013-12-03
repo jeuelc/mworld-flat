@@ -29,16 +29,16 @@
                         <div id="pol1" class="pPiece" style="left:100px;top:270px;">
                            <img src="css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Soaked_And_Squally/Thunderstorms/Supercells_And_T.png" alt="" />
                         </div>
-                        <div id="pol2"class="pPiece" style="left:85px;top:290px;">
+                        <div id="pol2"class="pPiece" style="left:100px;top:275px;">
                            <img src="css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Soaked_And_Squally/Thunderstorms/Thunder_And_Lightning.png" alt="" />
                         </div>
-						<div id="pol3"class="pPiece" style="left:65px;top:310px;">
+						<div id="pol3"class="pPiece" style="left:90px;top:280px;">
                            <img src="css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Soaked_And_Squally/Thunderstorms/Weather_Recall_No_Card.png" alt="" />
                         </div>
-						<div id="pol4"class="pPiece" style="left:45px;top:340px;">
+						<div id="pol4"class="pPiece" style="left:80px;top:285px;">
                            <img src="css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Soaked_And_Squally/Thunderstorms/Lightning.jpg" alt="" />
                         </div>
-						<div id="pol5"class="pPiece" style="left:25px;top:360px;">
+						<div id="pol5"class="pPiece" style="left:70px;top:290px;">
                            <img src="css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Soaked_And_Squally/Thunderstorms/Thunderstorm.jpg" alt="" />
                         </div>
                      </div><!--/zoomwrapper-->
@@ -75,8 +75,11 @@
         (function() {
           playing = false;
             $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
-            $('div#pol1').css("z-index", 2);
-            $('div#pol2').css("z-index", 1);
+			$('div#pol1').css("z-index", 5);
+			$('div#pol2').css("z-index", 4);
+			$('div#pol3').css("z-index", 3);
+			$('div#pol4').css("z-index", 2);
+			$('div#pol5').css("z-index", 1);
             $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
             $('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
            
@@ -121,7 +124,7 @@
     });
 
 	 $("#pol5").on('tap', function() {
-      $('#thunderstrom')[0].click();
+      $('#thunderstorm')[0].click();
     });		  
 	  
 /* ******************** */

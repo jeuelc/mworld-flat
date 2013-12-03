@@ -54,7 +54,7 @@
         </div>
     </div><!--/anisold-->
      
-    <div class="micbtnholder"><div class="micbtndeep"></div></div>
+    <div class="micbtnholder"><div class="micbtndeep" id="playstopwhattodo"></div></div>
     <div class="bdeep"><div class="rwdeep" id="whattodoaudiobbtn"></div></div>
     <div class="pldeep"><div class="plpsdeep" id="whattodoaudioplbtn"></div></div>
     <div class="fdeep"><div class="fwdeep" id="whattodoaudiofbtn" ></div></div>
@@ -74,26 +74,26 @@
            
            
              if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-whattodo').html('<audio controls preload id="whattodoaudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/whattodo.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-whattodo').html('<audio controls preload id="whattodoaudio" onpause="playbluesea()" onplay="pausebluesea()"><source src="audio/The_Deep_Blue_Sea/whatcanwedo.mp3" type="audio/mpeg"></audio>');
              } 
              
     
             $("#whattodo").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     
         })();
-        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsounddeep.pause(); bgsounddeep.currentTime = 0;});
+        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbluesea.pause(); bgsoundbluesea.currentTime = 0;});
     
         function goBack() {
             $.mobile.changePage("sub-deep-blue-sea-future.html");
         }
         
-       function pausedaudio() {
-         bgsounddeep.play();
-       }
-       
-       function pausebg() {
-         bgsounddeep.pause();
-       }
+        function playbluesea() {
+			 bgsoundbluesea.play();
+		}
+		   
+		function pausebluesea() {
+			 bgsoundbluesea.pause();
+		}
        
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-deep-binaries.html", {transition: "slide"});
@@ -117,36 +117,44 @@
       
 
 /* ******************** */
-    $("#whattodoaudioplbtn").on('tap', function() {
-	 var whattodoaudio = new Audio();
-      //lifeadeepaudio.play();
-      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+
+	$("#playstopwhattodo").on('tap', function() {
       if(!playing) {
         whattodoaudio.play();
         $('.micbtndeep').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
-        whattodoaudio.pause();
+        whattodoaudio.pause(); whattodoaudio.currentTime = 0;
         $('.micbtndeep').css('background-position-x', '0px');
         playing = false;
+        paused = true;
+      }
+    });
+	
+	
+    $("#whattodoaudioplbtn").on('tap', function() {
+	 if(!paused) {
+        whattodoaudio.pause();
+        paused = true;
+      } else {
+        whattodoaudio.play();
+        paused = false;
       }
     });
     
     $("#whattodoaudiofbtn").on('tap', function() {
-	 var whattodoaudio = new Audio();
-      var ctime = whattodoaudio.currentTime;
+	  var ctime = whattodoaudio.currentTime;
       whattodoaudio.currentTime = ctime + 10;
     });
     
     $("#whattodoaudiobbtn").on('tap', function() {
-	 var whattodoaudio = new Audio();
-      var ctime = whattodoaudio.currentTime;
+	  var ctime = whattodoaudio.currentTime;
       whattodoaudio.currentTime = ctime - 10;
     });
     
     $("#whattodoaudiopsbtn").on('tap', function() {
-	 var whattodoaudio = new Audio();
-      whattodoaudio.pause();
+	  whattodoaudio.pause();
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 

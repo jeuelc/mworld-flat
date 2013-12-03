@@ -66,7 +66,7 @@
         </div>
     </div><!--/anisold-->
      
-    <div class="micbtnholder"><div class="micbtndeep"></div></div>
+    <div class="micbtnholder"><div class="micbtndeep" id="playstopbubbles"></div></div>
     <div class="bdeep"><div class="rwdeep" id="bubblesaudiobbtn"></div></div>
     <div class="pldeep"><div class="plpsdeep" id="bubblesaudioplbtn"></div></div>
     <div class="fdeep"><div class="fwdeep" id="bubblesaudiofbtn" ></div></div>
@@ -83,29 +83,28 @@
             $('div#pol2').css("z-index", 1);
             $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
             $('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
-           
+            $('#f1_container').css({"visibility":"hidden", "z-index":0});
            
              if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-bubbles').html('<audio controls preload id="bubblesaudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/bubbles.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-bubbles').html('<audio controls preload id="bubblesaudio" onpause="playbluesea()" onplay="pausebluesea()"><source src="audio/The_Deep_Blue_Sea/extremebubble.mp3" type="audio/mpeg"></audio>');
              } 
-             
-    
+            
             $("#bubbles").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     
         })();
-        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsounddeep.pause(); bgsounddeep.currentTime = 0;});
+        $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbluesea.pause(); bgsoundbluesea.currentTime = 0;});
     
         function goBack() {
             $.mobile.changePage("sub-deep-blue-sea-dive-bottoms-up.html");
         }
         
-       function pausedaudio() {
-         bgsounddeep.play();
-       }
-       
-       function pausebg() {
-         bgsounddeep.pause();
-       }
+        function playbluesea() {
+			 bgsoundbluesea.play();
+		}
+		   
+		function pausebluesea() {
+			 bgsoundbluesea.pause();
+		}
 	   
 	    $(".returncard").on('tap', function() {
 		  $('#f1_card').css({"-webkit-transform": "rotateY(0deg)"});
@@ -154,35 +153,44 @@
       
 
 /* ******************** */
-    $("#bubblesaudioplbtn").on('tap', function() {
-	 var bubblesaudio = new Audio();
-      //lifeadeepaudio.play();
-      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+	$("#playstopbubbles").on('tap', function() {
       if(!playing) {
         bubblesaudio.play();
         $('.micbtndeep').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
-        bubblesaudio.pause();
+        bubblesaudio.pause(); bubblesaudio.currentTime = 0;
         $('.micbtndeep').css('background-position-x', '0px');
         playing = false;
+        paused = true;
+      }
+    });
+	
+    $("#bubblesaudioplbtn").on('tap', function() {
+	  if(!paused) {
+        bubblesaudio.pause();
+        paused = true;
+      } else {
+        bubblesaudio.play();
+        paused = false;
       }
     });
     
     $("#bubblesaudiofbtn").on('tap', function() {
-	 var bubblesaudio = new Audio();
+	// var bubblesaudio = new Audio();
       var ctime = bubblesaudio.currentTime;
       bubblesaudio.currentTime = ctime + 10;
     });
     
     $("#bubblesaudiobbtn").on('tap', function() {
-	 var bubblesaudio = new Audio();
+	// var bubblesaudio = new Audio();
       var ctime = bubblesaudio.currentTime;
       bubblesaudio.currentTime = ctime - 10;
     });
     
     $("#bubblesaudiopsbtn").on('tap', function() {
-	 var bubblesaudio = new Audio();
+	// var bubblesaudio = new Audio();
       bubblesaudio.pause();
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       

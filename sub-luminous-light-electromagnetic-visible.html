@@ -40,9 +40,14 @@
     var playing;
         (function() {
           playing = false;
+		  $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
+          $('div#pol1').css("z-index", 1);
+          //  $('div#pol2').css("z-index", 1);
+          //  $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
+          //  $('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
            /* $('#node-body-minoans').html(data[0].Body);*/
       if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-visible').html('<audio controls preload id="visibleaudio" onpause="playluminous()" onplay="pauseluminous()"><source src="http://deftsoft.info/appvendo/mw/audio/visible.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-visible').html('<audio controls preload id="visibleaudio" onpause="playluminous()" onplay="pauseluminous()"><source src="audio/Liminous_Light/visible.mp3" type="audio/mpeg"></audio>');
       } 
       
       $("#visible").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
@@ -111,5 +116,5 @@ $("#pol1").on('tap', function() {
       visibleaudio.pause();
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });
-  </script><script src="js/threecardLogic.js"></script>
+  </script><script src="js/onecardLogic.js"></script>
 </div>

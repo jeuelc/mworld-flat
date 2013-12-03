@@ -35,7 +35,7 @@
     
   
   <!--<div class="audiopanel">-->
-    <div class="micbtnholder"><div class="micbtndeep" id="playstopbigblue"></div></div>
+    <div class="micbtnholder"><div class="micbtndeep" id="playstopthefuture"></div></div>
     <div class="bdeep"><div class="rwdeep" id="bigblueaudiobbtn"></div></div>
     <div class="pldeep"><div class="plpsdeep" id="bigblueaudioplbtn"></div></div>
     <div class="fdeep"><div class="fwdeep" id="bigblueaudiofbtn"></div></div>
@@ -47,46 +47,50 @@
     (function() {
       playing = false;
       if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-bigblue').html('<audio id="bigblueaudio" controls preload onpause="playbigblue()" onplay="pausebigblue()"><source src="http://back.uvmate.com/sites/default/files/subjectsaudio/RevisedIntro.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-bigblue').html('<audio id="thefutureaudio" controls preload onpause="playbluesea()" onplay="pausebluesea()"><source src="audio/The_Deep_Blue_Sea/thefuture.mp3" type="audio/mpeg"></audio>');
       } 
     
       $("#bigblue").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     })();
     
-    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbh.pause(); bgsoundbh.currentTime = 0;});
+    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbluesea.pause(); bgsoundbluesea.currentTime = 0;});
     
     function goBack() {
       $.mobile.changePage("sub-deep-blue-sea.html", {transition: "slide", reverse: true });
-      bgsoundbh.pause();
-      bgsoundbh.currentTime = 0;
+      bgsoundbluesea.pause();
+      bgsoundbluesea.currentTime = 0;
       spacesoundbg.play();
     }
     
-    function pausedaudio() {
-      bgsoundbh.play();
+    function playbluesea() {
+         bgsoundbluesea.play();
     }
-    
-    function pausebg() {
-      bgsoundbh.pause();
+       
+    function pausebluesea() {
+         bgsoundbluesea.pause();
     }
     /* ******************** */
-    $("#playstopbigblue").on('tap', function() {
+    $("#playstopthefuture").on('tap', function() {
       if(!playing) {
-        bigblueaudio.play();
+        blueseaaudio.play();
         $('.micbtndeep').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
-        bigblueaudio.pause(); bigblueaudio.currentTime = 0;
+        blueseaaudio.pause(); blueseaaudio.currentTime = 0;
         $('.micbtndeep').css('background-position-x', '0px');
         playing = false;
+        paused = true;
       }
     });
     
     $("#bigblueaudioplbtn").on('tap', function() {
-      if(!playing) {
-        bigblueaudio.play();
+      if(!paused) {
+        blueseaaudio.pause();
+        paused = true;
       } else {
-        bigblueaudio.pause();
+        blueseaaudio.play();
+        paused = false;
       }
       //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
     });

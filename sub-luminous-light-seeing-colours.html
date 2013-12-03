@@ -76,15 +76,16 @@
         (function() {
           playing = false;
             $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
-            $('div#pol1').css("z-index", 2);
-            $('div#pol2').css("z-index", 1);
-            $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
-            $('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
+            $('div#pol1').css("z-index", 1);
+			$('#f1_container').css({"visibility":"hidden", "z-index":0});
+            //$('div#pol2').css("z-index", 1);
+            //$('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
+            //$('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
            
            
 			 
 			 if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-colours').html('<audio controls preload id="coloursaudio" onpause="playluminous()" onplay="pauseluminous()"><source src="http://deftsoft.info/appvendo/mw/audio/colours.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-colours').html('<audio controls preload id="coloursaudio" onpause="playluminous()" onplay="pauseluminous()"><source src="audio/Liminous_Light/colours.mp3" type="audio/mpeg"></audio>');
              }  
 		  
     

@@ -74,7 +74,7 @@ The tropical regions, which are closer to the equator, are like summer all year!
            
            
              if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-between').html('<audio controls preload id="betweenaudio" onpause="playbluesea()" onplay="pausebluesea()"><source src="http://deftsoft.info/appvendo/mw/audio/between.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-between').html('<audio controls preload id="betweenaudio" onpause="playbluesea()" onplay="pausebluesea()"><source src="audio/The_Deep_Blue_Sea/betweenpoles.mp3" type="audio/mpeg"></audio>');
              } 
              
             $("#between").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
@@ -86,13 +86,13 @@ The tropical regions, which are closer to the equator, are like summer all year!
             $.mobile.changePage("sub-deep-blue-sea-poles-vs-tropics.html");
         }
         
-      function playbluesea() {
-         bgsoundbluesea.play();
-    }
-       
-    function pausebluesea() {
-         bgsoundbluesea.pause();
-    }
+        function playbluesea() {
+			 bgsoundbluesea.play();
+		}
+		   
+		function pausebluesea() {
+			 bgsoundbluesea.pause();
+		}
        
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-deep-binaries.html", {transition: "slide"});
@@ -114,8 +114,10 @@ The tropical regions, which are closer to the equator, are like summer all year!
 	$("#pol3").on('tap', function() {
       $('#dolphins')[0].click();
     });  
-	  
-	  $("#playstopbetween").on('tap', function() {
+
+	/* ******************** */
+	
+	$("#playstopbetween").on('tap', function() {
       if(!playing) {
         betweenaudio.play();
         $('.micbtndeep').css('background-position-x', '-81px');
@@ -128,14 +130,9 @@ The tropical regions, which are closer to the equator, are like summer all year!
         paused = true;
       }
     });
-	  
-	  
 
-/* ******************** */
-  $("#betweenaudioplbtn").on('tap', function() {
-      //lifeabhaudio.play();
-      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
-       if(!paused) {
+	$("#betweenaudioplbtn").on('tap', function() {
+      if(!paused) {
         betweenaudio.pause();
         paused = true;
       } else {
@@ -157,7 +154,7 @@ The tropical regions, which are closer to the equator, are like summer all year!
     });
     
     $("#betweenaudiopsbtn").on('tap', function() {
-	 var betweenaudio = new Audio();
+	// var betweenaudio = new Audio();
       betweenaudio.pause();
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       

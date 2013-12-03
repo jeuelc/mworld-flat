@@ -153,6 +153,17 @@ $(function(){
             $('#pol1').css("z-index", 3);
             $('#pol2').css("z-index", 2);
             $('#pol4').css("z-index", 1);
+          }else if(jid == "pol5") {
+            $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
+            $('div#pol2').css({'top':'290px', 'left':'75px'});
+            $('div#pol3 > img').css("-webkit-transform", "rotate(-3deg)");
+            $('div#pol3').css({'top':'270px', 'left':'80px'});
+            $('div#pol4 > img').css("-webkit-transform", "rotate(-3deg)");
+            $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
+            $('div#pol1').css({'top':'270px', 'left':'100px'});
+            $('#pol1').css("z-index", 3);
+            $('#pol2').css("z-index", 2);
+            $('#pol5').css("z-index", 1);
           } 
           $(target).css({'z-index':'0'});
           $(target).animate({'top':'270px', 'left':'80px'}, 500);

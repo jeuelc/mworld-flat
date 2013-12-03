@@ -41,7 +41,7 @@
           playing = false;
            /* $('#node-body-minoans').html(data[0].Body);*/
       if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-askingquestions').html('<audio controls preload id="askingquestionsaudio" onpause="playscientist()" onplay="pausescientist()"><source src="http://deftsoft.info/appvendo/mw/audio/askingquestionslife.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-askingquestions').html('<audio controls preload id="askingquestionsaudio" onpause="playscientist()" onplay="pausescientist()"><source src="audio/How_To_Become_A_Scientist/askingquestions.mp3" type="audio/mpeg"></audio>');
       } 
       
       $("#askingquestions").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
@@ -59,7 +59,7 @@
       $.mobile.changePage("sub-scientist-how-to-become-scientist.html");
     }
     
-    function playscientist() {
+		function playscientist() {
 			 bgsoundscientist.play();
 		}
 		   

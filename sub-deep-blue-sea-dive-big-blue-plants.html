@@ -63,14 +63,13 @@ Dugongs and green turtles eat seagrasses, while sea creatures like prawns and fi
         (function() {
           playing = false;
             $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
-            $('div#pol1').css("z-index", 2);
-            $('div#pol2').css("z-index", 1);
+            $('div#pol1').css("z-index", 1);
             $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
-            $('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
+            //$('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
            
            
              if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-plants').html('<audio controls preload id="plantsaudio" onpause="playbluesea()" onplay="pausebluesea()"><source src="http://deftsoft.info/appvendo/mw/audio/plantsinocean.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-plants').html('<audio controls preload id="plantsaudio" onpause="playbluesea()" onplay="pausebluesea()"><source src="audio/The_Deep_Blue_Sea/plantsinocean.mp3" type="audio/mpeg"></audio>');
              } 
              
     
@@ -152,5 +151,5 @@ Dugongs and green turtles eat seagrasses, while sea creatures like prawns and fi
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 
-  </script><script src="js/threecardLogic.js"></script>
+  </script><script src="js/twocardLogic.js"></script>
 </div>

@@ -40,52 +40,52 @@
           playing = false;
            /* $('#node-body-minoans').html(data[0].Body);*/
 		     if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-oceans').html('<audio id="humansaudio" controls preload onpause="playbluesea()" onplay="pausebluesea()"><source src="http://deftsoft.info/appvendo/mw/audio/humanslife.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-oceans').html('<audio id="humansaudio" controls preload onpause="playbluesea()" onplay="pausebluesea()"><source src="audio/The_Deep_Blue_Sea/humansandocean.mp3" type="audio/mpeg"></audio>');
       } 
       
       $("#humans").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     })();
     
-  //  $("#sgl").on('tap', function() {$.mobile.changePage("sub-medieval- metropolis-humanslife-angkor-cooking.html", {transition:"slide"}); });
-  // $("#snl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-humanslife-angkor-marketers.html", {transition:"slide"}); });
-  //  $("#nsl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-humanslife-angkor-village.html", {transition:"slide"}); });
-  //  $("#deepl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-humanslife-angkor-fashion.html", {transition:"slide"}); });
-	// $("#dsl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-humanslife-angkor-houses.html", {transition:"slide"}); });
-	//  $("#ehl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-humanslife-angkor-animals.html", {transition:"slide"}); });
+	  //  $("#sgl").on('tap', function() {$.mobile.changePage("sub-medieval- metropolis-humanslife-angkor-cooking.html", {transition:"slide"}); });
+	  //  $("#snl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-humanslife-angkor-marketers.html", {transition:"slide"}); });
+	  //  $("#nsl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-humanslife-angkor-village.html", {transition:"slide"}); });
+	  //  $("#deepl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-humanslife-angkor-fashion.html", {transition:"slide"}); });
+	  //  $("#dsl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-humanslife-angkor-houses.html", {transition:"slide"}); });
+	  //  $("#ehl").on('tap', function() { $.mobile.changePage("sub-medieval- metropolis-humanslife-angkor-animals.html", {transition:"slide"}); });
     
    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbluesea.pause(); bgsoundbluesea.currentTime = 0;});
    function goBack() {
       $.mobile.changePage("sub-deep-blue-sea-oceans.html");
     }
     
-    function playbluesea() {
-         bgsoundbluesea.play();
-    }
-       
-    function pausebluesea() {
-         bgsoundbluesea.pause();
-    }
+		function playbluesea() {
+			 bgsoundbluesea.play();
+		}
+		   
+		function pausebluesea() {
+			 bgsoundbluesea.pause();
+		}
     /* ******************** */
     $("#playstophumans").on('tap', function() {
-      //comefromaudio.play();
-      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
       if(!playing) {
         humansaudio.play();
         $('.micbtndeep').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
-        humansaudio.pause();
+        humansaudio.pause(); humansaudio.currentTime = 0;
         $('.micbtndeep').css('background-position-x', '0px');
         playing = false;
+        paused = true;
       }
     });
 	
-  $("#humansaudioplbtn").on('tap', function() {
+	$("#humansaudioplbtn").on('tap', function() {
       if(!paused) {
-        oceansaudio.pause();
+        humansaudio.pause();
         paused = true;
       } else {
-        oceansaudio.play();
+        humansaudio.play();
         paused = false;
       }
       //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});

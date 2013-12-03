@@ -60,7 +60,7 @@
         </div>
     </div><!--/anisold-->
      
-    <div class="micbtnholder"><div class="micbtndeep"></div></div>
+    <div class="micbtnholder"><div class="micbtndeep" id="playstopwonders"></div></div>
     <div class="bdeep"><div class="rwdeep" id="wondersaudiobbtn"></div></div>
     <div class="pldeep"><div class="plpsdeep" id="wondersaudioplbtn"></div></div>
     <div class="fdeep"><div class="fwdeep" id="wondersaudiofbtn" ></div></div>
@@ -73,14 +73,15 @@
         (function() {
           playing = false;
             $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
-            $('div#pol1').css("z-index", 2);
-            $('div#pol2').css("z-index", 1);
+            $('div#pol1').css("z-index", 1);
+            //$('div#pol2').css("z-index", 1);
             $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
-            $('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
+            //$('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
+			$('#f1_container').css({"visibility":"hidden", "z-index":0});
            
            
              if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-wonders').html('<audio controls preload id="wondersaudio" onpause="pausedaudio()" onplay="pausebg()"><source src="http://deftsoft.info/appvendo/mw/audio/wonders.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-wonders').html('<audio controls preload id="wondersaudio" onpause="playbluesea()" onplay="pausebluesea()"><source src="audio/The_Deep_Blue_Sea/weired.mp3" type="audio/mpeg"></audio>');
              } 
              
     
@@ -93,13 +94,13 @@
             $.mobile.changePage("sub-deep-blue-sea-dive-bottoms-up.html");
         }
         
-       function pausedaudio() {
-         bgsounddeep.play();
-       }
-       
-       function pausebg() {
-         bgsounddeep.pause();
-       }
+        function playbluesea() {
+			 bgsoundbluesea.play();
+		}
+		   
+		function pausebluesea() {
+			 bgsoundbluesea.pause();
+		}
        
 	    $(".returncard").on('tap', function() {
 		  $('#f1_card').css({"-webkit-transform": "rotateY(0deg)"});
@@ -144,35 +145,44 @@
       
 
 /* ******************** */
-    $("#wondersaudioplbtn").on('tap', function() {
-	 var wondersaudio = new Audio();
-      //lifeadeepaudio.play();
-      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+	$("#playstopwonders").on('tap', function() {
       if(!playing) {
         wondersaudio.play();
         $('.micbtndeep').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
-        wondersaudio.pause();
+        wondersaudio.pause(); wondersaudio.currentTime = 0;
         $('.micbtndeep').css('background-position-x', '0px');
         playing = false;
+        paused = true;
+      }
+    });
+	
+    $("#wondersaudioplbtn").on('tap', function() {
+	  if(!paused) {
+        wondersaudio.pause();
+        paused = true;
+      } else {
+        wondersaudio.play();
+        paused = false;
       }
     });
     
     $("#wondersaudiofbtn").on('tap', function() {
-	 var wondersaudio = new Audio();
+	// var wondersaudio = new Audio();
       var ctime = wondersaudio.currentTime;
       wondersaudio.currentTime = ctime + 10;
     });
     
     $("#wondersaudiobbtn").on('tap', function() {
-	 var wondersaudio = new Audio();
+	// var wondersaudio = new Audio();
       var ctime = wondersaudio.currentTime;
       wondersaudio.currentTime = ctime - 10;
     });
     
     $("#wondersaudiopsbtn").on('tap', function() {
-	 var wondersaudio = new Audio();
+	// var wondersaudio = new Audio();
       wondersaudio.pause();
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       

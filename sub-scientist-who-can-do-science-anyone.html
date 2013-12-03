@@ -43,7 +43,7 @@
                         <div id="pol2"class="pPiece" style="left:75px;top:290px;">
                            <img src="css/images/9-12/The_Wonders_of_Science/How_To_Become_A_Scientist/Who_Can_Do_Science/Anyone_Can_Do_Science/Galaxy_Zoo.jpg" alt="" />
                         </div>
-						<div id="pol2"class="pPiece" style="left:75px;top:290px;">
+						<div id="pol3"class="pPiece" style="left:75px;top:290px;">
                            <img src="css/images/9-12/The_Wonders_of_Science/How_To_Become_A_Scientist/Who_Can_Do_Science/Anyone_Can_Do_Science/Zoom_Inverse_All.jpg" alt="" />
                         </div>
                      </div><!--/zoomwrapper-->
@@ -82,11 +82,11 @@
             $('div#pol1').css("z-index", 2);
             $('div#pol2').css("z-index", 1);
             $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
-            $('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
-           
+			$('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
+            $("#f1_container").css("z-index", 0);
            
              if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-anyonecando').html('<audio controls preload id="anyonecandoaudio" onpause="playscientist()" onplay="pausescientist()"><source src="http://deftsoft.info/appvendo/mw/audio/anyonecandoscience.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-anyonecando').html('<audio controls preload id="anyonecandoaudio" onpause="playscientist()" onplay="pausescientist()"><source src="audio/How_To_Become_A_Scientist/anyonecandoscience.mp3" type="audio/mpeg"></audio>');
              } 
              
     

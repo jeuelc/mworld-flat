@@ -18,6 +18,9 @@
             <div data-role="content" class="kidzcontent">
                 <div class="v-volcano"></div>
                   <div class="sidebarleft-half">
+				<a id="l1" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Extreme_Weather/Be_Prepared/Staying_Safe/Image_card_Rescue_Hi_Res.jpg', 'Emergency service personnel are vital during a natural disaster, such as a flood, bravely going out and helping people in need');">click here</a>		
+					
+					<a id="l2" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Extreme_Weather/Be_Prepared/Staying_Safe/Image_card_Stores_Hi_Res.jpg', 'In times of crisis it is important to help out where possible, like these volunteers at a shelter!');">click here</a>					  
                      <div id="zoomwrapper">
                         <div id="pol1" class="pPiece" style="left:100px;top:270px;">
                            <img src="css/images/9-12/The_Natural_World/Extreme_Weather/Be_Prepared/Staying_Safe/Image_card_Rescue.jpg" alt="" />
@@ -62,7 +65,6 @@
             $('div#pol1').css("z-index", 2);
             $('div#pol2').css("z-index", 1);
             $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
-            $('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
            
            
              if(sound.canPlayType('audio/mpeg')) {
@@ -86,7 +88,16 @@
 		function pauseweather() {
 			 bgsoundweather.pause();
 		}
-       
+ 
+	 $("#pol1").on('tap', function() {
+      $('#l1')[0].click();
+    });
+
+	 $("#pol2").on('tap', function() {
+      $('#l2')[0].click();
+    });	
+
+ 
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-weather-binaries.html", {transition: "slide"});
 //    });
@@ -141,5 +152,5 @@
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 
-  </script><script src="js/threecardLogic.js"></script>
+  </script><script src="js/twocardLogic.js"></script>
 </div>

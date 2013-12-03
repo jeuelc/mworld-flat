@@ -73,19 +73,18 @@
         (function() {
           playing = false;
             $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
-            $('div#pol1').css("z-index", 2);
-            $('div#pol2').css("z-index", 1);
+            $('div#pol1').css("z-index", 3);
+            $('div#pol2').css("z-index", 2);
+			$('div#pol3').css("z-index", 1);
             $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
             $('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
+			$('div#pol4 > img').css("-webkit-transform", "rotate(10deg)");
            
-           
-             if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-greatest').html('<audio controls preload id="greatestaudio" onpause="playbluesea()" onplay="pausebluesea()"><source src="http://deftsoft.info/appvendo/mw/audio/greatest.mp3" type="audio/mpeg"></audio>');
-             } 
-             
-    
+            if(sound.canPlayType('audio/mpeg')) {
+                $('#actualaudio-greatest').html('<audio controls preload id="greatestaudio" onpause="playbluesea()" onplay="pausebluesea()"><source src="audio/The_Deep_Blue_Sea/largestlivingthing.mp3" type="audio/mpeg"></audio>');
+            } 
+            
             $("#greatest").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
-    
         })();
         $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundbluesea.pause(); bgsoundbluesea.currentTime = 0;});
     
@@ -93,13 +92,13 @@
             $.mobile.changePage("sub-deep-blue-sea-bw-poles.html");
         }
         
-       function pausedaudio() {
-         bgsounddeep.play();
-       }
-       
-       function pausebg() {
-         bgsounddeep.pause();
-       }
+        function playbluesea() {
+			 bgsoundbluesea.play();
+		}
+		   
+		function pausebluesea() {
+			 bgsoundbluesea.pause();
+		}
        
     $("#pol1").on('tap', function() {
       $('#great')[0].click();
@@ -126,45 +125,44 @@
 
 /* ******************** */
     $("#playstopgreatest").on('tap', function() {
-	 var greatestaudio = new Audio();
-      //lifeadeepaudio.play();
-      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
-      if(!playing) {
+	 if(!playing) {
         greatestaudio.play();
         $('.micbtndeep').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
-        greatestaudio.pause();
+        greatestaudio.pause(); greatestaudio.currentTime = 0;
         $('.micbtndeep').css('background-position-x', '0px');
         playing = false;
+        paused = true;
       }
     });
     
 	
 	$("#greatestaudioplbtn").on('tap', function() {
       if(!paused) {
-        apartaudio.pause();
+        greatestaudio.pause();
         paused = true;
       } else {
-        apartaudio.play();
+        greatestaudio.play();
         paused = false;
       }
       //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
     });
     $("#greatestaudiofbtn").on('tap', function() {
-	 var greatestaudio = new Audio();
+	// var greatestaudio = new Audio();
       var ctime = greatestaudio.currentTime;
       greatestaudio.currentTime = ctime + 10;
     });
     
     $("#greatestaudiobbtn").on('tap', function() {
-	 var greatestaudio = new Audio();
+	// var greatestaudio = new Audio();
       var ctime = greatestaudio.currentTime;
       greatestaudio.currentTime = ctime - 10;
     });
     
     $("#greatestaudiopsbtn").on('tap', function() {
-	 var greatestaudio = new Audio();
+	// var greatestaudio = new Audio();
       greatestaudio.pause();
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       

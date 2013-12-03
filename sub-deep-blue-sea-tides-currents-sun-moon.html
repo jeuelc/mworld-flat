@@ -74,14 +74,12 @@
         (function() {
           playing = false;
             $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
-            $('div#pol1').css("z-index", 2);
-            $('div#pol2').css("z-index", 1);
-            $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
-            $('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
-           
+            $('div#pol1').css("z-index", 1);
+            //$('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
+            $('#f1_container').css({"visibility":"hidden", "z-index":0});
            
              if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-sun').html('<audio controls preload id="sunaudio" onpause="playbluesea()" onplay="pausebluesea()"><source src="http://deftsoft.info/appvendo/mw/audio/sun.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-sun').html('<audio controls preload id="sunaudio" onpause="playbluesea()" onplay="pausebluesea()"><source src="audio/The_Deep_Blue_Sea/sun.mp3" type="audio/mpeg"></audio>');
              } 
              
     
@@ -94,13 +92,13 @@
             $.mobile.changePage("sub-deep-blue-sea-tides-currents.html");
         }
         
-      function playbluesea() {
-         bgsoundbluesea.play();
-    }
-       
-    function pausebluesea() {
-         bgsoundbluesea.pause();
-    }
+		function playbluesea() {
+			 bgsoundbluesea.play();
+		}
+		   
+		function pausebluesea() {
+			 bgsoundbluesea.pause();
+		}
     $(".returncard").on('tap', function() {
       $('#f1_card').css({"-webkit-transform": "rotateY(0deg)"});
       $('#f1_card').css({"-moz-transform": "rotateY(0deg)"});
@@ -157,19 +155,19 @@
     });
 
     $("#sunaudiofbtn").on('tap', function() {
-	 var sunaudio = new Audio();
+	// var sunaudio = new Audio();
       var ctime = sunaudio.currentTime;
       sunaudio.currentTime = ctime + 10;
     });
     
     $("#sunaudiobbtn").on('tap', function() {
-	 var sunaudio = new Audio();
+	// var sunaudio = new Audio();
       var ctime = sunaudio.currentTime;
       sunaudio.currentTime = ctime - 10;
     });
     
     $("#sunaudiopsbtn").on('tap', function() {
-	 var sunaudio = new Audio();
+	// var sunaudio = new Audio();
       sunaudio.pause();
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       

@@ -1,6 +1,5 @@
 <!-- i-C-a -->
 <div data-role="page" id="poles">
-  <script src="js/slidebar_deep_blue_sea.js"></script>
   <link rel="stylesheet" href="css/style-deep-blue-sea.css" />
   <div class="menuhousing"></div>
   <div class="homebtnholder"><div class="homebtndeep"></div></div>
@@ -9,7 +8,9 @@
   <div class="infobtnholder"><div class="infobtndeep"></div></div>
   <div class="credsbtnholder"><div class="credsbtndeep"></div></div>
   <div class="menubtnholder"><div class="menubtndeep"></div></div>
-  
+  <script src="js/slidebar_deep_blue_sea.js"></script>
+  <script src="js/hammer.js"></script>
+  <script src="js/jquery.hammer.js"></script>
   <div class="navtitleholder" style="padding-top:14px;"><h1>Pole versus the Tropics</h1></div>
   
     <div data-role="content" class="kidzcontent">
@@ -44,7 +45,7 @@
     (function() {
       playing = false;
       if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-poles').html('<audio id="polesaudio" controls preload onpause="playbluesea()" onplay="pausebluesea()"><source src="http://deftsoft.info/appvendo/mw/audio/poles.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-poles').html('<audio id="polesaudio" controls preload onpause="playbluesea()" onplay="pausebluesea()"><source src="audio/The_Deep_Blue_Sea/polesversustropics.mp3" type="audio/mpeg"></audio>');
       } 
     
       $("#poles").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
@@ -72,10 +73,12 @@
         polesaudio.play();
         $('.micbtndeep').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
         polesaudio.pause(); polesaudio.currentTime = 0;
         $('.micbtndeep').css('background-position-x', '0px');
         playing = false;
+        paused = true;
       }
     });
     

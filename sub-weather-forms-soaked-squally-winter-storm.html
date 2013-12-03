@@ -18,6 +18,29 @@
             <div data-role="content" class="kidzcontent">
                 <div class="v-volcano"></div>
                   <div class="sidebarleft-half">
+
+				<a id="l1" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Soaked_And_Squally/Winter_Storms/Ice_On_Pl_Hi_Res.jpg', 'Just over 1 centimetre of ice adds over 200 kg to power lines and can lead to collapse');">click here</a>		
+					
+					<a id="l2" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Soaked_And_Squally/Winter_Storms/Snow_Car_Hi_Res.jpg', 'Winter storms can mean lots of things are delayed, like getting the car out to start morning activities!');">click here</a>		
+					
+				<a id="l3" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Soaked_And_Squally/Winter_Storms/Comma_Cloud_Hi_Res.jpg', 'The distinctive comma cloud of a winter storm');">click here</a>		
+				  
+				  
+					<!-- This section is for flipping images quize -->
+					<div id="f1_container" style="visibility:hidden;position:absolute;left:100px;top:270px;">
+					  <div id="f1_card">
+						<div class="front face">
+						  <img id="dopple" src="css/images/9-12/The_Natural_World/Extreme_Weather/What_Is_Weather/Under_Pressure/Poles_Versus_The_Tropics.png">
+						</div>
+						<div id="backofcard" class="back face center" style="background:url(css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Soaked_And_Squally/Winter_Storms/Rising_Flood_Waters_Reverse.png) no-repeat;">
+						  <div class="returncard" style="position:absolute;left:0px;top:0px;width:362px;height:170px;"></div>
+							<div id="falseans" style="position: absolute;left: 87px;top: 175px;width: 70px;height: 56px;"></div>		
+							<div id="trueans" style="position: absolute;left: 200px;top: 175px;width: 77px;height: 56px;"></div>		
+						</div>
+					  </div><!--/f1+card-->
+					</div><!--/f1_container-->
+					<!-- Flip content ends here -->
+				  
                      <div id="zoomwrapper">
                         <div id="pol1" class="pPiece" style="left:100px;top:270px;">
                            <img src="css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Soaked_And_Squally/Winter_Storms/Rising_Flood_Waters.png" alt="" />
@@ -71,7 +94,7 @@
             $('div#pol2').css("z-index", 1);
             $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
             $('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
-           
+			$('div#pol4 > img').css("-webkit-transform", "rotate(10deg)");
            
              if(sound.canPlayType('audio/mpeg')) {
                  $('#actualaudio-winter_storm').html('<audio controls preload id="winter_stormaudio" onpause="playsweather()" onplay="pauseweather()"><source src="http://deftsoft.info/appvendo/mw/audio/winter_storm.mp3" type="audio/mpeg"></audio>');
@@ -94,7 +117,45 @@
 		function pauseweather() {
 			 bgsoundweather.pause();
 		}
-       
+
+    $(".returncard").on('tap', function() {
+      $('#f1_card').css({"-webkit-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"-moz-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"-o-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"transform": "rotateY(0deg)"});
+      setTimeout(function() {
+        $("#pol1").css({"visibility":"visible", "z-index":3});
+        $('#f1_container').css({"visibility":"hidden", "z-index":0});
+      }, 1000);
+    });
+    $('.falseans').on('tap', function() {
+      alert("Wrong answer");
+    });
+    $('#trueans').on('tap', function() {
+      alert("Correct answer");
+	  });
+    $("#pol1").on('tap', function() {
+      $('#f1_container').css({"visibility":"visible", "z-index":10});
+      $(this).css({"visibility":"hidden"});
+      $('#f1_card').css({"-webkit-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"-moz-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"-o-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"transform": "rotateY(180deg)"});
+    });	
+
+	 $("#pol2").on('tap', function() {
+      $('#l1')[0].click();
+    });
+
+	 $("#pol3").on('tap', function() {
+      $('#l2')[0].click();
+    });		  
+	 $("#pol4").on('tap', function() {
+      $('#l3')[0].click();
+    });
+	
+	
+		
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-weather-binaries.html", {transition: "slide"});
 //    });
@@ -150,5 +211,5 @@
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 
-  </script><script src="js/threecardLogic.js"></script>
+  </script><script src="js/fourcardLogic.js"></script>
 </div>

@@ -694,7 +694,7 @@ $('#ancientgreece').live( 'pagehide',function(event, ui){
 
 /************************ Luminous Light Section *******************************/
 var bgsoundluminous = new Audio();
-bgsoundluminous.src = "";
+bgsoundluminous.src = "audio/How_To_Become_A_Scientist/luminouslight_bg.mp3";
 bgsoundluminous.addEventListener('ended', function() { bgsoundluminous.play(); });
 
 function pauseluminous() { bgsoundluminous.pause() }
@@ -702,7 +702,7 @@ function playluminous() { bgsoundluminous.play(); $(".audiopanel").css({"backgro
 
 /************************ Sleep And Dreams Section *******************************/
 var bgsoundsleeps = new Audio();
-bgsoundsleeps.src = "http://deftsoft.info/appvendo/mw/audio/background/sleeps_bg.mp3";
+bgsoundsleeps.src = "audio/Sleeps_And_Dreams/sleeps_bg.mp3";
 bgsoundsleeps.addEventListener('ended', function() { bgsoundsleeps.play(); });
 
 function pausesleeps() { bgsoundsleeps.pause() }
@@ -711,7 +711,7 @@ function playsleeps() { bgsoundsleeps.play(); $(".audiopanel").css({"backgroundP
 /************************ How to Become A Scientist Section *******************************/
 
 var bgsoundscientist = new Audio();
-bgsoundscientist.src = "http://deftsoft.info/appvendo/mw/audio/background/sleeps_bg.mp3";
+bgsoundscientist.src = "audio/How_To_Become_A_Scientist/scientist_bg.mp3";
 bgsoundscientist.addEventListener('ended', function() { bgsoundscientist.play(); });
 
 function pausescientist() { bgsoundscientist.pause() }
@@ -728,7 +728,7 @@ function playsweather() { bgsoundweather.play(); $(".audiopanel").css({"backgrou
 
 /************************ Deep Blue Section *******************************/
 var bgsoundbluesea = new Audio();
-bgsoundbluesea.src = "http://deftsoft.info/appvendo/mw/audio/backgroundsea.mp3";
+bgsoundbluesea.src = "audio/The_Deep_Blue_Sea/backgroundsea.mp3";
 bgsoundbluesea.addEventListener('ended', function() { bgsoundbluesea.play(); });
 
 function pausebluesea() { bgsoundbluesea.pause() }

@@ -728,6 +728,7 @@ function playsweather() { bgsoundweather.play(); $(".audiopanel").css({"backgrou
 
 /************************ Deep Blue Section *******************************/
 var bgsoundbluesea = new Audio();
+
 bgsoundbluesea.src = "audio/The_Deep_Blue_Sea/backgroundsea.mp3";
 bgsoundbluesea.addEventListener('ended', function() { bgsoundbluesea.play(); });
 

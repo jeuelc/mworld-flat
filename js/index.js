@@ -733,3 +733,12 @@ bgsoundbluesea.addEventListener('ended', function() { bgsoundbluesea.play(); });
 
 function pausebluesea() { bgsoundbluesea.pause() }
 function playbluesea() { bgsoundbluesea.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }
+
+/************************ Super Fast Trains Section *******************************/
+var bgsoundsuperfasttrains = new Audio();
+bgsoundsuperfasttrains.src = "audio/Super_Fast_Trains/super_fast_trains_bg.mp3";
+bgsoundsuperfasttrains.addEventListener('ended', function() { bgsoundsuperfasttrains.play(); });
+
+function pausetrains() { bgsoundsuperfasttrains.pause() }
+function playstrains() { bgsoundsuperfasttrains.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }
+

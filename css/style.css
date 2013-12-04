@@ -1031,12 +1031,13 @@ a.fun.bsubjectlink { background:url("images/5-8/Home_Screen/bfun.png") no-repeat
 }
 
 .navtitleholder h1, .bptitleholder h1, h1 {
-  text-transform:uppercase;
-  color: #000000;
-  font-family:"Chalkboard SE";
-  font-weight:normal;
-  padding:0;
-  margin:0;
+text-transform: uppercase;
+color: #FFF;
+font-family: "comic sans ms";
+padding: 0;
+margin: 0;
+font-size: 25px;
+font-weight: bold;
 }
 
 .navtitleholderbh h1, .bptitleholderbh h1 {
@@ -1070,9 +1071,9 @@ a.fun.bsubjectlink { background:url("images/5-8/Home_Screen/bfun.png") no-repeat
   height:359px;
   overflow-y:scroll;
   text-align:left;
-  font-family:"Chalkboard SE";
+  font-family: "comic sans ms";
   font-size:18px;
-  font-weight:bold;
+  font-weight:normal;
 }
 
 .navbtn1 {
@@ -1402,17 +1403,16 @@ ul.slides {
     z-index: 21;
 }
 .navvolcanobig-content {
-  position:absolute;
-  left:98px;
-  top:251px;
-  width:830px;
-  height:359px;
-  overflow-y:scroll;
-  text-align:center;
-  font-family:"Chalkboard SE";
-  font-size:18px;
-  font-weight:bold;
-  color:#000000;
+position: absolute;
+left: 98px;
+top: 251px;
+width: 830px;
+height: 359px;
+overflow-y: scroll;
+text-align: center;
+font-family: comic sans ms;
+font-size: 18px;
+color: #000000;
 }
 .navvolcanobigbtn1 {
     left: 134px;
@@ -1450,13 +1450,13 @@ ul.slides {
   width:1024px !important;
 }
 .navtitleholdervolcano {
-  width:553px;
-  height:68px;
-  position:absolute;
-  top:169px;
-  left:305px;
-  text-align:center;
-  line-height:32px;
+width: 435px;
+height: 68px;
+position: absolute;
+top: 169px;
+left: 295px;
+text-align: center;
+line-height: 32px;
 }
 .navvolcano-content {
   position:absolute;
@@ -1475,12 +1475,12 @@ ul.slides {
   margin-top:0 !important;
 }
 .navtitleholdervolcano h1, .bptitleholdervolcano h1 {
-  text-transform:uppercase;
-  color: #000000;
-  font-family:"Chalkboard SE";
-  font-weight:normal;
-  padding:0;
-  margin:0;
+text-transform: uppercase;
+color: #FFF;
+font-family: comic sans ms;
+padding: 0;
+margin: 0;
+font-weight: bold;
 }
 
 
@@ -1558,9 +1558,9 @@ ul.slides {
 }
 .bpcontentvolcano {
     color: #000000;
-    font-family: "Chalkboard SE";
+    font-family: "comic sans ms";
     font-size: 18px;
-    font-weight: bold;
+    font-weight: normal;
     height: 356px;
     left: 550px;
     overflow-y: scroll;
@@ -1965,9 +1965,9 @@ color: #000000;
 }
 
 .why-become-scientist-content {
-font-family: "Chalkboard SE";
+font-family: "comic sans ms";
     font-size: 18px;
-    font-weight: bold;
+    font-weight: normal;
     height: 229px;
     left: 169px;
     position: absolute;

@@ -68,7 +68,7 @@
         </div>
     </div><!--/anisold-->
      
-    <div class="micbtnholder"><div class="micbtnsleeps"></div></div>
+    <div class="micbtnholder"><div class="micbtnsleeps" id="playstopparasomnias"></div></div>
     <div class="bsleeps"><div class="rwsleeps" id="parasomniasaudiobbtn"></div></div>
     <div class="plsleeps"><div class="plpssleeps" id="parasomniasaudioplbtn"></div></div>
     <div class="fsleeps"><div class="fwsleeps" id="parasomniasaudiofbtn" ></div></div>
@@ -168,35 +168,46 @@
       
 
 /* ******************** */
-    $("#parasomniasaudioplbtn").on('tap', function() {
-	 var parasomniasaudio = new Audio();
-      //lifeasleepsaudio.play();
-      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+
+	$("#playstopparasomnias").on('tap', function() {
       if(!playing) {
         parasomniasaudio.play();
         $('.micbtnsleeps').css('background-position-x', '-81px');
         playing = true;
+        paused = false;
       } else {
-        parasomniasaudio.pause();
+        parasomniasaudio.pause(); parasomniasaudio.currentTime = 0;
         $('.micbtnsleeps').css('background-position-x', '0px');
         playing = false;
+        paused = true;
+      }
+    });
+	
+	
+    $("#parasomniasaudioplbtn").on('tap', function() {
+	 if(!paused) {
+        parasomniasaudio.pause();
+        paused = true;
+      } else {
+        parasomniasaudio.play();
+        paused = false;
       }
     });
     
     $("#parasomniasaudiofbtn").on('tap', function() {
-	 var parasomniasaudio = new Audio();
+	// var parasomniasaudio = new Audio();
       var ctime = parasomniasaudio.currentTime;
       parasomniasaudio.currentTime = ctime + 10;
     });
     
     $("#parasomniasaudiobbtn").on('tap', function() {
-	 var parasomniasaudio = new Audio();
+	// var parasomniasaudio = new Audio();
       var ctime = parasomniasaudio.currentTime;
       parasomniasaudio.currentTime = ctime - 10;
     });
     
     $("#parasomniasaudiopsbtn").on('tap', function() {
-	 var parasomniasaudio = new Audio();
+	// var parasomniasaudio = new Audio();
       parasomniasaudio.pause();
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       

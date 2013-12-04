@@ -124,16 +124,16 @@
 
 .storypagetitleetg_asking_questions{
 	color: #000000;
-    font-family: "Chalkboard SE";
+    font-family: "comic sans ms";
     margin-left: 348px;
     position: absolute;
     top: 55px;
 }
 .storypageetg_asking_questions {
 	color: #000000;
-    font-family: "Chalkboard SE";
+    font-family: "comic sans ms";
     font-size: 18px;
-    font-weight: bold;
+    font-weight: normal;
     height: 356px;
     margin-left: 42px;
     position: absolute;
@@ -142,40 +142,39 @@
 }
 
 .navtitleholder_scientist {
-	width: 486px;
-	height: 68px;
-	position: absolute;
-	top: 207px;
-	left: 266px;
-	text-align: center;
-	line-height: 32px;
+width: 486px;
+height: 68px;
+position: absolute;
+top: 235px;
+left: 266px;
+text-align: center;
+line-height: 32px;
 }
 .nav-content_scientist {
-	position: absolute;
-	left: 305px;
-	top: 315px;
-	width: 435px;
-	height: 359px;
-	overflow-y: scroll;
-	text-align: left;
-	font-family: "Chalkboard SE";
-	font-size: 18px;
-	font-weight: bold;
+position: absolute;
+left: 305px;
+top: 315px;
+width: 435px;
+height: 359px;
+overflow-y: scroll;
+text-align: left;
+font-family: comic sans ms;
+font-size: 18px; 
 }
 
 .bptitleholder_what_is_science {
-    width: 627px;
-	height: 68px;
-	text-align: center;
-	line-height: 28px;
-	position: absolute;
-	top: 209px;
-	left: 210px;
+width: 615px;
+height: 68px;
+text-align: center;
+line-height: 28px;
+position: absolute;
+top: 209px;
+left: 409px;
 }
 
 .storypagetitle_what_is_not_science {
 	color: #000000;
-	font-family: "Chalkboard SE";
+	font-family: "comic sans ms";
 	position: absolute;
 	top: 51px;
 	width: 390px;
@@ -184,7 +183,7 @@
 
 .storypage_what_is_not_science {
 	color: #000000;
-	font-family: "Chalkboard SE";
+	font-family: "comic sans ms";
 	font-size: 18px;
 	font-weight: bold;
 	height: 356px;
@@ -212,7 +211,7 @@
 	height: 359px;
 	overflow-y: scroll;
 	text-align: left;
-	font-family: "Chalkboard SE";
+	font-family: "comic sans ms";
 	font-size: 18px;
-	font-weight: bold;
+	font-weight: normal;
 }

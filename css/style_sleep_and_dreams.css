@@ -192,3 +192,24 @@
 	top: 54px;
 	width: 94%;
 }
+.storypagetitlehuman_bodyclock{
+color: #000000;
+font-family: "Chalkboard SE";
+margin-left: 280px;
+position: absolute;
+top: 165px;
+width: 435px;
+text-align: center;
+}
+.storypageetg_bodyclock{
+color: #000000;
+font-family: comic sans ms;
+font-size: 18px;
+font-weight: normal;
+height: 356px;
+margin-left: 142px;
+position: absolute;
+text-align: center;
+top: 200px;
+width: 70%;
+}

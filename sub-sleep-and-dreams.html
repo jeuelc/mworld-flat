@@ -33,7 +33,7 @@
         <p><a href="sub-sleeps-and-dreams-why-do-we-sleep.html" data-transition="slide" ><img src="css/images/9-12/Human_Body/Sleeps_And_Dreams/whydowesleep.png"></a></p>
       </div>
         
-      <div class="botlogoholder"><a href="home.html" class="homelinksleeps"><img src="css/images/9-12/Human_Body/bottomhomehb.png"></a></div>
+      <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Human_Body/bottomhomehb.png"></a></div>
     </div> <!-- end content -->  
     
   
@@ -56,13 +56,13 @@
       $("#sleeps").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     })();
     
-    $('.homelinksleeps').on('tap', function() { mainaudiobg.play(); bgsoundsleeps.pause(); bgsoundsleeps.currentTime = 0;});
+    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundsleeps.pause(); bgsoundsleeps.currentTime = 0;});
     
     function goBack() {
-      $.mobile.changePage("index.html", {transition: "slide", reverse: true });
+      $.mobile.changePage("sub-humanbody.html", {transition: "slide", reverse: true });
       bgsoundsleeps.pause();
       bgsoundsleeps.currentTime = 0;
-      spacesoundbg.play();
+      humanbodysoundbg.play();
     }
     
     function playsleeps() {

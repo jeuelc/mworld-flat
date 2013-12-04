@@ -1726,15 +1726,16 @@ color: #000000;
   top:449px;
 }
 .navpeople-content {
-  position:absolute;
-  left:305px;
-  top:263px;
-  width:410px;
-  height:166px;
-  text-align:left;
-  font-family:"Chalkboard SE";
-  font-size:18px;
-  font-weight:bold;
+position: absolute;
+left: 305px;
+top: 263px;
+width: 410px;
+height: 166px;
+text-align: left;
+font-family: comic sans ms;
+font-size: 18px;
+font-weight: normal;
+overflow: auto;
 }
 
 .navpeople-content_custom {

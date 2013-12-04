@@ -86,10 +86,11 @@
             $('div#pol2').css("z-index", 1);
             $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
             $('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
+			$('#f1_container').css({"visibility":"hidden", "z-index":0});
            
            
              if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-pressurize').html('<audio controls preload id="pressurizeaudio" onpause="playsweather()" onplay="pauseweather()"><source src="http://deftsoft.info/appvendo/mw/audio/pressurize.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-pressurize').html('<audio controls preload id="pressurizeaudio" onpause="playsweather()" onplay="pauseweather()"><source src="audio/Extreme_Weather/pressurize.mp3" type="audio/mpeg"></audio>');
              } 
              
     

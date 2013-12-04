@@ -90,14 +90,16 @@
         (function() {
           playing = false;
             $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
-            $('div#pol1').css("z-index", 2);
-            $('div#pol2').css("z-index", 1);
-            $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
+            $('div#pol1').css("z-index", 3);
+            $('div#pol2').css("z-index", 2);
+			$('div#pol3').css("z-index", 1);
+			$('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
             $('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
 			$('div#pol4 > img').css("-webkit-transform", "rotate(10deg)");
+			$('#f1_container').css({"visibility":"hidden", "z-index":0});
            
              if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-winter_storm').html('<audio controls preload id="winter_stormaudio" onpause="playsweather()" onplay="pauseweather()"><source src="http://deftsoft.info/appvendo/mw/audio/winter_storm.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-winter_storm').html('<audio controls preload id="winter_stormaudio" onpause="playsweather()" onplay="pauseweather()"><source src="audio/Extreme_Weather/winter_storm.mp3" type="audio/mpeg"></audio>');
              } 
              
     

@@ -56,14 +56,14 @@
         (function() {
           playing = false;
             $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
-            $('div#pol1').css("z-index", 2);
-            $('div#pol2').css("z-index", 1);
-            $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
-            $('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
+            $('div#pol1').css("z-index", 1);
+            //$('div#pol2').css("z-index", 1);
+            //$('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
+            //$('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
            
            
              if(sound.canPlayType('audio/mpeg')) {
-                 $('#actualaudio-pagecard4').html('<audio controls preload id="pagecard4audio" onpause="playsweather()" onplay="pauseweather()"><source src="http://deftsoft.info/appvendo/mw/audio/pagecard4.mp3" type="audio/mpeg"></audio>');
+                 $('#actualaudio-pagecard4').html('<audio controls preload id="pagecard4audio" onpause="playsweather()" onplay="pauseweather()"><source src="audio/Extreme_Weather/pagecard4.mp3" type="audio/mpeg"></audio>');
              } 
              
     
@@ -140,5 +140,5 @@
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 
-  </script><script src="js/threecardLogic.js"></script>
+  </script><script src="js/onecardLogic.js"></script>
 </div>

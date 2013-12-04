@@ -720,7 +720,7 @@ function playscientist() { bgsoundscientist.play(); $(".audiopanel").css({"backg
 /************************ Extreme Weather Section *******************************/
 
 var bgsoundweather = new Audio();
-bgsoundweather.src = "http://deftsoft.info/appvendo/mw/audio/weather_bg.mp3";
+bgsoundweather.src = "audio/Extreme_Weather/weather_bg.mp3";
 bgsoundweather.addEventListener('ended', function() { bgsoundweather.play(); });
 
 function pauseweather() { bgsoundweather.pause() }
@@ -728,7 +728,6 @@ function playsweather() { bgsoundweather.play(); $(".audiopanel").css({"backgrou
 
 /************************ Deep Blue Section *******************************/
 var bgsoundbluesea = new Audio();
-
 bgsoundbluesea.src = "audio/The_Deep_Blue_Sea/backgroundsea.mp3";
 bgsoundbluesea.addEventListener('ended', function() { bgsoundbluesea.play(); });
 

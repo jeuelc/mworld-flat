@@ -36,10 +36,10 @@
 					<!-- Flip content ends here -->
 
                      <div id="zoomwrapper">
-                        <div id="pol1" class="pPiece" style="left:100px;top:270px;">
+                        <div id="polb1" class="pPiece" style="left:100px;top:270px;">
                            <img src="css/images/9-12/The_Natural_World/The_Deep_Blue_Sea/Oceans_And_The_Earth/Tides_And_Currents/The_Great_Sun_And_Moon_Battle/Oceans_Puzzle.png" alt="" />
                         </div>
-						<div id="pol2"class="pPiece" style="left:75px;top:290px;">
+						<div id="polb2"class="pPiece" style="left:75px;top:290px;">
              <img src="css/images/9-12/The_Natural_World/The_Deep_Blue_Sea/Oceans_And_The_Earth/Tides_And_Currents/The_Great_Sun_And_Moon_Battle/Tides.png" alt="" />
           </div>
                      </div><!--/zoomwrapper-->
@@ -73,9 +73,9 @@
         var playing;
         (function() {
           playing = false;
-            $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
-            $('div#pol1').css("z-index", 1);
-            //$('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
+            $('div#polb1 > img').css("-webkit-transform", "rotate(0deg)");
+            $('div#polb1').css("z-index", 1);
+            //$('div#polb3 > img').css("-webkit-transform", "rotate(-5deg)");
             $('#f1_container').css({"visibility":"hidden", "z-index":0});
            
              if(sound.canPlayType('audio/mpeg')) {
@@ -105,7 +105,7 @@
       $('#f1_card').css({"-o-transform": "rotateY(0deg)"});
       $('#f1_card').css({"transform": "rotateY(0deg)"});
       setTimeout(function() {
-        $("#pol1").css({"visibility":"visible", "z-index":3});
+        $("#polb1").css({"visibility":"visible", "z-index":3});
         $('#f1_container').css({"visibility":"hidden", "z-index":0});
       }, 1000);
     });
@@ -115,7 +115,7 @@
     $('#trueans').on('tap', function() {
       alert("Correct answer");
 	  });
-    $("#pol1").on('tap', function() {
+    $("#polb1").on('tap', function() {
       $('#f1_container').css({"visibility":"visible", "z-index":10});
       $(this).css({"visibility":"hidden"});
       $('#f1_card').css({"-webkit-transform": "rotateY(180deg)"});
@@ -123,7 +123,7 @@
       $('#f1_card').css({"-o-transform": "rotateY(180deg)"});
       $('#f1_card').css({"transform": "rotateY(180deg)"});
     });
-    $("#pol2").on('tap', function() {
+    $("#polb2").on('tap', function() {
       $('#tides')[0].click();
     });
       
@@ -172,5 +172,5 @@
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 
-  </script><script src="js/twocardLogic.js"></script>
+  </script><script src="js/twocardLogicb.js"></script>
 </div>

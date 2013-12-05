@@ -25,13 +25,13 @@
 					<a id="crab" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/The_Deep_Blue_Sea/Dive_In/Beach_Time/Seaside_luxury/Crab_Hi_Res.jpg', 'A crab out exploring, comes upon a mussel!');">click here</a>
 					
                      <div id="zoomwrapper">
-                        <div id="pol1" class="pPiece" style="left:100px;top:270px;">
+                        <div id="polb1" class="pPiece" style="left:100px;top:270px;">
                            <img src="css/images/9-12/The_Natural_World/The_Deep_Blue_Sea/Dive_In/Beach_Time/Seaside_luxury/Humans_Swimming.jpg" alt="" />
                         </div>
-                        <div id="pol2"class="pPiece" style="left:80px;top:290px;">
+                        <div id="polb2"class="pPiece" style="left:80px;top:290px;">
                            <img src="css/images/9-12/The_Natural_World/The_Deep_Blue_Sea/Dive_In/Beach_Time/Seaside_luxury/Sea_Stars_etc.jpg" alt="" />
                         </div>
-                        <div id="pol3"class="pPiece" style="left:60px;top:310px;">
+                        <div id="polb3"class="pPiece" style="left:60px;top:310px;">
                            <img src="css/images/9-12/The_Natural_World/The_Deep_Blue_Sea/Dive_In/Beach_Time/Seaside_luxury/Crab.jpg" alt="" />
                         </div>
 					 </div><!--/zoomwrapper-->
@@ -65,11 +65,11 @@
         var playing;
         (function() {
           playing = false;
-            $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
-            $('div#pol1').css("z-index", 2);
-            $('div#pol2').css("z-index", 1);
-            $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
-            $('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
+            $('div#polb1 > img').css("-webkit-transform", "rotate(0deg)");
+            $('div#polb1').css("z-index", 2);
+            $('div#polb2').css("z-index", 1);
+            $('div#polb2 > img').css("-webkit-transform", "rotate(5deg)");
+            $('div#polb3 > img').css("-webkit-transform", "rotate(-5deg)");
            
            
              if(sound.canPlayType('audio/mpeg')) {
@@ -94,27 +94,27 @@
 			 bgsoundbluesea.pause();
 		}
 	   
-        $("#swimming").on('tap', function() {
-		  $('#coast')[0].click();
+        $("#polb1").on('tap', function() {
+		  $('#swimming')[0].click();
 		});
 		
-		$("#stars").on('tap', function() {
-		  $('#bigwave')[0].click();
+		$("#polb2").on('tap', function() {
+		  $('#stars')[0].click();
 		});
 		
-		$("#crab").on('tap', function() {
-		  $('#penguine')[0].click();
+		$("#polb3").on('tap', function() {
+		  $('#crab')[0].click();
 		});
 		
-   // $("#pol3").on('tap', function() {
+   // $("#polb3").on('tap', function() {
 //      $.mobile.changePage("sub-space-deep-binaries.html", {transition: "slide"});
 //    });
 //    
-//    $("#pol2").on('tap', function() {
+//    $("#polb2").on('tap', function() {
 //      $.mobile.changePage("sub-space-deep-quasars.html", {transition: "slide"});
 //    });
 //    
-//    $("#pol1").on('tap', function() {
+//    $("#polb1").on('tap', function() {
 //      $.mobile.changePage("sub-space-deep-galaxies.html", {transition: "slide"});
 //    });
       
@@ -161,5 +161,5 @@
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 
-  </script><script src="js/threecardLogic.js"></script>
+  </script><script src="js/threecardLogicb.js"></script>
 </div>

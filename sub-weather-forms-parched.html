@@ -18,6 +18,29 @@
             <div data-role="content" class="kidzcontent">
                 <div class="v-volcano"></div>
                   <div class="sidebarleft-half">
+				  
+				<a id="l1" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Parched/Dust_Storm_Hi_Res.jpg', 'A dust storm can turn daylight to night in less than a minute as a thick cloud of dust blocks out the sun, Jordan');">click here</a>		
+					
+					<a id="l2" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Parched/Mud_Cracks_Hi_Res.jpg', 'Mud cracks form as the earth dries out and contracts under the hot sun, Libya ');">click here</a>		
+			  
+					<!-- This section is for flipping images quize -->
+					<div id="f1_container" style="visibility:hidden;position:absolute;left:100px;top:270px;">
+					  <div id="f1_card">
+						<div class="front face">
+						  <img id="dopple" src="css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Parched/Lightning_Strike.png">
+						</div>
+						<div id="backofcard" class="back face center" style="background:url(css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Parched/Lightning_Strike_Reverse.png) no-repeat;">
+						  <div class="returncard" style="position:absolute;left:0px;top:0px;width:362px;height:170px;"></div>
+							<div class="falseans" style="position: absolute;left: 52px;top: 170px;width: 120px;height: 30px;"></div>
+							<div class="falseans" style="position: absolute;left: 190px;top: 170px;width: 120px;height: 30px;"></div>
+							<div class="falseans" style="position: absolute;left: 52px;top: 205px;width: 120px;height: 30px;"></div>							
+							<div id="trueans" style="position: absolute;left: 190px;top: 205px;width: 120px;height: 30px;"></div>		
+						</div>
+					  </div><!--/f1+card-->
+					</div><!--/f1_container-->
+					<!-- Flip content ends here -->				  
+				  
+				  
                      <div id="zoomwrapper">
                         <div id="pol1" class="pPiece" style="left:100px;top:270px;">
                            <img src="css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Parched/Lightning_Strike.png" alt="" />
@@ -89,7 +112,40 @@
 		function pauseweather() {
 			 bgsoundweather.pause();
 		}
-       
+
+    $(".returncard").on('tap', function() {
+      $('#f1_card').css({"-webkit-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"-moz-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"-o-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"transform": "rotateY(0deg)"});
+      setTimeout(function() {
+        $("#pol1").css({"visibility":"visible", "z-index":3});
+        $('#f1_container').css({"visibility":"hidden", "z-index":0});
+      }, 1000);
+    });
+    $('.falseans').on('tap', function() {
+      alert("Wrong answer");
+    });
+    $('#trueans').on('tap', function() {
+      alert("Correct answer");
+	  });
+    $("#pol1").on('tap', function() {
+      $('#f1_container').css({"visibility":"visible", "z-index":10});
+      $(this).css({"visibility":"hidden"});
+      $('#f1_card').css({"-webkit-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"-moz-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"-o-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"transform": "rotateY(180deg)"});
+    });	
+
+	 $("#pol2").on('tap', function() {
+      $('#l1')[0].click();
+    });
+
+	 $("#pol3").on('tap', function() {
+      $('#l2')[0].click();
+    });		 
+		
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-weather-binaries.html", {transition: "slide"});
 //    });

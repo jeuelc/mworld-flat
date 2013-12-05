@@ -28,16 +28,16 @@
 				   <a id="reef" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/The_Deep_Blue_Sea/Pole_Versus_The_Tropics/Between_The_Poles/The_Largest_Living_Thing_On_Earth/ReeF_Hi_Res.jpg', 'A spectacular spot for some snorkelling, notice how close the reef is to the shore! ');">click here</a>
 				   
                      <div id="zoomwrapper">
-                        <div id="pol1" class="pPiece" style="left:100px;top:270px;">
+                        <div id="polb1" class="pPiece" style="left:100px;top:270px;">
                            <img src="css/images/9-12/The_Natural_World/The_Deep_Blue_Sea/Pole_Versus_The_Tropics/Between_The_Poles/The_Largest_Living_Thing_On_Earth/Great_Barrier_Reef.jpg" alt="" />
                         </div>
-                        <div id="pol2"class="pPiece" style="left:75px;top:290px;">
+                        <div id="polb2"class="pPiece" style="left:75px;top:290px;">
                            <img src="css/images/9-12/The_Natural_World/The_Deep_Blue_Sea/Pole_Versus_The_Tropics/Between_The_Poles/The_Largest_Living_Thing_On_Earth/Butterflyfishes.jpg" alt="" />
                         </div>
-						<div id="pol3" class="pPiece" style="left:80px;top:270px;">
+						<div id="polb3" class="pPiece" style="left:80px;top:270px;">
                            <img src="css/images/9-12/The_Natural_World/The_Deep_Blue_Sea/Pole_Versus_The_Tropics/Between_The_Poles/The_Largest_Living_Thing_On_Earth/Clownfish.jpg" alt="" />
                         </div>
-                        <div id="pol4"class="pPiece" style="left:80px;top:270px;">
+                        <div id="polb4"class="pPiece" style="left:80px;top:270px;">
                            <img src="css/images/9-12/The_Natural_World/The_Deep_Blue_Sea/Pole_Versus_The_Tropics/Between_The_Poles/The_Largest_Living_Thing_On_Earth/Reef.jpg" alt="" />
                         </div>
                      </div><!--/zoomwrapper-->
@@ -72,13 +72,13 @@
         var playing;
         (function() {
           playing = false;
-            $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
-            $('div#pol1').css("z-index", 3);
-            $('div#pol2').css("z-index", 2);
-			$('div#pol3').css("z-index", 1);
-            $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
-            $('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
-			$('div#pol4 > img').css("-webkit-transform", "rotate(10deg)");
+            $('div#polb1 > img').css("-webkit-transform", "rotate(0deg)");
+            $('div#polb1').css("z-index", 3);
+            $('div#polb2').css("z-index", 2);
+			$('div#polb3').css("z-index", 1);
+            $('div#polb2 > img').css("-webkit-transform", "rotate(5deg)");
+            $('div#polb3 > img').css("-webkit-transform", "rotate(-5deg)");
+			$('div#polb4 > img').css("-webkit-transform", "rotate(10deg)");
            
             if(sound.canPlayType('audio/mpeg')) {
                 $('#actualaudio-greatest').html('<audio controls preload id="greatestaudio" onpause="playbluesea()" onplay="pausebluesea()"><source src="audio/The_Deep_Blue_Sea/largestlivingthing.mp3" type="audio/mpeg"></audio>');
@@ -100,17 +100,17 @@
 			 bgsoundbluesea.pause();
 		}
        
-    $("#pol1").on('tap', function() {
+    $("#polb1").on('tap', function() {
       $('#great')[0].click();
     });
-	$("#pol2").on('tap', function() {
+	$("#polb2").on('tap', function() {
       $('#butterfly')[0].click();
     });
-	$("#pol3").on('tap', function() {
+	$("#polb3").on('tap', function() {
       $('#clownfish')[0].click();
     });
     
-    $("#pol4").on('tap', function() {
+    $("#polb4").on('tap', function() {
       $('#reef')[0].click();
     });
       
@@ -167,5 +167,5 @@
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
                 
-  </script><script src="js/fourcardLogic.js"></script>
+  </script><script src="js/fourcardLogicb.js"></script>
 </div>

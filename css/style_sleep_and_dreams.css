@@ -1,12 +1,17 @@
 /********* Sleep And Dreams **********/
 
-#sleeps , #broken , #bodyclock , #messing , #parasomnias , #notsleeping , #brokensleep , #meaningofdreams , #openeyes , #rememberingdreams , #sleepcultures , #sleepstructure , #earlybirds , #sleeptime , #howsleep , #whywesleep {
+#sleeps , #broken , #messing , #parasomnias , #notsleeping , #brokensleep , #meaningofdreams , #openeyes , #rememberingdreams , #sleepcultures , #sleepstructure , #earlybirds , #sleeptime , #howsleep , #whywesleep,#duringsleep {
   background:url('images/9-12/Human_Body/Sleeps_And_Dreams/sleeps_bg.jpg') no-repeat;
   height:748px !important;
   overflow:hidden !important;
   width:1024px !important;
 }
-
+#bodyclock {
+  background:url('images/9-12/Human_Body/Sleeps_And_Dreams/Why_Do_We_Sleep/Tick_Tock_Body_clock/tick_tock_body_clock_bg.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
 #enoughtsleep{
   background:url('images/9-12/Human_Body/Sleeps_And_Dreams/Why_Do_We_Sleep/What_Happens_During_Sleep/When_You_Dont_Get_Enough_Sleep/When_You_Dont_Get_Enough_Sleep_Bg.jpg') no-repeat;
   height:748px !important;
@@ -182,7 +187,7 @@
 }
 .storypageetg_sleep_needed {
 	color: #ffffff;
-	font-family: "Chalkboard SE";
+	font-family: "comic sans ms";
 	font-size: 18px;
 	font-weight: bold;
 	height: 356px;
@@ -194,22 +199,22 @@
 }
 .storypagetitlehuman_bodyclock{
 color: #000000;
-font-family: "Chalkboard SE";
-margin-left: 280px;
+font-family: "comic sans ms";
+margin-left: 575px;
 position: absolute;
-top: 165px;
+top: 5px;
 width: 435px;
 text-align: center;
 }
 .storypageetg_bodyclock{
 color: #000000;
 font-family: comic sans ms;
-font-size: 18px;
+font-size: 16px;
 font-weight: normal;
 height: 356px;
-margin-left: 142px;
+margin-left: 32px;
 position: absolute;
 text-align: center;
-top: 200px;
-width: 70%;
+top: 470px;
+width: 90%;
 }

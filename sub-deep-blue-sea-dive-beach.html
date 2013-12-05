@@ -113,36 +113,7 @@
 //      $.mobile.changePage("sub-space-bh-quasars.html", {transition: "slide"});
 //    });
 	
-	
-	
-	
-	$(".returncard").on('tap', function() {
-      $('#f1_card').css({"-webkit-transform": "rotateY(0deg)"});
-      $('#f1_card').css({"-moz-transform": "rotateY(0deg)"});
-      $('#f1_card').css({"-o-transform": "rotateY(0deg)"});
-      $('#f1_card').css({"transform": "rotateY(0deg)"});
-      setTimeout(function() {
-        $("#pol1").css({"visibility":"visible", "z-index":3});
-        $('#f1_container').css({"visibility":"hidden", "z-index":0});
-      }, 1000);
-    });
-	
-    $('#falseans').on('tap', function() {
-      alert("Wrong answer");
-    });
-	
-    $('#trueans').on('tap', function() {
-      alert("Correct answer");
-	});
-	
-    $("#pol1").on('tap', function() {
-      $('#f1_container').css({"visibility":"visible", "z-index":10});
-      $(this).css({"visibility":"hidden"});
-      $('#f1_card').css({"-webkit-transform": "rotateY(180deg)"});
-      $('#f1_card').css({"-moz-transform": "rotateY(180deg)"});
-      $('#f1_card').css({"-o-transform": "rotateY(180deg)"});
-      $('#f1_card').css({"transform": "rotateY(180deg)"});
-    });
+
 	
     $("#pol1").on('tap', function() {
      $.mobile.changePage("sub-deep-blue-sea-dive-beach-luxry.html", {transition: "slide"});

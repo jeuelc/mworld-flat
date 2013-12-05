@@ -29,9 +29,11 @@
 						  <img id="dopple" src="css/images/9-12/The_Wonders_of_Science/How_To_Become_A_Scientist/Who_Can_Do_Science/Anyone_Can_Do_Science/Crowd_Source_MC_Quiz.png">
 						</div>
 						<div id="backofcard" class="back face center" style="background:url(css/images/9-12/The_Wonders_of_Science/How_To_Become_A_Scientist/Who_Can_Do_Science/Anyone_Can_Do_Science/Crowd_Source_MC_Quiz_Reverse.png) no-repeat;">
-						  <div class="returncard" style="position:absolute;left:0px;top:0px;width:362px;height:170px;"></div>
-						  <div id="trueans" style="position:absolute;left:90px;top:180px;width:70px;height:50px;"></div>
-						  <div id="falseans" style="position:absolute;left:200px;top:180px;width:70px;height:50px;"></div>							  
+							<div class="returncard" style="position:absolute;left:0px;top:0px;width:362px;height:170px;"></div>
+						  <div class="falseans" style="position: absolute;left: 170px;top: 102px;width: 156px;height: 20px;"></div>
+						  <div class="falseans" style="position: absolute;left: 170px;top: 125px;width: 156px;height: 20px;"></div>
+						  <div class="falseans" style="position: absolute;left: 170px;top: 150px;width: 156px;height: 20px;"></div>
+						  <div id="trueans" style="position: absolute;left: 170px;top: 175px;width: 156px;height: 20px;"></div>						  
 						</div>
 					  </div><!--/f1+card-->
 					</div><!--/f1_container-->
@@ -126,7 +128,16 @@
       $('#f1_card').css({"-o-transform": "rotateY(180deg)"});
       $('#f1_card').css({"transform": "rotateY(180deg)"});
 	  });	
-
+    $(".returncard").on('tap', function() {
+      $('#f1_card').css({"-webkit-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"-moz-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"-o-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"transform": "rotateY(0deg)"});
+      setTimeout(function() {
+        $("#pol1").css({"visibility":"visible", "z-index":3});
+        $('#f1_container').css({"visibility":"hidden", "z-index":0});
+      }, 1000);
+    });
 	  $("#pol2").on('tap', function() {
 		$('#galaxyzoo')[0].click();
 	  });
@@ -135,6 +146,16 @@
 		$('#zoom')[0].click();
 	  });
 
+/* ******************** */
+
+/* write and wrong ans */
+    $('.falseans').on('tap', function() {
+      alert("Wrong answer");
+    });
+    $('#trueans').on('tap', function() {
+      alert("Correct answer");
+    });		
+	
 /* ******************** */
 
 	$("#playstopanyonecando").on('tap', function() {

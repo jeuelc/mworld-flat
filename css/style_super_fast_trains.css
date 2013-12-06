@@ -1,6 +1,6 @@
 /********* Super Fast Trains **********/
 
-#sub-super-fast-trains, #sub-super-fast-trains-crazy-ideas, #sub-super-fast-trains-what-are-they, #sub-super-fast-trains-looking-future, #sub-super-fast-trains-overcoming-resistance-aerodynamics {
+#sub-super-fast-trains, #sub-super-fast-trains-crazy-ideas, #sub-super-fast-trains-what-are-they, #sub-super-fast-trains-looking-future, #sub-super-fast-trains-overcoming-resistance-aerodynamics, #sub-super-fast-trains-overcoming-resistance-rolling-resistance, #sub-super-fast-trains-overcoming-resistance, #sub-super-fast-trains-crazy-ideas-floating-trains, #sub-super-fast-trains-crazy-ideas-half-train-plane, #sub-super-fast-trains-crazy-ideas-jet-trains {
   background:url('images/9-12/The_Modern_World/Super_Fast_Trains/super_fast_trains_bg.jpg') no-repeat;
   height:748px !important;
   overflow:hidden !important;
@@ -94,7 +94,7 @@
 .navtitleholdertrains h1{
 	text-transform: uppercase;
 	color: #FFF;
-	font-family: comic sans ms;
+	font-family: Chalkboard SE;
 	padding: 0;
 	margin: 0;
 	font-weight: bold;
@@ -128,7 +128,7 @@
   height:359px;
   overflow-y:scroll;
   text-align:center;
-  font-family:"comic sans ms";
+  font-family:"Chalkboard SE";
   font-size:18px;
   font-weight:normal;
   color:#000000;
@@ -145,7 +145,7 @@
   height:160px;
   overflow-y:scroll;
   text-align:left;
-  font-family:"comic sans ms";
+  font-family:"Chalkboard SE";
   font-size:18px;
   font-weight:normal;
   color:#000000;

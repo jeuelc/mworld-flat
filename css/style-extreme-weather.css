@@ -103,3 +103,21 @@
   height:74px;
   width:74px;
 }
+
+.weather .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 169px;
+	left: 194px;	
+}
+.weather .bptitleholder h1, h1 {
+text-transform: uppercase;
+color: #FFFFFF;
+font-family: "Chalkboard SE";
+font-weight: bold;
+padding: 0;
+margin: 0;
+}

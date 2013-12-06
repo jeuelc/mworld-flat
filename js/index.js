@@ -694,7 +694,7 @@ $('#ancientgreece').live( 'pagehide',function(event, ui){
 
 /************************ Luminous Light Section *******************************/
 var bgsoundluminous = new Audio();
-bgsoundluminous.src = "audio/How_To_Become_A_Scientist/luminouslight_bg.mp3";
+bgsoundluminous.src = "audio/Liminous_Light/luminouslight_bg.mp3";
 bgsoundluminous.addEventListener('ended', function() { bgsoundluminous.play(); });
 
 function pauseluminous() { bgsoundluminous.pause() }
@@ -711,7 +711,7 @@ function playsleeps() { bgsoundsleeps.play(); $(".audiopanel").css({"backgroundP
 /************************ How to Become A Scientist Section *******************************/
 
 var bgsoundscientist = new Audio();
-bgsoundscientist.src = "audio/How_To_Become_A_Scientist/scientist_bg.mp3";
+bgsoundluminous.src = "audio/Liminous_Light/luminouslight_bg.mp3";
 bgsoundscientist.addEventListener('ended', function() { bgsoundscientist.play(); });
 
 function pausescientist() { bgsoundscientist.pause() }

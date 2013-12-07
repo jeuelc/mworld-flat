@@ -711,7 +711,7 @@ function playsleeps() { bgsoundsleeps.play(); $(".audiopanel").css({"backgroundP
 /************************ How to Become A Scientist Section *******************************/
 
 var bgsoundscientist = new Audio();
-bgsoundluminous.src = "audio/Liminous_Light/luminouslight_bg.mp3";
+bgsoundscientist.src = "audio/Liminous_Light/luminouslight_bg.mp3";
 bgsoundscientist.addEventListener('ended', function() { bgsoundscientist.play(); });
 
 function pausescientist() { bgsoundscientist.pause() }
@@ -742,3 +742,11 @@ bgsoundsuperfasttrains.addEventListener('ended', function() { bgsoundsuperfasttr
 function pausetrains() { bgsoundsuperfasttrains.pause() }
 function playstrains() { bgsoundsuperfasttrains.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }
 
+
+/************************ Build your Own Skelton *******************************/
+var bgsoundskelton = new Audio();
+bgsoundskelton.src = "audio/Build_Your_Own_Skelton/build_your_own_skelton_bg.mp3";
+bgsoundskelton.addEventListener('ended', function() { bgsoundskelton.play(); });
+
+function pauseskelton() { bgsoundskelton.pause() }
+function playsskelton() { bgsoundskelton.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }

@@ -11,8 +11,8 @@
       <div class="aclink"><a href="#" data-transition="slide"><img src="css/images/9-12/The_Wonders_of_Science/lifeworkbtn.png"></a></div>
       <div class="aclink"><a href="sub-wonderscience-invisibleworld.html" data-transition="slide"><img src="css/images/9-12/The_Wonders_of_Science/inviworldbtn.png"></a></div>
       <div class="aclink"><a href="#" data-transition="slide"><img src="css/images/9-12/The_Wonders_of_Science/lategreatbtn.png"></a></div><br>
-      <div class="aclink"><a href="sub-luminous-light.html" data-transition="slide"><img src="css/images/9-12/The_Wonders_of_Science/greenrevobtn.png"></a></div>
-      <div class="aclink"><a href="sub-scientist.html" data-transition="slide"><img src="css/images/9-12/The_Wonders_of_Science/scientistbtn.png"></a></div>
+      <div class="aclink"><a href="sub-luminous-light.html" data-transition="slide" id="sub_luminous_light-btn"><img src="css/images/9-12/The_Wonders_of_Science/greenrevobtn.png"></a></div>
+      <div class="aclink"><a href="sub-scientist.html" data-transition="slide" id="sub_scientist-btn"><img src="css/images/9-12/The_Wonders_of_Science/scientistbtn.png"></a></div>
       <div class="aclink"><a href="#" data-transition="slide"><img src="css/images/9-12/The_Wonders_of_Science/waterbtn.png"></a></div>
       <div class="aclink"><a href="#" data-transition="slide"><img src="css/images/9-12/The_Wonders_of_Science/chemicalreactbtn.png"></a></div>
     </div>
@@ -32,5 +32,24 @@
     $('.homelinkbh').on('tap', function() { 
       mainaudiobg.play(); sciencesoundbg.pause(); sciencesoundbg.currentTime = 0; 
     });
+
+//Change audio on card click
+		$(document).ready(function(e) {
+			  $('.aclink>a').on('tap', function(event) {
+				var subjectId = $(this).attr("id");
+				if(subjectId == "sub_luminous_light-btn") {
+					bgsoundluminous.play();
+					sciencesoundbg.pause();
+					sciencesoundbg.currentTime = 0;
+				}
+				else if(subjectId == "sub_scientist-btn"){
+					bgsoundscientist.play();
+					sciencesoundbg.pause();
+					sciencesoundbg.currentTime = 0;				
+				}
+			});
+		});	
+	//Change audio on card click ends here	
+	
 			</script>
 </div>

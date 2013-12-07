@@ -13,7 +13,7 @@
   <div class="bptitleholder" style="padding-top:14px;"><h1>Extreme weather</h1></div>
   
     <div data-role="content" class="kidzcontent">
-      <div class="nav-content">
+      <div class="sub_extreme_weather_text">
         <p>The weather is part of our everyday lives.  From sunny, warm days to cold, rainy days, the weather is with us every moment of every day.  Most of the time we dont think twice about the weather.  But sometimes, the weather makes us stand up and take notice. </p>
         <p>From spectacularly strong winds to driving sheets of rain; from heat and fire to bitter cold and ice; its the extremes of the weather that can be the most fascinating, but also the most dangerous.</p>
         <p>Lets take a look at extreme weather from the inside out to see how it works and where it happens.</p>	
@@ -58,7 +58,7 @@
     $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundweather.pause(); bgsoundweather.currentTime = 0;});
     
     function goBack() {
-      $.mobile.changePage("index.html", {transition: "slide", reverse: true });
+      $.mobile.changePage("sub-naturalworld.html", {transition: "slide", reverse: true });
       bgsoundweather.pause();
       bgsoundweather.currentTime = 0;
       naturalsoundbg.play();

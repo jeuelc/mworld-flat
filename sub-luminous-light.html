@@ -47,6 +47,73 @@
 	<!--<div id="actualaudio-luminouslight"></div> -->
   <!--</div>-->
   <script>
-   
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    (function() {
+      playing = false;
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-luminouslight').html('<audio id="luminouslightaudio" controls preload onpause="playluminous()" onplay="pauseluminous()"><source src="audio/Liminous_Light/luminouslight.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#luminouslight").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundluminous.pause(); bgsoundluminous.currentTime = 0;});
+    
+    function goBack() {
+      $.mobile.changePage("sub-wonderscience.html", {transition: "slide", reverse: true });
+      bgsoundluminous.pause();
+      bgsoundluminous.currentTime = 0;
+    }
+    
+    function playluminous() {
+         bgsoundluminous.play();
+    }
+       
+    function pauseluminous() {
+         bgsoundluminous.pause();
+    }
+    $("#playstopluminouslight").on('tap', function() {
+       if(!playing) {
+        luminouslightaudio.play();
+        $('.micbtnluminous').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        luminouslightaudio.pause(); luminouslightaudio.currentTime = 0;
+        $('.micbtnluminous').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#luminouslightaudioplbtn").on('tap', function() {
+      if(!paused) {
+        luminouslightaudio.pause();
+        paused = true;
+      } else {
+        luminouslightaudio.play();
+        paused = false;
+      }
+    });
+    
+    $("#luminouslightaudiofbtn").on('tap', function() {
+      var ctime = luminouslightaudio.currentTime;
+      luminouslightaudio.currentTime = ctime + 10;
+    });
+    
+    $("#luminouslightaudiobbtn").on('tap', function() {
+      var ctime = luminouslightaudio.currentTime;
+      luminouslightaudio.currentTime = ctime - 10;
+    });
+    
+    $("#luminouslightaudiopsbtn").on('tap', function() {
+     luminouslightaudio.pause();
+      //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+    
+    $('.navbtn1').on('tap', function() { 
+      nav1Effects(); 
+    });
   </script>
 </div> <!--//home-->

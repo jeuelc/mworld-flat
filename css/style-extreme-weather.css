@@ -133,3 +133,16 @@ font-weight: bold;
 padding: 0;
 margin: 0;
 }
+.sub_weather_be_prepared_text,.sub_extreme_weather_text,.sub_extreme_weather_creating_strom_text{
+	position: absolute;
+	left: 305px;
+	top: 263px;
+	width: 410px;
+	height: 359px;
+	overflow-y: scroll;
+	text-align: left;
+	font-family: "Chalkboard SE";
+	font-size: 18px;
+	font-weight: bold;
+	color:#000000;
+}

@@ -1,16 +1,28 @@
 /********* Extreme Weather  **********/
 
 #map  {
-  background:url('images/9-12/The_Natural_World/Extreme_Weather/What_Is_Weather/You_CanTell_The_Future/Translating_A_Weather_Map/Translating_A_Weather_Map_Bg.jpg') no-repeat;
+  background:url('images/9-12/The_Natural_World/Extreme_Weather/What_Is_Weather/You_CanTell_The_Future/Translating_A_Weather_Map/Translating_A_Weather_Map_Bg.png') no-repeat;
   height:748px !important;
   overflow:hidden !important;
   width:1024px !important;
 }
+.storypageweather{
+	top: 321px;
+	position: absolute;
+	font-family:"Chalkboard SE";
+	width: 441px;
+	right: 32px;
+	font-weight: bold;
+	height: 330px;
+	overflow: auto;	
+	color:#000000;
+}
+
 .storypagetitleweather{
 	text-align: center;
 	margin-top: 55px;
 }
-#weather , #prepared , #weather_change , #safed , #storm , #definition , #pressurize , #wacky , #tell_future , #map , #pagecard1 , #pagecard2 , #pagecard3 , #pagecard4 , #baked , #parched , #soaked , #thunder , #supercells , #winter_storm , #cyclones  {
+#weather , #prepared , #weather_change , #safed , #storm , #definition , #pressurize , #wacky , #tell_future , #pagecard1 , #pagecard2 , #pagecard3 , #pagecard4 , #baked , #parched , #soaked , #thunder , #supercells , #winter_storm , #cyclones  {
   background:url('images/9-12/The_Natural_World/Extreme_Weather/Extreme_Weather.jpg') no-repeat;
   height:748px !important;
   overflow:hidden !important;

@@ -8,10 +8,20 @@
 }
 
 #whalepoo{
-  background:url('images/9-12/The_Natural_World/The_Deep_Blue_Sea/The_Future/Whale_Poo/Whale_Poo_Bg.jpg') no-repeat;
+  background:url('images/9-12/The_Natural_World/The_Deep_Blue_Sea/The_Future/Whale_Poo/Whale_Poo_Bg.png') no-repeat;
   height:748px !important;
   overflow:hidden !important;
   width:1024px !important;
+}
+.sub_deep_blue_sea_future_whale_poo_text{
+	width: 400px;
+	position: absolute;
+	right: 20px;
+	top: 210px;
+	color: #FFFFFF;
+	font-family: "Chalkboard SE";
+	font-size: 18px;
+	font-weight: bold;
 }
 
 #humans{

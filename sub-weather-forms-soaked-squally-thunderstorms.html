@@ -12,7 +12,7 @@
     <script src="js/hammer.js"></script>
     <script src="js/jquery.hammer.js"></script>
    <!-- <div id="bonus-ags" class="talkbubble" style="background:url(css/images/5-8/volcanoes/placeholder-background.jpg) no-repeat; width:473px;height:296px;position:absolute;left:500px;top:40px;visibility:hidden;"></div>--><!--/bonus-ags-->
-    <div class="bptitleholder" style="padding-top:14px;"><h1>thunder</h1></div>
+    <div class="bptitleholder" style="padding-top:14px;"><h1>Thunderstorms</h1></div>
     <div id="anisold">
         <div id="spacechar">&nbsp;
             <div data-role="content" class="kidzcontent">
@@ -23,7 +23,22 @@
 					<a id="lightning" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Soaked_And_Squally/Thunderstorms/Lightning_Hi_Res.jpg', 'You can work out how far lightning is away from you by counting the number of seconds between the flash and the bang of lightning and thunder. Add 1 kilometre in distance for every 3 seconds you count!');">click here</a>		
 					
 					<a id="thunderstorm" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Soaked_And_Squally/Thunderstorms/Thunderstorm_Hi_Res.jpg', 'An anvil-shaped thunderstorm cloud rolls over a field in South Australia');">click here</a>					  
-				  
+
+					<!-- This section is for flipping images quize -->
+					<div id="f1_container" style="visibility:hidden;position:absolute;left:100px;top:270px;">
+					  <div id="f1_card">
+						<div class="front face">
+						  <img id="dopple" src="css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Soaked_And_Squally/Thunderstorms/Weather_Recall.png">
+						</div>
+						<div id="backofcard" class="back face center" style="background:url(css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Soaked_And_Squally/Thunderstorms/Weather_Recall_Reverse.png) no-repeat;">
+						  <div class="returncard" style="position:absolute;left:0px;top:0px;width:362px;height:170px;"></div>
+							<div id="falseans" style="position: absolute;left: 87px;top: 175px;width: 70px;height: 56px;"></div>		
+							<div id="trueans" style="position: absolute;left: 200px;top: 175px;width: 77px;height: 56px;"></div>		
+						</div>
+					  </div><!--/f1+card-->
+					</div><!--/f1_container-->
+					<!-- Flip content ends here -->
+				 				  
 				  
                      <div id="zoomwrapper">
                         <div id="pol1" class="pPiece" style="left:100px;top:270px;">
@@ -33,7 +48,7 @@
                            <img src="css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Soaked_And_Squally/Thunderstorms/Thunder_And_Lightning.png" alt="" />
                         </div>
 						<div id="pol3"class="pPiece" style="left:90px;top:280px;">
-                           <img src="css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Soaked_And_Squally/Thunderstorms/Weather_Recall_No_Card.png" alt="" />
+                           <img src="css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Soaked_And_Squally/Thunderstorms/Weather_Recall.png" alt="" />
                         </div>
 						<div id="pol4"class="pPiece" style="left:80px;top:285px;">
                            <img src="css/images/9-12/The_Natural_World/Extreme_Weather/Forms_Of_Extreme_Weather/Soaked_And_Squally/Thunderstorms/Lightning.jpg" alt="" />
@@ -111,7 +126,30 @@
       $.mobile.changePage("sub-weather-forms-soaked-squally-thunderstorms-supercells.html", {transition: "slide"});
     });
       
-
+   $(".returncard").on('tap', function() {
+      $('#f1_card').css({"-webkit-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"-moz-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"-o-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"transform": "rotateY(0deg)"});
+      setTimeout(function() {
+        $("#pol3").css({"visibility":"visible", "z-index":3});
+        $('#f1_container').css({"visibility":"hidden", "z-index":0});
+      }, 1000);
+    });
+    $('#falseans').on('tap', function() {
+      alert("Wrong answer");
+    });
+    $('#trueans').on('tap', function() {
+      alert("Correct answer");
+	  });
+    $("#pol3").on('tap', function() {
+      $('#f1_container').css({"visibility":"visible", "z-index":10});
+      $(this).css({"visibility":"hidden"});
+      $('#f1_card').css({"-webkit-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"-moz-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"-o-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"transform": "rotateY(180deg)"});
+    });	
 	 $("#pol4").on('tap', function() {
       $('#lightning')[0].click();
     });

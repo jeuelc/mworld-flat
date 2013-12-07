@@ -32,7 +32,18 @@
   overflow:hidden !important;
   width:1024px !important;
 }
-
+.in_your_dreams{
+color: #000000;
+font-family: "Chalkboard SE";
+font-size: 18px;
+font-weight: bold;
+height: 356px;
+margin-left: 142px;
+position: absolute;
+text-align: center;
+top: 483px;
+width: 70%;	
+}
 #socialjetlag{
   background:url('images/9-12/Human_Body/Sleeps_And_Dreams/Broken_Sleep/Messing_With_Your_Body_Clock/Social_Jet_lag/Social_Jet_Lag_Bg.jpg') no-repeat;
   height:748px !important;

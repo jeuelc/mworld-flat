@@ -130,7 +130,7 @@
   text-align:center;
   font-family:"Chalkboard SE";
   font-size:18px;
-  font-weight:normal;
+  font-weight:bold;
   color:#000000;
 }
 .navtrains-content p {
@@ -147,7 +147,7 @@
   text-align:left;
   font-family:"Chalkboard SE";
   font-size:18px;
-  font-weight:normal;
+  font-weight:bold;
   color:#000000;
 }
 
@@ -160,7 +160,7 @@
   overflow-y:scroll;
   font-family:"Chalkboard SE";
   font-size:18px;
-  font-weight:normal;
+  font-weight:bold;
   text-align:left;
   color:#000000;
 }

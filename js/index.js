@@ -750,3 +750,11 @@ bgsoundskelton.addEventListener('ended', function() { bgsoundskelton.play(); });
 
 function pauseskelton() { bgsoundskelton.pause() }
 function playsskelton() { bgsoundskelton.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }
+
+/************************ Reality TV *******************************/
+var bgsoundrealityTV = new Audio();
+bgsoundrealityTV.src = "audio/Reality_TV/Reality_TV_BG.mp3";
+bgsoundrealityTV.addEventListener('ended', function() { bgsoundrealityTV.play(); });
+
+function pauseRealityTV() { bgsoundrealityTV.pause() }
+function playsRealityTV() { bgsoundrealityTV.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }

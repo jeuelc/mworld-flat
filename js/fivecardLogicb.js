@@ -68,6 +68,7 @@ $(function(){
       }
 
       this.OnDrag = function(event) {
+        cardSlideSound.play();
         this.drag = [];
         var touches = event.originalEvent.touches || [event.originalEvent];
         for(var t=0; t<touches.length; t++) {
@@ -95,76 +96,93 @@ $(function(){
 
       this.OnDragEnd = function(event) {
 		  	this.drag = [];
-        	var touches = event.originalEvent.touches || [event.originalEvent];
-		 	for(var t=0; t<touches.length; t++) {
-          			var el = touches[t].target.parentNode;
+        var touches = event.originalEvent.touches || [event.originalEvent];
+		 	  for(var t=0; t<touches.length; t++) {
+          	var el = touches[t].target.parentNode;
 		  
 		  			if(el.className.search('polaroid') > -1){
 				 			el = touches[t].target.parentNode.parentNode;
-		  			}
-					//$(el).children().toggleClass('upSky');
-			
+		  			}			
         }
         
         var jid = $(target).attr("id");
         var position = $(target).position();
+        var polb1Selector = $('div#polb1'),
+            polb2Selector = $('div#polb2'),
+            polb3Selector = $('div#polb3'),
+            polb4Selector = $('div#polb4'),
+            polb5Selector = $('div#polb5');
         if(position.left < 50 || position.left > 150 || position.top < 220 || position.top > 320) { //balhin na
-         if(jid == "polb1") {
-            $('div#polb3 > img').css("-webkit-transform", "rotate(5deg)");
-            $('div#polb3').css({'top':'290px', 'left':'75px'});
-            $('div#polb4 > img').css("-webkit-transform", "rotate(-3deg)");
-            $('div#polb4').css({'top':'270px', 'left':'80px'});
-            $('div#polb1 > img').css("-webkit-transform", "rotate(-3deg)");
-            $('div#polb2 > img').css("-webkit-transform", "rotate(0deg)");
-            $('div#polb2').css({'top':'270px', 'left':'100px'});
-            $('#polb2').css("z-index", 3);
-            $('#polb3').css("z-index", 2);
-            $('#polb4').css("z-index", 1);
+          if(jid == "polb1") {
+            polb3Selector.find('img').css("-webkit-transform", "rotate(5deg)");
+            polb3Selector.css({'top':'290px', 'left':'75px'});
+            polb4Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
+            polb4Selector.css({'top':'270px', 'left':'80px'});
+            polb5Selector.find('img').css("-webkit-transform", "rotate(5deg)");
+            polb5Selector.css({'top':'290px', 'left':'75px'});
+            polb1Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
+            polb2Selector.find('img').css("-webkit-transform", "rotate(0deg)");
+            polb2Selector.css({'top':'270px', 'left':'100px'});
+
+            polb2Selector.css("z-index", 4);
+            polb3Selector.css("z-index", 3);
+            polb4Selector.css("z-index", 2);
+            polb5Selector.css("z-index", 1);
           } else if(jid == "polb2") {
-            $('div#polb4 > img').css("-webkit-transform", "rotate(5deg)");
-            $('div#polb4').css({'top':'290px', 'left':'75px'});
-            $('div#polb1 > img').css("-webkit-transform", "rotate(-3deg)");
-            $('div#polb1').css({'top':'270px', 'left':'80px'});
-            $('div#polb2 > img').css("-webkit-transform", "rotate(-3deg)");
-            $('div#polb3 > img').css("-webkit-transform", "rotate(0deg)");
-            $('div#polb3').css({'top':'270px', 'left':'100px'});
-            $('#polb3').css("z-index", 3);
-            $('#polb4').css("z-index", 2);
-            $('#polb1').css("z-index", 1);
+            polb4Selector.find('img').css("-webkit-transform", "rotate(5deg)");
+            polb4Selector.css({'top':'290px', 'left':'75px'});
+            polb5Selector.find('img').css("-webkit-transform", "rotate(0deg)");
+            polb5Selector.css({'top':'270px', 'left':'100px'});
+            polb1Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
+            polb1Selector.css({'top':'270px', 'left':'80px'});
+            polb2Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
+            polb3Selector.find('img').css("-webkit-transform", "rotate(0deg)");
+            polb3Selector.css({'top':'270px', 'left':'100px'});
+            polb3Selector.css("z-index", 4);
+            polb4Selector.css("z-index", 3);
+            polb5Selector.css("z-index", 2);
+            polb1Selector.css("z-index", 1);
           } else if(jid == "polb3") {
-            $('div#polb1 > img').css("-webkit-transform", "rotate(5deg)");
-            $('div#polb1').css({'top':'290px', 'left':'75px'});
-            $('div#polb2 > img').css("-webkit-transform", "rotate(-3deg)");
-            $('div#polb2').css({'top':'270px', 'left':'80px'});
-            $('div#polb3 > img').css("-webkit-transform", "rotate(-3deg)");
-            $('div#polb4 > img').css("-webkit-transform", "rotate(0deg)");
-            $('div#polb4').css({'top':'270px', 'left':'100px'});
-            $('#polb4').css("z-index", 3);
-            $('#polb1').css("z-index", 2);
-            $('#polb2').css("z-index", 1);
+            polb5Selector.find('img').css("-webkit-transform", "rotate(5deg)");
+            polb5Selector.css({'top':'290px', 'left':'75px'});
+            polb1Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
+            polb1Selector.css({'top':'270px', 'left':'80px'});
+            polb2Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
+            polb2Selector.css({'top':'270px', 'left':'80px'});
+            polb3Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
+            polb4Selector.find('img').css("-webkit-transform", "rotate(0deg)");
+            polb4Selector.css({'top':'270px', 'left':'100px'});
+            polb4Selector.css("z-index", 4);
+            polb5Selector.css("z-index", 3);
+            polb1Selector.css("z-index", 2);
+            polb2Selector.css("z-index", 1);
           } else if(jid == "polb4") {
-            $('div#polb2 > img').css("-webkit-transform", "rotate(5deg)");
-            $('div#polb2').css({'top':'290px', 'left':'75px'});
-            $('div#polb3 > img').css("-webkit-transform", "rotate(-3deg)");
-            $('div#polb3').css({'top':'270px', 'left':'80px'});
-            $('div#polb4 > img').css("-webkit-transform", "rotate(-3deg)");
-            $('div#polb1 > img').css("-webkit-transform", "rotate(0deg)");
-            $('div#polb1').css({'top':'270px', 'left':'100px'});
-            $('#polb1').css("z-index", 3);
-            $('#polb2').css("z-index", 2);
-            $('#polb4').css("z-index", 1);
-          }else if(jid == "polb5") {
-            $('div#polb2 > img').css("-webkit-transform", "rotate(5deg)");
-            $('div#polb2').css({'top':'290px', 'left':'75px'});
-            $('div#polb3 > img').css("-webkit-transform", "rotate(-3deg)");
-            $('div#polb3').css({'top':'270px', 'left':'80px'});
-            $('div#polb4 > img').css("-webkit-transform", "rotate(-3deg)");
-            $('div#polb1 > img').css("-webkit-transform", "rotate(0deg)");
-            $('div#polb1').css({'top':'270px', 'left':'100px'});
-            $('#polb1').css("z-index", 3);
-            $('#polb2').css("z-index", 2);
-            $('#polb5').css("z-index", 1);
-          } 
+            polb2Selector.find('img').css("-webkit-transform", "rotate(5deg)");
+            polb2Selector.css({'top':'290px', 'left':'75px'});
+            polb3Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
+            polb3Selector.css({'top':'270px', 'left':'80px'});
+            polb4Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
+            polb1Selector.find('img').css("-webkit-transform", "rotate(5deg)");
+            polb1Selector.css({'top':'290px', 'left':'75px'});
+            polb5Selector.find('img').css("-webkit-transform", "rotate(0deg)");
+            polb5Selector.css({'top':'270px', 'left':'100px'});
+            polb5Selector.css("z-index", 4);
+            polb1Selector.css("z-index", 3);
+            polb2Selector.css("z-index", 2);
+            polb4Selector.css("z-index", 1);
+          } else if(jid == "polb5") {
+            polb2Selector.find('img').css("-webkit-transform", "rotate(5deg)");
+            polb2Selector.css({'top':'290px', 'left':'75px'});
+            polb3Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
+            polb3Selector.css({'top':'270px', 'left':'80px'});
+            polb4Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
+            polb1Selector.find('img').css("-webkit-transform", "rotate(0deg)");
+            polb1Selector.css({'top':'270px', 'left':'100px'});
+            polb1Selector.css("z-index", 4);
+            polb2Selector.css("z-index", 3);
+            polb2Selector.css("z-index", 2);
+            polb4Selector.css("z-index", 1);
+          }
           $(target).css({'z-index':'0'});
           $(target).animate({'top':'270px', 'left':'80px'}, 500);
         } else { //i-uli sa
@@ -271,13 +289,3 @@ $(function(){
           });
       }
   }
-  
-  // added to enlarge button on click
-$('.pPiece').on('tap', function() {
-  var pPiece_id = $(this).attr('id');
-  $('div#'+pPiece_id+' > img').css("-webkit-transform", "scale(1.1, 1.1)");
-  setTimeout(function() {
-      $('div#'+pPiece_id+' > img').css("-webkit-transform", "scale(1, 1)");
-    }, 300);
-});
-// added to enlarge button on click end

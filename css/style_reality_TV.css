@@ -1,19 +1,29 @@
+
 /********* Reality TV **********/
 
-#sub-reality-TV, #sub-reality-TV-becoming-reality-TV-celebrity-beyond-fame, #sub-reality-TV-becoming-reality-TV-celebrity-life-on-show, #sub-reality-TV-becoming-reality-TV-celebrity-sell-yourself, #sub-reality-TV-becoming-reality-TV-celebrity-the-story, #sub-reality-TV-what-is-reality-TV, #sub-reality-TV-what-is-reality-TV-how-reality-TV-works {
+#sub-reality-TV, #sub-reality-TV-becoming-reality-TV-celebrity-beyond-fame, #sub-reality-TV-becoming-reality-TV-celebrity-life-on-show, #sub-reality-TV-becoming-reality-TV-celebrity-sell-yourself, #sub-reality-TV-becoming-reality-TV-celebrity-the-story, #sub-reality-TV-what-is-reality-TV, #sub-reality-TV-what-is-reality-TV-how-reality-TV-works, #sub-reality-TV-what-is-reality-TV-why-people-go-on-reality-shows, #sub-reality-TV-what-is-reality-TV-how-reality-TV-works-Big-Brother, #sub-reality-TV-what-is-reality-TV-how-real-it-is, #sub-reality-TV-why-do-we-watch-it-did-you-see-it, #sub-reality-TV-why-do-we-watch-it-entertainment, #sub-reality-TV-why-do-we-watch-it-hanging-out, #sub-reality-TV-why-do-we-watch-it-must-see-TV, #sub-reality-TV-why-do-we-watch-it-window-to-the-world {
   background:url('images/9-12/The_Modern_World/Reality_TV/Reality_TV_BG.jpg') no-repeat;
   height:748px !important;
   overflow:hidden !important;
   width:1024px !important;
 }
+
 #sub-reality-TV-becoming-reality-TV-celebrity{
   background:url('images/9-12/The_Modern_World/Reality_TV/Becoming_A_Reality_TV_Celebrity/Becoming_A_Reality_TV_Celebrity_BG.jpg') no-repeat;
   height:748px !important;
   overflow:hidden !important;
   width:1024px !important;	
 }
+
 #sub-reality-TV-becoming-reality-TV-celebrity-the-look{
   background:url('images/9-12/The_Modern_World/Reality_TV/Becoming_A_Reality_TV_Celebrity/The_Look/The_Look_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+#sub-reality-TV-why-do-we-watch-it{
+  background:url('images/9-12/The_Modern_World/Reality_TV/Why_Do_We_Watch_It/Why_Do_We_Watch_It_BG.jpg') no-repeat;
   height:748px !important;
   overflow:hidden !important;
   width:1024px !important;
@@ -173,6 +183,24 @@
 }
 
 .navrealityTV-Celebrity-content p {
+  margin-top:0 !important;
+}
+
+.navrealityTV-whydowewatch-content{
+	position: absolute;
+	left: 430px;
+	top: 80px;
+	width: 346px;
+	height: 290px;
+	overflow-y: scroll;
+	text-align: center;
+	font-family: "Chalkboard SE";
+	font-size: 18px;
+	font-weight: bold;
+	color: #000000;
+}
+
+.navrealityTV-whydowewatch-content p {
   margin-top:0 !important;
 }
 

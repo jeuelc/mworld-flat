@@ -162,13 +162,17 @@ width: 70%;
 	top: 65px;
 	width: 94%;
 }
+
 .storypageetg_messing_social_jetlag {
 	color: #000000;
 	font-family: "Chalkboard SE";
-	margin-left: 350px;
+	margin-left: 70px;
 	position: absolute;
-	top: 20px;
+	top: 65px;
+	width: 850px;
+	font-weight: bold;
 }
+
 .storypageetg_messing_social_jetlag h1
 {
   text-transform:uppercase;
@@ -259,4 +263,42 @@ width: 90%;
     left: 657px;
     position: absolute;
     top: 405px;
+}
+
+#bodyclocks .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 28px !important;
+	left: 194px;	
+}
+
+#bodyclocks .bptitleholder h1{
+	text-transform: uppercase;
+	color: #ffffff !important;
+	font-family: "Chalkboard SE";
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+#socialjetlag .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 35px;
+	left: 200px;
+}
+
+#socialjetlag .bptitleholder h1{
+	text-transform: uppercase;
+	color: #ffffff;
+	font-family: "Chalkboard SE";
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
 }

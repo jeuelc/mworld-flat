@@ -74,8 +74,8 @@
             $('div#pol3').css("z-index", 2);
             $('div#pol4').css("z-index", 1);			
             $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
-            $('div#pol3 > img').css("-webkit-transform", "rotate(-5deg)");
-           $('div#pol4 > img').css("-webkit-transform", "rotate(10deg)");
+            $('div#pol3 > img').css("-webkit-transform", "rotate(-3deg)");
+           $('div#pol4 > img').css("-webkit-transform", "rotate(3deg)");
              if(sound.canPlayType('audio/mpeg')) {
                  $('#actualaudio-messing').html('<audio controls preload id="messingaudio" onpause="playsleeps()" onplay="pausesleeps()"><source src="audio/Sleeps_And_Dreams/messing.mp3" type="audio/mpeg"></audio>');
              } 
@@ -98,7 +98,7 @@
 			 bgsoundsleeps.pause();
 		}
 
-    $(".returncard").on('tap', function() {
+	  $(".returncard").on('tap', function() {
       $('#f1_card').css({"-webkit-transform": "rotateY(0deg)"});
       $('#f1_card').css({"-moz-transform": "rotateY(0deg)"});
       $('#f1_card').css({"-o-transform": "rotateY(0deg)"});
@@ -107,7 +107,7 @@
         $("#pol1").css({"visibility":"visible", "z-index":3});
         $('#f1_container').css({"visibility":"hidden", "z-index":0});
       }, 1000);
-    });
+	  });
 		
    // $("#pol3").on('tap', function() {
 //      $.mobile.changePage("sub-space-sleeps-binaries.html", {transition: "slide"});

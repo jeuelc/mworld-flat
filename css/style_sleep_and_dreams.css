@@ -229,3 +229,34 @@ text-align: center;
 top: 470px;
 width: 90%;
 }
+
+.navsleepanddreams-content {
+  position:absolute;
+  left:98px;
+  top:251px;
+  width:830px;
+  height:145px;
+  overflow-y:scroll;
+  text-align:center;
+  font-family:"Chalkboard SE";
+  font-size:18px;
+  font-weight:bold;
+  color:#000000;
+}
+
+.navsleepanddreamsbtn1{
+	left: 134px;
+    position: absolute;
+    top: 405px;
+}
+
+.navsleepanddreamsbtn2 {
+    left: 394px;
+    position: absolute;
+    top: 435px;
+}
+.navsleepanddreamsbtn3 {
+    left: 657px;
+    position: absolute;
+    top: 405px;
+}

@@ -758,3 +758,12 @@ bgsoundrealityTV.addEventListener('ended', function() { bgsoundrealityTV.play();
 
 function pauseRealityTV() { bgsoundrealityTV.pause() }
 function playsRealityTV() { bgsoundrealityTV.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }
+
+
+/************************ Money *******************************/
+var bgsoundmoney = new Audio();
+bgsoundmoney.src = "audio/Reality_TV/Reality_TV_BG.mp3";
+bgsoundmoney.addEventListener('ended', function() { bgsoundmoney.play(); });
+
+function pauseMoney() { bgsoundmoney.pause() }
+function playsMoney() { bgsoundmoney.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }

@@ -1,6 +1,6 @@
 /********* Super Fast Money **********/
 
-#sub-money ,#sub-money-the-magic-of-money,#sub-money-the-magic-of-money-different-types-of-money{
+#sub-money ,#sub-money-the-magic-of-money,#sub-money-the-magic-of-money-different-types-of-money,#sub-money-the-magic-of-money-different-types-of-money-run-on-the-bank,#sub-money-the-magic-of-money-how-much-money-is-there,#sub-money-the-magic-of-money-how-much-money-is-there-inflation,#sub-money-the-magic-of-money-why-put-money-in-bank{
   background:url('images/9-12/The_Modern_World/Money/Money_BG.jpg') no-repeat;
   height:748px !important;
   overflow:hidden !important;
@@ -41,6 +41,12 @@
   height:748px !important;
   overflow:hidden !important;
   width:1024px !important;
+}
+#sub-money-the-magic-of-money-making-money-by-lending{
+  background:url('images/9-12/The_Modern_World/Money/The_Magic_Of_Money/Making_Money_By_Lending/Making_Money_By_Lending_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;	
 }
 .plMoney, .psMoney, .bMoney, .fMoney {
   position:absolute;
@@ -156,7 +162,7 @@
   height:359px;
   overflow-y:scroll;
   text-align:center;
-  font-family:"Chalkboard SE";
+  font-family:"comic sans ms";
   font-size:18px;
   font-weight:normal;
   color:#000000;
@@ -179,19 +185,21 @@
   color:#000000;
 }
 
+
 .bpcontentMoney{
-  width:413px;
-  height:356px;
-  position:absolute;
-  left:550px;
-  top:266px;
-  overflow-y:scroll;
-  font-family:"Chalkboard SE";
-  font-size:18px;
-  font-weight:normal;
-  text-align:left;
-  color:#000000;
+	color: #000000;
+	font-family: Comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	height: 356px;
+	left: 550px;
+	overflow-y: scroll;
+	position: absolute;
+	text-align: left;
+	top: 266px;
+	width: 413px;
 }
+
 .navMoney-how_do_you_make_moneny{
 	position: absolute;
 	right: 103px;
@@ -275,6 +283,19 @@
 	color: #000000;
 
 }
+.navMoney-making_money_by_lending{
+	position: absolute;
+	right: 0px;
+	top: 70px;
+	width: 1000px;
+	height: 359px;
+	overflow: auto;
+	text-align: justify;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;	
+}
 .get_started{
 	height: 80px;
 	width: 144px;
@@ -282,3 +303,91 @@
 	position: absolute;
 	right: 85px;
 }
+
+
+#sub-money-the-magic-of-money-different-types-of-money .bptitleholder,#sub-money-the-magic-of-money-different-types-of-money-run-on-the-bank .bptitleholder,#sub-money-the-magic-of-money-how-much-money-is-there .bptitleholder,#sub-money-the-magic-of-money-how-much-money-is-there-inflation .bptitleholder,#sub-money-the-magic-of-money-why-put-money-in-bank .bptitleholder,#sub-money-the-magic-of-money .bptitleholder{
+  width:627px;
+  height:68px;
+  text-align:center;
+  line-height:28px;
+  position:absolute;
+  top:169px;
+  left:194px;
+}
+#sub-money-the-magic-of-money-making-money-by-lending .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 22px !important;
+	left: 194px;	
+}
+#sub-money-the-magic-of-money-making-money-by-lending .bptitleholder h1{
+	text-transform:uppercase;
+	color: #000000 !important;
+	font-family:"comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+#sub-money-the-magic-of-money-different-types-of-money .bptitleholder h1,#sub-money-the-magic-of-money-different-types-of-money-run-on-the-bank .bptitleholder h1,#sub-money-the-magic-of-money-how-much-money-is-there .bptitleholder h1,#sub-money-the-magic-of-money-how-much-money-is-there-inflation .bptitleholder h1,#sub-money-the-magic-of-money-why-put-money-in-bank .bptitleholder h1,#sub-money-the-magic-of-money .bptitleholder h1{
+	text-transform:uppercase;
+	color: #ffffff !important;
+	font-family:"comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+		.custom_random_div_1{
+			height: 133px;
+			width: 248px;
+			position:absolute;
+			top: 269px;
+			left: 189px;
+			font-family: comic sans ms;
+			padding-left: 10px;
+			padding-top: 5px;			
+		}
+		.custom_random_div_2{
+			height: 51px;
+			width: 178px;
+			position:absolute;
+			top: 613px;
+			left: 158px;
+			font-family: comic sans ms;
+			padding-left: 10px;
+			padding-top: 5px;			
+		}
+		.custom_random_div_3{
+			height: 51px;
+			width: 253px;
+			position:absolute;
+			top: 643px;
+			left: 408px;
+			font-family: comic sans ms;
+			padding-left: 10px;
+			padding-top: 5px;
+		}
+		.custom_random_div_4{
+			height: 108px;
+			width: 180px;
+			position:absolute;
+			top: 516px;
+			left: 772px;
+			font-family: comic sans ms;
+			padding-left: 10px;
+			padding-top: 5px;
+			padding-right: 12px;			
+		}
+		.custom_random_div_5{			
+			height: 80px;
+			width: 117px;
+			position:absolute;
+			top: 355px;
+			left: 757px;
+			font-family: comic sans ms;
+			padding-left: 10px;
+			padding-top: 5px;
+			padding-right: 12px;			
+		}

@@ -34,9 +34,9 @@
 }
 .in_your_dreams{
 color: #000000;
-font-family: "Chalkboard SE";
+font-family: "comic sans ms";
 font-size: 18px;
-font-weight: bold;
+font-weight: normal;
 height: 356px;
 margin-left: 142px;
 position: absolute;
@@ -135,7 +135,7 @@ width: 70%;
 
 .storypagetitlehuman_messing_body_clock {
 	color: #000000;
-    font-family: "Chalkboard SE";
+    font-family: "comic sans ms";
     margin-left: 243px;
     position: absolute;
     top: 33px;
@@ -144,49 +144,15 @@ width: 70%;
 {
   text-transform:uppercase;
   color: #ffffff;
-  font-family:"Chalkboard SE";
+  font-family:"comic sans ms";
   font-weight:normal;
   padding:0;
   margin:0;
 }
-
-.storypageetg_messing_body_clock {
-	color: #ffffff;
-	font-family: "Chalkboard SE";
-	font-size: 18px;
-	font-weight: bold;
-	height: 356px;
-	margin-left: 0px;
-	position: absolute;
-	text-align: center;
-	top: 65px;
-	width: 94%;
-}
-
-.storypageetg_messing_social_jetlag {
-	color: #000000;
-	font-family: "Chalkboard SE";
-	margin-left: 70px;
-	position: absolute;
-	top: 65px;
-	width: 850px;
-	font-weight: bold;
-}
-
-.storypageetg_messing_social_jetlag h1
-{
-  text-transform:uppercase;
-  color: #ffffff;
-  font-family:"Chalkboard SE";
-  font-weight:normal;
-  padding:0;
-  margin:0;
-}
-
 
 .storypagetitlehuman_sleep_needed {
 	color: #000000;
-	font-family: "Chalkboard SE";
+	font-family: "comic sans ms";
 	margin-left: 215px;
 	position: absolute;
 	top: 20px;
@@ -195,57 +161,57 @@ width: 70%;
 {
   text-transform:uppercase;
   color: #ffffff;
-  font-family:"Chalkboard SE";
+  font-family:"comic sans ms";
   font-weight:normal;
   padding:0;
   margin:0;
 }
 .storypageetg_sleep_needed {
 	color: #ffffff;
-	font-family: "Chalkboard SE";
+	font-family: "comic sans ms";
 	font-size: 18px;
 	font-weight: bold;
 	height: 356px;
 	margin-left: 0px;
 	position: absolute;
 	text-align: center;
-	top: 54px;
+	top: 38px;
 	width: 94%;
 }
-.storypagetitlehuman_bodyclock{
-color: #000000;
-font-family: "Chalkboard SE";
-margin-left: 575px;
-position: absolute;
-top: 5px;
-width: 435px;
-text-align: center;
+.storypagetitlehuman_bodyclock {
+	color: #000000;
+	font-family: "comic sans ms";
+	margin-left: 575px;
+	position: absolute;
+	top: 5px;
+	width: 435px;
+	text-align: center;
 }
-.storypageetg_bodyclock{
-color: #000000;
-font-family: "Chalkboard SE";
-font-size: 16px;
-font-weight: normal;
-height: 356px;
-margin-left: 32px;
-position: absolute;
-text-align: center;
-top: 470px;
-width: 90%;
+
+.storypageetg_bodyclock {
+	color: #000000;
+	font-family: "comic sans ms";
+	font-size: 16px;
+	font-weight: normal;
+	height: 356px;
+	position: absolute;
+	text-align: center;
+	top: 473px;
+	width: 97%;
 }
 
 .navsleepanddreams-content {
-  position:absolute;
-  left:98px;
-  top:251px;
-  width:830px;
-  height:145px;
-  overflow-y:scroll;
-  text-align:center;
-  font-family:"Chalkboard SE";
-  font-size:18px;
-  font-weight:bold;
-  color:#000000;
+	position: absolute;
+	left: 98px;
+	top: 251px;
+	width: 830px;
+	height: 145px;
+	overflow: auto;
+	text-align: center;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
 }
 
 .navsleepanddreamsbtn1{
@@ -266,38 +232,131 @@ width: 90%;
 }
 
 #bodyclocks .bptitleholder{
-	width: 627px;
-	height: 68px;
-	text-align: center;
-	line-height: 28px;
-	position: absolute;
-	top: 28px !important;
-	left: 194px;	
+	width:627px;
+	height:68px;
+	text-align:center;
+	line-height:28px;
+	position:absolute;
+	top:30px;
+	left:194px;
 }
 
 #bodyclocks .bptitleholder h1{
 	text-transform: uppercase;
 	color: #ffffff !important;
-	font-family: "Chalkboard SE";
+	font-family: "comic sans ms";
 	font-weight: bold;
 	padding: 0;
 	margin: 0;
 }
 
 #socialjetlag .bptitleholder{
-	width: 627px;
-	height: 68px;
-	text-align: center;
-	line-height: 28px;
-	position: absolute;
-	top: 35px;
-	left: 200px;
+	width:627px;
+	height:68px;
+	text-align:center;
+	line-height:28px;
+	position:absolute;
+	top:25px;
+	left:194px;
 }
 
 #socialjetlag .bptitleholder h1{
 	text-transform: uppercase;
 	color: #ffffff;
-	font-family: "Chalkboard SE";
+	font-family: "comic sans ms";
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+#duringsleep .bptitleholder h1{
+	text-transform: uppercase;
+	color: #ffffff;
+	font-family: "comic sans ms";
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+#enoughtsleep .bptitleholder{
+	width: 463px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 40px;
+	left: 10px;
+	line-height: 45px;
+}
+
+#enoughtsleep .bptitleholder h1{
+	text-transform: uppercase;
+	color: #ffffff;
+	font-family: "comic sans ms";
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+#sleepneeded .bptitleholder{
+	width:627px;
+	height:68px;
+	text-align:center;
+	line-height:28px;
+	position:absolute;
+	top:20px;
+	left:194px;
+}
+
+#sleepneeded .bptitleholder h1{
+	text-transform: uppercase;
+	color: #ffffff;
+	font-family: "comic sans ms";
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+#meaningofdreams .bptitleholder h1{
+	text-transform: uppercase;
+	color: #ffffff;
+	font-family: "comic sans ms";
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+#openeyes .bptitleholder h1{
+	text-transform: uppercase;
+	color: #ffffff;
+	font-family: "comic sans ms";
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+#rememberingdreams .bptitleholder h1{
+	text-transform: uppercase;
+	color: #ffffff;
+	font-family: "comic sans ms";
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+#sleepcultures .bptitleholder h1{
+	text-transform: uppercase;
+	color: #ffffff;
+	font-family: "comic sans ms";
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+#sleepstructure .bptitleholder h1{
+	text-transform: uppercase;
+	color: #ffffff;
+	font-family: "comic sans ms";
 	font-weight: bold;
 	padding: 0;
 	margin: 0;
@@ -316,8 +375,221 @@ width: 90%;
 #sleeps .bptitleholder h1 {
 	text-transform:uppercase;
 	color: #ffffff !important;
-	font-family:"Chalkboard SE";
+	font-family:"comic sans ms";
 	font-weight: bold;
 	padding: 0;
 	margin: 0;
+}
+
+#sleeps .nav-content{
+  position:absolute;
+  left:305px;
+  top:263px;
+  width:410px;
+  height:359px;
+  /*overflow-y:auto;*/
+  overflow:auto;
+  text-align:center;
+  font-family:"comic sans ms";
+  font-size:18px;
+  font-weight:normal;
+  color:#000000 !important;
+}
+
+#brokensleep  .bptitleholder h1 {
+	text-transform:uppercase;
+	color: #ffffff !important;
+	font-family:"comic sans ms";
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+#messing .bptitleholder h1 {
+	text-transform:uppercase;
+	color: #ffffff !important;
+	font-family:"comic sans ms";
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+	line-height:35px;
+}
+
+#notsleeping .bptitleholder h1 {
+	text-transform:uppercase;
+	color: #ffffff !important;
+	font-family:"comic sans ms";
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+#parasomnias .bptitleholder{
+	width:627px;
+	height:68px;
+	text-align:center;
+	line-height:28px;
+	position:absolute;
+	top:143px;
+	left:194px;
+}
+
+#parasomnias .bptitleholder h1 {
+	text-transform:uppercase;
+	color: #ffffff !important;
+	font-family:"comic sans ms";
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+	line-height:40px;
+}
+
+#sleeptime .bptitleholder h1 {
+	text-transform:uppercase;
+	color: #ffffff !important;
+	font-family:"comic sans ms";
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+#inyourdreams .bptitleholder{
+	width:627px;
+	height:68px;
+	text-align:center;
+	line-height:28px;
+	position:absolute;
+	top:70px;
+	left:194px;
+}
+
+#inyourdreams .bptitleholder h1 {
+	text-transform:uppercase;
+	color: #ffffff !important;
+	font-family:"comic sans ms";
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+#whywesleep .bptitleholder h1 {
+	text-transform:uppercase;
+	color: #ffffff !important;
+	font-family:"comic sans ms";
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+#whydodreaming .bptitleholder h1 {
+	text-transform:uppercase;
+	color: #ffffff !important;
+	font-family:"comic sans ms";
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+#bodyclock .bptitleholder{
+	width: 475px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 29px;
+	left: 0px;
+}
+
+#bodyclock .bptitleholder h1 {
+	text-transform:uppercase;
+	color: #ffffff !important;
+	font-family:"comic sans ms";
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+#howsleep .bptitleholder h1 {
+	text-transform:uppercase;
+	color: #ffffff !important;
+	font-family:"comic sans ms";
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+#bodyclock .bptitleholder{
+	width: 475px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 150px;
+	left: 0px;
+}
+
+#earlybirds .bptitleholder h1 {
+	text-transform:uppercase;
+	color: #ffffff !important;
+	font-family:"comic sans ms";
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+	line-height:40px;
+}
+
+.bpcontentsleeps{
+	color: #000000;
+    font-family: "comic sans ms";
+    font-size: 18px;
+    font-weight: normal;
+    height: 356px;
+    left: 550px;
+    overflow-y: auto;
+    position: absolute;
+    text-align: left;
+    top: 266px;
+    width: 413px;
+}
+
+.bpcontent_messing_body_clock {
+	color: #ffffff;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	height: 356px;
+	margin-left: 0px;
+	position: absolute;
+	text-align: center;
+	top: 65px;
+	width: 94%;
+}
+
+.bpcontent_messing_social_jetlag {
+	color: #000000;
+	font-family: "comic sans ms";
+	margin-left: 70px;
+	position: absolute;
+	top: 65px;
+	width: 850px;
+	font-weight: normal;
+}
+
+.bpcontent_messing_social_jetlag h1{
+  text-transform:uppercase;
+  color: #ffffff;
+  font-family:"comic sans ms";
+  font-weight:normal;
+  padding:0;
+  margin:0;
+}
+
+.bpcontent_messing_social_jetlag_new {
+	color: #000000;
+	font-family: "comic sans ms";
+	margin-left: 70px;
+	position: absolute;
+	top: 240px;
+	width: 600px;
+	font-weight: normal;
 }

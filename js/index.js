@@ -767,3 +767,14 @@ bgsoundmoney.addEventListener('ended', function() { bgsoundmoney.play(); });
 
 function pauseMoney() { bgsoundmoney.pause() }
 function playsMoney() { bgsoundmoney.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }
+
+
+/************************ Life and how it works *******************************/
+var bgsoundhowlifeworks = new Audio();
+
+//Background sound not available
+bgsoundhowlifeworks.src = "audio/Life_And_How_It_Works/Life_And_How_It_Works_audio_not_available.mp3";
+bgsoundhowlifeworks.addEventListener('ended', function() { bgsoundhowlifeworks.play(); });
+
+function pausehowlifeworks() { bgsoundhowlifeworks.pause() }
+function playshowlifeworks() { bghowlifeworks.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }

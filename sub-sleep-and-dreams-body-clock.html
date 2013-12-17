@@ -24,9 +24,20 @@
       </div>-->
       <div class="bptitleholder"><h1>Tick, tock, body clock</h1></div>
       <div class="storypageetg_bodyclock">
-		<p>Inside your body is a clock that tells you when it's time to eat (you get hungry), time to play (you get lots of energy), and time to sleep (you get tired).  Your body clock is also known as your circadian rhythm, and comes from a tiny spot in your brain called the Suprachiasmatic Nucleus.Over 24 hours of the day, your body clock is like a roller coaster - it goes up and it goes down. From about 6am to 2pm, your body clock ensures you have what you need for peak performance and energy.  It then tells your body to take a rest, so it slows everything down until about 4pm.  After that, your body clock gets you moving again until between 8 and 10pm. From then until 6am, your body clock tells you to sleep.</p>
+		<p>Inside your body is a clock that tells you when it's time to eat (you get hungry), time to play (you get lots of energy), and time to sleep (you get tired).  Your body clock is also known as your circadian rhythm, and comes from a tiny spot in your brain called the <a href="#Suprachiasmatic" data-rel="popup">Suprachiasmatic</a> Nucleus.Over 24 hours of the day, your body clock is like a roller coaster - it goes up and it goes down. From about 6am to 2pm, your body clock ensures you have what you need for peak performance and energy.  It then tells your body to take a rest, so it slows everything down until about 4pm.  After that, your body clock gets you moving again until between 8 and 10pm. From then until 6am, your body clock tells you to sleep.</p>
 					<p>Of course, your body clock can't tell the actual time so it uses day and night, or light and dark, which it senses through your eyes, to set your body clock.</p>
 	  </div>
+	  <div data-role="popup" id="Suprachiasmatic" data-position-to="window" data-overlay-theme="a" style="text-align:center;">
+			<div id="node-pop">
+			<p>Suprachiasmatic</p>
+			<p>The Suprachiasmatic Nucleus is a tiny region of the brain about the size of a grain of rice. It is deep inside the brain, about level with the top of your ear.</p>
+			<div>  <div class="defspeaker"  id="Suprachiasmatic"> </div></div>
+			<audio id="Suprachiasmaticaudio" controls preload onpause="playaudio()" onplay="pausebg()" style="visibility:hidden;"><source src="audio/Money/Suprachiasmatic.mp3" type="audio/mpeg"></audio>
+			</div>
+		</div>
+	  
+	  
+	  
       <div class="botlogoholder"><a href="home.html" class="homelinksleeps"><img src="css/images/9-12/Human_Body/bottomhomehb.png"></a></div>
     </div><!--end of content-->
   </div><!--/spacechar-->
@@ -108,6 +119,13 @@
 	  bodyclockaudio.pause();
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
-                
+       
+//Definations
+       $( "#Suprachiasmatic" ).bind({
+          popupafterclose: function(event, ui) { 
+                  Suprachiasmaticaudio.pause(); 
+           }
+        });
+	//Definations ends here	   
   </script>
 </div>

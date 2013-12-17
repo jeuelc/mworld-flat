@@ -54,7 +54,7 @@
                     <p>Have you ever sleep walked, sleep talked or wet the bed?  Then you've had a parasomnia!  They are a very common type of sleep interruption and usually stop on their own.  Other parasominas include night terrors and teeth grinding! </p>
 					<p>Most people think parasomnias happen in our REM sleep and that we are acting out our dreams.   But actually they most often occur in our deepest sleep, non-REM sleep, where most of our brain is switched off.  If we experience a parasomnia, parts of our brain get switched back on.  Other parts stay off though, and that's why we can't remember if we talked or walked in our sleep, unless we get woken up at the time.  </p>
 					<p>Dyssomnias are not as common as parasomnias, but they cause a lot more problems to those that have them, and they need treatment from a sleep doctor if they are to get better. </p>
-					<p>Dyssomnias include insomnia, sleep apnoea, and restless leg syndrome.  Imagine if your legs kept twitching in the night! These sleep problems can mess up how we function during the day.  Because they disrupt sleep, we come very tired during the day, grumpy, unable to concentrate, and have trouble doing things we usually do easily, like playing sport.  </p>
+					<p>Dyssomnias include <a href="#insomnia" data-rel="popup">insomnia</a>, <a href="#apnoea" data-rel="popup">sleep apnoea</a>, and <a href="#restless" data-rel="popup">restless leg syndrome</a>.  Imagine if your legs kept twitching in the night! These sleep problems can mess up how we function during the day.  Because they disrupt sleep, we come very tired during the day, grumpy, unable to concentrate, and have trouble doing things we usually do easily, like playing sport.  </p>
 				</div>
                 <!-- <div data-role="popup" id="imongnawong" data-position-to="window" data-overlay-theme="a" style="text-align:center;">
                   <div id="node-pop">
@@ -63,6 +63,32 @@
                      <p>A satellite travels so fast horizontally that instead of crashing to Earth, the satellite ends up circling the Earth instead.  The Planets in our Solar System have orbited the Sun for billions of years!</p>
                   </div> 
                 </div>-->
+				<div data-role="popup" id="insomnia" data-position-to="window" data-overlay-theme="a" style="text-align:center;">
+					<div id="node-pop">
+					<p>Insomnia</p>
+					<p>The inability to go to sleep or stay asleep.</p>
+					<div>  <div class="defspeaker"  id="insomnia"> </div></div>
+					<audio id="insomniaaudio" controls preload onpause="playaudio()" onplay="pausebg()" style="visibility:hidden;"><source src="audio/Money/insomnia.mp3" type="audio/mpeg"></audio>
+					</div>
+				</div>
+				
+				<div data-role="popup" id="apnoea" data-position-to="window" data-overlay-theme="a" style="text-align:center;">
+					<div id="node-pop">
+					<p>Sleep-apnoea</p>
+					<p>Snoring and stopping breathing during the night.</p>
+					<div>  <div class="defspeaker"  id="apnoea"> </div></div>
+					<audio id="apnoeaaudio" controls preload onpause="playaudio()" onplay="pausebg()" style="visibility:hidden;"><source src="audio/Money/apnoea.mp3" type="audio/mpeg"></audio>
+					</div>
+				</div>
+				
+				<div data-role="popup" id="restless" data-position-to="window" data-overlay-theme="a" style="text-align:center;">
+					<div id="node-pop">
+					<p>Restless leg syndrome</p>
+					<p>The overwhelming urge to move your legs when falling asleep.</p>
+					<div>  <div class="defspeaker"  id="restless"> </div></div>
+					<audio id="restlessaudio" controls preload onpause="playaudio()" onplay="pausebg()" style="visibility:hidden;"><source src="audio/Money/restless.mp3" type="audio/mpeg"></audio>
+					</div>
+				</div>
                 <div class="botlogoholder"><a href="home.html" class="homelinksleeps"><img src="css/images/9-12/Human_Body/bottomhomehb.png"></a></div>
             </div><!--end of content-->
         </div>
@@ -211,6 +237,29 @@
       parasomniasaudio.pause();
       $(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });       
-                
+        //Definations
+       $( "#insomnia" ).bind({
+          popupafterclose: function(event, ui) { 
+                  insomniaaudio.pause(); 
+           }
+        });
+	//Definations ends here  
+
+
+//Definations
+       $( "#apnoea" ).bind({
+          popupafterclose: function(event, ui) { 
+                  apnoeaaudio.pause(); 
+           }
+        });
+	//Definations ends here
+
+//Definations
+       $( "#restless" ).bind({
+          popupafterclose: function(event, ui) { 
+                  restlessaudio.pause(); 
+           }
+        });
+	//Definations ends here  	
   </script><script src="js/twocardLogic.js"></script>
 </div>

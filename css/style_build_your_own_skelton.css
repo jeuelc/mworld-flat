@@ -361,6 +361,26 @@
 	left: 424px;
 }
 
+#sub-build-your-own-skelton-what-are-bones-what-are-they-made-of .bptitleholder, #sub-build-your-own-skelton-what-are-bones-every-bone-has-home .bptitleholder, #sub-build-your-own-skelton-without-bones-in-trouble-thanks-for-your-support .bptitleholder, #sub-build-your-own-skelton-without-bones-in-trouble-your-body-is-full-of-levers .bptitleholder, #sub-build-your-own-skelton-keep-your-skelton-healthy-fueling-your-skelton .bptitleholder, #sub-build-your-own-skelton-keep-skelton-healthy-old-bones .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 190px;
+	left: 194px;
+}
+
+#sub-build-your-own-skelton-what-are-bones-long-short-wobbly-and-strange .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 35px;
+	position: absolute;
+	top: 165px;
+	left: 194px;
+}
+	
 #sub-build-your-own-skelton .bptitleholder h1, #sub-build-your-own-skelton-what-are-bones .bptitleholder h1, #sub-build-your-own-skelton-without-bones-in-trouble .bptitleholder h1, #sub-build-your-own-skelton-keep-skelton-healthy .bptitleholder h1, #sub-build-your-own-skelton-what-are-bones-what-are-they-made-of .bptitleholder h1, #sub-build-your-own-skelton-what-are-bones-long-short-wobbly-and-strange .bptitleholder h1, #sub-build-your-own-skelton-what-are-bones-every-bone-has-home .bptitleholder h1, #sub-build-your-own-skelton-what-are-bones-bones-are-alive .bptitleholder h1, #sub-build-your-own-skelton-without-bones-in-trouble-thanks-for-your-support .bptitleholder h1, #sub-build-your-own-skelton-without-bones-in-trouble-your-boney-shield .bptitleholder h1, #sub-build-your-own-skelton-without-bones-in-trouble-your-body-is-full-of-levers .bptitleholder h1, #sub-build-your-own-skelton-without-bones-in-trouble-making-blood .bptitleholder h1, #sub-build-your-own-skelton-keep-your-skelton-healthy-bone-fitness .bptitleholder h1, #sub-build-your-own-skelton-keep-your-skelton-healthy-fueling-your-skelton .bptitleholder h1, #sub-build-your-own-skelton-keep-your-skelton-healthy-broken-bones .bptitleholder h1, #sub-build-your-own-skelton-keep-skelton-healthy-old-bones .bptitleholder h1{
 	text-transform: uppercase;
 	color: #ffffff !important;

@@ -1,6 +1,6 @@
 /********* howlifeworks In Peril **********/
 
-#sub-life-and-how-it-works,#sub-life-and-how-it-works-evolution-and-natural-selection,#sub-life-and-how-it-works-evolution-and-natural-selection-evolving-to-live-together,#sub-life-and-how-it-works-evolution-and-natural-selection-evolving-to-live-together-extreme-evolution{
+#sub-life-and-how-it-works,#sub-life-and-how-it-works-evolution-and-natural-selection,#sub-life-and-how-it-works-evolution-and-natural-selection-evolving-to-live-together,#sub-life-and-how-it-works-evolution-and-natural-selection-evolving-to-live-together-extreme-evolution,#sub-life-and-how-it-works-evolution-and-natural-selection-mutant,#sub-life-and-how-it-works-extinction,#sub-life-and-how-it-works-extinction-the-rise-of-the-mammals,#sub-life-and-how-it-works-extinction-ultimate-survivors,#sub-life-and-how-it-works-extinction-ultimate-survivors-shark-the-ultimate-survivor,#sub-life-and-how-it-works-how-did-life-begin{
   background:url('images/9-12/The_Wonders_of_Science/Life_And_How_It_Works/Life_And_How_It_Works_bg.jpg') no-repeat;
   height:748px !important;
   overflow:hidden !important;
@@ -12,6 +12,27 @@
   overflow:hidden !important;
   width:1024px !important;
 }
+
+#sub-life-and-how-it-works-evolution-and-natural-selection-mutants-what-were-mutants{
+  background:url('images/9-12/The_Wonders_of_Science/Life_And_How_It_Works/Evolution_And_Natural_Selection/Mutants/What_Were_Mutants/What_Were_Mutants_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;	
+}
+
+#sub-life-and-how-it-works-extinction-the-end-of-the-dinosaurs{
+  background:url('images/9-12/The_Wonders_of_Science/Life_And_How_It_Works/Extinction/The_End_Of_The_Dinosaurs/The_End_Of_The_Dinosaurs_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;	
+}
+#sub-life-and-how-it-works-extinction-the-five-extinctions{
+  background:url('images/9-12/The_Wonders_of_Science/Life_And_How_It_Works/Extinction/The_Five_Extinctions/The_Five_Extinctions_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;	
+}
+
 .plhowlifeworks, .pshowlifeworks, .bhowlifeworks, .fhowlifeworks {
   position:absolute;
   top:670px;
@@ -110,7 +131,7 @@
     position: absolute;
     top: 405px;
 }
-#sub-life-and-how-it-works .bptitleholder,#sub-life-and-how-it-works-evolution-and-natural-selection .bptitleholder,#sub-life-and-how-it-works-evolution-and-natural-selection-evolving-to-live-together .bptitleholder,#sub-life-and-how-it-works-evolution-and-natural-selection-evolving-to-live-together-extreme-evolution .bptitleholder{
+#sub-life-and-how-it-works .bptitleholder,#sub-life-and-how-it-works-evolution-and-natural-selection .bptitleholder,#sub-life-and-how-it-works-evolution-and-natural-selection-evolving-to-live-together .bptitleholder,#sub-life-and-how-it-works-evolution-and-natural-selection-evolving-to-live-together-extreme-evolution .bptitleholder,#sub-life-and-how-it-works-evolution-and-natural-selection-mutant .bptitleholder,#sub-life-and-how-it-works-extinction .bptitleholder,#sub-life-and-how-it-works-extinction-the-rise-of-the-mammals .bptitleholder,#sub-life-and-how-it-works-extinction-ultimate-survivors .bptitleholder,#sub-life-and-how-it-works-extinction-ultimate-survivors-shark-the-ultimate-survivor .bptitleholder,#sub-life-and-how-it-works-how-did-life-begin .bptitleholder{
 width: 627px;
 height: 68px;
 text-align: center;
@@ -128,7 +149,35 @@ left: 194px;
 	top: 43px;
 	left: 36px;
 }
-#sub-life-and-how-it-works .bptitleholder h1,#sub-life-and-how-it-works-evolution-and-natural-selection .bptitleholder  h1,#sub-life-and-how-it-works-evolution-and-natural-selection-dna  .bptitleholder h1,#sub-life-and-how-it-works-evolution-and-natural-selection-evolving-to-live-together .bptitleholder h1,#sub-life-and-how-it-works-evolution-and-natural-selection-evolving-to-live-together-extreme-evolution .bptitleholder h1{
+#sub-life-and-how-it-works-evolution-and-natural-selection-mutants-what-were-mutants .bptitleholder{
+	width: 490px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 26px;
+	left: 255px;
+}
+#sub-life-and-how-it-works-extinction-the-end-of-the-dinosaurs .bptitleholder{
+	width: 580px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 20px;
+	left: 235px;
+}
+#sub-life-and-how-it-works-extinction-the-five-extinctions .bptitleholder{
+	width: 580px;
+	height: 36px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 9px;
+	left: 235px;
+}
+
+#sub-life-and-how-it-works .bptitleholder h1,#sub-life-and-how-it-works-evolution-and-natural-selection .bptitleholder  h1,#sub-life-and-how-it-works-evolution-and-natural-selection-dna  .bptitleholder h1,#sub-life-and-how-it-works-evolution-and-natural-selection-evolving-to-live-together .bptitleholder h1,#sub-life-and-how-it-works-evolution-and-natural-selection-evolving-to-live-together-extreme-evolution .bptitleholder h1,#sub-life-and-how-it-works-evolution-and-natural-selection-mutant .bptitleholder h1,#sub-life-and-how-it-works-extinction .bptitleholder h1,#sub-life-and-how-it-works-extinction-the-rise-of-the-mammals .bptitleholder h1,#sub-life-and-how-it-works-extinction-ultimate-survivors .bptitleholder h1,#sub-life-and-how-it-works-extinction-ultimate-survivors-shark-the-ultimate-survivor .bptitleholder h1,#sub-life-and-how-it-works-how-did-life-begin .bptitleholder h1{
 	text-transform: uppercase;
 	color: #ffffff !important;
 	font-family: "comic sans ms" !important;
@@ -137,6 +186,31 @@ left: 194px;
 	margin: 0;
 }
 
+/* Custom Page */
+#sub-life-and-how-it-works-evolution-and-natural-selection-mutants-what-were-mutants .bptitleholder h1{
+	text-transform: uppercase;
+	color: #000000 !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;	
+}
+#sub-life-and-how-it-works-extinction-the-end-of-the-dinosaurs .bptitleholder h1{
+	text-transform: uppercase;
+	color: #000000 !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;	
+}
+#sub-life-and-how-it-works-extinction-the-five-extinctions .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;	
+}
 
 .bpcontenthowlifeworks{
 	color: #000000;
@@ -230,4 +304,45 @@ left: 194px;
 	font-size: 18px;
 	font-weight: normal;
 	color: #000000;
+}
+.navhowlifeworks-what-were-mutants{
+	position: absolute;
+	left: 48px;
+	top: 80px;
+	width: 930px;
+	height: 535px;
+	overflow: auto;
+	text-align: left;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+.navhowlifeworks-theendofthedinosaurs{
+	position: absolute;
+	left: 48px;
+	top: 70px;
+	width: 930px;
+	height: 535px;
+	overflow: auto;
+	text-align: left;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+.navhowlifeworks-thefiveextinctions{
+	position: absolute;
+	left: 48px;
+	top: 47px;
+	width: 930px;
+	height: 535px;
+	overflow: auto;
+	text-align: left;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #FFFFFF;
 }

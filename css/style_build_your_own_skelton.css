@@ -117,7 +117,7 @@
 .navtitleholderskelton h1{
 	text-transform: uppercase;
 	color: #FFF;
-	font-family: Chalkboard SE;
+	font-family: comic sans ms;
 	padding: 0;
 	margin: 0;
 	font-weight: bold;
@@ -136,7 +136,7 @@
 .bptitleholderskelton h1{
   text-transform:uppercase;
   color: #FFFFFF;
-  font-family:"Chalkboard SE";
+  font-family:"comic sans ms";
   font-weight:bold;
   padding:0;
   margin:0;
@@ -148,13 +148,15 @@
   top:263px;
   width:410px;
   height:359px;
-  overflow-y:scroll;
+  /*overflow-y:scroll;*/
+  overflow: auto;
   text-align:center;
-  font-family:"Chalkboard SE";
+  font-family:"comic sans ms";
   font-size:18px;
-  font-weight:bold;
+  font-weight:normal;
   color:#000000;
 }
+
 .navskelton-content p {
   margin-top:0 !important;
 }
@@ -165,11 +167,12 @@
   top:263px;
   width:920px;
   height:160px;
-  overflow-y:scroll;
+  /*overflow-y:scroll;*/
+  overflow: auto;
   text-align:left;
-  font-family:"Chalkboard SE";
+  font-family:"comic sans ms";
   font-size:18px;
-  font-weight:bold;
+  font-weight:normal;
   color:#000000;
 }
 
@@ -179,78 +182,79 @@
   position:absolute;
   left:550px;
   top:266px;
-  overflow-y:scroll;
-  font-family:"Chalkboard SE";
+  /*overflow-y:scroll;*/
+  overflow: auto;
+  font-family:"comic sans ms";
   font-size:18px;
-  font-weight:bold;
+  font-weight:normal;
   text-align:left;
   color:#000000;
 }
 
 .bones-are-alive-text{
-position: absolute;
-right: 62px;
-top: 111px;
-width: 399px;
-height: 525px;
-overflow: auto;
-text-align: left;
-font-family: "Chalkboard SE";
-font-size: 18px;
-font-weight: normal;
-color: #000000;	
+	position: absolute;
+	right: 62px;
+	top: 111px;
+	width: 399px;
+	height: 525px;
+	overflow: auto;
+	text-align: left;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;	
 }
 
 .making-blood-text{
-position: absolute;
-right: 62px;
-top: 111px;
-width: 465px;
-height: 525px;
-overflow: auto;
-text-align: left;
-font-family: "Chalkboard SE";
-font-size: 18px;
-font-weight: normal;
-color: #000000;
+	position: absolute;
+	right: 62px;
+	top: 111px;
+	width: 465px;
+	height: 525px;
+	overflow: auto;
+	text-align: left;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
 }
 .healthy-bone-text{
-position: absolute;
-left: 25px;
-top: 111px;
-width: 970px;
-height: 525px;
-overflow: auto;
-text-align: left;
-font-family: "Chalkboard SE";
-font-size: 18px;
-font-weight: normal;
-color: #FFFFFF;
+	position: absolute;
+	left: 25px;
+	top: 73px;
+	width: 970px;
+	height: 220px;
+	overflow: auto;
+	text-align: left;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	color: #FFFFFF;
 }
 .broken-bone-text{
 	position: absolute;
 	left: 25px;
 	top: 111px;
-	width: 350px;
+	width: 368px;
 	height: 525px;
 	overflow: auto;
 	text-align: left;
-	font-family: "Chalkboard SE";
+	font-family: "comic sans ms";
 	font-size: 18px;
 	font-weight: normal;
 	color: #FFFFFF;
 }
 .your-boney-shield-text{
-position: absolute;
-right: 62px;
-top: 111px;
-width: 425px;
-height: 525px;
-overflow: auto;
-font-family: "Chalkboard SE";
-font-size: 18px;
-font-weight: normal;
-color: #FFFFFF;
+	position: absolute;
+	right: 62px;
+	top: 111px;
+	width: 425px;
+	height: 525px;
+	overflow: auto;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	color: #FFFFFF;
 
 }
 
@@ -262,37 +266,138 @@ color: #FFFFFF;
 	height: 525px;
 	overflow: auto;
 	text-align: left;
-	font-family: "Chalkboard SE";
+	font-family: "comic sans ms";
 	font-size: 18px;
 	font-weight: normal;
 	color: #000000;	
 	float:left;
 }
 .every-bone-has-home-img{
-background: url('images/9-12/Human_Body/Build_Your_Own_Skelton/What_Are_Bones/Every_Bone_Has_Home/Every_Bone_Has_Home.gif') no-repeat;
-position: absolute;
-right: 0px;
-top: 248px;
-width: 640px;
-height: 360px;
-overflow: auto;
-text-align: left;
-font-family: "Chalkboard SE";
-font-size: 18px;
-font-weight: normal;
-color: #000000;
-float: left;
+	background: url('images/9-12/Human_Body/Build_Your_Own_Skelton/What_Are_Bones/Every_Bone_Has_Home/Every_Bone_Has_Home.gif') no-repeat;
+	position: absolute;
+	right: 0px;
+	top: 248px;
+	width: 640px;
+	height: 360px;
+	overflow: auto;
+	text-align: left;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+	float: left;
 }
 .short-wobbly-and-strange-text,.what-are-they-made-of-text,.thanks-for-your-support-text,.your-body-is-full-of-levers,.fueling-your-skelton-text,.healthy-old-bones-text{
-position: absolute;
-right: 60px;
-top: 263px;
-width: 410px;
-height: 359px;
-overflow-y: scroll;
-text-align: center;
-font-family: "Chalkboard SE";
-font-size: 18px;
-font-weight: normal;
-color: #000000;
+	position: absolute;
+	right: 60px;
+	top: 263px;
+	width: 410px;
+	height: 359px;
+	overflow: auto;
+	text-align: center;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+#sub-build-your-own-skelton-without-bones-in-trouble .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 35px;
+	position: absolute;
+	top: 149px;
+	left: 194px;
+}
+
+#sub-build-your-own-skelton-without-bones-in-trouble-your-boney-shield .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 50px;
+	left: 412px;
+}
+
+#sub-build-your-own-skelton-without-bones-in-trouble-making-blood .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 85px;
+	left: 400px;
+}
+
+#sub-build-your-own-skelton-keep-your-skelton-healthy-bone-fitness .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 35px;
+	left: 188px;
+}
+
+#sub-build-your-own-skelton-keep-your-skelton-healthy-broken-bones .bptitleholder{
+	width: 370px !important;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 38px;
+	left:10px;
+}
+
+#sub-build-your-own-skelton-what-are-bones-bones-are-alive .bptitleholder{
+	width: 627px !important;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 70px;
+	left: 424px;
+}
+
+#sub-build-your-own-skelton .bptitleholder h1, #sub-build-your-own-skelton-what-are-bones .bptitleholder h1, #sub-build-your-own-skelton-without-bones-in-trouble .bptitleholder h1, #sub-build-your-own-skelton-keep-skelton-healthy .bptitleholder h1, #sub-build-your-own-skelton-what-are-bones-what-are-they-made-of .bptitleholder h1, #sub-build-your-own-skelton-what-are-bones-long-short-wobbly-and-strange .bptitleholder h1, #sub-build-your-own-skelton-what-are-bones-every-bone-has-home .bptitleholder h1, #sub-build-your-own-skelton-what-are-bones-bones-are-alive .bptitleholder h1, #sub-build-your-own-skelton-without-bones-in-trouble-thanks-for-your-support .bptitleholder h1, #sub-build-your-own-skelton-without-bones-in-trouble-your-boney-shield .bptitleholder h1, #sub-build-your-own-skelton-without-bones-in-trouble-your-body-is-full-of-levers .bptitleholder h1, #sub-build-your-own-skelton-without-bones-in-trouble-making-blood .bptitleholder h1, #sub-build-your-own-skelton-keep-your-skelton-healthy-bone-fitness .bptitleholder h1, #sub-build-your-own-skelton-keep-your-skelton-healthy-fueling-your-skelton .bptitleholder h1, #sub-build-your-own-skelton-keep-your-skelton-healthy-broken-bones .bptitleholder h1, #sub-build-your-own-skelton-keep-skelton-healthy-old-bones .bptitleholder h1{
+	text-transform: uppercase;
+	color: #ffffff !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+#sub-build-your-own-skelton-keep-your-skelton-healthy-broken-bones .bptitleholder h1{
+	text-transform: uppercase;
+	color: #ffffff !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+#sub-build-your-own-skelton-without-bones-in-trouble-making-blood .bptitleholder h1{
+	text-transform: uppercase;
+	color: #000000 !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+.bpcontentskelton{
+	color: #000000;
+    font-family: "comic sans ms";
+    font-size: 18px;
+    font-weight: normal;
+    height: 356px;
+    left: 550px;
+    overflow-y: auto;
+    position: absolute;
+    text-align: left;
+    top: 266px;
+    width: 413px;
 }

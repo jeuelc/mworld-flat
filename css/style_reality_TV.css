@@ -1,4 +1,3 @@
-
 /********* Reality TV **********/
 
 #sub-reality-TV, #sub-reality-TV-becoming-reality-TV-celebrity-beyond-fame, #sub-reality-TV-becoming-reality-TV-celebrity-life-on-show, #sub-reality-TV-becoming-reality-TV-celebrity-sell-yourself, #sub-reality-TV-becoming-reality-TV-celebrity-the-story, #sub-reality-TV-what-is-reality-TV, #sub-reality-TV-what-is-reality-TV-how-reality-TV-works, #sub-reality-TV-what-is-reality-TV-why-people-go-on-reality-shows, #sub-reality-TV-what-is-reality-TV-how-reality-TV-works-Big-Brother, #sub-reality-TV-what-is-reality-TV-how-real-it-is, #sub-reality-TV-why-do-we-watch-it-did-you-see-it, #sub-reality-TV-why-do-we-watch-it-entertainment, #sub-reality-TV-why-do-we-watch-it-hanging-out, #sub-reality-TV-why-do-we-watch-it-must-see-TV, #sub-reality-TV-why-do-we-watch-it-window-to-the-world {
@@ -110,7 +109,7 @@
 .navtitleholderrealityTV h1{
 	text-transform: uppercase;
 	color: #FFF;
-	font-family: Chalkboard SE;
+	font-family: comic sans ms;
 	padding: 0;
 	margin: 0;
 	font-weight: bold;
@@ -126,11 +125,10 @@
   left:194px;
 }
 
-.bptitleholderrealityTV h1
- {
+.bptitleholderrealityTV h1{
   text-transform:uppercase;
   color: #FFFFFF;
-  font-family:"Chalkboard SE";
+  font-family:"comic sans ms";
   font-weight:bold;
   padding:0;
   margin:0;
@@ -142,25 +140,25 @@
   top:263px;
   width:410px;
   height:359px;
-  overflow-y:scroll;
+  overflow:auto;
   text-align:center;
-  font-family:"Chalkboard SE";
+  font-family:"comic sans ms";
   font-size:18px;
-  font-weight:bold;
-  color:#000000;
+  font-weight:normal;
+  color:#000000 !important;
 }
 
 .navrealityTV-thelook-content{
   position:absolute;
   left:540px;
-  top:200px;
+  top:225px;
   width:410px;
   height:395px;
   overflow-y:scroll;
   text-align:center;
-  font-family:"Chalkboard SE";
+  font-family:"comic sans ms";
   font-size:18px;
-  font-weight:bold;
+  font-weight:normal;
   color:#ffffff;
 }
 
@@ -171,14 +169,14 @@
 .navrealityTV-Celebrity-content{
 	position: absolute;
 	left: 348px;
-	top: 209px;
+	top: 190px;
 	width: 346px;
-	height: 359px;
+	height: 370px;
 	overflow-y: scroll;
 	text-align: center;
-	font-family: "Chalkboard SE";
+	font-family: "comic sans ms";
 	font-size: 18px;
-	font-weight: bold;
+	font-weight: normal;
 	color: #000000;
 }
 
@@ -188,15 +186,15 @@
 
 .navrealityTV-whydowewatch-content{
 	position: absolute;
-	left: 430px;
-	top: 80px;
-	width: 346px;
-	height: 290px;
+	left: 408px;
+	top: 85px;
+	width: 360px;
+	height: 284px;
 	overflow-y: scroll;
 	text-align: center;
-	font-family: "Chalkboard SE";
+	font-family: "comic sans ms";
 	font-size: 18px;
-	font-weight: bold;
+	font-weight: normal;
 	color: #000000;
 }
 
@@ -205,29 +203,106 @@
 }
 
 .navrealityTV-content3 {
-  position:absolute;
-  left:59px;
-  top:263px;
-  width:920px;
-  height:160px;
-  overflow-y:scroll;
-  text-align:left;
-  font-family:"Chalkboard SE";
-  font-size:18px;
-  font-weight:bold;
-  color:#000000;
+    position: absolute;
+	left: 98px;
+	top: 251px;
+	width: 830px;
+	height: 145px;
+	overflow: auto;
+	text-align: center;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
 }
 
 .bpcontentrealityTV{
-  width:413px;
-  height:356px;
-  position:absolute;
-  left:550px;
-  top:266px;
-  overflow-y:scroll;
-  font-family:"Chalkboard SE";
-  font-size:18px;
-  font-weight:bold;
-  text-align:left;
-  color:#000000;
+    color: #000000;
+    font-family: "comic sans ms";
+    font-size: 18px;
+    font-weight: normal;
+    height: 356px;
+    left: 550px;
+    overflow-y: auto;
+    position: absolute;
+    text-align: left;
+    top: 266px;
+    width: 413px;
+}
+
+#sub-reality-TV-becoming-reality-TV-celebrity .bptitleholder{
+	width: 920px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 17px;
+	left: 51px;
+}
+
+#sub-reality-TV-becoming-reality-TV-celebrity-the-look .bptitleholder{
+	width: 920px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 185px;
+	left: 255px;
+}
+
+#sub-reality-TV-becoming-reality-TV-celebrity-beyond-fame .bptitleholder, #sub-reality-TV-becoming-reality-TV-celebrity-life-on-show .bptitleholder, #sub-reality-TV-becoming-reality-TV-celebrity-the-story .bptitleholder, #sub-reality-TV-becoming-reality-TV-celebrity-sell-yourself .bptitleholder, #sub-reality-TV-what-is-reality-TV-how-reality-TV-works .bptitleholder {
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 180px;
+	left: 194px;
+}
+
+#sub-reality-TV-what-is-reality-TV-why-people-go-on-reality-shows .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 35px;
+	position: absolute;
+	top: 185px;
+	left: 194px;
+}
+
+#sub-reality-TV-why-do-we-watch-it .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 35px;
+	position: absolute;
+	top: 23px;
+	left: 194px;
+	
+}
+
+#sub-reality-TV .bptitleholder h1, #sub-reality-TV-becoming-reality-TV-celebrity .bptitleholder h1, #sub-reality-TV-becoming-reality-TV-celebrity-the-look .bptitleholder h1, #sub-reality-TV-becoming-reality-TV-celebrity-life-on-show .bptitleholder h1, #sub-reality-TV-becoming-reality-TV-celebrity-the-story .bptitleholder h1, #sub-reality-TV-becoming-reality-TV-celebrity-sell-yourself .bptitleholder h1, #sub-reality-TV-becoming-reality-TV-celebrity-beyond-fame .bptitleholder h1, #sub-reality-TV-what-is-reality-TV .bptitleholder h1, #sub-reality-TV-what-is-reality-TV-how-real-it-is .bptitleholder h1, #sub-reality-TV-what-is-reality-TV-why-people-go-on-reality-shows .bptitleholder h1, #sub-reality-TV-what-is-reality-TV-how-reality-TV-works .bptitleholder h1, #sub-reality-TV-what-is-reality-TV-how-reality-TV-works-Big-Brother .bptitleholder h1, #sub-reality-TV-why-do-we-watch-it .bptitleholder h1, #sub-reality-TV-why-do-we-watch-it-must-see-TV .bptitleholder h1, #sub-reality-TV-why-do-we-watch-it-window-to-the-world .bptitleholder h1, #sub-reality-TV-why-do-we-watch-it-entertainment .bptitleholder h1, #sub-reality-TV-why-do-we-watch-it-did-you-see-it .bptitleholder h1, #sub-reality-TV-why-do-we-watch-it-hanging-out .bptitleholder h1{
+	text-transform: uppercase;
+	color: #ffffff;
+	font-family: "comic sans ms";
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+.navrealityTVbtn1{
+	left: 134px;
+    position: absolute;
+    top: 405px;
+}
+
+.navrealityTVbtn2 {
+    left: 394px;
+    position: absolute;
+    top: 435px;
+}
+.navrealityTVbtn3 {
+    left: 657px;
+    position: absolute;
+    top: 405px;
 }

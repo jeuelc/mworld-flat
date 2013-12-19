@@ -17,7 +17,7 @@
       <div class="navhowlifeworks-content3">
 		<p>Life on Earth varies in size, shape, colour and function.  But if all life started from a common ancestor like a simple cell, how did everything become so different?</p>
 
-		<p>From a single cell to a dinosaur or a bird or an elephant, life underwent a process called evolution.  Evolution is a complex, random process of trial and error.  When an organisms DNA, (the blueprint for how it is made) undergoes mutation and makes a new design, the new design may or might not work.  If the new design works, the organism is likely to survive and be around for a lot longer.  This process is known as natural selection.  
+		<p>From a single cell to a dinosaur or a bird or an elephant, life underwent a process called evolution.  Evolution is a complex, random process of trial and error.  When an organisms DNA, (the blueprint for how it is made) undergoes mutation and makes a new design, the new design may or might not work.  If the new design works, the organism is likely to survive and be around for a lot longer.  This process is known as <a href="#natural" data-rel="popup">natural selection</a>.  
 		</p>
 		<p>These new designs use both the organism's environment and the others they interact with creating for example, near-invisible birds, trickster plants and frozen-alive frogs! </p>
 
@@ -33,7 +33,14 @@
       </div>
       <div class="navevolutionandnaturalselectionbtn3" style="top: 420px;">
         <p><a href="sub-life-and-how-it-works-evolution-and-natural-selection-mutants.html" data-transition="slide"><img src="css/images/9-12/The_Wonders_of_Science/Life_And_How_It_Works/Evolution_And_Natural_Selection/Mutants.png"></a></p>
-      </div>       
+      </div>
+		<div data-role="popup" id="natural" data-position-to="window" data-overlay-theme="a" style="text-align:center;">
+			<div id="node-pop">
+			<p>Natural Selection</p>
+			<p>Natural selection was introduced as part of the theory of evolution by Charles Darwin. Darwin was a natural historian, and first mentioned natural selection in his book 'On the Origin of Species', which was published in 1859.</p>
+			<div>  <div class="defspeaker"  id="natural"> </div></div>
+			</div>
+		</div>	  
       <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/The_Wonders_of_Science/bottomhomewos.png"></a></div>
     </div> <!-- end content -->  
     
@@ -119,5 +126,13 @@
       evolutionandnaturalselectionaudio.pause();
       //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });
+//Definations
+       $( "#natural" ).bind({
+          popupafterclose: function(event, ui) { 
+                   
+           }
+        });
+	//Definations ends here	
+	
   </script>
 </div> <!--//home-->

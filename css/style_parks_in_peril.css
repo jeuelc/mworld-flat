@@ -1,12 +1,23 @@
 /********* Parks In Peril **********/
 
-#sub-parks-in-peril, #sub-parks-in-peril-parks-and-you, #sub-parks-in-peril-reef-rhinos-re-introduction, #sub-parks-in-peril-parks-and-you {
+#sub-parks-in-peril, #sub-parks-in-peril-parks-and-you, #sub-parks-in-peril-reef-rhinos-re-introduction, #sub-parks-in-peril-parks-and-you, #sub-parks-in-peril-parks-and-you-hononrary-rangers,#sub-parks-in-peril-what-is-park-environments, #sub-parks-in-peril-parks-and-you-hack-team, #sub-parks-in-peril-parks-and-you-what-about-my-backyard{
   background:url('images/9-12/The_Natural_World/Parks_In_Peril/Parks_In_Peril_BG.jpg') no-repeat;
   height:748px !important;
   overflow:hidden !important;
   width:1024px !important;
 }
-
+#sub-parks-in-peril-protection{
+  background:url('images/9-12/The_Natural_World/Parks_In_Peril/Protection/Protection_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+#sub-parks-in-peril-what-is-park-what-are-they{
+  background:url('images/9-12/The_Natural_World/Parks_In_Peril/What_Is_A_Park/What_Are_They/Where_Are_They_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
 .plparksperil, .psparksperil, .bparksperil, .fparksperil {
   position:absolute;
   top:670px;
@@ -88,7 +99,7 @@
 .navtitleholderparksperil h1{
 	text-transform: uppercase;
 	color: #FFF;
-	font-family: Chalkboard SE;
+	font-family: comic sans ms;
 	padding: 0;
 	margin: 0;
 	font-weight: bold;
@@ -108,7 +119,7 @@
  {
   text-transform:uppercase;
   color: #FFFFFF;
-  font-family:"Chalkboard SE";
+  font-family:"comic sans ms";
   font-weight:bold;
   padding:0;
   margin:0;
@@ -127,31 +138,83 @@
   font-weight:normal;
   color:#000000 !important;
 }
+
+.navparksperilprotection-content{
+	position: absolute;
+	left: 300px;
+	top: 205px;
+	width: 455px;
+	height: 430px;
+	overflow: auto;
+	text-align: center;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	color: #ffffff !important;
+}
+
 .navparksperil-content p {
   margin-top:0 !important;
 }
 
 .bpcontentparksperil{
-  width:413px;
-  height:356px;
-  position:absolute;
-  left:550px;
-  top:266px;
-  overflow-y:scroll;
-  font-family:"Chalkboard SE";
-  font-size:18px;
-  font-weight:normal;
-  text-align:left;
-  color:#000000;
+	color: #000000;
+    font-family: "comic sans ms";
+    font-size: 18px;
+    font-weight: normal;
+    height: 356px;
+    left: 550px;
+    overflow-y: auto;
+    position: absolute;
+    text-align: left;
+    top: 266px;
+    width: 413px;
 }
 
-#sub-parks-in-peril .bptitleholder h1, #sub-parks-in-peril-parks-and-you .bptitleholder h1, #sub-parks-in-peril-reef-rhinos-re-introduction .bptitleholder h1, #sub-parks-in-peril-parks-and-you .bptitleholder h1{
+#sub-parks-in-peril-what-is-park-what-are-they .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 20px;
+	left: 194px;	
+}
+#sub-parks-in-peril .bptitleholder h1, #sub-parks-in-peril-parks-and-you .bptitleholder h1, #sub-parks-in-peril-reef-rhinos-re-introduction .bptitleholder h1, #sub-parks-in-peril-parks-and-you .bptitleholder h1, #sub-parks-in-peril-protection .bptitleholder h1,#sub-parks-in-peril-what-is-park-what-are-they .bptitleholder h1, #sub-parks-in-peril-parks-and-you-hononrary-rangers .bptitleholder h1,#sub-parks-in-peril-what-is-park-environments .bptitleholder h1, #sub-parks-in-peril-parks-and-you-hack-team .bptitleholder h1, #sub-parks-in-peril-parks-and-you-what-about-my-backyard .bptitleholder h1{
 	text-transform: uppercase;
 	color: #ffffff !important;
 	font-family: "comic sans ms";
 	font-weight: bold;
 	padding: 0;
 	margin: 0;
+}
+#sub-parks-in-peril-what-is-park-environments .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 135px;
+	left: 205px;	
+}
+#sub-parks-in-peril-protection .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 135px;
+	left: 205px;
+}
+
+#sub-parks-in-peril-what-is-park-what-are-they .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 135px;
+	left: 205px;
 }
 
 #sub-parks-in-peril-reef-rhinos-re-introduction .bptitleholder{
@@ -163,7 +226,19 @@
 	top: 145px;
 	left: 194px;
 }
-
+.navparksperilwhatarethey-content{
+	position: absolute;
+	left: 20px;
+	top: 75px;
+	width: 980px;
+	height: 169px;
+	overflow: auto;
+	text-align: center;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
 .navparksperil-content3{
 	position: absolute;
 	left: 98px;

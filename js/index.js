@@ -785,3 +785,11 @@ bgsoundParksInPeril.addEventListener('ended', function() { bgsoundParksInPeril.p
 
 function pauseParksInPeril() { bgsoundParksInPeril.pause() }
 function playsParksInPeril() { bgsoundParksInPeril.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }
+
+/************************ Comets, Asteroids and meteors *******************************/
+var bgsoundcometsasteroidsmeteors = new Audio();
+bgsoundcometsasteroidsmeteors.src = "audio/Commets_Asteroids_Meteors/Commets_Asteroids_Meteors_BG.mp3";
+bgsoundcometsasteroidsmeteors.addEventListener('ended', function() { bgsoundcometsasteroidsmeteors.play(); });
+
+function pausecometsasteroidsmeteors() { bgsoundcometsasteroidsmeteors.pause() }
+function playscometsasteroidsmeteors() { bgsoundcometsasteroidsmeteors.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }

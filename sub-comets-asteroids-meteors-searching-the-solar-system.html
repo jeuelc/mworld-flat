@@ -2,7 +2,7 @@
 <div data-role="page" id="sub-comets-asteroids-meteors-searching-the-solar-system">
   <!-- <script src="js/slidebarnat.js"></script> -->
   <script src="js/slidebar_comets_asteroids_meteors.js"></script>
-  <link rel="stylesheet" href="css/style_cometsasteroidsmeteors.css" />
+  <link rel="stylesheet" href="css/style_comets_asteroids_meteors.css" />
   <div class="menuhousing"></div>
   <div class="homebtnholder"><div class="homebtncometsasteroidsmeteors"></div></div>
   <div class="mpbtnholder"><div class="mpbtncometsasteroidsmeteors"></div></div>
@@ -14,7 +14,7 @@
   <div class="bptitleholder" style="padding-top:14px;"><h1>Searching the Solar System: Dust grains to Small Worlds</h1></div>
   
     <div data-role="content" class="kidzcontent">
-      <div class="navcometsasteroidsmeteors-content">
+      <div class="navcometsasteroidsmeteors-looingup">
 			<p>How do you find these small solar system bodies, orbiting between and beyond the planets? </p>
 
 			<p>How big a telescope and how many millions of dollars do you need? </p>
@@ -26,7 +26,7 @@
         <p><a href="sub-comets-asteroids-meteors-searching-the-solar-system-looking-down.html" data-transition="slide"><img src="css/images/9-12/Space/Comets_Asteroids_Meteors/Searching_The_Solar_System/Looking_Down.png"></a></p>
       </div>
       <div class="navbtn2">
-        <p><a href="sub-comets-asteroids-meteors-searching-the-solar-system-looking-for-visitor.html" data-transition="slide"><img src="css/images/9-12/Space/Comets_Asteroids_Meteors/Searching_The_Solar_System/Looking_For_Visitor.png"></a></p>
+        <p><a href="sub-comets-asteroids-meteors-searching-the-solar-system-looking-for-visitors.html" data-transition="slide"><img src="css/images/9-12/Space/Comets_Asteroids_Meteors/Searching_The_Solar_System/Looking_For_Visitor.png"></a></p>
       </div>
       <div class="navbtn3">
         <p><a href="sub-comets-asteroids-meteors-searching-the-solar-system-looking-further.html" data-transition="slide"><img src="css/images/9-12/Space/Comets_Asteroids_Meteors/Searching_The_Solar_System/Looking_Further.png"></a></p>
@@ -56,7 +56,7 @@
       playing = false;
       paused = true;
       if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-searchingthesolarsystem').html('<audio id="searchingthesolarsystemaudio" controls preload onpause="playscometsasteroidsmeteors()" onplay="pausecometsasteroidsmeteors()"><source src="audio/Comets_Astroids_Metiors/Comets_Asteroids_Meteors.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-searchingthesolarsystem').html('<audio id="searchingthesolarsystemaudio" controls preload onpause="playscometsasteroidsmeteors()" onplay="pausecometsasteroidsmeteors()"><source src="audio/Commets_Asteroids_Meteors/Comets_Asteroids_Meteors.mp3" type="audio/mpeg"></audio>');
       } 
     
       $("#sub-comets-asteroids-meteors-searching-the-solar-system").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
@@ -65,7 +65,7 @@
     $('.homelinkbh').on('tap', function() { bgsoundcometsasteroidsmeteors.pause(); bgsoundcometsasteroidsmeteors.currentTime = 0; mainaudiobg.play(); });
     
     function goBack() {
-      $.mobile.changePage("sub-comets-asteroids-metiors.html", {transition: "slide", reverse: true });
+      $.mobile.changePage("sub-comets-asteroids-meteors.html", {transition: "slide", reverse: true });
       bgsoundcometsasteroidsmeteors.pause(); 
       bgsoundcometsasteroidsmeteors.currentTime = 0;
       spacesoundbg.play();

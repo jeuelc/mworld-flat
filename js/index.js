@@ -793,3 +793,11 @@ bgsoundcometsasteroidsmeteors.addEventListener('ended', function() { bgsoundcome
 
 function pausecometsasteroidsmeteors() { bgsoundcometsasteroidsmeteors.pause() }
 function playscometsasteroidsmeteors() { bgsoundcometsasteroidsmeteors.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }
+
+/************************ Fang... How Animals Eat *******************************/
+var bgsoundFangAnimals = new Audio();
+bgsoundFangAnimals.src = "audio/Fang_How_Animals_Eat/Fang-How-Animals-Eat-BG.mp3";
+bgsoundFangAnimals.addEventListener('ended', function() { bgsoundFangAnimals.play(); });
+
+function pauseFangAnimals() { bgsoundFangAnimals.pause() }
+function playsFangAnimals() { bgsoundFangAnimals.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }

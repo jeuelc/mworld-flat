@@ -2,7 +2,7 @@
 <div data-role="page" id="sub-comets-asteroids-meteors-impact">
   <!-- <script src="js/slidebarnat.js"></script> -->
   <script src="js/slidebar_comets_asteroids_meteors.js"></script>
-  <link rel="stylesheet" href="css/style_cometsasteroidsmeteors.css" />
+  <link rel="stylesheet" href="css/style_comets_asteroids_meteors.css" />
   <div class="menuhousing"></div>
   <div class="homebtnholder"><div class="homebtncometsasteroidsmeteors"></div></div>
   <div class="mpbtnholder"><div class="mpbtncometsasteroidsmeteors"></div></div>
@@ -40,7 +40,7 @@
       playing = false;
       paused = true;
       if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-impact').html('<audio id="impactaudio" controls preload onpause="playscometsasteroidsmeteors()" onplay="pausecometsasteroidsmeteors()"><source src="audio/Comets_Astroids_Metiors/Comets_Asteroids_Meteors.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-impact').html('<audio id="impactaudio" controls preload onpause="playscometsasteroidsmeteors()" onplay="pausecometsasteroidsmeteors()"><source src="audio/Commets_Asteroids_Meteors/Comets_Asteroids_Meteors.mp3" type="audio/mpeg"></audio>');
       } 
     
       $("#sub-comets-asteroids-meteors-impact").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
@@ -49,7 +49,7 @@
     $('.homelinkbh').on('tap', function() { bgsoundcometsasteroidsmeteors.pause(); bgsoundcometsasteroidsmeteors.currentTime = 0; mainaudiobg.play(); });
     
     function goBack() {
-      $.mobile.changePage("sub-comets-astroids-metiors.html", {transition: "slide", reverse: true });
+      $.mobile.changePage("sub-comets-asteroids-metiors.html", {transition: "slide", reverse: true });
       bgsoundcometsasteroidsmeteors.pause(); 
       bgsoundcometsasteroidsmeteors.currentTime = 0;
       spacesoundbg.play();

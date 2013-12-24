@@ -22,16 +22,16 @@
       </div>
         
       <div class="navbtn1">
-        <p><a href="sub-comets-asteroids-meteors-searching-the-solar-system-looking-down.html" data-transition="slide"><img src="css/images/9-12/Space/Comets_Asteroids_Meteors/Visiting_Small_Worlds/"></a></p>
+        <p><a href="sub-comets-asteroids-meteors-visiting-small-worlds-asteroids-and-astronauts.html" data-transition="slide"><img src="css/images/9-12/Space/Comets_Asteroids_Meteors/Visiting_Small_Worlds/Button_4.png"></a></p>
       </div>
       <div class="navbtn2">
-        <p><a href="sub-comets-asteroids-meteors-searching-the-solar-system-looking-for-visitor.html" data-transition="slide"><img src="css/images/9-12/Space/Comets_Asteroids_Meteors/Visiting_Small_Worlds/"></a></p>
+        <p><a href="sub-comets-asteroids-meteors-visiting-small-worlds-first-look.html" data-transition="slide"><img src="css/images/9-12/Space/Comets_Asteroids_Meteors/Visiting_Small_Worlds/Button_1.png"></a></p>
       </div>
       <div class="navbtn3">
-        <p><a href="sub-comets-asteroids-meteors-searching-the-solar-system-looking-further.html" data-transition="slide"><img src="css/images/9-12/Space/Comets_Asteroids_Meteors/Visiting_Small_Worlds/"></a></p>
+        <p><a href="sub-comets-asteroids-meteors-visiting-small-worlds-getting-closer.html" data-transition="slide"><img src="css/images/9-12/Space/Comets_Asteroids_Meteors/Visiting_Small_Worlds/Button_3.png"></a></p>
       </div>
       <div class="navbtn4">
-        <p><a href="sub-comets-asteroids-meteors-searching-the-solar-system-looking-up.html" data-transition="slide"><img src="css/images/9-12/Space/Comets_Asteroids_Meteors/Visiting_Small_Worlds/"></a></p>
+        <p><a href="sub-comets-asteroids-meteors-visiting-small-worlds-halleys-comet.html" data-transition="slide"><img src="css/images/9-12/Space/Comets_Asteroids_Meteors/Visiting_Small_Worlds/Button_2.png"></a></p>
       </div>
         
       <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Space/bottomhomesp.png"></a></div>
@@ -55,7 +55,7 @@
       playing = false;
       paused = true;
       if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-visitingsmallworlds').html('<audio id="visitingsmallworldsaudio" controls preload onpause="playscometsasteroidsmeteors()" onplay="pausecometsasteroidsmeteors()"><source src="audio/Commets_Asteroids_Meteors/Comets_Asteroids_Meteors.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-visitingsmallworlds').html('<audio id="visitingsmallworldsaudio" controls preload onpause="playscometsasteroidsmeteors()" onplay="pausecometsasteroidsmeteors()"><source src="audio/Commets_Asteroids_Meteors/Visiting_Small_Worlds.mp3" type="audio/mpeg"></audio>');
       } 
     
       $("#sub-comets-asteroids-meteors-visiting-small-worlds").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
@@ -64,7 +64,7 @@
     $('.homelinkbh').on('tap', function() { bgsoundcometsasteroidsmeteors.pause(); bgsoundcometsasteroidsmeteors.currentTime = 0; mainaudiobg.play(); });
     
     function goBack() {
-      $.mobile.changePage("sub-comets-asteroids-metiors.html", {transition: "slide", reverse: true });
+      $.mobile.changePage("sub-comets-asteroids-meteors.html", {transition: "slide", reverse: true });
       bgsoundcometsasteroidsmeteors.pause(); 
       bgsoundcometsasteroidsmeteors.currentTime = 0;
       spacesoundbg.play();

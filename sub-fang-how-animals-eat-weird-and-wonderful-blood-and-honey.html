@@ -11,11 +11,9 @@
   <div class="menubtnholder"><div class="menubtnFangAnimals"></div></div>
   
   <div class="bptitleholder" style="padding-top:14px;"><h1></h1></div>
-  <div id="eatpoolink" style="position: absolute;left: 128px;top: 200px;width: 217px;height: 205px;"></div>
-  <div id="spitlink" style="position: absolute;left: 410px;top: 192px;width: 232px;height: 210px;"></div>
-  <div id="spearlink" style="position: absolute;left: 690px;top: 195px;width: 193px;height: 212px;"></div>
-  <div id="bloodlink" style="position: absolute;left: 320px;top: 429px;width: 233px;height: 230px;"></div>
-  <div id="stomachslink" style="position: absolute;left: 591px;top: 434px;width: 239px;height: 227px;"></div>
+  <div id="batlink" style="position: absolute;left: 40px;top: 149px;width: 110px;height: 105px;"></div>
+  <div id="mozzielink" style="position: absolute;left: 48px;top: 340px;width: 115px;height: 100px;"></div>
+  <div id="butterflylink" style="position: absolute;left: 320px;top: 540px;width: 120px;height: 112px;"></div>
   <div data-role="content" class="kidzcontent">
 	<div class="bpcontentFangAnimals-blood">
         <p>Can you imagine only ever eating through a straw?  Maybe you've had a sore tooth and not been allowed to chew food, so would know what it's like.  But there are many animals that only feed on liquids.</p>
@@ -36,6 +34,30 @@
     <div class="fFangAnimals"><div class="fwFangAnimals" id="BloodHoneyaudiofbtn"></div></div>
     <div id="actualaudio-BloodHoney" style="visibility:hidden;"></div>
   <!--</div>-->
+  <!-- Video embedding -->
+  
+  <div id="watchBatVideo" style="width:1024px;height:748px;position:absolute;left:0px;top:0px;visibility:hidden;background:#000000;z-index:-1;">
+    <video id="watchBat" width="1024" height="748" preload>
+      <source src="css/images/9-12/Animals/Fang_How_Animals_Eat/Weird_And_Wonderful/Blood_And_Honey/Bat.mpg" type="video/mp4">
+    </video>
+  </div>
+  
+  <div id="watchMozzieVideo" style="width:1024px;height:748px;position:absolute;left:0px;top:0px;visibility:hidden;background:#000000;z-index:-1;">
+    <video id="watchMozzie" width="1024" height="748" preload>
+      <source src="css/images/9-12/Animals/Fang_How_Animals_Eat/Weird_And_Wonderful/Blood_And_Honey/Mozzie.mpg" type="video/mp4">
+    </video>
+  </div>
+  
+  <div id="watchButterflyVideo" style="width:1024px;height:748px;position:absolute;left:0px;top:0px;visibility:hidden;background:#000000;z-index:-1;">
+    <video id="watchButterfly" width="1024" height="748" preload>
+      <source src="css/images/9-12/Animals/Fang_How_Animals_Eat/Weird_And_Wonderful/Blood_And_Honey/Butterfly.mpg" type="video/mp4">
+    </video>
+  </div>
+  
+  
+  <!-- --------------- -->
+  
+  
   <script>
   // sound setup is in home.html and index.js
     sound = new Audio(); // 'sound' is now an audio object
@@ -44,6 +66,10 @@
     (function() {
       playing = false;
       paused = true;
+	  $('#watchBatVideo').css({"visibility":"hidden", "z-index":-10});
+	  $('#watchMozzieVideo').css({"visibility":"hidden", "z-index":-10});
+	  $('#watchButterflyVideo').css({"visibility":"hidden", "z-index":-10});
+	  
       if(sound.canPlayType('audio/mpeg')) {
         $('#actualaudio-BloodHoney').html('<audio id="BloodHoneyaudio" controls preload onpause="playsFangAnimals()" onplay="pauseFangAnimals()"><source src="audio/Fang_How_Animals_Eat/Blood_And_Money.mp3" type="audio/mpeg"></audio>');
       } 
@@ -51,27 +77,70 @@
       $("#sub-fang-how-animals-eat-weird-and-wonderful-blood-and-honey").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     })();
     
-	$('#eatpoolink').on('tap', function() {
-      $.mobile.changePage("sub-fang-how-animals-eat-weird-and-wonderful-blood-and-honey-eat-your-own-poo.html", {transition: "slide"});
+	  watchBat.addEventListener('ended', function() { 
+        $("#watchBatVideo").css({"visibility":"hidden", "z-index":-1});
+        $("#watchBat").css({"z-index":-1});
+        bgsoundFangAnimals.play(); 
+      });
+    
+      $("#watchBat").on('tap', function() {
+        $("#watchBatVideo").css({"visibility":"hidden", "z-index":-1});
+        $("#watchBat").css({"z-index":-1});
+        bgsoundFangAnimals.play();
+        watchBat.pause();
+        watchBat.currentTime = 0;
+      });
+	  
+	  watchMozzie.addEventListener('ended', function() { 
+        $("#watchMozzieVideo").css({"visibility":"hidden", "z-index":-1});
+        $("#watchMozzie").css({"z-index":-1});
+        bgsoundFangAnimals.play(); 
+      });
+    
+      $("#watchMozzie").on('tap', function() {
+        $("#watchMozzieVideo").css({"visibility":"hidden", "z-index":-1});
+        $("#watchMozzie").css({"z-index":-1});
+        bgsoundFangAnimals.play();
+        watchMozzie.pause();
+        watchMozzie.currentTime = 0;
+      });
+	  
+	  watchButterfly.addEventListener('ended', function() { 
+        $("#watchButterflyVideo").css({"visibility":"hidden", "z-index":-1});
+        $("#watchButterfly").css({"z-index":-1});
+        bgsoundFangAnimals.play(); 
+      });
+    
+      $("#watchButterfly").on('tap', function() {
+        $("#watchButterflyVideo").css({"visibility":"hidden", "z-index":-1});
+        $("#watchButterfly").css({"z-index":-1});
+        bgsoundFangAnimals.play();
+        watchButterfly.pause();
+        watchButterfly.currentTime = 0;
+      });
+	
+	$('#batlink').on('tap', function() {
+      $("#watchBatVideo").css({"visibility":"visible", "z-index":10});
+      $("#watchBat").css({"z-index":9});
+      bgsoundvol.pause();
+      watchBat.play();
     });
     
-    $('#spitlink').on('tap', function() {
-      $.mobile.changePage("sub-fang-how-animals-eat-weird-and-wonderful-blood-and-honey-spit-on-food.html", {transition: "slide"});
+    $('#mozzielink').on('tap', function() {
+      $("#watchMozzieVideo").css({"visibility":"visible", "z-index":10});
+      $("#watchMozzie").css({"z-index":9});
+      bgsoundvol.pause();
+      watchMozzie.play();
     });
     
-    $('#spearlink').on('tap', function() {
-      $.mobile.changePage("sub-fang-how-animals-eat-weird-and-wonderful-blood-and-honey-spear-time.html", {transition: "slide"});
+    $('#butterflylink').on('tap', function() {
+      $("#watchButterflyVideo").css({"visibility":"visible", "z-index":10});
+      $("#watchButterfly").css({"z-index":9});
+      bgsoundvol.pause();
+      watchButterfly.play();
     });
 	
-	$('#bloodlink').on('tap', function() {
-      $.mobile.changePage("sub-fang-how-animals-eat-weird-and-wonderful-blood-and-honey-blood-and-honey.html", {transition: "slide"});
-    });
-	
-	$('#stomachslink').on('tap', function() {
-      $.mobile.changePage("sub-fang-how-animals-eat-weird-and-wonderful-blood-and-honey-stomachs-stones-starfish-snakes.html", {transition: "slide"});
-    });
-	
-    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundFangAnimals.pause(); bgsoundFangAnimals.currentTime = 0;});
+	$('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundFangAnimals.pause(); bgsoundFangAnimals.currentTime = 0;});
     
     function goBack() {
       $.mobile.changePage("sub-fang-how-animals-eat-weird-and-wonderful.html", {transition: "slide", reverse: true });

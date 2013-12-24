@@ -18,7 +18,27 @@
 		<p>Not every asteroid or comet burns up high above the Earth.  Some plunge through the atmosphere, explosively releasing vast amounts of energy as they burn up.</p> 
 
 		<p>A few even slam into the surface of the Earth, producing craters.  Some of these craters are enormous!  Tap the buttons to find out more!</p>
-      </div>     
+      </div>
+		<div class="impact_craters">
+			
+		</div>
+		<div class="impact_near_misses">
+		</div>
+
+		<div class="impact_death_of_the_dinosaurs">
+		</div>
+		<div class="impact_tunguska">
+		</div>
+		<div class="impact_sudan">
+		</div>	
+		<div class="impact_comet_crash">
+		</div>
+
+		<div class="impact_chelyabinsk">
+		</div>
+		<div class="impact_defence">
+		</div>
+	  
       <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Space/bottomhomesp.png"></a></div>
     </div> <!-- end content -->  
     
@@ -40,7 +60,7 @@
       playing = false;
       paused = true;
       if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-impact').html('<audio id="impactaudio" controls preload onpause="playscometsasteroidsmeteors()" onplay="pausecometsasteroidsmeteors()"><source src="audio/Commets_Asteroids_Meteors/Comets_Asteroids_Meteors.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-impact').html('<audio id="impactaudio" controls preload onpause="playscometsasteroidsmeteors()" onplay="pausecometsasteroidsmeteors()"><source src="audio/Commets_Asteroids_Meteors/Craters.mp3" type="audio/mpeg"></audio>');
       } 
     
       $("#sub-comets-asteroids-meteors-impact").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
@@ -48,8 +68,32 @@
     
     $('.homelinkbh').on('tap', function() { bgsoundcometsasteroidsmeteors.pause(); bgsoundcometsasteroidsmeteors.currentTime = 0; mainaudiobg.play(); });
     
+	$('.impact_craters').on('tap', function() { 
+		$.mobile.changePage("sub-comets-asteroids-meteors-impact-craters.html", {transition: "slide", reverse: true });
+	});
+	$('.impact_near_misses').on('tap', function() { 
+		$.mobile.changePage("sub-comets-asteroids-meteors-impact-chelyabinsk-near-misses.html", {transition: "slide", reverse: true });
+	});
+	$('.impact_death_of_the_dinosaurs').on('tap', function() { 
+		$.mobile.changePage("sub-comets-asteroids-meteors-impact-death-of-the-dinosaurs.html", {transition: "slide", reverse: true });
+	});
+	$('.impact_tunguska').on('tap', function() { 
+		$.mobile.changePage("sub-comets-asteroids-meteors-impact-tunguska.html", {transition: "slide", reverse: true });
+	});
+	$('.impact_sudan').on('tap', function() { 
+		$.mobile.changePage("sub-comets-asteroids-meteors-impact-sudan.html", {transition: "slide", reverse: true });
+	});
+	$('.impact_comet_crash').on('tap', function() { 
+		$.mobile.changePage("sub-comets-asteroids-meteors-impact-tunguska-comet-crash.html", {transition: "slide", reverse: true });
+	});
+	$('.impact_chelyabinsk').on('tap', function() { 
+		$.mobile.changePage("sub-comets-asteroids-meteors-impact-chelyabinsk.html", {transition: "slide", reverse: true });
+	});
+	$('.impact_defence').on('tap', function() { 
+		$.mobile.changePage("sub-comets-asteroids-meteors-impact-defence.html", {transition: "slide", reverse: true });
+	});	
     function goBack() {
-      $.mobile.changePage("sub-comets-asteroids-metiors.html", {transition: "slide", reverse: true });
+      $.mobile.changePage("sub-comets-asteroids-meteors.html", {transition: "slide", reverse: true });
       bgsoundcometsasteroidsmeteors.pause(); 
       bgsoundcometsasteroidsmeteors.currentTime = 0;
       spacesoundbg.play();

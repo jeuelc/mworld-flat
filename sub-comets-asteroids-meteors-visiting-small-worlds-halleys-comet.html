@@ -1,0 +1,113 @@
+<!-- i-C-a -->
+<div data-role="page" id="sub-comets-asteroids-meteors-visiting-small-worlds-halleys-comet">
+  <!-- <script src="js/slidebarnat.js"></script> -->
+  <script src="js/slidebar_comets_asteroids_meteors.js"></script>
+  <link rel="stylesheet" href="css/style_comets_asteroids_meteors.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtncometsasteroidsmeteors"></div></div>
+  <div class="mpbtnholder"><div class="mpbtncometsasteroidsmeteors"></div></div>
+  <div class="cpbtnholder"><div class="cpbtncometsasteroidsmeteors"></div></div>
+  <div class="infobtnholder"><div class="infobtncometsasteroidsmeteors"></div></div>
+  <div class="credsbtnholder"><div class="credsbtncometsasteroidsmeteors"></div></div>
+  <div class="menubtnholder"><div class="menubtncometsasteroidsmeteors"></div></div>
+  
+  <div class="bptitleholder" style="padding-top:14px;"><h1>Halley's Comet</h1></div>
+  
+    <div data-role="content" class="kidzcontent">
+      <div class="navcometsasteroidsmeteors-halleyscomet">
+		<p>In 1986, Halley's Comet returned to the inner solar system.  Three spacecraft flew towards it, to provide our first close look at a comet.  Would comets really prove to be dirty snowballs?</p>
+
+		<p>The Soviet Union sent two Vega spacecraft.  These revealed that the nucleus (or solid part of the comet) was a tumbling 'potato' roughly 10 kilometres across, with gas and dust streaming from spots where the ice of the comet was boiling away.</p>
+
+		<p>The European Giotto spacecraft went even closer, passing through the tail of the comet and flying within 600 kilometres of the main snowball!  The spacecraft was travelling at 50 kilometres per second, so it needed a shield to protect it from halleyscomets with the small particles being shed by the comet.  The shield had a metal plate to shatter dust and a special fabric layer to catch the debris. </p>
+
+		<p>Giotto took the most detailed images we have of Halley's Comet, before two dust halleyscomets sent the Giotto spacecraft tumbling and destroyed its camera.  The photos that it sent back to Earth revealed that comets really are giant dirty snowballs, as Fred Whipple had predicted decades earlier.</p> 
+
+		<p>Halley's Comet is one of the dirtiest snowballs found so far!  Just 4% of the sun's light is reflected from its black and carbon-rich surface.</p>
+      </div>     
+      <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Space/bottomhomesp.png"></a></div>
+    </div> <!-- end content -->  
+    
+  
+  <!--<div class="audiopanel">-->
+    <!-- images are in slidebarnat.js -->
+    <div class="micbtnholder"><div class="micbtncometsasteroidsmeteors" id="playstophalleyscomet"></div></div>
+    <div class="bcometsasteroidsmeteors"><div class="rwcometsasteroidsmeteors" id="halleyscometaudiobbtn"></div></div>
+    <div class="plcometsasteroidsmeteors"><div class="plpscometsasteroidsmeteors" id="halleyscometaudioplbtn"></div></div>
+    <div class="fcometsasteroidsmeteors"><div class="fwcometsasteroidsmeteors" id="halleyscometaudiofbtn"></div></div>
+    <div id="actualaudio-halleyscomet" style="visibility:hidden;"></div>
+  <!--</div>-->
+  <script>
+  // sound setup is in home.html and index.js
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    var paused;
+    (function() {
+      playing = false;
+      paused = true;
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-halleyscomet').html('<audio id="halleyscometaudio" controls preload onpause="playscometsasteroidsmeteors()" onplay="pausecometsasteroidsmeteors()"><source src="audio/Commets_Asteroids_Meteors/Halleys_Comet.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#sub-comets-asteroids-meteors-visiting-small-worlds-halleys-comet").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+    $('.homelinkbh').on('tap', function() { bgsoundcometsasteroidsmeteors.pause(); bgsoundcometsasteroidsmeteors.currentTime = 0; mainaudiobg.play(); });
+    
+    function goBack() {
+      $.mobile.changePage("sub-comets-asteroids-meteors-visiting-small-worlds.html", {transition: "slide", reverse: true });
+      bgsoundcometsasteroidsmeteors.pause(); 
+      bgsoundcometsasteroidsmeteors.currentTime = 0;
+      spacesoundbg.play();
+    }
+    function playscometsasteroidsmeteors() {
+         bgsoundcometsasteroidsmeteors.play();
+    }
+       
+    function pausecometsasteroidsmeteors() {
+         bgsoundcometsasteroidsmeteors.pause();
+    }
+    /* ******************** */
+    /* this is the microphone button */
+	
+    $("#playstophalleyscomet").on('tap', function() {
+      if(!playing) {
+        halleyscometaudio.play();
+        $('.micbtncometsasteroidsmeteors').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        halleyscometaudio.pause(); halleyscometaudio.currentTime = 0;
+        $('.micbtncometsasteroidsmeteors').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#halleyscometaudioplbtn").on('tap', function() {
+      if(!paused) {
+        halleyscometaudio.pause();
+        paused = true;
+      } else {
+        halleyscometaudio.play();
+        paused = false;
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+    
+    $("#halleyscometaudiofbtn").on('tap', function() {
+      var ctime = halleyscometaudio.currentTime;
+      halleyscometaudio.currentTime = ctime + 10;
+    });
+    
+    $("#halleyscometaudiobbtn").on('tap', function() {
+      var ctime = halleyscometaudio.currentTime;
+      halleyscometaudio.currentTime = ctime - 10;
+    });
+    
+    $("#cometsasteroidsmeteorsaudiopsbtnpsbtn").on('tap', function() {
+      halleyscometaudio.pause();
+      //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+  </script>
+</div> <!--//home-->

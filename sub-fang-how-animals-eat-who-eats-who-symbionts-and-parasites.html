@@ -17,11 +17,11 @@
     <div data-role="content" class="kidzcontent">
       <div class="v-spacer"></div>
       <div class="sidebarleft-half">
-        <a id="algaelink" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Animals/Fang_How_Animals_Eat/Who_Eats_Who/Symbionts_And_Parasites/Algae_Hi_Res.jpg', 'A field of mushroom leather corals on a reef in the western Pacific Ocean - they have symbiotic relationships with algae that live in the coral!');">click here</a>
+        <a id="rabbitlink" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Animals/Fang_How_Animals_Eat/Who_Eats_Who/Symbionts_And_Parasites/Algae_Hi_Res.jpg', 'A field of mushroom leather corals on a reef in the western Pacific Ocean - they have symbiotic relationships with algae that live in the coral!');">click here</a>
 		
-		<a id="tapewormlink" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Animals/Fang_How_Animals_Eat/Who_Eats_Who/Symbionts_And_Parasites/Tapeworm_Hi_Res.jpg', 'This is an image of a tapeworm INSIDE a human\'s intestine...yuck!');">click here</a>
-        
-        <div id="f1_container" style="visibility:hidden;position:absolute;left:100px;top:270px;">
+		<a id="grasslink" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Animals/Fang_How_Animals_Eat/Who_Eats_Who/Symbionts_And_Parasites/Tapeworm_Hi_Res.jpg', 'This is an image of a tapeworm INSIDE a human\'s intestine...yuck!');">click here</a>
+		
+		<div id="f1_container" style="visibility:hidden;position:absolute;left:100px;top:270px;">
           <div id="f1_card">
             <div class="front face">
               <img id="dopple" src="css/images/9-12/Animals/Fang_How_Animals_Eat/Who_Eats_Who/Symbionts_And_Parasites/Meats_Eaters.png">
@@ -49,7 +49,7 @@
       <div class="bpcontentFangAnimals">
         <p>Catching your own food can be hard work, so there are animals that form partnerships with others  one supplies the food, the other makes the home and provides protection.  For example, little plant-like algae can live inside the bodies of corals and sponges that live in the Great Barrier Reef in Australia.  They get along very well, and each couldn't survive without the other - we call these 'symbionts'.</p>
 		<p>But sometimes animals steal food.  Parasites can live inside another animal's body or stomach, taking food from its host!  Of course the host doesn't like this and will try to defend itself, but parasites are experts at getting away with it.  A really successful parasite doesn't take too much food because if the host dies so might the parasite!</p>
-	  </div>
+      </div>
        
       <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Animals/bottomhomeani.png"></a></div>
     </div> <!-- end content -->  
@@ -62,16 +62,6 @@
     <div id="actualaudio-symbionts" style="visibility:hidden;"></div>
   <!-- </div> -->
   
-  <!-- ----------------------- Video embedding --------------------------- -->
-  
-	<div id="watchLavaFlowholder" style="width:1024px;height:748px;position:absolute;left:0px;top:0px;visibility:hidden;background:#000000;z-index:-1;">
-    <video id="watchLavaFlow" width="1024" height="748" preload>
-      <source src="css/images/9-12/The_Natural_World/Volcanoes/Rumbling_From_The_Deep/Huff_and_Puff_Vs_Flow/View_From_Super_Fast_Train .mpg" type="video/mp4">
-    </video>
-  </div>
-  
-  <!-- ------------------------------------------------------------------ -->
-  
   <script>
   // sound setup is in home.html and index.js
     sound = new Audio(); // 'sound' is now an audio object
@@ -81,33 +71,17 @@
     (function() {
       playing = false;
       paused = true;
-      $('div#pol1').css("z-index", 2);
       $('div#pol2').css("z-index", 1);
+      $('div#pol1').css("z-index", 2);
       $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
-      $('#watchLavaFlowholder').css({"visibility":"hidden", "z-index":-10});		
       $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
       $('div#pol3 > img').css("-webkit-transform", "rotate(-3deg)");
-      
       if(sound.canPlayType('audio/mpeg')) {
         $('#actualaudio-symbionts').html('<audio id="symbiontsaudio" controls preload onpause="playsFangAnimals()" onplay="pauseFangAnimals()"><source src="audio/Fang_How_Animals_Eat/Symbionts_And_Parasites.mp3" type="audio/mpeg"></audio>');
       }             
       $("#sub-fang-how-animals-eat-who-eats-who-symbionts-and-parasites").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     })();
     
-	  watchLavaFlow.addEventListener('ended', function() { 
-        $("#watchLavaFlowholder").css({"visibility":"hidden", "z-index":-1});
-        $("#watchLavaFlow").css({"z-index":-1});
-        bgsoundvol.play(); 
-      });
-    
-      $("#watchLavaFlow").on('tap', function() {
-        $("#watchLavaFlowholder").css({"visibility":"hidden", "z-index":-1});
-        $("#watchLavaFlow").css({"z-index":-1});
-        bgsoundvol.play();
-        watchLavaFlow.pause();
-        watchLavaFlow.currentTime = 0;
-      });
-	  
     $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundFangAnimals.pause(); bgsoundFangAnimals.currentTime = 0;});
 	
     $('#falseans').on('tap', function() {
@@ -123,12 +97,12 @@
       $('#f1_card').css({"-o-transform": "rotateY(0deg)"});
       $('#f1_card').css({"transform": "rotateY(0deg)"});
       setTimeout(function() {
-        $("#pol2").css({"visibility":"visible", "z-index":4});
+        $("#pol1").css({"visibility":"visible", "z-index":4});
         $('#f1_container').css({"visibility":"hidden", "z-index":0});
       }, 1000);
     });
     
-	$("#pol1").on('tap', function(){
+    $("#pol1").on('tap', function() {
       $('#f1_container').css({"visibility":"visible", "z-index":10});
       $(this).css({"visibility":"hidden"});
       $('#f1_card').css({"-webkit-transform": "rotateY(180deg)"});
@@ -136,18 +110,20 @@
       $('#f1_card').css({"-o-transform": "rotateY(180deg)"});
       $('#f1_card').css({"transform": "rotateY(180deg)"});
     });
-	$("#pol2").on('tap', function() {
-      $('#algaelink')[0].click();
+	
+    $("#pol2").on('tap', function() {
+      $('#rabbitlink')[0].click();
     });
-    $("#pol3").on('tap', function() {
-      $('#tapewormlink')[0].click();
+	
+	$("#pol3").on('tap', function() {
+      $('#grasslink')[0].click();
     });
     
     function goBack() {
-      $.mobile.changePage("sub-fang-how-animals-eat-who-eats-who.html", {transition: "slide", reverse: true });
+      $.mobile.changePage("sub-fang-how-animals-eat-weird-and-wonderful.html", {transition: "slide", reverse: true });
     }
     
-	function playsFangAnimals() {
+    function playsFangAnimals() {
          bgsoundFangAnimals.play();
     }
        

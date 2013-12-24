@@ -1,7 +1,28 @@
 /********* Parks In Peril **********/
 
-#sub-fang-how-animals-eat, #sub-fang-how-animals-eat-who-eats-who, #sub-fang-how-animals-eat-who-eats-who-carnivores, #sub-fang-how-animals-eat-who-eats-who-herbivores, #sub-fang-how-animals-eat-who-eats-who-symbionts-and-parasites {
+#sub-fang-how-animals-eat, #sub-fang-how-animals-eat-who-eats-who, #sub-fang-how-animals-eat-who-eats-who-carnivores, #sub-fang-how-animals-eat-who-eats-who-herbivores, #sub-fang-how-animals-eat-who-eats-who-symbionts-and-parasites, #sub-fang-how-animals-eat-weird-and-wonderful-eat-your-own-poo, #sub-fang-how-animals-eat-weird-and-wonderful-spear-time, #sub-fang-how-animals-eat-weird-and-wonderful-stomachs-stones-starfish-snakes, #sub-fang-how-animals-eat-you-are-what-you-eat-dinner-or-your-life, #sub-fang-how-animals-eat-you-are-what-you-eat-how-big-can-I-get, #sub-fang-how-animals-eat-you-are-what-you-eat-teeth-or-not, #sub-fang-how-animals-eat-you-are-what-you-eat-teeth-or-not-Bite-Force, #sub-fang-how-animals-eat-you-are-what-you-eat-us-and-eating {
   background:url('images/9-12/Animals/Fang_How_Animals_Eat/Fang-How-Animals-Eat-BG.png') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+#sub-fang-how-animals-eat-you-are-what-you-eat-friends-or-no-friends{
+  background:url('images/9-12/Animals/Fang_How_Animals_Eat/you_Are_What_You_Eat/Friends_Or_No_Friends/Friends_Or_No_Friends_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+#sub-fang-how-animals-eat-you-are-what-you-eat{
+  background:url('images/9-12/Animals/Fang_How_Animals_Eat/you_Are_What_You_Eat/You_Are_What_You_Eat_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+#sub-fang-how-animals-eat-weird-and-wonderful-spit-on-food{
+  background:url('images/9-12/Animals/Fang_How_Animals_Eat/Weird_And_Wonderful/Spit_On_Your_Food/Spit_On_Your_Food_BG.jpg') no-repeat;
   height:748px !important;
   overflow:hidden !important;
   width:1024px !important;
@@ -209,6 +230,20 @@
 	color: #000000;
 }
 
+.bpcontentFangAnimals-whatyoueat{
+	width: 870px;
+	height: 160px;
+	position: absolute;
+	left: 80px;
+	top: 75px;
+	overflow: auto;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	text-align: left;
+	color: #000000;
+}
+
 .bpcontentFangAnimals-blood{
 	width: 433px;
 	height: 539px;
@@ -222,9 +257,47 @@
 	text-align: left;
 	color: #000000;
 }
-#sub-fang-how-animals-eat .bptitleholder h1, #sub-fang-how-animals-eat-who-eats-who .bptitleholder h1, #sub-fang-how-animals-eat-who-eats-who-carnivores .bptitleholder h1, #sub-fang-how-animals-eat-who-eats-who-herbivores .bptitleholder h1, #sub-fang-how-animals-eat-who-eats-who-symbionts-and-parasites .bptitleholder h1, #sub-fang-how-animals-eat-who-eats-who-dirt-and-floating-bits .bptitleholder h1, #sub-fang-how-animals-eat-weird-and-wonderful-blood-and-honey .bptitleholder h1{
+
+.bpcontentFangAnimals-food{
+	width: 371px;
+	height: 560px;
+	position: absolute;
+	left: 586px;
+	top: 101px;
+	overflow: auto;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	text-align: left;
+	color: #000000;
+}
+
+.bpcontentFangAnimals-friends{
+	width: 371px;
+	height: 560px;
+	position: absolute;
+	left: 544px;
+	top: 101px;
+	overflow: auto;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	text-align: left;
+	color: #000000;
+}
+
+#sub-fang-how-animals-eat .bptitleholder h1, #sub-fang-how-animals-eat-who-eats-who .bptitleholder h1, #sub-fang-how-animals-eat-who-eats-who-carnivores .bptitleholder h1, #sub-fang-how-animals-eat-who-eats-who-herbivores .bptitleholder h1, #sub-fang-how-animals-eat-who-eats-who-symbionts-and-parasites .bptitleholder h1, #sub-fang-how-animals-eat-who-eats-who-dirt-and-floating-bits .bptitleholder h1, #sub-fang-how-animals-eat-weird-and-wonderful-blood-and-honey .bptitleholder h1, #sub-fang-how-animals-eat-weird-and-wonderful-eat-your-own-poo .bptitleholder h1, #sub-fang-how-animals-eat-weird-and-wonderful-spear-time .bptitleholder h1, #sub-fang-how-animals-eat-weird-and-wonderful-stomachs-stones-starfish-snakes .bptitleholder h1, #sub-fang-how-animals-eat-you-are-what-you-eat-dinner-or-your-life .bptitleholder h1, #sub-fang-how-animals-eat-you-are-what-you-eat-how-big-can-I-get .bptitleholder h1, #sub-fang-how-animals-eat-you-are-what-you-eat-teeth-or-not .bptitleholder h1, #sub-fang-how-animals-eat-you-are-what-you-eat-teeth-or-not-Bite-Force .bptitleholder h1, #sub-fang-how-animals-eat-you-are-what-you-eat-us-and-eating .bptitleholder h1{
 	text-transform: uppercase;
 	color: #ffffff !important;
+	font-family: "comic sans ms";
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+#sub-fang-how-animals-eat-you-are-what-you-eat .bptitleholder h1{
+	text-transform: uppercase;
+	color: #000000 !important;
 	font-family: "comic sans ms";
 	font-weight: bold;
 	padding: 0;
@@ -240,6 +313,16 @@
 	margin: 0;
 }
 
+#sub-fang-how-animals-eat-you-are-what-you-eat .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 15px;
+	left: 194px;
+}
+
 #sub-fang-how-animals-eat-weird-and-wonderful .bptitleholder {
 	width: 627px;
 	height: 68px;
@@ -247,5 +330,15 @@
 	line-height: 28px;
 	position: absolute;
 	top: 15px;
+	left: 194px;
+}
+
+#sub-fang-how-animals-eat-weird-and-wonderful-stomachs-stones-starfish-snakes .bptitleholder {
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 35px;
+	position: absolute;
+	top: 160px;
 	left: 194px;
 }

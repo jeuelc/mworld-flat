@@ -1,0 +1,154 @@
+<!-- i-C-a -->
+<div data-role="page" id="sub-comets-asteroids-meteors-small-worlds-planetary-building-blocks">
+  <!-- <script src="js/slidebarnat.js"></script> -->
+  <script src="js/slidebar_comets_asteroids_meteors.js"></script>
+  <script src="js/hammer.js"></script>
+  <script src="js/jquery.hammer.js"></script>    
+  <link rel="stylesheet" href="css/style_comets_asteroids_meteors.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtncometsasteroidsmeteors"></div></div>
+  <div class="mpbtnholder"><div class="mpbtncometsasteroidsmeteors"></div></div>
+  <div class="cpbtnholder"><div class="cpbtncometsasteroidsmeteors"></div></div>
+  <div class="infobtnholder"><div class="infobtncometsasteroidsmeteors"></div></div>
+  <div class="credsbtnholder"><div class="credsbtncometsasteroidsmeteors"></div></div>
+  <div class="menubtnholder"><div class="menubtncometsasteroidsmeteors"></div></div>
+  <div class="bptitleholder" style="padding-top:14px;"><h1>Planetary Building Blocks</h1></div>
+  <div id="spacechar">&nbsp;
+    <div data-role="content" class="kidzcontent">
+      <div class="v-spacer"></div>
+      <div class="sidebarleft-half">
+		<!-- pol1 image -->
+         <a id="img1" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Space/Comets_Asteroids_Meteors/Small_Worlds/Planetary_Building_Blocks/Spitzer_Hi_Res.jpg', 'Artist impression of a young sun-like star surrounded by its planetary-forming disk of dust and gas.  Courtesy: NASA/JPL-Caltech');">click here</a>		
+		 
+		<!-- pol2 image -->
+        <a id="img2" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Space/Comets_Asteroids_Meteors/Small_Worlds/Planetary_Building_Blocks/Asteroid_Hi_Res.jpg', 'An artist\'s impression of a broken up asteroid, which would have formed from a disk surrounding the young sun.  Courtesy: NASA/JPL-Caltech');">click here</a>		
+	
+		<div id="zoomwrapper">
+		<!-- image card -->
+          <div id="pol1" class="pPiece" style="left:100px;top:270px;">
+             <img src="css/images/9-12/Space/Comets_Asteroids_Meteors/Small_Worlds/Planetary_Building_Blocks/Spitzer.jpg" alt="" />
+          </div>
+		 
+		  <!-- image card -->
+          <div id="pol2" class="pPiece" style="left:75px;top:290px;">
+             <img src="css/images/9-12/Space/Comets_Asteroids_Meteors/Small_Worlds/Planetary_Building_Blocks/Asteroid.jpg" alt="" />
+          </div>		  
+        </div><!--/zoomwrapper-->
+      </div>
+      
+		  <div class="bpcontentcometsasteroidsmeteors">
+			<p>The solar system was made approximately 4.7 billion years ago.  What did it look like back then?  How were the planets made?</p> 
+
+			<p>The big things like planets grew from many smaller things, like asteroids, meteorites and comets.</p>
+
+			<p>We can see parts of space where new stars are being born.  These places have loads of gas, dust and ice.  As stars are born, it looks as though they are surrounded by spinning disks of matter. </p>
+
+			<p>Within these disks, bits of dust and ice can stick together, making bigger and bigger objects.  Things grow from millimetres in size, then to metres and then to kilometres.  There are some spectacular collisions.  Our moon even may have been made by a giant collision!</p>
+
+			<p>Some objects get so big that their gravitational pull means that they can attract more fragments than smaller ones can, dragging in more and more matter including gas. These become planets.  But some objects never get to this stage and remain smaller.  These leftovers are the comets, asteroids and meteors we see today.</p>
+		  </div>
+		<div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Space/bottomhomesp.png"></a></div>
+    </div> <!-- end content -->  
+  </div><!--/spacechar-->  
+    
+  
+  <!--<div class="audiopanel">-->
+    <!-- images are in slidebarnat.js -->
+    <div class="micbtnholder"><div class="micbtncometsasteroidsmeteors" id="playstopplanetarybuildingblocks"></div></div>
+    <div class="bcometsasteroidsmeteors"><div class="rwcometsasteroidsmeteors" id="planetarybuildingblocksaudiobbtn"></div></div>
+    <div class="plcometsasteroidsmeteors"><div class="plpscometsasteroidsmeteors" id="planetarybuildingblocksaudioplbtn"></div></div>
+    <div class="fcometsasteroidsmeteors"><div class="fwcometsasteroidsmeteors" id="planetarybuildingblocksaudiofbtn"></div></div>
+    <div id="actualaudio-planetarybuildingblocks" style="visibility:hidden;"></div>
+  <!--</div>-->
+  <script>
+  // sound setup is in home.html and index.js
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    var paused;
+    (function() {
+      playing = false;
+      paused = true;
+      $('div#pol1').css("z-index", 2);
+      $('div#pol2').css("z-index", 1);
+      $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
+      $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-planetarybuildingblocks').html('<audio id="planetarybuildingblocksaudio" controls preload onpause="playscometsasteroidsmeteors()" onplay="pausecometsasteroidsmeteors()"><source src="audio/Comets_Asteroids_Meteors/Planetary_Building_Blocks.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#sub-comets-asteroids-meteors-small-worlds-planetary-building-blocks").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+    $('.homelinkbh').on('tap', function() { bgsoundcometsasteroidsmeteors.pause(); bgsoundcometsasteroidsmeteors.currentTime = 0; mainaudiobg.play(); });
+    
+    function goBack() {
+      $.mobile.changePage("sub-comets-asteroids-meteors-small-worlds.html", {transition: "slide", reverse: true });
+      bgsoundcometsasteroidsmeteors.pause(); 
+      bgsoundcometsasteroidsmeteors.currentTime = 0;
+      spacesoundbg.play();
+    }
+    
+    function playscometsasteroidsmeteors() {
+         bgsoundcometsasteroidsmeteors.play();
+    }
+       
+    function pausecometsasteroidsmeteors() {
+         bgsoundcometsasteroidsmeteors.pause();
+    }
+    /* ******************** */
+    /* this is the microphone button */
+	
+    $("#playstopplanetarybuildingblocks").on('tap', function() {
+      if(!playing) {
+        planetarybuildingblocksaudio.play();
+        $('.micbtncometsasteroidsmeteors').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        planetarybuildingblocksaudio.pause(); planetarybuildingblocksaudio.currentTime = 0;
+        $('.micbtncometsasteroidsmeteors').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#planetarybuildingblocksaudioplbtn").on('tap', function() {
+      if(!paused) {
+        planetarybuildingblocksaudio.pause();
+        paused = true;
+      } else {
+        planetarybuildingblocksaudio.play();
+        paused = false;
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+    
+    $("#planetarybuildingblocksaudiofbtn").on('tap', function() {
+      var ctime = planetarybuildingblocksaudio.currentTime;
+      planetarybuildingblocksaudio.currentTime = ctime + 10;
+    });
+    
+    $("#planetarybuildingblocksaudiobbtn").on('tap', function() {
+      var ctime = planetarybuildingblocksaudio.currentTime;
+      planetarybuildingblocksaudio.currentTime = ctime - 10;
+    });
+    
+    $("#cometsasteroidsmeteorsaudiopsbtnpsbtn").on('tap', function() {
+      planetarybuildingblocksaudio.pause();
+      //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+		//poll1
+
+		$("#pol1").on('tap', function() {
+		  $('#img1')[0].click();
+		});			
+		//pol2
+		$("#pol2").on('tap', function() {
+		  $('#img2')[0].click();
+		});	
+
+	//card on click js ends here
+
+  </script>
+  <script src="js/twocardLogic.js"></script>  <!-- for card dragging effects -->
+</div> <!--//home-->

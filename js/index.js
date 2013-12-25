@@ -809,3 +809,11 @@ bgsoundChangingPlaces.addEventListener('ended', function() { bgsoundChangingPlac
 
 function pauseChangingPlaces() { bgsoundChangingPlaces.pause() }
 function playsChangingPlaces() { bgsoundChangingPlaces.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }
+
+/************************ People In Space *******************************/
+var bgsoundPeopleInSpace = new Audio();
+bgsoundPeopleInSpace.src = "audio/Fang_How_Animals_Eat/Fang-How-Animals-Eat-BG.mp3";
+bgsoundPeopleInSpace.addEventListener('ended', function() { bgsoundPeopleInSpace.play(); });
+
+function pausePeopleInSpace() { bgsoundPeopleInSpace.pause() }
+function playsPeopleInSpace() { bgsoundPeopleInSpace.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }

@@ -1,0 +1,162 @@
+<!-- i-C-a -->
+<div data-role="page" id="sub-comets-asteroids-meteors-small-worlds-meteorites">
+  <!-- <script src="js/slidebarnat.js"></script> -->
+  <script src="js/slidebar_comets_asteroids_meteors.js"></script>
+  <script src="js/hammer.js"></script>
+  <script src="js/jquery.hammer.js"></script>    
+  <link rel="stylesheet" href="css/style_comets_asteroids_meteors.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtncometsasteroidsmeteors"></div></div>
+  <div class="mpbtnholder"><div class="mpbtncometsasteroidsmeteors"></div></div>
+  <div class="cpbtnholder"><div class="cpbtncometsasteroidsmeteors"></div></div>
+  <div class="infobtnholder"><div class="infobtncometsasteroidsmeteors"></div></div>
+  <div class="credsbtnholder"><div class="credsbtncometsasteroidsmeteors"></div></div>
+  <div class="menubtnholder"><div class="menubtncometsasteroidsmeteors"></div></div>
+  <div class="bptitleholder" style="padding-top:14px;"><h1>Meteorites</h1></div>
+  <div id="spacechar">&nbsp;
+    <div data-role="content" class="kidzcontent">
+      <div class="v-spacer"></div>
+      <div class="sidebarleft-half">
+		<!-- pol1 Read me --> 				
+
+		
+		<!-- pol2 image -->
+        <a id="img1" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Space/Comets_Asteroids_Meteors/Small_Worlds/Meteorites/Iron_Hi_Res.jpg', 'Iron meteorite on Mars!  This is about the size of a basketball and was found in 2005 by the Mars rover Opportunity.  Courtesy: NASA/JPL/Cornell');">click here</a>		
+
+		<!-- pol3 image -->
+        <a id="img2" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Space/Comets_Asteroids_Meteors/Small_Worlds/Meteorites/Pallasite_Hi_Res.jpg', 'A stunning pallasite stony-iron meteorite sample');">click here</a>		
+	
+		<div id="zoomwrapper">
+			<!-- Read me -->
+          <div id="pol1" class="pPiece" style="left:100px;top:270px;">
+             <img src="css/images/9-12/Space/Comets_Asteroids_Meteors/Small_Worlds/Meteorites/M_M_M.png" alt="" />
+          </div>	
+		  
+			<!-- image card -->
+          <div id="pol2" class="pPiece" style="left:100px;top:270px;">
+             <img src="css/images/9-12/Space/Comets_Asteroids_Meteors/Small_Worlds/Meteorites/Iron.jpg" alt="" />
+          </div>
+		 
+		  <!-- image card -->
+          <div id="pol3" class="pPiece" style="left:75px;top:290px;">
+             <img src="css/images/9-12/Space/Comets_Asteroids_Meteors/Small_Worlds/Meteorites/Pallasite.jpg" alt="" />
+          </div>
+		  
+        </div><!--/zoomwrapper-->
+      </div>
+      
+		  <div class="bpcontentcometsasteroidsmeteors">
+			<p>Meteorites range in size from micrometeorites that are measured in micrometres to meteorites that can be found up to a few metres in size and can weigh many tonnes.  Some meteorites are made of stone.  These 'stony meteorites' often contain lots of pebbles and grains (called chondrules) that were stuck together by gravity billions of years ago, when the solar system formed.</p>
+
+			<p>Some meteorites are made of metal, known as 'iron meteorites'!  On Earth you make metal in a factory, but how do you forge metal in outer space?  Well, some asteroids, like planets, had centres made of molten iron.  Some of these asteroids were smashed into pieces during collisions with other asteroids, and the fragments of these shattered worlds sometimes fall to Earth or land on other planets, like Mars.  The third type of meteorite known as 'stony-iron meteorites' are less common.  They have a sub-group known as Pallasites which are particularly spectacular meteorites.  Tap the card to see one!</p>
+		  </div>
+		<div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Space/bottomhomesp.png"></a></div>
+    </div> <!-- end content -->  
+  </div><!--/spacechar-->  
+    
+  
+  <!--<div class="audiopanel">-->
+    <!-- images are in slidebarnat.js -->
+    <div class="micbtnholder"><div class="micbtncometsasteroidsmeteors" id="playstopmeteorites"></div></div>
+    <div class="bcometsasteroidsmeteors"><div class="rwcometsasteroidsmeteors" id="meteoritesaudiobbtn"></div></div>
+    <div class="plcometsasteroidsmeteors"><div class="plpscometsasteroidsmeteors" id="meteoritesaudioplbtn"></div></div>
+    <div class="fcometsasteroidsmeteors"><div class="fwcometsasteroidsmeteors" id="meteoritesaudiofbtn"></div></div>
+    <div id="actualaudio-meteorites" style="visibility:hidden;"></div>
+  <!--</div>-->
+  <script>
+  // sound setup is in home.html and index.js
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    var paused;
+    (function() {
+      playing = false;
+      paused = true;
+      $('div#pol2').css("z-index", 2);
+      $('div#pol1').css("z-index", 1);
+      $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
+      $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
+      $('div#pol3 > img').css("-webkit-transform", "rotate(-3deg)");
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-meteorites').html('<audio id="meteoritesaudio" controls preload onpause="playscometsasteroidsmeteors()" onplay="pausecometsasteroidsmeteors()"><source src="audio/Comets_Asteroids_Meteors/Meteorites.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#sub-comets-asteroids-meteors-small-worlds-meteorites").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+    $('.homelinkbh').on('tap', function() { bgsoundcometsasteroidsmeteors.pause(); bgsoundcometsasteroidsmeteors.currentTime = 0; mainaudiobg.play(); });
+    
+    function goBack() {
+      $.mobile.changePage("sub-comets-asteroids-meteors-visiting-small-worlds.html", {transition: "slide", reverse: true });
+      bgsoundcometsasteroidsmeteors.pause(); 
+      bgsoundcometsasteroidsmeteors.currentTime = 0;
+      spacesoundbg.play();
+    }
+    
+    function playscometsasteroidsmeteors() {
+         bgsoundcometsasteroidsmeteors.play();
+    }
+       
+    function pausecometsasteroidsmeteors() {
+         bgsoundcometsasteroidsmeteors.pause();
+    }
+    /* ******************** */
+    /* this is the microphone button */
+	
+    $("#playstopmeteorites").on('tap', function() {
+      if(!playing) {
+        meteoritesaudio.play();
+        $('.micbtncometsasteroidsmeteors').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        meteoritesaudio.pause(); meteoritesaudio.currentTime = 0;
+        $('.micbtncometsasteroidsmeteors').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#meteoritesaudioplbtn").on('tap', function() {
+      if(!paused) {
+        meteoritesaudio.pause();
+        paused = true;
+      } else {
+        meteoritesaudio.play();
+        paused = false;
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+    
+    $("#meteoritesaudiofbtn").on('tap', function() {
+      var ctime = meteoritesaudio.currentTime;
+      meteoritesaudio.currentTime = ctime + 10;
+    });
+    
+    $("#meteoritesaudiobbtn").on('tap', function() {
+      var ctime = meteoritesaudio.currentTime;
+      meteoritesaudio.currentTime = ctime - 10;
+    });
+    
+    $("#cometsasteroidsmeteorsaudiopsbtnpsbtn").on('tap', function() {
+      meteoritesaudio.pause();
+      //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+		//poll1
+			
+		$("#pol1").on('tap', function() {
+			$.mobile.changePage("sub-comets-asteroids-meteors-small-worlds-meteorites-meteorites-meteors-and-meteoroids.html", {transition: "slide"});
+		});			
+		//pol2
+		$("#pol2").on('tap', function() {
+		  $('#img1')[0].click();
+		});	
+		//pol3
+		$("#pol3").on('tap', function() {
+		  $('#img2')[0].click();
+		});			
+
+	//card on click js ends here
+
+  </script>
+  <script src="js/threecardLogic.js"></script>  <!-- for card dragging effects -->
+</div> <!--//home-->

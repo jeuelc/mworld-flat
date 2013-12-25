@@ -1,0 +1,194 @@
+<!-- i-C-a -->
+<div data-role="page" id="sub-comets-asteroids-meteors-impact-tunguska">
+  <!-- <script src="js/slidebarnat.js"></script> -->
+  <script src="js/slidebar_comets_asteroids_meteors.js"></script>
+  <script src="js/hammer.js"></script>
+  <script src="js/jquery.hammer.js"></script>    
+  <link rel="stylesheet" href="css/style_comets_asteroids_meteors.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtncometsasteroidsmeteors"></div></div>
+  <div class="mpbtnholder"><div class="mpbtncometsasteroidsmeteors"></div></div>
+  <div class="cpbtnholder"><div class="cpbtncometsasteroidsmeteors"></div></div>
+  <div class="infobtnholder"><div class="infobtncometsasteroidsmeteors"></div></div>
+  <div class="credsbtnholder"><div class="credsbtncometsasteroidsmeteors"></div></div>
+  <div class="menubtnholder"><div class="menubtncometsasteroidsmeteors"></div></div>
+  <div class="bptitleholder" style="padding-top:14px;"><h1>Tunguska - What was that?</h1></div>
+  <div id="spacechar">&nbsp;
+    <div data-role="content" class="kidzcontent">
+      <div class="v-spacer"></div>
+      <div class="sidebarleft-half">
+		
+		<!-- pol1 Quiz -->
+        <div id="f1_container" style="visibility:hidden;position:absolute;left:100px;top:270px;">
+          <div id="f1_card">
+            <div class="front face">
+              <img id="dopple" src="css/images/9-12/Space/Comets_Asteroids_Meteors/Impact/Tunguska/Mega_Asteroids.png">
+            </div>
+            <div id="backofcard" class="back face center" style="background:url(css/images/9-12/Space/Comets_Asteroids_Meteors/Impact/Tunguska/Mega_Asteroids_Reverse.png) no-repeat;">
+              <div class="returncard" style="position:absolute;left:0px;top:0px;width:362px;height:170px;"></div>
+              <div id="trueans" style="position: absolute;left: 192px;top: 205px;width: 118px;height: 29px;"></div>
+              <div class="falseans" style="position: absolute;left: 192px;top: 169px;width: 118px;height: 29px;"></div>
+			  <div class="falseans" style="position: absolute;left: 56px;top: 169px;width: 118px;height: 29px;"></div>
+			  <div class="falseans" style="position: absolute;left: 56px;top: 205px;width: 118px;height: 29px;"></div>
+            </div>
+          </div><!--/f1+card-->
+        </div><!--/f1_container-->	
+		
+		<!-- pol2  -->
+
+		<div id="zoomwrapper">
+			<!-- quiz -->
+          <div id="pol1" class="pPiece" style="left:100px;top:270px;">
+             <img src="css/images/9-12/Space/Comets_Asteroids_Meteors/Impact/Tunguska/Mega_Asteroids.png" alt="" />
+          </div>
+		 
+		  <!-- image card -->
+          <div id="pol2" class="pPiece" style="left:75px;top:290px;">
+             <img src="css/images/9-12/Space/Comets_Asteroids_Meteors/Impact/Tunguska/Comet_Crash.png" alt="" />
+          </div>		  
+        </div><!--/zoomwrapper-->
+      </div>
+      
+		  <div class="bpcontentcometsasteroidsmeteors">
+				<p>Asteroid and comet impacts didn't just happen millions of years ago.  They can still happen today.  In 1908, an asteroid or comet slammed into the Earth's atmosphere.  The blast could be seen from 400 kilometres away, but not many people saw it because it happened over a remote part of Siberia.  People who did see it struggled to describe what they had seen.</p>
+
+				<p>At the site, trees were flattened over many kilometres by an explosion as powerful as a nuclear bomb, that's the same as blowing up millions of tonnes of TNT!</p>
+
+				<p>Bizarrely, tree trunks stood upright near the centre of the blast.  The asteroid or comet must have exploded kilometres above the trees, so trees directly beneath the explosion were stripped of their branches but their trunks weren't tipped over!</p>
+		  </div>
+		<div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Space/bottomhomesp.png"></a></div>
+    </div> <!-- end content -->  
+  </div><!--/spacechar-->  
+    
+  
+  <!--<div class="audiopanel">-->
+    <!-- images are in slidebarnat.js -->
+    <div class="micbtnholder"><div class="micbtncometsasteroidsmeteors" id="playstoptunguska"></div></div>
+    <div class="bcometsasteroidsmeteors"><div class="rwcometsasteroidsmeteors" id="tunguskaaudiobbtn"></div></div>
+    <div class="plcometsasteroidsmeteors"><div class="plpscometsasteroidsmeteors" id="tunguskaaudioplbtn"></div></div>
+    <div class="fcometsasteroidsmeteors"><div class="fwcometsasteroidsmeteors" id="tunguskaaudiofbtn"></div></div>
+    <div id="actualaudio-tunguska" style="visibility:hidden;"></div>
+  <!--</div>-->
+   <!-- ----------------------- Video embedding --------------------------- -->
+  
+	<div id="watchAsteroidVideo" style="width:1024px;height:748px;position:absolute;left:0px;top:0px;visibility:hidden;background:#000000;z-index:-1;">
+		<video id="watchAsteroid" width="1024" height="748" preload>
+		  <source src="css/images/9-12/Space/Comets_Asteroids_Meteors/Impact/tunguska/Asteroid_Video.mp4" type="video/mp4">
+		</video>
+    </div>
+  
+  <!-- ------------------------------------------------------------------ --> 
+  <script>
+  // sound setup is in home.html and index.js
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    var paused;
+    (function() {
+      playing = false;
+      paused = true;
+      $('div#pol1').css("z-index", 2);
+      $('div#pol2').css("z-index", 1);
+      $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
+      $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-tunguska').html('<audio id="tunguskaaudio" controls preload onpause="playscometsasteroidsmeteors()" onplay="pausecometsasteroidsmeteors()"><source src="audio/Comets_Asteroids_Meteors/Tunguska.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#sub-comets-asteroids-meteors-impact-tunguska").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    $('.homelinkbh').on('tap', function() { bgsoundcometsasteroidsmeteors.pause(); bgsoundcometsasteroidsmeteors.currentTime = 0; mainaudiobg.play(); });
+    
+    function goBack() {
+      $.mobile.changePage("sub-comets-asteroids-meteors-impact.html", {transition: "slide", reverse: true });
+      bgsoundcometsasteroidsmeteors.pause(); 
+      bgsoundcometsasteroidsmeteors.currentTime = 0;
+      spacesoundbg.play();
+    }
+    
+    function playscometsasteroidsmeteors() {
+         bgsoundcometsasteroidsmeteors.play();
+    }
+       
+    function pausecometsasteroidsmeteors() {
+         bgsoundcometsasteroidsmeteors.pause();
+    }
+    /* ******************** */
+    /* this is the microphone button */
+	
+    $("#playstoptunguska").on('tap', function() {
+      if(!playing) {
+        tunguskaaudio.play();
+        $('.micbtncometsasteroidsmeteors').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        tunguskaaudio.pause(); tunguskaaudio.currentTime = 0;
+        $('.micbtncometsasteroidsmeteors').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#tunguskaaudioplbtn").on('tap', function() {
+      if(!paused) {
+        tunguskaaudio.pause();
+        paused = true;
+      } else {
+        tunguskaaudio.play();
+        paused = false;
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+    
+    $("#tunguskaaudiofbtn").on('tap', function() {
+      var ctime = tunguskaaudio.currentTime;
+      tunguskaaudio.currentTime = ctime + 10;
+    });
+    
+    $("#tunguskaaudiobbtn").on('tap', function() {
+      var ctime = tunguskaaudio.currentTime;
+      tunguskaaudio.currentTime = ctime - 10;
+    });
+    
+    $("#cometsasteroidsmeteorsaudiopsbtnpsbtn").on('tap', function() {
+      tunguskaaudio.pause();
+      //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+//poll1
+			$(".returncard").on('tap', function() {
+			  $('#f1_card').css({"-webkit-transform": "rotateY(0deg)"});
+			  $('#f1_card').css({"-moz-transform": "rotateY(0deg)"});
+			  $('#f1_card').css({"-o-transform": "rotateY(0deg)"});
+			  $('#f1_card').css({"transform": "rotateY(0deg)"});
+			  setTimeout(function() {
+				$("#pol1").css({"visibility":"visible", "z-index":4});
+				$('#f1_container').css({"visibility":"hidden", "z-index":0});
+			  }, 1000);
+			});
+			
+			$("#pol1").on('tap', function() {
+			  $('#f1_container').css({"visibility":"visible", "z-index":10});
+			  $(this).css({"visibility":"hidden"});
+			  $('#f1_card').css({"-webkit-transform": "rotateY(180deg)"});
+			  $('#f1_card').css({"-moz-transform": "rotateY(180deg)"});
+			  $('#f1_card').css({"-o-transform": "rotateY(180deg)"});
+			  $('#f1_card').css({"transform": "rotateY(180deg)"});
+			});	
+			$('.falseans').on('tap', function() {
+			  alert("Wrong answer");
+			});
+			$('#trueans').on('tap', function() {
+			  alert("Correct answer");
+			});	
+		
+		
+		//pol2 read me
+		$("#pol2").on('tap', function() {
+		  $.mobile.changePage("sub-comets-asteroids-meteors-impact-tunguska-comet-crash.html", {transition: "slide"});
+		});
+
+	//card on click js ends here
+
+  </script>
+  <script src="js/twocardLogic.js"></script>  <!-- for card dragging effects -->
+</div> <!--//home-->

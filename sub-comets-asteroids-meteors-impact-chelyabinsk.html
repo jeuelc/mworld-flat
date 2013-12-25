@@ -1,0 +1,172 @@
+<!-- i-C-a -->
+<div data-role="page" id="sub-comets-asteroids-meteors-impact-chelyabinsk">
+  <!-- <script src="js/slidebarnat.js"></script> -->
+  <script src="js/slidebar_comets_asteroids_meteors.js"></script>
+  <script src="js/hammer.js"></script>
+  <script src="js/jquery.hammer.js"></script>    
+  <link rel="stylesheet" href="css/style_comets_asteroids_meteors.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtncometsasteroidsmeteors"></div></div>
+  <div class="mpbtnholder"><div class="mpbtncometsasteroidsmeteors"></div></div>
+  <div class="cpbtnholder"><div class="cpbtncometsasteroidsmeteors"></div></div>
+  <div class="infobtnholder"><div class="infobtncometsasteroidsmeteors"></div></div>
+  <div class="credsbtnholder"><div class="credsbtncometsasteroidsmeteors"></div></div>
+  <div class="menubtnholder"><div class="menubtncometsasteroidsmeteors"></div></div>
+  <div class="bptitleholder" style="padding-top:14px;"><h1>Chelyabinsk</h1></div>
+  <div id="spacechar">&nbsp;
+    <div data-role="content" class="kidzcontent">
+      <div class="v-spacer"></div>
+      <div class="sidebarleft-half">
+		<!-- pol1 Video -->				
+
+		
+		<!-- pol2  -->
+			<!-- read me -->
+		<div id="zoomwrapper">
+			<!-- quiz -->
+          <div id="pol1" class="pPiece" style="left:100px;top:270px;">
+             <img src="css/images/9-12/Space/Comets_Asteroids_Meteors/Impact/Chelyabinsk/Chel.png" alt="" />
+          </div>
+		 
+		  <!-- image card -->
+          <div id="pol2" class="pPiece" style="left:75px;top:290px;">
+             <img src="css/images/9-12/Space/Comets_Asteroids_Meteors/Impact/Chelyabinsk/Near_Misses.png" alt="" />
+          </div>		  
+        </div><!--/zoomwrapper-->
+      </div>
+      
+		  <div class="bpcontentcometsasteroidsmeteors">
+				<p>On 15 February 2013, a 10,000-tonne meteor entered the atmosphere near Chelyabinsk, Russia. Thousands of people saw this meteor and it was recorded by car dashboard cameras, security cameras and mobile phones. </p>
+
+				<p>The asteroid hit the top of the atmosphere travelling at almost 20 kilometres every second (that's 72,000 km per hour!).  About 20 kilometres above the ground, the meteor exploded, releasing enormous energy.  The explosion was so large that sound waves from the explosion, in the form of infrasound (which people cannot hear), were recorded around the world! </p>
+
+				<p>After the bright flash of the explosion, people went outside to see what had happened. Several minutes later, the shockwave reached the Earth's surface  the shockwave travelled a lot slower than the speed of the meteor, it travelled at the speed of sound, while the flash of light travelled at the speed of light!  The shockwave shattered windows, blew in doors and caused over 1000 injuries!  Luckily the Chelyabinsk blast was not as powerful as the Tunguska event from a century earlier.</p>
+		  </div>
+		<div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Space/bottomhomesp.png"></a></div>
+    </div> <!-- end content -->  
+  </div><!--/spacechar-->  
+    
+  
+  <!--<div class="audiopanel">-->
+    <!-- images are in slidebarnat.js -->
+    <div class="micbtnholder"><div class="micbtncometsasteroidsmeteors" id="playstopchelyabinsk"></div></div>
+    <div class="bcometsasteroidsmeteors"><div class="rwcometsasteroidsmeteors" id="chelyabinskaudiobbtn"></div></div>
+    <div class="plcometsasteroidsmeteors"><div class="plpscometsasteroidsmeteors" id="chelyabinskaudioplbtn"></div></div>
+    <div class="fcometsasteroidsmeteors"><div class="fwcometsasteroidsmeteors" id="chelyabinskaudiofbtn"></div></div>
+    <div id="actualaudio-chelyabinsk" style="visibility:hidden;"></div>
+  <!--</div>-->
+   <!-- ----------------------- Video embedding --------------------------- -->
+  
+	<div id="watchChelVideo" style="width:1024px;height:748px;position:absolute;left:0px;top:0px;visibility:hidden;background:#000000;z-index:-1;">
+		<video id="watchChel" width="1024" height="748" preload>
+		  <source src="css/images/9-12/Space/Comets_Asteroids_Meteors/Impact/Chelyabinsk/Chel_Video.mov" type="video/mp4">
+		</video>
+    </div>
+  
+  <!-- ------------------------------------------------------------------ --> 
+  <script>
+  // sound setup is in home.html and index.js
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    var paused;
+    (function() {
+      playing = false;
+      paused = true;
+      $('div#pol1').css("z-index", 2);
+      $('div#pol2').css("z-index", 1);
+      $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
+	  $('#watchChelVideo').css({"visibility":"hidden", "z-index":-10});
+      $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-chelyabinsk').html('<audio id="chelyabinskaudio" controls preload onpause="playscometsasteroidsmeteors()" onplay="pausecometsasteroidsmeteors()"><source src="audio/Comets_Asteroids_Meteors/Chelyabinsk.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#sub-comets-asteroids-meteors-impact-chelyabinsk").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    watchChel.addEventListener('ended', function() { 
+        $("#watchChelVideo").css({"visibility":"hidden", "z-index":-1});
+        $("#watchChel").css({"z-index":-1});
+        bgsoundvol.play(); 
+      });
+    
+      $("#watchChel").on('tap', function() {
+        $("#watchChelVideo").css({"visibility":"hidden", "z-index":-1});
+        $("#watchChel").css({"z-index":-1});
+        bgsoundvol.play();
+        watchChel.pause();
+        watchChel.currentTime = 0;
+      });
+    $('.homelinkbh').on('tap', function() { bgsoundcometsasteroidsmeteors.pause(); bgsoundcometsasteroidsmeteors.currentTime = 0; mainaudiobg.play(); });
+    
+    function goBack() {
+      $.mobile.changePage("sub-comets-asteroids-meteors-impact.html", {transition: "slide", reverse: true });
+      bgsoundcometsasteroidsmeteors.pause(); 
+      bgsoundcometsasteroidsmeteors.currentTime = 0;
+      spacesoundbg.play();
+    }
+    
+    function playscometsasteroidsmeteors() {
+         bgsoundcometsasteroidsmeteors.play();
+    }
+       
+    function pausecometsasteroidsmeteors() {
+         bgsoundcometsasteroidsmeteors.pause();
+    }
+    /* ******************** */
+    /* this is the microphone button */
+	
+    $("#playstopchelyabinsk").on('tap', function() {
+      if(!playing) {
+        chelyabinskaudio.play();
+        $('.micbtncometsasteroidsmeteors').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        chelyabinskaudio.pause(); chelyabinskaudio.currentTime = 0;
+        $('.micbtncometsasteroidsmeteors').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#chelyabinskaudioplbtn").on('tap', function() {
+      if(!paused) {
+        chelyabinskaudio.pause();
+        paused = true;
+      } else {
+        chelyabinskaudio.play();
+        paused = false;
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+    
+    $("#chelyabinskaudiofbtn").on('tap', function() {
+      var ctime = chelyabinskaudio.currentTime;
+      chelyabinskaudio.currentTime = ctime + 10;
+    });
+    
+    $("#chelyabinskaudiobbtn").on('tap', function() {
+      var ctime = chelyabinskaudio.currentTime;
+      chelyabinskaudio.currentTime = ctime - 10;
+    });
+    
+    $("#cometsasteroidsmeteorsaudiopsbtnpsbtn").on('tap', function() {
+      chelyabinskaudio.pause();
+      //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+	$("#pol1").on('tap', function() {
+      $("#watchChelVideo").css({"visibility":"visible", "z-index":10});
+      $("#watchChel").css({"z-index":9});
+      bgsoundvol.pause();
+      watchChel.play();
+    });
+		//pol2 read me
+		$("#pol2").on('tap', function() {
+		  $.mobile.changePage("sub-comets-asteroids-meteors-impact-chelyabinsk-near-misses.html", {transition: "slide"});
+		});
+
+	//card on click js ends here
+
+  </script>
+  <script src="js/twocardLogic.js"></script>  <!-- for card dragging effects -->
+</div> <!--//home-->

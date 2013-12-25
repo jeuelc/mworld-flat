@@ -87,10 +87,10 @@ $(function(){
         }
         
         var jid = $(target).attr("id");
-        /*if(jid == "polb2") {
-          $('div#polb1 > img').css("-webkit-transform", "rotate(0deg)");
-        } else if(jid == "polb1") {
-          $('div#polb2 > img').css("-webkit-transform", "rotate(0deg)");
+        /*if(jid == "pol2") {
+          $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
+        } else if(jid == "pol1") {
+          $('div#pol2 > img').css("-webkit-transform", "rotate(0deg)");
         } */
       }
 
@@ -107,81 +107,81 @@ $(function(){
         
         var jid = $(target).attr("id");
         var position = $(target).position();
-        var polb1Selector = $('div#polb1'),
-            polb2Selector = $('div#polb2'),
-            polb3Selector = $('div#polb3'),
-            polb4Selector = $('div#polb4'),
-            polb5Selector = $('div#polb5');
+        var pol1Selector = $('div#polb1'),
+            pol2Selector = $('div#polb2'),
+            pol3Selector = $('div#polb3'),
+            pol4Selector = $('div#polb4'),
+            pol5Selector = $('div#polb5');
         if(position.left < 50 || position.left > 150 || position.top < 220 || position.top > 320) { //balhin na
           if(jid == "polb1") {
-            polb3Selector.find('img').css("-webkit-transform", "rotate(5deg)");
-            polb3Selector.css({'top':'290px', 'left':'75px'});
-            polb4Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
-            polb4Selector.css({'top':'270px', 'left':'80px'});
-            polb5Selector.find('img').css("-webkit-transform", "rotate(5deg)");
-            polb5Selector.css({'top':'290px', 'left':'75px'});
-            polb1Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
-            polb2Selector.find('img').css("-webkit-transform", "rotate(0deg)");
-            polb2Selector.css({'top':'270px', 'left':'100px'});
+            pol3Selector.find('img').css("-webkit-transform", "rotate(5deg)");
+            pol3Selector.css({'top':'290px', 'left':'75px'});
+            pol4Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
+            pol4Selector.css({'top':'270px', 'left':'80px'});
+            pol5Selector.find('img').css("-webkit-transform", "rotate(5deg)");
+            pol5Selector.css({'top':'290px', 'left':'75px'});
+            pol1Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
+            pol2Selector.find('img').css("-webkit-transform", "rotate(0deg)");
+            pol2Selector.css({'top':'270px', 'left':'100px'});
 
-            polb2Selector.css("z-index", 4);
-            polb3Selector.css("z-index", 3);
-            polb4Selector.css("z-index", 2);
-            polb5Selector.css("z-index", 1);
+            pol2Selector.css("z-index", 4);
+            pol3Selector.css("z-index", 3);
+            pol4Selector.css("z-index", 2);
+            pol5Selector.css("z-index", 1);
           } else if(jid == "polb2") {
-            polb4Selector.find('img').css("-webkit-transform", "rotate(5deg)");
-            polb4Selector.css({'top':'290px', 'left':'75px'});
-            polb5Selector.find('img').css("-webkit-transform", "rotate(0deg)");
-            polb5Selector.css({'top':'270px', 'left':'100px'});
-            polb1Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
-            polb1Selector.css({'top':'270px', 'left':'80px'});
-            polb2Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
-            polb3Selector.find('img').css("-webkit-transform", "rotate(0deg)");
-            polb3Selector.css({'top':'270px', 'left':'100px'});
-            polb3Selector.css("z-index", 4);
-            polb4Selector.css("z-index", 3);
-            polb5Selector.css("z-index", 2);
-            polb1Selector.css("z-index", 1);
+            pol4Selector.find('img').css("-webkit-transform", "rotate(5deg)");
+            pol4Selector.css({'top':'290px', 'left':'75px'});
+            pol5Selector.find('img').css("-webkit-transform", "rotate(0deg)");
+            pol5Selector.css({'top':'270px', 'left':'100px'});
+            pol1Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
+            pol1Selector.css({'top':'270px', 'left':'80px'});
+            pol2Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
+            pol3Selector.find('img').css("-webkit-transform", "rotate(0deg)");
+            pol3Selector.css({'top':'270px', 'left':'100px'});
+            pol3Selector.css("z-index", 4);
+            pol4Selector.css("z-index", 3);
+            pol5Selector.css("z-index", 2);
+            pol1Selector.css("z-index", 1);
           } else if(jid == "polb3") {
-            polb5Selector.find('img').css("-webkit-transform", "rotate(5deg)");
-            polb5Selector.css({'top':'290px', 'left':'75px'});
-            polb1Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
-            polb1Selector.css({'top':'270px', 'left':'80px'});
-            polb2Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
-            polb2Selector.css({'top':'270px', 'left':'80px'});
-            polb3Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
-            polb4Selector.find('img').css("-webkit-transform", "rotate(0deg)");
-            polb4Selector.css({'top':'270px', 'left':'100px'});
-            polb4Selector.css("z-index", 4);
-            polb5Selector.css("z-index", 3);
-            polb1Selector.css("z-index", 2);
-            polb2Selector.css("z-index", 1);
+            pol5Selector.find('img').css("-webkit-transform", "rotate(5deg)");
+            pol5Selector.css({'top':'290px', 'left':'75px'});
+            pol1Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
+            pol1Selector.css({'top':'270px', 'left':'80px'});
+            pol2Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
+            pol2Selector.css({'top':'270px', 'left':'80px'});
+            pol3Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
+            pol4Selector.find('img').css("-webkit-transform", "rotate(0deg)");
+            pol4Selector.css({'top':'270px', 'left':'100px'});
+            pol4Selector.css("z-index", 4);
+            pol5Selector.css("z-index", 3);
+            pol1Selector.css("z-index", 2);
+            pol2Selector.css("z-index", 1);
           } else if(jid == "polb4") {
-            polb2Selector.find('img').css("-webkit-transform", "rotate(5deg)");
-            polb2Selector.css({'top':'290px', 'left':'75px'});
-            polb3Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
-            polb3Selector.css({'top':'270px', 'left':'80px'});
-            polb4Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
-            polb1Selector.find('img').css("-webkit-transform", "rotate(5deg)");
-            polb1Selector.css({'top':'290px', 'left':'75px'});
-            polb5Selector.find('img').css("-webkit-transform", "rotate(0deg)");
-            polb5Selector.css({'top':'270px', 'left':'100px'});
-            polb5Selector.css("z-index", 4);
-            polb1Selector.css("z-index", 3);
-            polb2Selector.css("z-index", 2);
-            polb4Selector.css("z-index", 1);
+            pol2Selector.find('img').css("-webkit-transform", "rotate(5deg)");
+            pol2Selector.css({'top':'290px', 'left':'75px'});
+            pol3Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
+            pol3Selector.css({'top':'270px', 'left':'80px'});
+            pol4Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
+            pol1Selector.find('img').css("-webkit-transform", "rotate(5deg)");
+            pol1Selector.css({'top':'290px', 'left':'75px'});
+            pol5Selector.find('img').css("-webkit-transform", "rotate(0deg)");
+            pol5Selector.css({'top':'270px', 'left':'100px'});
+            pol5Selector.css("z-index", 4);
+            pol1Selector.css("z-index", 3);
+            pol2Selector.css("z-index", 2);
+            pol4Selector.css("z-index", 1);
           } else if(jid == "polb5") {
-            polb2Selector.find('img').css("-webkit-transform", "rotate(5deg)");
-            polb2Selector.css({'top':'290px', 'left':'75px'});
-            polb3Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
-            polb3Selector.css({'top':'270px', 'left':'80px'});
-            polb4Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
-            polb1Selector.find('img').css("-webkit-transform", "rotate(0deg)");
-            polb1Selector.css({'top':'270px', 'left':'100px'});
-            polb1Selector.css("z-index", 4);
-            polb2Selector.css("z-index", 3);
-            polb2Selector.css("z-index", 2);
-            polb4Selector.css("z-index", 1);
+            pol2Selector.find('img').css("-webkit-transform", "rotate(5deg)");
+            pol2Selector.css({'top':'290px', 'left':'75px'});
+            pol3Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
+            pol3Selector.css({'top':'270px', 'left':'80px'});
+            pol4Selector.find('img').css("-webkit-transform", "rotate(-3deg)");
+            pol1Selector.find('img').css("-webkit-transform", "rotate(0deg)");
+            pol1Selector.css({'top':'270px', 'left':'100px'});
+            pol1Selector.css("z-index", 4);
+            pol2Selector.css("z-index", 3);
+            pol2Selector.css("z-index", 2);
+            pol4Selector.css("z-index", 1);
           }
           $(target).css({'z-index':'0'});
           $(target).animate({'top':'270px', 'left':'80px'}, 500);

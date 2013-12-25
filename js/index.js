@@ -801,3 +801,11 @@ bgsoundFangAnimals.addEventListener('ended', function() { bgsoundFangAnimals.pla
 
 function pauseFangAnimals() { bgsoundFangAnimals.pause() }
 function playsFangAnimals() { bgsoundFangAnimals.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }
+
+/************************ Changing Pleaces *******************************/
+var bgsoundChangingPlaces = new Audio();
+bgsoundChangingPlaces.src = "audio/Fang_How_Animals_Eat/Fang-How-Animals-Eat-BG.mp3";
+bgsoundChangingPlaces.addEventListener('ended', function() { bgsoundChangingPlaces.play(); });
+
+function pauseChangingPlaces() { bgsoundChangingPlaces.pause() }
+function playsChangingPlaces() { bgsoundChangingPlaces.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }

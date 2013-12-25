@@ -1,7 +1,7 @@
 /********* cometsasteroidsmeteors In Peril **********/
 
 /* Main common basic pages */
-#sub-comets-asteroids-meteors,#sub-comets-asteroids-meteors-searching-the-solar-system,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-down,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-for-visitors,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-further,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-further-lf-1-2-3,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-up,#sub-comets-asteroids-meteors-visiting-small-worlds,#sub-comets-asteroids-meteors-visiting-small-worlds-asteroids-and-astronauts,#sub-comets-asteroids-meteors-visiting-small-worlds-first-look,#sub-comets-asteroids-meteors-visiting-small-worlds-getting-closer{
+#sub-comets-asteroids-meteors,#sub-comets-asteroids-meteors-searching-the-solar-system,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-down,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-for-visitors,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-further,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-further-lf-1-2-3,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-up,#sub-comets-asteroids-meteors-visiting-small-worlds,#sub-comets-asteroids-meteors-visiting-small-worlds-asteroids-and-astronauts,#sub-comets-asteroids-meteors-visiting-small-worlds-first-look,#sub-comets-asteroids-meteors-visiting-small-worlds-getting-closer,#sub-comets-asteroids-meteors-impact-chelyabinsk,#sub-comets-asteroids-meteors-impact-defence,#sub-comets-asteroids-meteors-impact-tunguska,#sub-comets-asteroids-meteors-impact-tunguska-comet-crash,#sub-comets-asteroids-meteors-small-worlds-asteroids,#sub-comets-asteroids-meteors-small-worlds-comets,#sub-comets-asteroids-meteors-small-worlds-comets-way-way-out,#sub-comets-asteroids-meteors-small-worlds-meteorites{
   background:url('images/9-12/Space/Comets_Asteroids_Meteors/Comets_Asteroids_Meteors_BG.png') no-repeat;
   height:748px !important;
   overflow:hidden !important;
@@ -162,7 +162,7 @@
 }
 
 /* Common Header Div Design */
-#sub-comets-asteroids-meteors .bptitleholder,#sub-comets-asteroids-meteors-searching-the-solar-system .bptitleholder,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-down .bptitleholder,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-for-visitors .bptitleholder,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-further .bptitleholder,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-further-lf-1-2-3 .bptitleholder,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-up .bptitleholder,#sub-comets-asteroids-meteors-visiting-small-worlds .bptitleholder,#sub-comets-asteroids-meteors-visiting-small-worlds-asteroids-and-astronauts .bptitleholder,#sub-comets-asteroids-meteors-visiting-small-worlds-first-look .bptitleholder,#sub-comets-asteroids-meteors-visiting-small-worlds-getting-closer .bptitleholder{
+#sub-comets-asteroids-meteors .bptitleholder,#sub-comets-asteroids-meteors-searching-the-solar-system .bptitleholder,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-down .bptitleholder,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-for-visitors .bptitleholder,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-further .bptitleholder,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-further-lf-1-2-3 .bptitleholder,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-up .bptitleholder,#sub-comets-asteroids-meteors-visiting-small-worlds .bptitleholder,#sub-comets-asteroids-meteors-visiting-small-worlds-asteroids-and-astronauts .bptitleholder,#sub-comets-asteroids-meteors-visiting-small-worlds-first-look .bptitleholder,#sub-comets-asteroids-meteors-visiting-small-worlds-getting-closer .bptitleholder,#sub-comets-asteroids-meteors-impact-chelyabinsk .bptitleholder,#sub-comets-asteroids-meteors-impact-defence .bptitleholder,#sub-comets-asteroids-meteors-impact-tunguska .bptitleholder,#sub-comets-asteroids-meteors-impact-tunguska-comet-crash .bptitleholder,#sub-comets-asteroids-meteors-small-worlds-asteroids .bptitleholder,#sub-comets-asteroids-meteors-small-worlds-comets .bptitleholder,#sub-comets-asteroids-meteors-small-worlds-comets-way-way-out .bptitleholder,#sub-comets-asteroids-meteors-small-worlds-meteorites .bptitleholder{
 	width: 627px;
 	height: 68px;
 	text-align: center;
@@ -252,6 +252,34 @@
 	left: 346px;
 	top: 300px;
 }
+.small_worlds_meteors{
+	height: 86px;
+	width: 180px;
+	top: 529px;
+	position: absolute;
+	left: 281px;	
+}
+.small_worlds_asteroids{
+	height: 86px;
+	width: 180px;
+	top: 387px;
+	position: absolute;
+	left: 43px;
+}
+.small_worlds_planetry{
+	height: 86px;
+	width: 180px;
+	top: 102px;
+	position: absolute;
+	left: 52px;	
+}
+.small_worlds_comets{
+	height: 86px;
+	width: 180px;
+	top: 40px;
+	position: absolute;
+	left: 735px;
+}
 /* Custom Header Div Design */
 #sub-comets-asteroids-meteors-impact .bptitleholder{
 	width: 490px;
@@ -269,8 +297,8 @@
 	text-align: center;
 	line-height: 28px;
 	position: absolute;
-	top: 250px;
-	left: 451px;
+	top: 150px;
+	left: 504px;
 }
 
 #sub-comets-asteroids-meteors-visiting-small-worlds-halleys-comet .bptitleholder{
@@ -302,7 +330,7 @@
 }
 
 /* Common Header Design h1 */
-#sub-comets-asteroids-meteors .bptitleholder h1,#sub-comets-asteroids-meteors-impact .bptitleholder h1,#sub-comets-asteroids-meteors-searching-the-solar-system .bptitleholder h1,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-down .bptitleholder h1,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-for-visitors .bptitleholder h1,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-further .bptitleholder h1,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-further-lf-1-2-3 .bptitleholder h1,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-up .bptitleholder h1,#sub-comets-asteroids-meteors-visiting-small-worlds .bptitleholder h1,#sub-comets-asteroids-meteors-visiting-small-worlds-asteroids-and-astronauts .bptitleholder h1,#sub-comets-asteroids-meteors-visiting-small-worlds-first-look .bptitleholder h1,#sub-comets-asteroids-meteors-visiting-small-worlds-getting-closer .bptitleholder h1{
+#sub-comets-asteroids-meteors .bptitleholder h1,#sub-comets-asteroids-meteors-impact .bptitleholder h1,#sub-comets-asteroids-meteors-searching-the-solar-system .bptitleholder h1,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-down .bptitleholder h1,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-for-visitors .bptitleholder h1,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-further .bptitleholder h1,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-further-lf-1-2-3 .bptitleholder h1,#sub-comets-asteroids-meteors-searching-the-solar-system-looking-up .bptitleholder h1,#sub-comets-asteroids-meteors-visiting-small-worlds .bptitleholder h1,#sub-comets-asteroids-meteors-visiting-small-worlds-asteroids-and-astronauts .bptitleholder h1,#sub-comets-asteroids-meteors-visiting-small-worlds-first-look .bptitleholder h1,#sub-comets-asteroids-meteors-visiting-small-worlds-getting-closer .bptitleholder h1,#sub-comets-asteroids-meteors-impact-chelyabinsk .bptitleholder h1,#sub-comets-asteroids-meteors-impact-defence .bptitleholder h1,#sub-comets-asteroids-meteors-impact-tunguska .bptitleholder h1,#sub-comets-asteroids-meteors-impact-tunguska-comet-crash .bptitleholder h1,#sub-comets-asteroids-meteors-small-worlds-asteroids .bptitleholder h1,#sub-comets-asteroids-meteors-small-worlds-comets .bptitleholder h1,#sub-comets-asteroids-meteors-small-worlds-comets-way-way-out .bptitleholder h1,#sub-comets-asteroids-meteors-small-worlds-meteorites .bptitleholder h1{
 	text-transform: uppercase;
 	color: #ffffff !important;
 	font-family: "comic sans ms" !important;
@@ -322,7 +350,7 @@
 }
 #sub-life-and-how-it-works-evolution-and-natural-selection-mutants-what-were-mutants .bptitleholder h1,#sub-comets-asteroids-meteors-small-worlds .bptitleholder h1{
 	text-transform: uppercase;
-	color: #000000 !important;
+	color: #FFFFFF !important;
 	font-family: "comic sans ms" !important;
 	font-weight: bold;
 	padding: 0;
@@ -436,8 +464,8 @@
 }
 .navcometsasteroidsmeteors-smallworlds{
 	position: absolute;
-	left: 495px;
-	top: 294px;
+	left: 528px;
+	top: 190px;
 	width: 444px;
 	height: 535px;
 	overflow: auto;

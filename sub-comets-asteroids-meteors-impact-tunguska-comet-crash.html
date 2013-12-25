@@ -1,0 +1,133 @@
+<!-- i-C-a -->
+<div data-role="page" id="sub-comets-asteroids-meteors-impact-tunguska-comet-crash">
+  <!-- <script src="js/slidebarnat.js"></script> -->
+  <script src="js/slidebar_comets_asteroids_meteors.js"></script>
+ <script src="js/hammer.js"></script>
+  <script src="js/jquery.hammer.js"></script>   
+  <link rel="stylesheet" href="css/style_comets_asteroids_meteors.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtncometsasteroidsmeteors"></div></div>
+  <div class="mpbtnholder"><div class="mpbtncometsasteroidsmeteors"></div></div>
+  <div class="cpbtnholder"><div class="cpbtncometsasteroidsmeteors"></div></div>
+  <div class="infobtnholder"><div class="infobtncometsasteroidsmeteors"></div></div>
+  <div class="credsbtnholder"><div class="credsbtncometsasteroidsmeteors"></div></div>
+  <div class="menubtnholder"><div class="menubtncometsasteroidsmeteors"></div></div>
+  <div class="bptitleholder" style="padding-top:14px;"><h1>Comet crash</h1></div>
+  <div id="spacechar">&nbsp;
+    <div data-role="content" class="kidzcontent">
+      <div class="v-spacer"></div>
+		<div class="sidebarleft-half">	
+			<!-- polb1 image -->
+			<a id="img1" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Space/Comets_Asteroids_Meteors/Impact/Tunguska/Comet_Crash/Shoemaker_Hi_Res.jpg', 'Comet-Shoemaker/Levy remains crashing into Jupiter in 1994.  Courtesy NASA/SEDS/D.Seal');">click here</a>		
+			<div id="zoomwrapper">
+				<!-- image card -->
+			  <div id="polb1" class="pPiece" style="left:100px;top:270px;">
+				<img src="css/images/9-12/Space/Comets_Asteroids_Meteors/Impact/Tunguska/Comet_Crash/Shoemaker.jpg" alt="" />
+			  </div>
+			</div>
+		</div>
+      
+		  <div class="bpcontentcometsasteroidsmeteors">
+				<p>When Comet Shoemaker-Levy 9 was discovered in 1993, it was already in bad shape.  It had had a close encounter with Jupiter in 1992 and been pulled apart by the gravity of the giant planet!  Instead of being a single 'dirty snowball' it was now a series of fragments and the fragments were on a collision course with Jupiter!</p>
+
+				<p>The impacts hit on the night side of Jupiter, just out of view from the Earth.  Only the Galileo spacecraft, 240 million kilometres away, got a clear view of what happened. </p>
+
+				<p>The explosions when they comet hit the top of Jupiter's massive atmosphere were bigger and more violent than anyone expected!  Fireballs rose so high above Jupiter's clouds that they briefly became visible through telescopes from Earth.  As the giant planet rotated, dark smudges marked the sites of each impact.  These gradually faded from view, mixing with the clouds of the giant planet.</p>
+
+				<p>Comet and asteroid impacts may happen frequently on Jupiter, as the gravity of this gas giant planet attracts smaller solar system bodies that come too close to it.  Australian amateur astronomer Anthony Wesley detected more bright flashes on Jupiter in 2009 and 2010.  Both of these were from a crashing comet or asteroid.</p>
+		  </div>
+		<div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Space/bottomhomesp.png"></a></div>
+    </div> <!-- end content -->  
+  </div><!--/spacechar-->  
+    
+  
+  <!--<div class="audiopanel">-->
+    <!-- images are in slidebarnat.js -->
+    <div class="micbtnholder"><div class="micbtncometsasteroidsmeteors" id="playstopcometcrash"></div></div>
+    <div class="bcometsasteroidsmeteors"><div class="rwcometsasteroidsmeteors" id="cometcrashaudiobbtn"></div></div>
+    <div class="plcometsasteroidsmeteors"><div class="plpscometsasteroidsmeteors" id="cometcrashaudioplbtn"></div></div>
+    <div class="fcometsasteroidsmeteors"><div class="fwcometsasteroidsmeteors" id="cometcrashaudiofbtn"></div></div>
+    <div id="actualaudio-cometcrash" style="visibility:hidden;"></div>
+  <!--</div>-->
+  <script>
+  // sound setup is in home.html and index.js
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    var paused;
+    (function() {
+      playing = false;
+      paused = true;
+      $('div#polb1').css("z-index", 1);
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-cometcrash').html('<audio id="cometcrashaudio" controls preload onpause="playscometsasteroidsmeteors()" onplay="pausecometsasteroidsmeteors()"><source src="audio/Comets_Asteroids_Meteors/Comet_Crash.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#sub-comets-asteroids-meteors-impact-tunguska-comet-crash").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+    $('.homelinkbh').on('tap', function() { bgsoundcometsasteroidsmeteors.pause(); bgsoundcometsasteroidsmeteors.currentTime = 0; mainaudiobg.play(); });
+    
+    function goBack() {
+      $.mobile.changePage("sub-comets-asteroids-meteors-impact-tunguska.html", {transition: "slide", reverse: true });
+      bgsoundcometsasteroidsmeteors.pause(); 
+      bgsoundcometsasteroidsmeteors.currentTime = 0;
+      spacesoundbg.play();
+    }
+    
+    function playscometsasteroidsmeteors() {
+         bgsoundcometsasteroidsmeteors.play();
+    }
+       
+    function pausecometsasteroidsmeteors() {
+         bgsoundcometsasteroidsmeteors.pause();
+    }
+    /* ******************** */
+    /* this is the microphone button */
+	
+    $("#playstopcometcrash").on('tap', function() {
+      if(!playing) {
+        cometcrashaudio.play();
+        $('.micbtncometsasteroidsmeteors').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        cometcrashaudio.pause(); cometcrashaudio.currentTime = 0;
+        $('.micbtncometsasteroidsmeteors').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#cometcrashaudioplbtn").on('tap', function() {
+      if(!paused) {
+        cometcrashaudio.pause();
+        paused = true;
+      } else {
+        cometcrashaudio.play();
+        paused = false;
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+    
+    $("#cometcrashaudiofbtn").on('tap', function() {
+      var ctime = cometcrashaudio.currentTime;
+      cometcrashaudio.currentTime = ctime + 10;
+    });
+    
+    $("#cometcrashaudiobbtn").on('tap', function() {
+      var ctime = cometcrashaudio.currentTime;
+      cometcrashaudio.currentTime = ctime - 10;
+    });
+    
+    $("#cometsasteroidsmeteorsaudiopsbtnpsbtn").on('tap', function() {
+      cometcrashaudio.pause();
+      //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+	//poll1
+	$("#polb1").on('tap', function() {
+	  $('#img1')[0].click();
+	});
+
+  </script>
+  <script src="js/onecardLogicb.js"></script>  <!-- for card dragging effects -->
+</div> <!--//home-->

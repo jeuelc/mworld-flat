@@ -20,7 +20,15 @@
 		<p>It's full of millions of small worlds and smaller rocky fragments.  Some are the size of countries like yours and others are the size of a pin-head!  What are these small solar system bodies? </p>
 
 		<p>You'll have to tap the buttons to find out!</p>
-      </div>     
+      </div>  
+		<div class="small_worlds_meteors">
+		</div>
+		<div class="small_worlds_asteroids">
+		</div>
+		<div class="small_worlds_planetry">
+		</div>
+		<div class="small_worlds_comets">
+		</div>		
       <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Space/bottomhomesp.png"></a></div>
     </div> <!-- end content -->  
     
@@ -34,6 +42,20 @@
     <div id="actualaudio-smallworlds" style="visibility:hidden;"></div>
   <!--</div>-->
   <script>
+  
+	$('.small_worlds_meteors').on('tap', function() { 
+		$.mobile.changePage("sub-comets-asteroids-meteors-small-worlds-meteorites.html", {transition: "slide", reverse: true });
+	});
+	$('.small_worlds_asteroids').on('tap', function() { 
+		$.mobile.changePage("sub-comets-asteroids-meteors-small-worlds-asteroids.html", {transition: "slide", reverse: true });
+	});
+	$('.small_worlds_planetry').on('tap', function() { 
+		$.mobile.changePage("sub-comets-asteroids-meteors-small-worlds-planetary-building-blocks.html", {transition: "slide", reverse: true });
+	});
+	$('.small_worlds_comets').on('tap', function() { 
+		$.mobile.changePage("sub-comets-asteroids-meteors-small-worlds-comets.html", {transition: "slide", reverse: true });
+	});
+	
   // sound setup is in home.html and index.js
     sound = new Audio(); // 'sound' is now an audio object
     var playing;

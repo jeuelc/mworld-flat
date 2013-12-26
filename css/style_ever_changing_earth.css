@@ -1,0 +1,269 @@
+/********* everchangingearth In Peril **********/
+
+/* Main common basic pages */
+#sub-ever-changing-earth, #sub-ever-changing-earth-changing-earth,#sub-ever-changing-earth-earths-endless-evolution,#sub-ever-changing-earth-wipe-out{
+  background:url('images/9-12/The_Natural_World/Ever_Changing_Earth/Ever_Changing_Earth_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+/* Custom Pages Style */
+#sub-ever-changing-earth-fossil-puzzles{
+  background:url('images/9-12/The_Natural_World/Ever_Changing_Earth/Fossil_Puzzles/Fossil_Puzzles_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+/* Custom Pages Style Ends here */
+
+/* Common Button Design */
+.pleverchangingearth, .pseverchangingearth, .beverchangingearth, .feverchangingearth {
+  position:absolute;
+  top:670px;
+  left:1024px;
+  z-index:20;
+}
+
+.micbtneverchangingearth {
+  background:url('images/9-12/The_Natural_World/micnat.png') no-repeat 0 -81px;
+  height:81px;
+  width:81px;
+}
+
+.rweverchangingearth {
+  background:url('images/9-12/The_Natural_World/rwnat.png') no-repeat 0 -73px;
+  height:73px;
+  width:73px;
+}
+
+.plpseverchangingearth {
+  background:url('images/9-12/The_Natural_World/playnat.png') no-repeat 0 -73px;
+  height:73px;
+  width:73px;
+}
+
+.fweverchangingearth {
+  background:url('images/9-12/The_Natural_World/fwnat.png') no-repeat 0 -73px;
+  height:73px;
+  width:73px;
+}
+
+.menubtneverchangingearth {
+  background:url('images/9-12/The_Natural_World/menunat.png') no-repeat 0 -90px;
+  height:90px;
+  width:90px;
+}
+
+
+.homebtneverchangingearth {
+  background:url('images/9-12/The_Natural_World/mapnat.png') no-repeat 0 -74px;
+  height:74px;
+  width:80px;
+}
+
+.mpbtneverchangingearth {
+  background:url('images/9-12/The_Natural_World/mpointsnat.png') no-repeat 0 -84px;
+  height:79px;
+  width:80px;
+}
+
+.cpbtneverchangingearth {
+  background:url('images/9-12/The_Natural_World/ctrlpnlnat.png') no-repeat 0 -74px;
+  height:74px;
+  width:74px;
+}
+
+.infobtneverchangingearth {
+  background:url('images/9-12/The_Natural_World/infonat.png') no-repeat 0 -74px;
+  height:74px;
+  width:74px;
+}
+
+.credsbtneverchangingearth {
+  background:url('images/9-12/The_Natural_World/creditsnat.png') no-repeat 0 -74px;
+  height:74px;
+  width:74px;
+}
+/* Common Button Design Ends Here */
+
+
+.naveverchangingearth-content {
+	position: absolute;
+	left: 305px;
+	top: 275px;
+	width: 410px;
+	height: 359px;
+	overflow: auto;
+	text-align: center;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+/* Some pages needs different style for text content */
+.naveverchangingearth-looingup {
+	position: absolute;
+	left: 305px;
+	top: 346px;
+	width: 410px;
+	height: 275px;
+	overflow: auto;
+	text-align: center;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+
+.naveverchangingearthbtn1{
+	left: 134px;
+    position: absolute;
+    top: 405px;
+}
+
+.naveverchangingearthbtn2 {
+    left: 394px;
+    position: absolute;
+    top: 435px;
+}
+.naveverchangingearthbtn3 {
+    left: 657px;
+    position: absolute;
+    top: 405px;
+}
+
+.fossil-puzzles-the_fossil_formula{
+	position: absolute;
+	height: 100px;
+	width: 187px;
+	top: 97px;
+	left: 54px;
+}
+.fossil-puzzles-the_language_of_the_past{
+	position: absolute;
+	height: 100px;
+	width: 93px;
+	top: 290px;
+	left: 238px;			
+}
+.fossil-puzzles-a_fossils_tale{
+	position: absolute;
+	height: 100px;
+	width: 93px;
+	top: 389px;
+	left: 511px;			
+}
+/* Common Header Div Design */
+#sub-ever-changing-earth .bptitleholder, #sub-ever-changing-earth-changing-earth  .bptitleholder,#sub-ever-changing-earth-earths-endless-evolution .bptitleholder,#sub-ever-changing-earth-wipe-out .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 170px;
+	left: 194px;
+}
+
+/* Custom Header Div Design */
+#sub-ever-changing-earth-fossil-puzzles .bptitleholder{
+	width: 490px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 170px;
+	left: 347px;
+}
+
+/* Common Header Design h1 */
+#sub-ever-changing-earth .bptitleholder h1, #sub-ever-changing-earth-changing-earth  .bptitleholder h1,#sub-ever-changing-earth-earths-endless-evolution .bptitleholder h1,#sub-ever-changing-earth-wipe-out .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+/* Custom Page Header Design h1 */
+#sub-ever-changing-earth-fossil-puzzles .bptitleholder h1{
+	text-transform: uppercase;
+	color: #000000 !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;	
+}
+
+
+.bpcontenteverchangingearth{
+	color: #000000;
+    font-family: "comic sans ms";
+    font-size: 18px;
+    font-weight: normal;
+    height: 356px;
+    left: 550px;
+    overflow-y: auto;
+    position: absolute;
+    text-align: left;
+    top: 266px;
+    width: 413px;
+}
+
+.bpcontent_messing_body_clock {
+	color: #ffffff;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	height: 356px;
+	margin-left: 0px;
+	position: absolute;
+	text-align: center;
+	top: 65px;
+	width: 94%;
+}
+
+.naveverchangingearth-content3{
+  position:absolute;
+  left:59px;
+  top:263px;
+  width:920px;
+  height:160px;
+  overflow-y:scroll;
+  text-align:left;
+  font-family:"comic sans ms";
+  font-size:18px;
+  font-weight:normal;
+  color:#000000;
+}
+.navevolutionandnaturalselectionbtn1{
+	position: absolute;
+	left: 134px;
+}
+.navevolutionandnaturalselectionbtn2{
+	position: absolute;
+	left: 394px;
+}
+.navevolutionandnaturalselectionbtn3{
+	position: absolute;
+	left: 657px;
+}
+
+/* Custom content */
+.naveverchangingearth-fossilpuzzles{
+	position: absolute;
+	left: 640px;
+	top: 131px;
+	width: 325px;
+	height: 379px;
+	overflow: auto;
+	text-align: left;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}

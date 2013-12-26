@@ -817,3 +817,12 @@ bgsoundPeopleInSpace.addEventListener('ended', function() { bgsoundPeopleInSpace
 
 function pausePeopleInSpace() { bgsoundPeopleInSpace.pause() }
 function playsPeopleInSpace() { bgsoundPeopleInSpace.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }
+
+
+/************************ Ever Changing Earth *******************************/
+var bgsoundeverchangingearth = new Audio();
+bgsoundeverchangingearth.src = "audio/Ever_Changing_Earth/Ever_Changing_Earth_BG.mp3";
+bgsoundeverchangingearth.addEventListener('ended', function() { bgsoundeverchangingearth.play(); });
+
+function pauseeverchangingearth() { bgsoundeverchangingearth.pause() }
+function playseverchangingearth() { bgsoundeverchangingearth.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }

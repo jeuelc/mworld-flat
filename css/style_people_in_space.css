@@ -1,18 +1,18 @@
 /********* People In Space **********/
 
-#sub-people-in-space{
+#sub-people-in-space, #sub-people-in-space-dreaming-of-space, #sub-people-in-space-dreaming-of-space-beep-beep, #sub-people-in-space-dreaming-of-space-imagining-space-flight, #sub-people-in-space-dreaming-of-space-orbit, #sub-people-in-space-dreaming-of-space-rockets, #sub-people-in-space-dreaming-of-space-wrong-planet{
   background:url('images/9-12/Space/People_In_Space/People_In_Space_BG.png') no-repeat;
   height:748px !important;
   overflow:hidden !important;
   width:1024px !important;
 }
 
-#sub-people-in-space-dreaming-of-space{
+/*#sub-people-in-space-dreaming-of-space{
   background:url('images/9-12/Space/People_In_Space/Dreaming_Of_Space/Dreaming_Of_Space_BG.jpg') no-repeat;
   height:748px !important;
   overflow:hidden !important;
   width:1024px !important;
-}
+}*/
 
 .plPeopleInSpace, .psPeopleInSpace, .bPeopleInSpace, .fPeopleInSpace {
   position:absolute;
@@ -147,6 +147,20 @@
   color:#000000;
 }
 
+.navPeopleInSpace-content5{
+  position:absolute;
+  left:305px;
+  top:245px;
+  width:410px;
+  height:180px;
+  overflow:auto;
+  text-align:center;
+  font-family:"comic sans ms";
+  font-size:18px;
+  font-weight:normal;
+  color:#000000;
+}
+
 .navPeopleInSpace-content p {
   margin-top:0 !important;
 }
@@ -221,7 +235,7 @@
 	color: #000000;
 }
 
-#sub-people-in-space .bptitleholder h1{
+#sub-people-in-space .bptitleholder h1, #sub-people-in-space-dreaming-of-space .bptitleholder h1, #sub-people-in-space-dreaming-of-space-beep-beep .bptitleholder h1, #sub-people-in-space-dreaming-of-space-imagining-space-flight .bptitleholder h1, #sub-people-in-space-dreaming-of-space-orbit .bptitleholder h1, #sub-people-in-space-dreaming-of-space-rockets .bptitleholder h1, #sub-people-in-space-dreaming-of-space-wrong-planet .bptitleholder h1{
 	text-transform: uppercase;
 	color: #ffffff !important;
 	font-family: "comic sans ms";
@@ -230,12 +244,12 @@
 	margin: 0;
 }
 
-#sub-changing-places-big-decision .bptitleholder{
+#sub-people-in-space-dreaming-of-space-imagining-space-flight .bptitleholder{
 	width: 627px;
 	height: 68px;
 	text-align: center;
 	line-height: 28px;
 	position: absolute;
-	top: 360px;
+	top: 185px;
 	left: 194px;
 }

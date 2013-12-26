@@ -1,5 +1,6 @@
 <!-- i-C-a -->
 <div data-role="page" id="sub-people-in-space-dreaming-of-space">
+  <!-- <script src="js/slidebarnat.js"></script> -->
   <script src="js/slidebar_people_in_space.js"></script>
   <link rel="stylesheet" href="css/style_people_in_space.css" />
   <div class="menuhousing"></div>
@@ -10,21 +11,35 @@
   <div class="credsbtnholder"><div class="credsbtnPeopleInSpace"></div></div>
   <div class="menubtnholder"><div class="menubtnPeopleInSpace"></div></div>
   
-  <div class="bptitleholder" style="padding-top:14px;"></div>
-  <div id="beeplink" style="position:absolute;left:225px;top:105px;width:250px;height:60px;">Beep</div>
-  <div id="imagininglink" style="position:absolute;left:225px;top:255px;width:250px;height:60px;">Imagining</div>
-  <div id="orbitlink" style="position:absolute;left:225px;top:400px;width:250px;height:60px;">Orbit</div>
-  <div id="rocketslink" style="position:absolute;left:365px;top:400px;width:250px;height:60px;">Rockets</div>
-  <div id="wrongplanetlink" style="position:absolute;left:480px;top:400px;width:250px;height:60px;">Wrong Planet</div>
-  <div data-role="content" class="kidzcontent">
-    <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Space/bottomhomesp.png"></a></div>
-  </div> <!-- end content -->  
+  <div class="bptitleholder" style="padding-top:14px;"><h1>Dreaming of Space</h1></div>
+  
+    <div data-role="content" class="kidzcontent">
+      <div class="navPeopleInSpace-content5">
+        <p>People have dreamed of travelling into space for centuries.  Science fiction adventures with heroes flying rocket ships were recurring themes in early 20th-century movies and comic books.  How did space travel transform from science fiction to reality?</p>
+      </div>
+        
+      <div class="navpeoplebtn1">
+        <p><a href="sub-people-in-space-dreaming-of-space-beep-beep.html" data-transition="slide"><img src="css/images/9-12/Space/People_In_Space/Dreaming_Of_Space/Beep_Beep_Beep.png"></a></p>
+      </div>
+      <div class="navpeoplebtn2">
+        <p><a href="sub-people-in-space-dreaming-of-space-imagining-space-flight.html" data-transition="slide"><img src="css/images/9-12/Space/People_In_Space/Dreaming_Of_Space/Imagining_Space_Flight.png"></a></p>
+      </div>
+      <div class="navpeoplebtn3">
+        <p><a href="sub-people-in-space-dreaming-of-space-orbit.html" data-transition="slide"><img src="css/images/9-12/Space/People_In_Space/Dreaming_Of_Space/Orbit.png"></a></p>
+      </div>
+      <div class="navpeoplebtn4">
+        <p><a href="sub-people-in-space-dreaming-of-space-rockets.html" data-transition="slide"><img src="css/images/9-12/Space/People_In_Space/Dreaming_Of_Space/Rockets.png"></a></p>
+      </div>
+	  <div class="navpeoplebtn5">
+        <p><a href="sub-people-in-space-dreaming-of-space-wrong-planet.html" data-transition="slide"><img src="css/images/9-12/Space/People_In_Space/Dreaming_Of_Space/The_Wrong_Planet.png"></a></p>
+      </div>
+        
+      <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Space/bottomhomesp.png"></a></div>
+    </div> <!-- end content -->  
     
   
   <!--<div class="audiopanel">-->
-    <!-- images are in slidebarnat.js 
-         note: change the ids to be able play the narration
-    -->
+    <!-- images are in slidebarnat.js -->
     <div class="micbtnholder"><div class="micbtnPeopleInSpace" id="playstopDreamingOfSpace"></div></div>
     <div class="bPeopleInSpace"><div class="rwPeopleInSpace" id="DreamingOfSpaceaudiobbtn"></div></div>
     <div class="plPeopleInSpace"><div class="plpsPeopleInSpace" id="DreamingOfSpaceaudioplbtn"></div></div>
@@ -46,27 +61,7 @@
       $("#sub-people-in-space-dreaming-of-space").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     })();
     
-    $('#beeplink').on('tap', function() {
-      $.mobile.changePage("sub-people-in-space-dreaming-of-space-beep-beep.html", {transition: "slide"});
-    });
-    
-    $('#imagininglink').on('tap', function() {
-      $.mobile.changePage("sub-people-in-space-dreaming-of-space-imagining-space-flight.html", {transition: "slide"});
-    });
-    
-    $('#orbitlink').on('tap', function() {
-      $.mobile.changePage("sub-people-in-space-dreaming-of-space-rolling-orbits.html", {transition: "slide"});
-    });
-	
-	$('#rocketslink').on('tap', function() {
-      $.mobile.changePage("sub-people-in-space-dreaming-of-space-rockets.html", {transition: "slide"});
-    });
-	
-	$('#wrongplanetlink').on('tap', function() {
-      $.mobile.changePage("sub-people-in-space-dreaming-of-space-wrong-planet.html", {transition: "slide"});
-    });
-    
-    $('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundPeopleInSpace.pause(); bgsoundPeopleInSpace.currentTime = 0;});
+    $('.homelinkbh').on('tap', function() { bgsoundPeopleInSpace.pause(); bgsoundPeopleInSpace.currentTime = 0; mainaudiobg.play(); });
     
     function goBack() {
       $.mobile.changePage("sub-people-in-space.html", {transition: "slide", reverse: true });
@@ -81,6 +76,7 @@
     }
     /* ******************** */
     /* this is the microphone button */
+	
     $("#playstopDreamingOfSpace").on('tap', function() {
       if(!playing) {
         DreamingOfSpaceaudio.play();
@@ -118,6 +114,23 @@
     
     $("#DreamingOfSpaceaudiopsbtn").on('tap', function() {
       DreamingOfSpaceaudio.pause();
+      //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+    
+    $('.navpeoplebtn1').on('tap', function() { 
+      nav1Effects(); 
+    });
+    
+    $('.navpeoplebtn2').on('tap', function() { 
+      nav2Effects(); 
+    });
+    
+    $('.navpeoplebtn3').on('tap', function() { 
+      nav3Effects(); 
+    });
+    
+    $('.navpeoplebtn4').on('tap', function() { 
+      nav4Effects(); 
     });
   </script>
 </div> <!--//home-->

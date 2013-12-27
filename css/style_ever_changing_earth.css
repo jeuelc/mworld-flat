@@ -1,7 +1,5 @@
-/********* everchangingearth In Peril **********/
-
 /* Main common basic pages */
-#sub-ever-changing-earth, #sub-ever-changing-earth-changing-earth,#sub-ever-changing-earth-earths-endless-evolution,#sub-ever-changing-earth-wipe-out{
+#sub-ever-changing-earth, #sub-ever-changing-earth-changing-earth,#sub-ever-changing-earth-earths-endless-evolution,#sub-ever-changing-earth-wipe-out,#sub-ever-changing-earth-fossil-puzzles-the-language-of-the-past,#sub-ever-changing-earth-fossil-puzzles-the-fossil-formula,#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale,#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale-life-on-the-high-seas,#sub-ever-changing-earth-geology-layer-upon-layer,#sub-ever-changing-earth-geology-making-an-earth-cake,#sub-ever-changing-earth-geology-never-ending-sediments,#sub-ever-changing-earth-geology-never-ending-sediments-clues-to-catastrophe{
   background:url('images/9-12/The_Natural_World/Ever_Changing_Earth/Ever_Changing_Earth_BG.jpg') no-repeat;
   height:748px !important;
   overflow:hidden !important;
@@ -11,6 +9,18 @@
 /* Custom Pages Style */
 #sub-ever-changing-earth-fossil-puzzles{
   background:url('images/9-12/The_Natural_World/Ever_Changing_Earth/Fossil_Puzzles/Fossil_Puzzles_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale-polar-plants-of-pangaea{
+  background:url('images/9-12/The_Natural_World/Ever_Changing_Earth/Fossil_Puzzles/A_Fossils_Tale/Polar_Plants_Of_Pangaea/Polar_Plants_Of_Pangaea_BG.png') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+#sub-ever-changing-earth-fossil-geology{
+  background:url('images/9-12/The_Natural_World/Ever_Changing_Earth/Geology/Geology_BG.jpg') no-repeat;
   height:748px !important;
   overflow:hidden !important;
   width:1024px !important;
@@ -136,29 +146,56 @@
     top: 405px;
 }
 
-.fossil-puzzles-the_fossil_formula{
-	position: absolute;
-	height: 100px;
-	width: 187px;
-	top: 97px;
-	left: 54px;
-}
-.fossil-puzzles-the_language_of_the_past{
-	position: absolute;
-	height: 100px;
-	width: 93px;
-	top: 290px;
-	left: 238px;			
-}
-.fossil-puzzles-a_fossils_tale{
-	position: absolute;
-	height: 100px;
-	width: 93px;
-	top: 389px;
-	left: 511px;			
-}
+	.fossil-puzzles-the_fossil_formula{
+		position: absolute;
+		height: 100px;
+		width: 93px;
+		top: 290px;
+		left: 238px;
+	}
+	.fossil-puzzles-the_language_of_the_past{
+		position: absolute;
+		height: 100px;
+		width: 187px;
+		top: 97px;
+		left: 54px;	
+	
+	
+	
+			
+	}
+	.fossil-puzzles-a_fossils_tale{
+		position: absolute;
+		height: 100px;
+		width: 93px;
+		top: 389px;
+		left: 511px;			
+	}
+	
+	.geology-making_earth_cake{
+		position: absolute;
+		height: 280px;
+		width: 440px;
+		top: 296px;
+		left: 548px;
+	}
+	.geology-layer_upon_layer{
+		position: absolute;
+		height: 50px;
+		width: 325px;
+		top: 471px;
+		left: 85px;	
+	}
+	.geology-never_ending_sediments{
+		position: absolute;
+		height: 55px;
+		width: 354px;
+		top: 592px;
+		left: 315px;	
+	}	
+	
 /* Common Header Div Design */
-#sub-ever-changing-earth .bptitleholder, #sub-ever-changing-earth-changing-earth  .bptitleholder,#sub-ever-changing-earth-earths-endless-evolution .bptitleholder,#sub-ever-changing-earth-wipe-out .bptitleholder{
+#sub-ever-changing-earth .bptitleholder, #sub-ever-changing-earth-changing-earth  .bptitleholder,#sub-ever-changing-earth-earths-endless-evolution .bptitleholder,#sub-ever-changing-earth-wipe-out .bptitleholder,#sub-ever-changing-earth-fossil-puzzles-the-language-of-the-past .bptitleholder,#sub-ever-changing-earth-fossil-puzzles-the-fossil-formula .bptitleholder,#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale .bptitleholder,#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale-life-on-the-high-seas .bptitleholder,#sub-ever-changing-earth-geology-layer-upon-layer .bptitleholder,#sub-ever-changing-earth-geology-making-an-earth-cake .bptitleholder,#sub-ever-changing-earth-geology-never-ending-sediments .bptitleholder,#sub-ever-changing-earth-geology-never-ending-sediments-clues-to-catastrophe .bptitleholder{
 	width: 627px;
 	height: 68px;
 	text-align: center;
@@ -179,8 +216,27 @@
 	left: 347px;
 }
 
+#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale-polar-plants-of-pangaea .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 10px;
+	left: 194px;
+}
+#sub-ever-changing-earth-fossil-geology .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 10px;
+	left: 50px;
+}
+
 /* Common Header Design h1 */
-#sub-ever-changing-earth .bptitleholder h1, #sub-ever-changing-earth-changing-earth  .bptitleholder h1,#sub-ever-changing-earth-earths-endless-evolution .bptitleholder h1,#sub-ever-changing-earth-wipe-out .bptitleholder h1{
+#sub-ever-changing-earth .bptitleholder h1, #sub-ever-changing-earth-changing-earth  .bptitleholder h1,#sub-ever-changing-earth-earths-endless-evolution .bptitleholder h1,#sub-ever-changing-earth-wipe-out .bptitleholder h1,#sub-ever-changing-earth-fossil-puzzles-the-language-of-the-past .bptitleholder h1,#sub-ever-changing-earth-fossil-puzzles-the-fossil-formula .bptitleholder h1,#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale .bptitleholder h1,#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale-life-on-the-high-seas .bptitleholder h1,#sub-ever-changing-earth-geology-layer-upon-layer .bptitleholder h1,#sub-ever-changing-earth-geology-making-an-earth-cake .bptitleholder h1,#sub-ever-changing-earth-geology-never-ending-sediments .bptitleholder h1,#sub-ever-changing-earth-geology-never-ending-sediments-clues-to-catastrophe .bptitleholder h1{
 	text-transform: uppercase;
 	color: #FFFFFF !important;
 	font-family: "comic sans ms" !important;
@@ -198,8 +254,22 @@
 	padding: 0;
 	margin: 0;	
 }
-
-
+#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale-polar-plants-of-pangaea .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;		
+}
+#sub-ever-changing-earth-fossil-geology .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;		
+}
 .bpcontenteverchangingearth{
 	color: #000000;
     font-family: "comic sans ms";
@@ -260,6 +330,33 @@
 	top: 131px;
 	width: 325px;
 	height: 379px;
+	overflow: auto;
+	text-align: left;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+.naveverchangingearth-polarplantsofpangaea{
+	position: absolute;
+	left: 582px;
+	top: 171px;
+	width: 325px;
+	height: 460px;
+	overflow: auto;
+	text-align: left;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+.naveverchangingearth-geology{
+	position: absolute;
+	left: 25px;
+	top: 55px;
+	width: 694px;
+	height: 460px;
 	overflow: auto;
 	text-align: left;
 	font-family: comic sans ms;

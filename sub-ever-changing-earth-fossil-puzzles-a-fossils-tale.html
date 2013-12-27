@@ -1,5 +1,5 @@
 <!-- i-C-a -->
-<div data-role="page" id="sub-ever-changing-earth-fossil-puzzles">
+<div data-role="page" id="sub-ever-changing-earth-fossil-puzzles-a-fossils-tale">
   <!-- <script src="js/slidebarnat.js"></script> -->
   <script src="js/slidebar_ever_changing_earth.js"></script>
   <script src="js/hammer.js"></script>
@@ -13,31 +13,38 @@
   <div class="credsbtnholder"><div class="credsbtneverchangingearth"></div></div>
   <div class="menubtnholder"><div class="menubtneverchangingearth"></div></div>
   
-  
-  <div data-role="content" class="kidzcontent">
-	<div class="naveverchangingearth-fossilpuzzles">
-		<p> Fossils are signs of ancient life.  They are like puzzle pieces which, when gathered together, give us a picture of prehistoric life and the way life has evolved throughout Earth's history.  They can tell you what extinct animals, plants and other organisms looked like, how they lived and how they related to others. </p>
+  <div class="bptitleholder" style="padding-top:14px;"><h1>A Fossil's Tale</h1></div>
+  <div id="spacechar">&nbsp;
+    <div data-role="content" class="kidzcontent">
+      <div class="v-spacer"></div>
+      <div class="sidebarleft-half">
+        <div id="zoomwrapper">
+          <div id="pol1" class="pPiece" style="left:100px;top:270px;">
+             <img src="css/images/9-12/The_Natural_World/Ever_Changing_Earth/Fossil_Puzzles/A_Fossils_Tale/Polar_Plants.png" alt="" />
+          </div>
+          <div id="pol2"class="pPiece" style="left:75px;top:290px;">
+             <img src="css/images/9-12/The_Natural_World/Ever_Changing_Earth/Fossil_Puzzles/A_Fossils_Tale/Life_On.png" alt="" />
+          </div>
+        </div><!--/zoomwrapper-->
+      </div>
+      
+		<div class="bpcontenteverchangingearth">
+			<p>Sit back and relax, as the fossils tell you their stories... </p>
+			<p>Stories of the hidden history of the Earth, from times when the Earth was so different, you may hardly recognise it! </p>
+			<p>Tap the cards to explore...</p>
+		</div>
+       
+      <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/The_Natural_World/bottomhomenat.png"></a></div>
+    </div> <!-- end content -->  
+  </div><!--/spacechar-->  
 
-		<p>Just as fossils tell us about extinct (or living) critters, they can also tell us about 'extinct' environments: conditions on the Earth that are completely different to any that we know today. </p>
-
-		<p>How do you make a fossil?  How can they tell us stories of ancient Earth?  And what stories do they have to tell?  Tap the buttons to find out!</p>
-	 </div>
-    <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/The_Natural_World/bottomhomenat.png"></a></div>
-  </div> <!-- end content -->  
-	<div class="fossil-puzzles-the_fossil_formula">
-	</div>
-	<div class="fossil-puzzles-the_language_of_the_past">
-	</div>
-	<div class="fossil-puzzles-a_fossils_tale">
-	</div>	
-	
   <!--<div class="audiopanel">-->
     <!-- images are in slidebarnat.js -->
-    <div class="micbtnholder"><div class="micbtneverchangingearth" id="playstopFossil_Puzzles"></div></div>
-    <div class="beverchangingearth"><div class="rweverchangingearth" id="Fossil_Puzzlesaudiobbtn"></div></div>
-    <div class="pleverchangingearth"><div class="plpseverchangingearth" id="Fossil_Puzzlesaudioplbtn"></div></div>
-    <div class="feverchangingearth"><div class="fweverchangingearth" id="Fossil_Puzzlesaudiofbtn"></div></div>
-    <div id="actualaudio-Fossil_Puzzles" style="visibility:hidden;"></div>
+    <div class="micbtnholder"><div class="micbtneverchangingearth" id="playstopAFossilsTale"></div></div>
+    <div class="beverchangingearth"><div class="rweverchangingearth" id="AFossilsTaleaudiobbtn"></div></div>
+    <div class="pleverchangingearth"><div class="plpseverchangingearth" id="AFossilsTaleaudioplbtn"></div></div>
+    <div class="feverchangingearth"><div class="fweverchangingearth" id="AFossilsTaleaudiofbtn"></div></div>
+    <div id="actualaudio-AFossilsTale" style="visibility:hidden;"></div>
   <!--</div>-->
   
  
@@ -49,17 +56,21 @@
     (function() {
       playing = false;
       paused = true;
-
+      $('div#pol1').css("z-index", 2);
+      $('div#pol2').css("z-index", 1);
+      $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
+      $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
       if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-Fossil_Puzzles').html('<audio id="Fossil_Puzzlesaudio" controls preload onpause="playseverchangingearth()" onplay="pauseeverchangingearth()"><source src="audio/Ever_Changing_Earth/Fossil_Puzzles.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-AFossilsTale').html('<audio id="AFossilsTaleaudio" controls preload onpause="playseverchangingearth()" onplay="pauseeverchangingearth()"><source src="audio/Ever_Changing_Earth/AFossilsTale.mp3" type="audio/mpeg"></audio>');
       } 
     
-      $("#sub-ever-changing-earth-fossil-puzzles").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+      $("#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     })();
+  
     $('.homelinkbh').on('tap', function() { bgsoundeverchangingearth.pause(); bgsoundeverchangingearth.currentTime = 0; mainaudiobg.play(); });
     
     function goBack() {
-		$.mobile.changePage("sub-ever-changing-earth.html", {transition: "slide", reverse: true });
+		$.mobile.changePage("sub-ever-changing-earth-fossil-puzzles.html", {transition: "slide", reverse: true });
 		bgsoundeverchangingearth.pause(); 
 		bgsoundeverchangingearth.currentTime = 0;
 		naturalsoundbg.play();
@@ -75,48 +86,57 @@
     /* ******************** */
     /* this is the microphone button */
 	
-    $("#playstopFossil_Puzzles").on('tap', function() {
+    $("#playstopAFossilsTale").on('tap', function() {
       if(!playing) {
-        Fossil_Puzzlesaudio.play();
+        AFossilsTaleaudio.play();
         $('.micbtneverchangingearth').css('background-position-x', '-81px');
         playing = true;
         paused = false;
       } else {
-        Fossil_Puzzlesaudio.pause(); Fossil_Puzzlesaudio.currentTime = 0;
+        AFossilsTaleaudio.pause(); AFossilsTaleaudio.currentTime = 0;
         $('.micbtneverchangingearth').css('background-position-x', '0px');
         playing = false;
         paused = true;
       }
     });
     
-    $("#Fossil_Puzzlesaudioplbtn").on('tap', function() {
+    $("#AFossilsTaleaudioplbtn").on('tap', function() {
       if(!paused) {
-        Fossil_Puzzlesaudio.pause();
+        AFossilsTaleaudio.pause();
         paused = true;
       } else {
-        Fossil_Puzzlesaudio.play();
+        AFossilsTaleaudio.play();
         paused = false;
       }
       //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
     });
     
-    $("#Fossil_Puzzlesaudiofbtn").on('tap', function() {
-      var ctime = Fossil_Puzzlesaudio.currentTime;
-      Fossil_Puzzlesaudio.currentTime = ctime + 10;
+    $("#AFossilsTaleaudiofbtn").on('tap', function() {
+      var ctime = AFossilsTaleaudio.currentTime;
+      AFossilsTaleaudio.currentTime = ctime + 10;
     });
     
-    $("#Fossil_Puzzlesaudiobbtn").on('tap', function() {
-      var ctime = Fossil_Puzzlesaudio.currentTime;
-      Fossil_Puzzlesaudio.currentTime = ctime - 10;
+    $("#AFossilsTaleaudiobbtn").on('tap', function() {
+      var ctime = AFossilsTaleaudio.currentTime;
+      AFossilsTaleaudio.currentTime = ctime - 10;
     });
     
-    $("#Fossil_Puzzlesaudiopsbtn").on('tap', function() {
-      Fossil_Puzzlesaudio.pause();
+    $("#AFossilsTaleaudiopsbtn").on('tap', function() {
+      AFossilsTaleaudio.pause();
       //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });
-	$('.fossil-puzzles-the_fossil_formula').on('tap', function() {
-      $.mobile.changePage("sub-super-fast-trains-overcoming-resistance-rolling-resistance-maglev-trains.html", {transition: "slide"});
-    });	
+
+	$("#pol1").on('tap', function(){
+		$.mobile.changePage("sub-ever-changing-earth-fossil-puzzles-a-fossils-tale-polar-plants-of-pangaea.html", {transition: "slide"});
+		
+    });
+	
+    $("#pol2").on('tap', function() {
+		$.mobile.changePage("sub-ever-changing-earth-fossil-puzzles-a-fossils-tale-life-on-the-high-seas.html", {transition: "slide"});
+    });
+
+	
 	
   </script>
+   <script src="js/twocardLogic.js"></script>  <!-- for card dragging effects -->
 </div> <!--//home-->

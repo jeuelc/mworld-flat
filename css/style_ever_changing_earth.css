@@ -1,5 +1,5 @@
 /* Main common basic pages */
-#sub-ever-changing-earth, #sub-ever-changing-earth-changing-earth,#sub-ever-changing-earth-earths-endless-evolution,#sub-ever-changing-earth-wipe-out,#sub-ever-changing-earth-fossil-puzzles-the-language-of-the-past,#sub-ever-changing-earth-fossil-puzzles-the-fossil-formula,#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale,#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale-life-on-the-high-seas,#sub-ever-changing-earth-geology-layer-upon-layer,#sub-ever-changing-earth-geology-making-an-earth-cake,#sub-ever-changing-earth-geology-never-ending-sediments,#sub-ever-changing-earth-geology-never-ending-sediments-clues-to-catastrophe{
+#sub-ever-changing-earth, #sub-ever-changing-earth-changing-earth,#sub-ever-changing-earth-earths-endless-evolution,#sub-ever-changing-earth-wipe-out,#sub-ever-changing-earth-fossil-puzzles-the-language-of-the-past,#sub-ever-changing-earth-fossil-puzzles-the-fossil-formula,#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale,#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale-life-on-the-high-seas,#sub-ever-changing-earth-geology-layer-upon-layer,#sub-ever-changing-earth-geology-making-an-earth-cake,#sub-ever-changing-earth-geology-never-ending-sediments,#sub-ever-changing-earth-geology-never-ending-sediments-clues-to-catastrophe,#sub-ever-changing-earth-rock-whispering-stick-around-or-go-with-the-flow,#sub-ever-changing-earth-rock-whispering-stories-written-in-stone,#sub-ever-changing-earth-rock-whispering-stories-written-in-stone-slushball-earth,#sub-ever-changing-earth-rock-whispering-stories-written-in-stone-wheres-the-earth-gone{
   background:url('images/9-12/The_Natural_World/Ever_Changing_Earth/Ever_Changing_Earth_BG.jpg') no-repeat;
   height:748px !important;
   overflow:hidden !important;
@@ -21,6 +21,19 @@
 }
 #sub-ever-changing-earth-fossil-geology{
   background:url('images/9-12/The_Natural_World/Ever_Changing_Earth/Geology/Geology_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+#sub-ever-changing-earth-rock-whispering{
+  background:url('images/9-12/The_Natural_World/Ever_Changing_Earth/Rock_Whispering/Rock_Whispering_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+#sub-ever-changing-earth-rock-whispering-through-the-lens{
+  background:url('images/9-12/The_Natural_World/Ever_Changing_Earth/Rock_Whispering/Through_The_Lens/Through_The_Lens_BG.jpg') no-repeat;
   height:748px !important;
   overflow:hidden !important;
   width:1024px !important;
@@ -193,9 +206,25 @@
 		top: 592px;
 		left: 315px;	
 	}	
-	
+	.rock-whispering-stick_around	{
+		height:100px;
+		width:100px;
+		position:absolute;
+	}
+	.rock-whispering-stories_written_in_stone	{
+		height:100px;
+		width:100px;
+		left:100px;
+		position:absolute;
+	}
+	.rock-whispering-throught_the_lens{
+		height:100px;
+		width:100px;
+		left:200px;
+		position:absolute;
+	}
 /* Common Header Div Design */
-#sub-ever-changing-earth .bptitleholder, #sub-ever-changing-earth-changing-earth  .bptitleholder,#sub-ever-changing-earth-earths-endless-evolution .bptitleholder,#sub-ever-changing-earth-wipe-out .bptitleholder,#sub-ever-changing-earth-fossil-puzzles-the-language-of-the-past .bptitleholder,#sub-ever-changing-earth-fossil-puzzles-the-fossil-formula .bptitleholder,#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale .bptitleholder,#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale-life-on-the-high-seas .bptitleholder,#sub-ever-changing-earth-geology-layer-upon-layer .bptitleholder,#sub-ever-changing-earth-geology-making-an-earth-cake .bptitleholder,#sub-ever-changing-earth-geology-never-ending-sediments .bptitleholder,#sub-ever-changing-earth-geology-never-ending-sediments-clues-to-catastrophe .bptitleholder{
+#sub-ever-changing-earth .bptitleholder, #sub-ever-changing-earth-changing-earth  .bptitleholder,#sub-ever-changing-earth-earths-endless-evolution .bptitleholder,#sub-ever-changing-earth-wipe-out .bptitleholder,#sub-ever-changing-earth-fossil-puzzles-the-language-of-the-past .bptitleholder,#sub-ever-changing-earth-fossil-puzzles-the-fossil-formula .bptitleholder,#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale .bptitleholder,#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale-life-on-the-high-seas .bptitleholder,#sub-ever-changing-earth-geology-layer-upon-layer .bptitleholder,#sub-ever-changing-earth-geology-making-an-earth-cake .bptitleholder,#sub-ever-changing-earth-geology-never-ending-sediments .bptitleholder,#sub-ever-changing-earth-geology-never-ending-sediments-clues-to-catastrophe .bptitleholder,#sub-ever-changing-earth-rock-whispering-stick-around-or-go-with-the-flow .bptitleholder,#sub-ever-changing-earth-rock-whispering-stories-written-in-stone .bptitleholder,#sub-ever-changing-earth-rock-whispering-stories-written-in-stone-slushball-earth .bptitleholder,#sub-ever-changing-earth-rock-whispering-stories-written-in-stone-wheres-the-earth-gone .bptitleholder{
 	width: 627px;
 	height: 68px;
 	text-align: center;
@@ -234,9 +263,27 @@
 	top: 10px;
 	left: 50px;
 }
+#sub-ever-changing-earth-rock-whispering .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 10px;
+	left: 50px;
+}
+#sub-ever-changing-earth-rock-whispering-through-the-lens .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 10px;
+	left: 50px;
+}
 
 /* Common Header Design h1 */
-#sub-ever-changing-earth .bptitleholder h1, #sub-ever-changing-earth-changing-earth  .bptitleholder h1,#sub-ever-changing-earth-earths-endless-evolution .bptitleholder h1,#sub-ever-changing-earth-wipe-out .bptitleholder h1,#sub-ever-changing-earth-fossil-puzzles-the-language-of-the-past .bptitleholder h1,#sub-ever-changing-earth-fossil-puzzles-the-fossil-formula .bptitleholder h1,#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale .bptitleholder h1,#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale-life-on-the-high-seas .bptitleholder h1,#sub-ever-changing-earth-geology-layer-upon-layer .bptitleholder h1,#sub-ever-changing-earth-geology-making-an-earth-cake .bptitleholder h1,#sub-ever-changing-earth-geology-never-ending-sediments .bptitleholder h1,#sub-ever-changing-earth-geology-never-ending-sediments-clues-to-catastrophe .bptitleholder h1{
+#sub-ever-changing-earth .bptitleholder h1, #sub-ever-changing-earth-changing-earth  .bptitleholder h1,#sub-ever-changing-earth-earths-endless-evolution .bptitleholder h1,#sub-ever-changing-earth-wipe-out .bptitleholder h1,#sub-ever-changing-earth-fossil-puzzles-the-language-of-the-past .bptitleholder h1,#sub-ever-changing-earth-fossil-puzzles-the-fossil-formula .bptitleholder h1,#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale .bptitleholder h1,#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale-life-on-the-high-seas .bptitleholder h1,#sub-ever-changing-earth-geology-layer-upon-layer .bptitleholder h1,#sub-ever-changing-earth-geology-making-an-earth-cake .bptitleholder h1,#sub-ever-changing-earth-geology-never-ending-sediments .bptitleholder h1,#sub-ever-changing-earth-geology-never-ending-sediments-clues-to-catastrophe .bptitleholder h1,#sub-ever-changing-earth-rock-whispering-stick-around-or-go-with-the-flow .bptitleholder h1,#sub-ever-changing-earth-rock-whispering-stories-written-in-stone .bptitleholder h1,#sub-ever-changing-earth-rock-whispering-stories-written-in-stone-slushball-earth .bptitleholder h1,#sub-ever-changing-earth-rock-whispering-stories-written-in-stone-wheres-the-earth-gone .bptitleholder h1{
 	text-transform: uppercase;
 	color: #FFFFFF !important;
 	font-family: "comic sans ms" !important;
@@ -263,6 +310,23 @@
 	margin: 0;		
 }
 #sub-ever-changing-earth-fossil-geology .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;		
+}
+#sub-ever-changing-earth-rock-whispering .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;		
+}
+
+#sub-ever-changing-earth-rock-whispering-through-the-lens .bptitleholder h1{
 	text-transform: uppercase;
 	color: #FFFFFF !important;
 	font-family: "comic sans ms" !important;
@@ -357,6 +421,20 @@
 	top: 55px;
 	width: 694px;
 	height: 460px;
+	overflow: auto;
+	text-align: left;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+.naveverchangingearth-throughthelens{
+	position: absolute;
+	left: 470px;
+	top: 124px;
+	width: 472px;
+	height: 522px;
 	overflow: auto;
 	text-align: left;
 	font-family: comic sans ms;

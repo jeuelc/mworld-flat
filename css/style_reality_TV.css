@@ -149,17 +149,17 @@
 }
 
 .navrealityTV-thelook-content{
-  position:absolute;
-  left:540px;
-  top:225px;
-  width:410px;
-  height:395px;
-  overflow-y:scroll;
-  text-align:center;
-  font-family:"comic sans ms";
-  font-size:18px;
-  font-weight:normal;
-  color:#ffffff;
+	position: absolute;
+	left: 540px;
+	top: 211px;
+	width: 410px;
+	height: 406px;
+	overflow-y: scroll;
+	text-align: center;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	color: #ffffff;
 }
 
 .navrealityTV-content p {
@@ -187,11 +187,11 @@
 .navrealityTV-whydowewatch-content{
 	position: absolute;
 	left: 408px;
-	top: 85px;
+	top: 95px;
 	width: 360px;
 	height: 284px;
 	overflow-y: scroll;
-	text-align: center;
+	text-align: left;
 	font-family: "comic sans ms";
 	font-size: 18px;
 	font-weight: normal;
@@ -246,8 +246,8 @@
 	text-align: center;
 	line-height: 28px;
 	position: absolute;
-	top: 185px;
-	left: 255px;
+	top: 39px;
+	left: 49px;
 }
 
 #sub-reality-TV-becoming-reality-TV-celebrity-beyond-fame .bptitleholder, #sub-reality-TV-becoming-reality-TV-celebrity-life-on-show .bptitleholder, #sub-reality-TV-becoming-reality-TV-celebrity-the-story .bptitleholder, #sub-reality-TV-becoming-reality-TV-celebrity-sell-yourself .bptitleholder, #sub-reality-TV-what-is-reality-TV-how-reality-TV-works .bptitleholder {
@@ -281,7 +281,7 @@
 	
 }
 
-#sub-reality-TV .bptitleholder h1, #sub-reality-TV-becoming-reality-TV-celebrity .bptitleholder h1, #sub-reality-TV-becoming-reality-TV-celebrity-the-look .bptitleholder h1, #sub-reality-TV-becoming-reality-TV-celebrity-life-on-show .bptitleholder h1, #sub-reality-TV-becoming-reality-TV-celebrity-the-story .bptitleholder h1, #sub-reality-TV-becoming-reality-TV-celebrity-sell-yourself .bptitleholder h1, #sub-reality-TV-becoming-reality-TV-celebrity-beyond-fame .bptitleholder h1, #sub-reality-TV-what-is-reality-TV .bptitleholder h1, #sub-reality-TV-what-is-reality-TV-how-real-it-is .bptitleholder h1, #sub-reality-TV-what-is-reality-TV-why-people-go-on-reality-shows .bptitleholder h1, #sub-reality-TV-what-is-reality-TV-how-reality-TV-works .bptitleholder h1, #sub-reality-TV-what-is-reality-TV-how-reality-TV-works-Big-Brother .bptitleholder h1, #sub-reality-TV-why-do-we-watch-it .bptitleholder h1, #sub-reality-TV-why-do-we-watch-it-must-see-TV .bptitleholder h1, #sub-reality-TV-why-do-we-watch-it-window-to-the-world .bptitleholder h1, #sub-reality-TV-why-do-we-watch-it-entertainment .bptitleholder h1, #sub-reality-TV-why-do-we-watch-it-did-you-see-it .bptitleholder h1, #sub-reality-TV-why-do-we-watch-it-hanging-out .bptitleholder h1{
+#sub-reality-TV .bptitleholder h1, #sub-reality-TV-becoming-reality-TV-celebrity .bptitleholder h1, #sub-reality-TV-becoming-reality-TV-celebrity-the-look .bptitleholder h1, #sub-reality-TV-becoming-reality-TV-celebrity-life-on-show .bptitleholder h1, #sub-reality-TV-becoming-reality-TV-celebrity-the-story .bptitleholder h1, #sub-reality-TV-becoming-reality-TV-celebrity-sell-yourself .bptitleholder h1, #sub-reality-TV-becoming-reality-TV-celebrity-beyond-fame .bptitleholder h1, #sub-reality-TV-what-is-reality-TV .bptitleholder h1, #sub-reality-TV-what-is-reality-TV-how-real-it-is .bptitleholder h1, #sub-reality-TV-what-is-reality-TV-why-people-go-on-reality-shows .bptitleholder h1, #sub-reality-TV-what-is-reality-TV-how-reality-TV-works .bptitleholder h1, #sub-reality-TV-what-is-reality-TV-how-reality-TV-works-Big-Brother .bptitleholder h1, #sub-reality-TV-why-do-we-watch-it-must-see-TV .bptitleholder h1, #sub-reality-TV-why-do-we-watch-it-window-to-the-world .bptitleholder h1, #sub-reality-TV-why-do-we-watch-it-entertainment .bptitleholder h1, #sub-reality-TV-why-do-we-watch-it-did-you-see-it .bptitleholder h1, #sub-reality-TV-why-do-we-watch-it-hanging-out .bptitleholder h1{
 	text-transform: uppercase;
 	color: #ffffff;
 	font-family: "comic sans ms";
@@ -289,7 +289,14 @@
 	padding: 0;
 	margin: 0;
 }
-
+#sub-reality-TV-why-do-we-watch-it .bptitleholder h1{
+	text-transform: uppercase;
+	color: #000000;
+	font-family: "comic sans ms";
+	font-weight: bold;
+	padding: 0;
+	margin: 0;	
+}
 .navrealityTVbtn1{
 	left: 134px;
     position: absolute;

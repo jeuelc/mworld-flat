@@ -33,16 +33,16 @@
   width:1024px !important;
 }
 .in_your_dreams{
-color: #000000;
-font-family: "comic sans ms";
-font-size: 18px;
-font-weight: normal;
-height: 356px;
-margin-left: 142px;
-position: absolute;
-text-align: center;
-top: 483px;
-width: 70%;	
+	color: #FFFFFF;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	height: 356px;
+	margin-left: 142px;
+	position: absolute;
+	text-align: center;
+	top: 483px;
+	width: 70%;
 }
 #socialjetlag{
   background:url('images/9-12/Human_Body/Sleeps_And_Dreams/Broken_Sleep/Messing_With_Your_Body_Clock/Social_Jet_lag/Social_Jet_Lag_Bg.jpg') no-repeat;
@@ -189,15 +189,15 @@ width: 70%;
 }
 
 .storypageetg_bodyclock {
-	color: #000000;
+	color: #365b7c;
 	font-family: "comic sans ms";
-	font-size: 16px;
-	font-weight: normal;
+	font-size: 14px;
+	font-weight: bold;
 	height: 356px;
 	position: absolute;
 	text-align: center;
-	top: 473px;
-	width: 97%;
+	top: 489px;
+	width: 97%; 
 }
 
 .navsleepanddreams-content {
@@ -362,7 +362,7 @@ width: 70%;
 	margin: 0;
 }
 
-#sleeps .bptitleholder{
+#sleeps .bptitleholder, #brokensleep .bptitleholder, #messing .bptitleholder,#notsleeping .bptitleholder,#howsleep .bptitleholder,#sleeptime .bptitleholder,#sleepcultures .bptitleholder, #earlybirds .bptitleholder, #sleepstructure .bptitleholder,#rememberingdreams .bptitleholder,#meaningofdreams .bptitleholder, #whywesleep .bptitleholder,#openeyes .bptitleholder, #duringsleep .bptitleholder{
 	width:627px;
 	height:68px;
 	text-align:center;
@@ -538,6 +538,23 @@ width: 70%;
 	line-height:40px;
 }
 
+#whydodreaming .bptitleholder{
+	width: 490px;
+	height: 68px;
+	text-align: left;
+	line-height: 28px;
+	position: absolute;
+	top: 50px;
+	left: 45px;
+}
+#whydodreaming .bptitleholder h1{
+	text-transform: uppercase;
+	color: #000000 !important;
+	font-family: "comic sans ms";
+	font-weight: bold;
+	padding: 0;
+	margin: 0;	
+}
 .bpcontentsleeps{
 	color: #000000;
     font-family: "comic sans ms";
@@ -592,4 +609,16 @@ width: 70%;
 	top: 240px;
 	width: 600px;
 	font-weight: normal;
+}
+.why_do_we_dream-text{
+	color: #000000;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	height: 470px;
+	position: absolute;
+	text-align: left;
+	top: 90px;
+	width: 418px;
+	left: 50px;
 }

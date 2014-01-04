@@ -230,19 +230,53 @@
 	position: absolute;
 	left: 510px;
 }
+
+#circleslider {
+  position:absolute;
+  top:619px;
+  left:500px;
+}
+
+#lineslider {
+  background:url('images/9-12/Space/Comets_Asteroids_Meteors/Impact/Craters/lineslider.png') no-repeat center center;
+  position:absolute;
+  top:610px;
+  left:300px;
+  width:460px;
+  height:73px;
+}
+
+#craters_manicouagan_active{
+  width:332px;
+  height:203px;
+  background:url('images/9-12/Space/Comets_Asteroids_Meteors/Impact/Craters/minicougan_active.png');
+  margin-left:-43px;
+  margin-top:-44px;
+  display:none;
+}
 .craters_manicouagan{
 	position: absolute;
-	height: 85px;
-	width: 176px;
+	height: 115px;
+	width: 245px;
 	left: 50px;
 	top: 584px;
+  background:url('images/9-12/Space/Comets_Asteroids_Meteors/Impact/Craters/minicougan_inactive.png');
+}
+#craters_mind_blowing_active{
+  width:332px;
+  height:203px;
+  background:url('images/9-12/Space/Comets_Asteroids_Meteors/Impact/Craters/mindblowing_active.png');
+  margin-left:-43px;
+  margin-top:-44px;
+  display:none;
 }
 .craters_mind_blowing{
 	position: absolute;
-	height: 85px;
-	width: 176px;
-	left: 798px;
+	height: 115px;
+	width: 245px;
+	left: 764px;
 	top: 584px;
+  background:url('images/9-12/Space/Comets_Asteroids_Meteors/Impact/Craters/mindblowing_inactive.png');
 }
 .near_misses_2012{
 	background: url('images/9-12/Space/Comets_Asteroids_Meteors/Impact/Chelyabinsk/Near_Misses/Button_Inac.png') no-repeat;

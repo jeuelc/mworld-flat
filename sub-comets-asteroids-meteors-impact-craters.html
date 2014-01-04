@@ -2,6 +2,8 @@
 <div data-role="page" id="sub-comets-asteroids-meteors-impact-craters">
   <!-- <script src="js/slidebarnat.js"></script> -->
   <script src="js/slidebar_comets_asteroids_meteors.js"></script>
+  <script src="js/hammer.js"></script>
+  <script src="js/jquery.hammer.js"></script>
   <link rel="stylesheet" href="css/style_comets_asteroids_meteors.css" />
   <div class="menuhousing"></div>
   <div class="homebtnholder"><div class="homebtncometsasteroidsmeteors"></div></div>
@@ -15,23 +17,22 @@
   
     <div data-role="content" class="kidzcontent">
       <div class="navcometsasteroidsmeteors-craters">
-		<p>When an asteroid hits the surface of the Earth, it explosively releases vast amounts of energy.  Rocks from the area it hits are vaporised or flung vast distances.  Layers of rocks on the surface are flipped over at the edge of the impact zone.  When the dust settles, what remains on the surface of the Earth is a crater.   What do you think happens when one lands in the ocean?</p>
-
-		<p>You can see craters on the moon with a telescope, the dark areas (mare) on the face of the Moon are lava filled craters  you don't need a telescope to see those!  Other moons and planets in the solar system also have craters.  We have even seen new craters appear on Mars and the Moon over the past few years.  And there are craters on Earth too.</p>
-
-		<p>Wolfe Creek in Western Australia and Meteor Crater in northern Arizona in the United States of America, are well known examples, and both are roughly a kilometre wide.  The impacts that created them must have released far more energy than a nuclear bomb!</p>
-
-		<p>There are even bigger craters too. The wind, rain, rivers and geological processes of our planet gradually erase craters over time, but some of the biggest ones can still be identified.  From space you can see a crater 70 kilometres wide scarring the Canadian province of Quebec  the Manicouagan Crater.  And this isn't even the biggest crater on the surface of the Earth! 
-		</p>
+        <p>When an asteroid hits the surface of the Earth, it explosively releases vast amounts of energy.  Rocks from the area it hits are vaporised or flung vast distances.  Layers of rocks on the surface are flipped over at the edge of the impact zone.  When the dust settles, what remains on the surface of the Earth is a crater.   What do you think happens when one lands in the ocean?</p>
+        <p>You can see craters on the moon with a telescope, the dark areas (mare) on the face of the Moon are lava filled craters  you don't need a telescope to see those!  Other moons and planets in the solar system also have craters.  We have even seen new craters appear on Mars and the Moon over the past few years.  And there are craters on Earth too.</p>
+        <p>Wolfe Creek in Western Australia and Meteor Crater in northern Arizona in the United States of America, are well known examples, and both are roughly a kilometre wide.  The impacts that created them must have released far more energy than a nuclear bomb!</p>
+        <p>There are even bigger craters too. The wind, rain, rivers and geological processes of our planet gradually erase craters over time, but some of the biggest ones can still be identified.  From space you can see a crater 70 kilometres wide scarring the Canadian province of Quebec  the Manicouagan Crater.  And this isn't even the biggest crater on the surface of the Earth! 
+        </p>
       </div>
-        <a id="img1" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Space/Comets_Asteroids_Meteors/Impact/Craters/Manicouagan_Hi_Res.png', '');">click here</a>	
-		
-		<div class="craters_manicouagan">
-			
-		</div>
-        <a id="img2" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Space/Comets_Asteroids_Meteors/Impact/Craters/Mind_Blowing_Hi_Res.png', '');">click here</a>			
-		<div class="craters_mind_blowing">
-		</div>	  
+      <a id="img1" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Space/Comets_Asteroids_Meteors/Impact/Craters/Manicouagan_Hi_Res.png', '');">click here</a>	
+      <a id="img2" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Space/Comets_Asteroids_Meteors/Impact/Craters/Mind_Blowing_Hi_Res.png', '');">click here</a>			
+      <div class="craters_manicouagan"><div id="craters_manicouagan_active"></div></div>
+      <div class="craters_mind_blowing"><div id="craters_mind_blowing_active"></div></div>	  
+      <div id="lineslider"></div>
+      <div id="zoomwrapper">
+        <div id="circleslider">
+          <img src="css/images/9-12/Space/Comets_Asteroids_Meteors/Impact/Craters/circleslider.png" alt="" />
+        </div>
+      </div>
       <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Space/bottomhomesp.png"></a></div>
     </div> <!-- end content -->  
     
@@ -118,13 +119,14 @@
     });
 	
 		//craters_manicouagan
-		$(".craters_manicouagan").on('tap', function() {
+		$("#craters_manicouagan_active").on('tap', function() {
 		  $('#img1')[0].click();
 		});	
 		
 		//craters_manicouagan
-		$(".craters_mind_blowing").on('tap', function() {
+		$("#craters_mind_blowing_active").on('tap', function() {
 		  $('#img2')[0].click();
 		});		
   </script>
+  <script src="js/craters-slider.js"></script>  <!-- for card dragging effects -->
 </div> <!--//home-->

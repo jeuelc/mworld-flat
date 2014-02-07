@@ -22,12 +22,20 @@
 		<p>You'll have to tap the buttons to find out!</p>
       </div>  
 		<div class="small_worlds_meteors">
+			<div class="small_worlds_meteors_active small_world_sprite">
+			</div>
 		</div>
 		<div class="small_worlds_asteroids">
+			<div class="small_worlds_asteroids_active small_world_sprite">
+			</div>		
 		</div>
 		<div class="small_worlds_planetry">
+			<div class="small_worlds_planetry_active small_world_sprite">
+			</div>		
 		</div>
 		<div class="small_worlds_comets">
+			<div class="small_worlds_comets_active small_world_sprite">
+			</div>		
 		</div>		
       <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Space/bottomhomesp.png"></a></div>
     </div> <!-- end content -->  
@@ -44,15 +52,19 @@
   <script>
   
 	$('.small_worlds_meteors').on('tap', function() { 
+		clearInterval(sp);
 		$.mobile.changePage("sub-comets-asteroids-meteors-small-worlds-meteorites.html", {transition: "slide", reverse: true });
 	});
 	$('.small_worlds_asteroids').on('tap', function() { 
+		clearInterval(sp);
 		$.mobile.changePage("sub-comets-asteroids-meteors-small-worlds-asteroids.html", {transition: "slide", reverse: true });
 	});
 	$('.small_worlds_planetry').on('tap', function() { 
+		clearInterval(sp);
 		$.mobile.changePage("sub-comets-asteroids-meteors-small-worlds-planetary-building-blocks.html", {transition: "slide", reverse: true });
 	});
 	$('.small_worlds_comets').on('tap', function() { 
+		clearInterval(sp);
 		$.mobile.changePage("sub-comets-asteroids-meteors-small-worlds-comets.html", {transition: "slide", reverse: true });
 	});
 	
@@ -73,10 +85,7 @@
     $('.homelinkbh').on('tap', function() { bgsoundcometsasteroidsmeteors.pause(); bgsoundcometsasteroidsmeteors.currentTime = 0; mainaudiobg.play(); });
     
     function goBack() {
-      $.mobile.changePage("sub-comets-asteroids-metiors.html", {transition: "slide", reverse: true });
-      bgsoundcometsasteroidsmeteors.pause(); 
-      bgsoundcometsasteroidsmeteors.currentTime = 0;
-      spacesoundbg.play();
+      $.mobile.changePage("sub-comets-asteroids-meteors.html", {transition: "slide", reverse: true });
     }
     function playscometsasteroidsmeteors() {
          bgsoundcometsasteroidsmeteors.play();
@@ -127,5 +136,8 @@
       smallworldsaudio.pause();
       //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });
+	sp			=	window.setInterval(function(){
+						$('.small_world_sprite').fadeOut('slow').fadeIn('fast');
+					},500);
   </script>
 </div> <!--//home-->

@@ -1,0 +1,128 @@
+<!-- i-C-a -->
+<div data-role="page" id="sub-comets-asteroids-meteors-impact-death-of-the-dinosaurs">
+  <!-- <script src="js/slidebarnat.js"></script> -->
+  <script src="js/slidebar_comets_asteroids_meteors.js"></script>
+  <link rel="stylesheet" href="css/style_comets_asteroids_meteors.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtncometsasteroidsmeteors"></div></div>
+  <div class="mpbtnholder"><div class="mpbtncometsasteroidsmeteors"></div></div>
+  <div class="cpbtnholder"><div class="cpbtncometsasteroidsmeteors"></div></div>
+  <div class="infobtnholder"><div class="infobtncometsasteroidsmeteors"></div></div>
+  <div class="credsbtnholder"><div class="credsbtncometsasteroidsmeteors"></div></div>
+  <div class="menubtnholder"><div class="menubtncometsasteroidsmeteors"></div></div>
+  
+  <!-- <div class="bptitleholder" style="padding-top:14px;"><h1>Death of the Dinosaurs</h1></div> -->
+  
+    <div data-role="content" class="kidzcontent">
+        <a id="img1" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Space/Comets_Asteroids_Meteors/Impact/Death_Of_The_Dinosaurs/KT_Img.png', '');">click here</a>
+		<div id="zoomwrapper">
+      <div class="navcometsasteroidsmeteors-deathofdinosaurs">
+		<p>Would we be here if the dinosaurs hadnt died out 65 million years ago?  Why did the majority of the dinosaurs suddenly disappear?  We find a clue in the Earth itself!</p>
+		<p>There is a thin layer of <a href="#sedimentary_rock" data-rel="popup">sedimentary rock</a>, the 'K-T boundary', now known as the K-Pg Boundary.  Below this layer we find dinosaur fossils.  This layer has lots of iridium, which you also find in meteorites and asteroids.  Scientists Luis and Walter Alvarez figured out that a large asteroid crashed into the Earth, throwing dust and dirt across the globe and eventually killing off the dinosaurs.</p>
+
+		<p>Where did the asteroid land?  On the coast of Mexico, in the Yucatán Peninsula, are the remains of a crater that was originally 180 kilometres across.  It was made by an asteroid at least 10 kilometres wide travelling at many kilometres per second.</p>
+
+		<p>This impact must have been horrendous!  Hot debris would have rained across most of North America.  Dust thrown up by the blast would have made the skies darker all across the planet, cooling the Earth for many years.  Most large animals would have struggled to survive on this cold, dark Earth. </p>
+
+		<p>After this catastrophe, mammals became far more common, and the only dinosaurs left were the ones that could fly away to less affected areas  the birds!  So the eventual evolution of humans may be the result of a huge asteroid impact! </p>
+      </div> 
+	  <div class="kt_boundary_rock">
+		<div class="kt_boundary_rock_active"></div>
+		
+	  </div>
+      <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Space/bottomhomesp.png"></a></div>
+    </div> <!-- end content -->  
+ 	<!------------------------------------- Definition box ----------------------------------- -->
+	<div data-role="popup" id="sedimentary_rock" data-position-to="window" data-overlay-theme="a" style="text-align:center;">
+		<div id="node-pop">
+			<p>SEDIMENTARY ROCK</p>
+			<p>A sedimentary rock is formed through the compression and cementing of material eroded and weathered from other rocks; or formed by chemical 'precipitation' or separation of solids out of a liquid; or as a result of animal action</p>
+		</div>
+    </div>
+	<!---------------------------------------------------------------------------------------- -->   
+  
+  <!--<div class="audiopanel">-->
+    <!-- images are in slidebarnat.js -->
+    <div class="micbtnholder"><div class="micbtncometsasteroidsmeteors" id="playstopdeathofdinosaurs"></div></div>
+    <div class="bcometsasteroidsmeteors"><div class="rwcometsasteroidsmeteors" id="deathofdinosaursaudiobbtn"></div></div>
+    <div class="plcometsasteroidsmeteors"><div class="plpscometsasteroidsmeteors" id="deathofdinosaursaudioplbtn"></div></div>
+    <div class="fcometsasteroidsmeteors"><div class="fwcometsasteroidsmeteors" id="deathofdinosaursaudiofbtn"></div></div>
+    <div id="actualaudio-deathofdinosaurs" style="visibility:hidden;"></div>
+  <!--</div>-->
+  <script>
+  // sound setup is in home.html and index.js
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    var paused;
+    (function() {
+      playing = false;
+      paused = true;
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-deathofdinosaurs').html('<audio id="deathofdinosaursaudio" controls preload onpause="playscometsasteroidsmeteors()" onplay="pausecometsasteroidsmeteors()"><source src="audio/Commets_Asteroids_Meteors/Sudan.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#sub-comets-asteroids-meteors-impact-death-of-the-dinosaurs").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+    $('.homelinkbh').on('tap', function() { bgsoundcometsasteroidsmeteors.pause(); bgsoundcometsasteroidsmeteors.currentTime = 0; mainaudiobg.play(); });
+    
+    function goBack() {
+      $.mobile.changePage("sub-comets-asteroids-meteors-impact.html", {transition: "slide", reverse: true });
+    }
+    function playscometsasteroidsmeteors() {
+         bgsoundcometsasteroidsmeteors.play();
+    }
+       
+    function pausecometsasteroidsmeteors() {
+         bgsoundcometsasteroidsmeteors.pause();
+    }
+    /* ******************** */
+    /* this is the microphone button */
+	
+    $("#playstopdeathofdinosaurs").on('tap', function() {
+      if(!playing) {
+        deathofdinosaursaudio.play();
+        $('.micbtncometsasteroidsmeteors').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        deathofdinosaursaudio.pause(); deathofdinosaursaudio.currentTime = 0;
+        $('.micbtncometsasteroidsmeteors').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#deathofdinosaursaudioplbtn").on('tap', function() {
+      if(!paused) {
+        deathofdinosaursaudio.pause();
+        paused = true;
+      } else {
+        deathofdinosaursaudio.play();
+        paused = false;
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+    
+    $("#deathofdinosaursaudiofbtn").on('tap', function() {
+      var ctime = deathofdinosaursaudio.currentTime;
+      deathofdinosaursaudio.currentTime = ctime + 10;
+    });
+    
+    $("#deathofdinosaursaudiobbtn").on('tap', function() {
+      var ctime = deathofdinosaursaudio.currentTime;
+      deathofdinosaursaudio.currentTime = ctime - 10;
+    });
+    
+    $("#cometsasteroidsmeteorsaudiopsbtnpsbtn").on('tap', function() {
+      deathofdinosaursaudio.pause();
+      //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+		$(".kt_boundary_rock").on('tap', function() {
+		   $('#img1')[0].click();
+		});	
+	sprite_interval			=	window.setInterval(function(){
+						$('.kt_boundary_rock_active').fadeOut('slow').fadeIn('fast');
+					},500);	
+  </script>
+</div> <!--//home-->

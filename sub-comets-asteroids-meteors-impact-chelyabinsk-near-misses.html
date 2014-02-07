@@ -56,10 +56,7 @@
     $('.homelinkbh').on('tap', function() { bgsoundcometsasteroidsmeteors.pause(); bgsoundcometsasteroidsmeteors.currentTime = 0; mainaudiobg.play(); });
     
     function goBack() {
-      $.mobile.changePage("sub-comets-asteroids-meteors-impact-chelyabinsk.html", {transition: "slide", reverse: true });
-      bgsoundcometsasteroidsmeteors.pause(); 
-      bgsoundcometsasteroidsmeteors.currentTime = 0;
-      spacesoundbg.play();
+      $.mobile.changePage("sub-comets-asteroids-meteors-impact.html", {transition: "slide", reverse: true });
     }
     function playscometsasteroidsmeteors() {
          bgsoundcometsasteroidsmeteors.play();

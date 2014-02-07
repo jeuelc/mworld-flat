@@ -94,13 +94,13 @@
     watchEros.addEventListener('ended', function() { 
         $("#watchErosVideo").css({"visibility":"hidden", "z-index":-1});
         $("#watchEros").css({"z-index":-1});
-        bgsoundvol.play(); 
+        bgsoundcometsasteroidsmeteors.play(); 
       });
     
       $("#watchEros").on('tap', function() {
         $("#watchErosVideo").css({"visibility":"hidden", "z-index":-1});
         $("#watchEros").css({"z-index":-1});
-        bgsoundvol.play();
+        bgsoundcometsasteroidsmeteors.play();
         watchEros.pause();
         watchEros.currentTime = 0;
       });    
@@ -108,9 +108,6 @@
     
     function goBack() {
       $.mobile.changePage("sub-comets-asteroids-meteors-small-worlds.html", {transition: "slide", reverse: true });
-      bgsoundcometsasteroidsmeteors.pause(); 
-      bgsoundcometsasteroidsmeteors.currentTime = 0;
-      spacesoundbg.play();
     }
     
     function playscometsasteroidsmeteors() {
@@ -166,7 +163,7 @@
 	$("#pol1").on('tap', function() {
       $("#watchErosVideo").css({"visibility":"visible", "z-index":10});
       $("#watchEros").css({"z-index":9});
-      bgsoundvol.pause();
+      bgsoundcometsasteroidsmeteors.pause();
       watchEros.play();
     });
 		//pol2

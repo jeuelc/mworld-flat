@@ -1,0 +1,107 @@
+<!-- i-C-a -->
+<div data-role="page" id="sub-comets-asteroids-meteors-small-worlds-meteorites-meteorites-meteors-and-meteoroids">
+  <!-- <script src="js/slidebarnat.js"></script> -->
+  <script src="js/slidebar_comets_asteroids_meteors.js"></script>
+  <link rel="stylesheet" href="css/style_comets_asteroids_meteors.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtncometsasteroidsmeteors"></div></div>
+  <div class="mpbtnholder"><div class="mpbtncometsasteroidsmeteors"></div></div>
+  <div class="cpbtnholder"><div class="cpbtncometsasteroidsmeteors"></div></div>
+  <div class="infobtnholder"><div class="infobtncometsasteroidsmeteors"></div></div>
+  <div class="credsbtnholder"><div class="credsbtncometsasteroidsmeteors"></div></div>
+  <div class="menubtnholder"><div class="menubtncometsasteroidsmeteors"></div></div>
+  
+  <!-- <div class="bptitleholder" style="padding-top:14px;"><h1>Death of the Dinosaurs</h1></div> -->
+  <div class="bptitleholder" style="padding-top:14px;"><h1>Meteorites, meteors and meteoroids</h1></div>  
+    <div data-role="content" class="kidzcontent">
+		<div id="zoomwrapper">
+      <div class="navcometsasteroidsmeteors-meteoritesmeteorsandmeteoroids">
+		<p>Meteorite, meteor or meteoroid?  It sounds confusing!  The words are almost the same, so what are they and how are they different from each other? </p>
+
+		<p>Meteoroids are small objects floating in space, made of rock or metal. </p>
+
+		<p>Meteors are meteoroids and asteroids that are falling through the Earth's atmosphere.  These are what we see when we see a 'shooting star' at night!</p>
+
+		<p>Meteorites are pieces of meteors that reach the surface of the Earth.</p>
+      </div> 
+      <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Space/bottomhomesp.png"></a></div>
+    </div> <!-- end content -->   
+  <!--<div class="audiopanel">-->
+    <!-- images are in slidebarnat.js -->
+    <div class="micbtnholder"><div class="micbtncometsasteroidsmeteors" id="playstopmeteoritesmeteorsandmeteoroids"></div></div>
+    <div class="bcometsasteroidsmeteors"><div class="rwcometsasteroidsmeteors" id="meteoritesmeteorsandmeteoroidsaudiobbtn"></div></div>
+    <div class="plcometsasteroidsmeteors"><div class="plpscometsasteroidsmeteors" id="meteoritesmeteorsandmeteoroidsaudioplbtn"></div></div>
+    <div class="fcometsasteroidsmeteors"><div class="fwcometsasteroidsmeteors" id="meteoritesmeteorsandmeteoroidsaudiofbtn"></div></div>
+    <div id="actualaudio-meteoritesmeteorsandmeteoroids" style="visibility:hidden;"></div>
+  <!--</div>-->
+  <script>
+  // sound setup is in home.html and index.js
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    var paused;
+    (function() {
+      playing = false;
+      paused = true;
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-meteoritesmeteorsandmeteoroids').html('<audio id="meteoritesmeteorsandmeteoroidsaudio" controls preload onpause="playscometsasteroidsmeteors()" onplay="pausecometsasteroidsmeteors()"><source src="audio/Commets_Asteroids_Meteors/Meteorites_Meteors_And_Meteoroids.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#sub-comets-asteroids-meteors-small-worlds-meteorites-meteorites-meteors-and-meteoroids").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+    $('.homelinkbh').on('tap', function() { bgsoundcometsasteroidsmeteors.pause(); bgsoundcometsasteroidsmeteors.currentTime = 0; mainaudiobg.play(); });
+    
+    function goBack() {
+      $.mobile.changePage("sub-comets-asteroids-meteors-small-worlds-meteorites.html", {transition: "slide", reverse: true });
+    }
+    function playscometsasteroidsmeteors() {
+         bgsoundcometsasteroidsmeteors.play();
+    }
+       
+    function pausecometsasteroidsmeteors() {
+         bgsoundcometsasteroidsmeteors.pause();
+    }
+    /* ******************** */
+    /* this is the microphone button */
+	
+    $("#playstopmeteoritesmeteorsandmeteoroids").on('tap', function() {
+      if(!playing) {
+        meteoritesmeteorsandmeteoroidsaudio.play();
+        $('.micbtncometsasteroidsmeteors').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        meteoritesmeteorsandmeteoroidsaudio.pause(); meteoritesmeteorsandmeteoroidsaudio.currentTime = 0;
+        $('.micbtncometsasteroidsmeteors').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#meteoritesmeteorsandmeteoroidsaudioplbtn").on('tap', function() {
+      if(!paused) {
+        meteoritesmeteorsandmeteoroidsaudio.pause();
+        paused = true;
+      } else {
+        meteoritesmeteorsandmeteoroidsaudio.play();
+        paused = false;
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+    
+    $("#meteoritesmeteorsandmeteoroidsaudiofbtn").on('tap', function() {
+      var ctime = meteoritesmeteorsandmeteoroidsaudio.currentTime;
+      meteoritesmeteorsandmeteoroidsaudio.currentTime = ctime + 10;
+    });
+    
+    $("#meteoritesmeteorsandmeteoroidsaudiobbtn").on('tap', function() {
+      var ctime = meteoritesmeteorsandmeteoroidsaudio.currentTime;
+      meteoritesmeteorsandmeteoroidsaudio.currentTime = ctime - 10;
+    });
+    
+    $("#cometsasteroidsmeteorsaudiopsbtnpsbtn").on('tap', function() {
+      meteoritesmeteorsandmeteoroidsaudio.pause();
+      //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+  </script>
+</div> <!--//home-->

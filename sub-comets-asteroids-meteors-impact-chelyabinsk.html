@@ -86,13 +86,13 @@
     watchChel.addEventListener('ended', function() { 
         $("#watchChelVideo").css({"visibility":"hidden", "z-index":-1});
         $("#watchChel").css({"z-index":-1});
-        bgsoundvol.play(); 
+        bgsoundcometsasteroidsmeteors.play(); 
       });
     
       $("#watchChel").on('tap', function() {
         $("#watchChelVideo").css({"visibility":"hidden", "z-index":-1});
         $("#watchChel").css({"z-index":-1});
-        bgsoundvol.play();
+        bgsoundcometsasteroidsmeteors.play();
         watchChel.pause();
         watchChel.currentTime = 0;
       });
@@ -100,9 +100,6 @@
     
     function goBack() {
       $.mobile.changePage("sub-comets-asteroids-meteors-impact.html", {transition: "slide", reverse: true });
-      bgsoundcometsasteroidsmeteors.pause(); 
-      bgsoundcometsasteroidsmeteors.currentTime = 0;
-      spacesoundbg.play();
     }
     
     function playscometsasteroidsmeteors() {
@@ -157,7 +154,7 @@
 	$("#pol1").on('tap', function() {
       $("#watchChelVideo").css({"visibility":"visible", "z-index":10});
       $("#watchChel").css({"z-index":9});
-      bgsoundvol.pause();
+      bgsoundcometsasteroidsmeteors.pause();
       watchChel.play();
     });
 		//pol2 read me

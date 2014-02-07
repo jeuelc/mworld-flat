@@ -86,10 +86,8 @@
     $('.homelinkbh').on('tap', function() { bgsoundcometsasteroidsmeteors.pause(); bgsoundcometsasteroidsmeteors.currentTime = 0; mainaudiobg.play(); });
     
     function goBack() {
-      $.mobile.changePage("sub-comets-asteroids-meteors-visiting-small-worlds.html", {transition: "slide", reverse: true });
-      bgsoundcometsasteroidsmeteors.pause(); 
-      bgsoundcometsasteroidsmeteors.currentTime = 0;
-      spacesoundbg.play();
+      $.mobile.changePage("sub-comets-asteroids-meteors-small-worlds.html", {transition: "slide", reverse: true });
+      bgsoundcometsasteroidsmeteors.play();
     }
     
     function playscometsasteroidsmeteors() {

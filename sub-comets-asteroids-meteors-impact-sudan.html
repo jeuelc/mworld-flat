@@ -1,0 +1,108 @@
+<!-- i-C-a -->
+<div data-role="page" id="sub-comets-asteroids-meteors-impact-sudan">
+  <!-- <script src="js/slidebarnat.js"></script> -->
+  <script src="js/slidebar_comets_asteroids_meteors.js"></script>
+  <link rel="stylesheet" href="css/style_comets_asteroids_meteors.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtncometsasteroidsmeteors"></div></div>
+  <div class="mpbtnholder"><div class="mpbtncometsasteroidsmeteors"></div></div>
+  <div class="cpbtnholder"><div class="cpbtncometsasteroidsmeteors"></div></div>
+  <div class="infobtnholder"><div class="infobtncometsasteroidsmeteors"></div></div>
+  <div class="credsbtnholder"><div class="credsbtncometsasteroidsmeteors"></div></div>
+  <div class="menubtnholder"><div class="menubtncometsasteroidsmeteors"></div></div>
+  
+  <div class="bptitleholder" style="padding-top:14px;"><h1>Sudan</h1></div>
+  
+    <div data-role="content" class="kidzcontent">
+      <div class="navcometsasteroidsmeteors-sudan">
+		<p>On 6 October 2008, Richard Kowalski discovered a small asteroid in images taken with a telescope in Arizona.  Named '2008 TC3', the asteroid was only 20 hours away from Earth!  The asteroid was speeding across the night sky  where would it hit?</p>
+
+		<p>Around the world astronomers got together to track the path of the asteroid. They worked out it would hit the atmosphere above the Sudanese desert in Africa.</p>
+
+		<p>Very few people saw the asteroid enter the Earth's atmosphere above the Sudanese desert on the morning of Tuesday 7 October.  However, some airline pilots saw the flash from 1000 kilometres away.  Weather satellites and spy satellites saw the asteroid explode tens of kilometres above the Earth!  Although it weighed less than 100 tonnes and was only four metres across, it made a huge blast. </p>
+
+		<p>Six hundred meteorites, fragments of 2008 TC3, were later found scattered across the desert!  Almost 100 tonnes of asteroid was reduced down to smoke and hundreds of fragments.</p>
+      </div> 
+      <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Space/bottomhomesp.png"></a></div>
+    </div> <!-- end content -->  
+    
+  
+  <!--<div class="audiopanel">-->
+    <!-- images are in slidebarnat.js -->
+    <div class="micbtnholder"><div class="micbtncometsasteroidsmeteors" id="playstopsudan"></div></div>
+    <div class="bcometsasteroidsmeteors"><div class="rwcometsasteroidsmeteors" id="sudanaudiobbtn"></div></div>
+    <div class="plcometsasteroidsmeteors"><div class="plpscometsasteroidsmeteors" id="sudanaudioplbtn"></div></div>
+    <div class="fcometsasteroidsmeteors"><div class="fwcometsasteroidsmeteors" id="sudanaudiofbtn"></div></div>
+    <div id="actualaudio-sudan" style="visibility:hidden;"></div>
+  <!--</div>-->
+  <script>
+  // sound setup is in home.html and index.js
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    var paused;
+    (function() {
+      playing = false;
+      paused = true;
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-sudan').html('<audio id="sudanaudio" controls preload onpause="playscometsasteroidsmeteors()" onplay="pausecometsasteroidsmeteors()"><source src="audio/Commets_Asteroids_Meteors/Sudan.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#sub-comets-asteroids-meteors-impact-sudan").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+    $('.homelinkbh').on('tap', function() { bgsoundcometsasteroidsmeteors.pause(); bgsoundcometsasteroidsmeteors.currentTime = 0; mainaudiobg.play(); });
+    
+    function goBack() {
+      $.mobile.changePage("sub-comets-asteroids-meteors-impact.html", {transition: "slide", reverse: true });
+    }
+    function playscometsasteroidsmeteors() {
+         bgsoundcometsasteroidsmeteors.play();
+    }
+       
+    function pausecometsasteroidsmeteors() {
+         bgsoundcometsasteroidsmeteors.pause();
+    }
+    /* ******************** */
+    /* this is the microphone button */
+	
+    $("#playstopsudan").on('tap', function() {
+      if(!playing) {
+        sudanaudio.play();
+        $('.micbtncometsasteroidsmeteors').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        sudanaudio.pause(); sudanaudio.currentTime = 0;
+        $('.micbtncometsasteroidsmeteors').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#sudanaudioplbtn").on('tap', function() {
+      if(!paused) {
+        sudanaudio.pause();
+        paused = true;
+      } else {
+        sudanaudio.play();
+        paused = false;
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+    
+    $("#sudanaudiofbtn").on('tap', function() {
+      var ctime = sudanaudio.currentTime;
+      sudanaudio.currentTime = ctime + 10;
+    });
+    
+    $("#sudanaudiobbtn").on('tap', function() {
+      var ctime = sudanaudio.currentTime;
+      sudanaudio.currentTime = ctime - 10;
+    });
+    
+    $("#cometsasteroidsmeteorsaudiopsbtnpsbtn").on('tap', function() {
+      sudanaudio.pause();
+      //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+  </script>
+</div> <!--//home-->
